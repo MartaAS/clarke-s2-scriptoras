@@ -1,3 +1,40 @@
+/* redes sociales*/
+.linkedin a{
+	background: url('../images/linkedin.png');
+	overflow: hidden;
+	display: block;
+	background-size: 40px 40px;
+	padding-top: 40px;
+	height: 0;
+	width: 40px;
+}
+.facebook a{
+	background: url('../images/facebook.png');
+	overflow: hidden;
+	display: block;
+	background-size: 40px 40px;
+	padding-top: 40px;
+	height: 0;
+	width: 40px;
+}
+.github a{
+	background: url('../images/github.png');
+	overflow: hidden;
+	display: block;
+	background-size: 40px 40px;
+	padding-top: 40px;
+	height: 0;
+	width: 40px;
+}
+.twitter a{
+	background: url('../images/twitter.png');
+	overflow: hidden;
+	display: block;
+	background-size: 40px 40px;
+	padding-top: 40px;
+	height: 0;
+	width: 40px;
+}
 /*footer*/
 .footer{
 	background-color: #252525;
