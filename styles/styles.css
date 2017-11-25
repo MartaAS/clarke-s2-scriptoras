@@ -23,7 +23,7 @@
 .hobbies{
 
 }
-/* redes sociales*/
+/* Redes sociales*/
 .linkedin a{
 	background: url('../images/linkedin.png');
 	overflow: hidden;
@@ -67,9 +67,13 @@
 	padding-bottom: 50px;
 	box-sizing: border-box;
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
+}
+.end{
+	width: 100%;
+	padding: 15px;
+	display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .copy{
 	color: #555555;
@@ -79,4 +83,10 @@
 	color: #d5d4cd;
 	margin-left: 25px;
 	text-decoration: none;
+}
+.logo{
+	width: 100%;
+	margin-right:50px;
+	display: flex;
+	justify-content: flex-end;
 }
