@@ -1,11 +1,8 @@
 body{
 background-color: #FFFEFA;
 }
-/*About*/
-.about{
+/*Estilos generales de la sección de desplegables*/
 
-}
-/*Experience*/
 .title-section{
 	max-width: 250px;
 	border-top: 1px solid #a19680;
@@ -35,6 +32,12 @@ background-color: #FFFEFA;
    border-top-color: #6f1614;
    background: #6f1614;
    }
+/*About*/
+.about{
+
+}
+/*Experience*/
+
 
 /*Education*/
 
