@@ -28,13 +28,13 @@ var newSkill = document.querySelectorAll(".skilli");
 var skill;
 //alert(newSkill.length);
 for(var i = 0; i < newSkill.length; i++){
-	skill = prompt("Introduce skill");
+	//skill = prompt("Introduce skill");
 	newSkill[i].innerHTML = skill;
 }
 
 /*languages section*/
 var newTextLanguage = document.querySelector('.textBar');
-var text = prompt("Introduce un idioma");
+//var text = prompt("Introduce un idioma");
 newTextLanguage.innerHTML = text;
 
 /*languages section*/
