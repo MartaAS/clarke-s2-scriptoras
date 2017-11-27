@@ -69,6 +69,10 @@ main{
 
 }
 /*Languages*/
+.languagesTitle {
+	color: #2E2B24;
+}
+
 .languagesBar{
 	width: 90%;
 	background-color: #eeeeee;
@@ -76,7 +80,7 @@ main{
 
 .textBar{
 	text-align: left;
-	color: #2E2B24;
+	color: #ffffff;
 	line-height: 1.5em;
 }
 #percentajeBar1 {
