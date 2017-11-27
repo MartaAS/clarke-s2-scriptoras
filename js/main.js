@@ -15,18 +15,20 @@ function ocultar(idContent){
 /*var aboutMe = document.querySelector("#about");
 var aboutInput = prompt("Haz una breve descripción sobre ti.");
 aboutMe.innerHTML = aboutInput;
-
+*/
 //Experience
 /*
-var jobName = document.querySelector('#job');
+var jobName = document.querySelector('#job-pre');
 var jobInput = prompt('Introduce el nombre del puesto de trabajo');
 jobName.innerHTML = jobInput;
 
-var companyName = document.querySelector('#company');
+var companyName = document.querySelector('#company-pre');
 var companyInput = prompt('Introduce el nombre de la empresa');
 companyName.innerHTML = companyInput;
 */
 //Skills
+
+
 var newSkill = document.querySelectorAll(".skilli");
 var skill;
 //alert(newSkill.length);
@@ -36,6 +38,8 @@ for(var i = 0; i < newSkill.length; i++){
 }
 
 /*languages section*/
+
+
 var newTextLanguage = document.querySelector('.textBar');
 //var text = prompt("Introduce un idioma");
 newTextLanguage.innerHTML = text;
