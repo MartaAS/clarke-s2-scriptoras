@@ -1,10 +1,18 @@
 body{
 background-color: #FFFEFA;
+margin-top: 0px;
+margin-left: 0px;
 }
 /*header*/
+.logoscriptoras{
+	height: auto;
+	width: 65px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
 header{
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	background-color: grey;
 	position: fixed;
 	display: flex;
@@ -17,7 +25,37 @@ header{
 main{
 	padding-top: 50px;
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
 
+}
+.containerinfo{
+	display: flex;
+	flex-direction: column;
+}
+.containerfoto{
+	display: flex;
+	justify-content: center;
+}
+.datosprin{
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.datosprin input{
+	margin-bottom: 5px;
+	display: flex;
+	text-align: center;
+	border: none;
+	font-size: 20px;
+	text-transform: capitalize;
+}
+.foto{
+		 width: 200px;
+     height: 200px;
+     border-radius: 100px;
+		 margin-top: 20px;
 }
 
 /*Estilos generales de la sección de desplegables*/

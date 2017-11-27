@@ -1,4 +1,7 @@
 'use strict';
+//Datos principales
+var profesionIntroducida = prompt("¿Cuál es tu nombre");
+document.getElementById('nombreformulario').value=profesionIntroducida;
 //About
 /*var aboutMe = document.querySelector("#about");
 var aboutInput = prompt("Haz una breve descripción sobre ti.");
