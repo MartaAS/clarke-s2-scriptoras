@@ -8,9 +8,9 @@
   </head>
   <body>
 		<!-- Header -->
-			<header>
+		<header>
 
-			</header>
+		</header>
 		<!-- End Header -->
 		<!-- Container -->
 
@@ -23,51 +23,75 @@
 							<div class="containerfoto">
 								<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt"foto" class="foto">
 							</div>
-						<div class="profesionformu">
-							<input type="text" name="profesion" placeholder="Profesion" class="profesion" required>
+							<div class="profesionformu">
+								<input type="text" name="profesion" placeholder="Profesion" class="profesion" required>
+							</div>
 						</div>
+						<div class="parte2">
+							<div class="nombreformu">
+								<input type="text" name="name" placeholder="Nombre" class="name" required>
+							</div>
+							<div nombre="apellidoformu">
+								<input type="text" name="surname" placeholder="Apellidos" class="apellidos" required>
+							</div>
+							<div class="correoformu">
+								<input type="email" name="mail" placeholder="email" class="email">
+							</div>
+							<div class="telefonoformu">
+								<input type="tel" name="telephone" placeholder="Teléfono" class="telefono">
+							</div>
 						</div>
-			<div class="parte2">
-				<div class="nombreformu">
-					<input type="text" name="name" placeholder="Nombre" class="name" required>
-				</div>
-				<div nombre="apellidoformu">
-					<input type="text" name="surname" placeholder="Apellidos" class="apellidos" required>
-				</div>
-				<div class="correoformu">
-					<input type="email" name="mail" placeholder="email" class="email">
-				</div>
-				<div class="telefonoformu">
-					<input type="tel" name="telephone" placeholder="Teléfono" class="telefono">
-				</div>
-			</div>
-		</div>
-	</form>
-<!--about -->
-	<form class="" action="" method="post"> <!--Mostrado-->
-		<div class="">
-			<h2 class="title-section ">Sobre mi
-				<input type="button" value="Editar" onclick="editar('content-about')"></h2>
-		</div>
-		<div id="content-about" class="content"> <!--Oculto-->
-			<label for="about"></label>
-			<input type="text" name="name" id="about">
-			<input type="button" name="save" value="Guardar">
-			<input type="button" value="Cerrar" onclick="ocultar('content-about')">
-		</div>
-	</form>
-<!--End about-->
+					</div>
+				</form>
+				<!--about -->
+				<form class="" action="" method="post"> <!--Mostrado-->
+					<div class="">
+						<h2 class="title-section ">Sobre mi
+							<input type="button" value="Editar" onclick="editar('content-about')"></h2>
+					</div>
+					<div id="content-about" class="content"> <!--Oculto-->
+						<label for="about"></label>
+						<input type="text" name="name" id="about">
+						<input type="button" name="save" value="Guardar">
+						<input type="button" value="Cerrar" onclick="ocultar('content-about')">
+					</div>
+				</form>
+				<!--End about-->
 				<!--Sección de Experiencia-->
-				<section class="experience">
-					<h2 class="title-section">Experiencia laboral</h2>
-						<h3 id="job">Puesto de trabajo</h3>
-						<ul>
-							<li id="company">Empresa</li>
-							<li>Fecha de Inicio</li>
-							<li>Fecha de Finalización</li>
-						</ul>
+				<form class="experience" action="" method="post">
+				<div>
+					<h2 class="title-section" onclick="editar('job-box')">Experiencia laboral</h2>
+					<div id="job-box">
+					<div>
+						<label for="job"><h3>Puesto de trabajo</h3></label>
+						<input class="form-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" />
+					</div>
 
-				</section>
+					<div >
+						<label for="company">Empresa</label>
+						<input class="form-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
+					</div>
+
+					<div>
+						<label for="start-job">Fecha de inicio</label>
+						<select class="" id='start-job' name="">
+
+						</select>
+					</div>
+
+					<div>
+						<label for="end-job">Fecha de finalización</label>
+						<select class="" id='end-job' name="">
+
+						</select>
+					</div>
+
+					<input type="button" name="save" value="Guardar">
+					<input type="button" value="Cerrar" onclick="ocultar('job-box')">
+					</div>
+				</div>
+				</form>
+
 				<!--Sección de Formación-->
 				<section>
 					<h2 class="title-section">Formación</h2>
