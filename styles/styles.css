@@ -1,9 +1,10 @@
 body{
 background-color: #FFFEFA;
-margin-top: 0px;
-margin-left: 0px;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
-/*header*/
+/*header parte marta*/
 .logoscriptoras{
 	height: auto;
 	width: 65px;
@@ -57,6 +58,16 @@ main{
      border-radius: 100px;
 		 margin-top: 20px;
 }
+/*fin parte marta*/
+.formulario-sec{
+height: 50%;
+overflow: scroll;
+}
+
+.previsualizacion-sec{
+height: 50%;
+overflow: scroll;
+}
 
 /*Estilos generales de la sección de desplegables*/
 
@@ -91,9 +102,19 @@ main{
    }
 
 /*About*/
-.about{
-
+input{
+	display: block;
 }
+input[type=button]{
+	display: inline-block;
+	border-radius: 10px;
+	border: #ccc;
+	background: #ffff;
+}
+.content {
+	display: none;
+}
+
 /*Experience*/
 
 
@@ -104,9 +125,33 @@ main{
 
 }
 /*Languages*/
-.languages{
-
+.languagesTitle {
+	color: #2E2B24;
 }
+
+.languagesBar{
+	width: 90%;
+	background-color: #eeeeee;
+}
+
+.textBar{
+	text-align: left;
+	color: #ffffff;
+	line-height: 1.5em;
+}
+#percentajeBar1 {
+	width: 50% ;
+	background-color: #A19680;
+}
+#percentajeBar2 {
+	width: 70% ;
+	background-color: #A19680;
+}
+#percentajeBar3{
+	width: 10% ;
+	background-color: #A19680;
+}
+
 /*Hobbies*/
 .hobbies{
 

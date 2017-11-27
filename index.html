@@ -31,12 +31,20 @@
 							</div>
 					</div>
 				</form>
-				<!--about -->
-				<div class="about">
-					<h2 class="title-section">Sobre mí</h2>
-					<p id = "about"></p>
-				</div>
-				<!--End about-->
+<!--about -->
+	<form class="" action="" method="post"> <!--Mostrado-->
+		<div class="">
+			<h2 class="title-section ">Sobre mi
+				<input type="button" value="Editar" onclick="editar('content-about')"></h2>
+		</div>
+		<div id="content-about" class="content"> <!--Oculto-->
+			<label for="about"></label>
+			<input type="text" name="name" id="about">
+			<input type="button" name="save" value="Guardar">
+			<input type="button" value="Cerrar" onclick="ocultar('content-about')">
+		</div>
+	</form>
+<!--End about-->
 				<!--Sección de Experiencia-->
 				<section class="experience">
 					<h2 class="title-section">Experiencia laboral</h2>
@@ -62,31 +70,36 @@
 				<div class="skills">
 					<h2 class="title-section">Habilidades</h2>
 					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li class="skilli"></li>
+						<li class="skilli"></li>
+						<li class="skilli"></li>
+						<li class="skilli"></li>
 					</ul>
 				</div>
 				<!--End Skills-->
-			  <!--Sección de Idiomas -->
-	      <div class="languages">
-	        <ul>
-	          <li>Inglés</li>
-	          <li>Francés</li>
-	          <li>Español</li>
-	        </ul>
-	      </div>
-	      <!--Sección de Hobbies -->
-	      <div class="hobbies">
-	        <ul>
-	          <li>Futbol</li>
-	          <li>Baloncesto</li>
-	          <li>Leer</li>
-	          <li>Viajar</li>
-	        </ul>
-	      </div>
+        <!--Languages section-->
+        <section id="languages">
+          <h2 class="languagesTitle">Lenguajes</h2>
+          <div class="languagesBar">
+            <div id="percentajeBar1">
+              <p class="textBar">Inglés</p>
+            </div>
+          </div>
+          <div class="languagesBar">
+            <div id="percentajeBar2">
+              <p class="textBar">Francés</p>
+            </div>
+          </div>
+          <div class="languagesBar">
+            <div id="percentajeBar3">
+              <p class="textBar">Español</p>
+            </div>
+          </div>
+        </section>
+        <!--Hobbies section-->
+        <div class="hobbies">
+
+        </div>
 				<!--Sección de Redes sociales -->
 			  <div class="socialNetworks">
 					<ul class="social-networks">
@@ -105,21 +118,33 @@
 					</ul>
 			 	 </div>
 			</section>
+
 			<section class="previsualizacion-sec">
-			<!--Skills -->
-			<div class="skills">
-				<h2 class="title-section">Habilidades</h2>
-				<ul>
-					<li class="skilli"></li>
-					<li class="skilli"></li>
-					<li class="skilli"></li>
-					<li class="skilli"></li>
-				</ul>
-			</div>
-			<!--End Skills-->
-		  <!--Sección de Idiomas -->
-      <div class="languages">
+
+				<!--Sección de Experiencia-->
+				<section class="experience">
+					<h2 class="title-section">Prueba para comprobar scroll</h2>
+						<h3 id="job">Puesto de trabajo</h3>
+						<ul>
+							<li id="company">Empresa</li>
+							<li>Fecha de Inicio</li>
+							<li>Fecha de Finalización</li>
+						</ul>
+
+				</section>
+				<!--Sección de Formación-->
+				<section>
+					<h2 class="title-section">Formación</h2>
+						<h3>Nombre de titulación</h3>
+						<ul>
+							<li>Centro de estudios</li>
+							<li>Duración</li>
+						</ul>
+				</section>
+
+
 			</section>
+
     </main>
 
 		<!-- End Container -->

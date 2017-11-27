@@ -3,6 +3,15 @@
 var profesionIntroducida = prompt("¿Cuál es tu nombre");
 document.getElementById('nombreformulario').value=profesionIntroducida;
 //About
+//función para abrir el desplegable
+function editar(idContent){
+document.getElementById(idContent).style.display = 'block';
+}
+//función para cerrar sección
+function ocultar(idContent){
+	document.getElementById(idContent).style.display = 'none';
+}
+
 /*var aboutMe = document.querySelector("#about");
 var aboutInput = prompt("Haz una breve descripción sobre ti.");
 aboutMe.innerHTML = aboutInput;
@@ -25,3 +34,10 @@ for(var i = 0; i < newSkill.length; i++){
 	skill = prompt("Introduce skill");
 	newSkill[i].innerHTML = skill;
 }
+
+/*languages section*/
+var newTextLanguage = document.querySelector('.textBar');
+var text = prompt("Introduce un idioma");
+newTextLanguage.innerHTML = text;
+
+/*languages section*/
