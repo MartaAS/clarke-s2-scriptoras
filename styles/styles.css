@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+body{
+background-color: #FFFEFA;
+}
 /*header*/
 header{
 	width: 100%;
@@ -17,10 +19,7 @@ main{
 	box-sizing: border-box;
 
 }
-=======
-body{
-background-color: #FFFEFA;
-}
+
 /*Estilos generales de la sección de desplegables*/
 
 .title-section{
@@ -52,7 +51,7 @@ background-color: #FFFEFA;
    border-top-color: #6f1614;
    background: #6f1614;
    }
->>>>>>> a4d075ca802945a8e24b090c5c1e797285202ffc
+
 /*About*/
 .about{
 
