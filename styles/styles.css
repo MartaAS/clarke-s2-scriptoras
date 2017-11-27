@@ -17,7 +17,17 @@ header{
 main{
 	padding-top: 50px;
 	box-sizing: border-box;
+height: 100vh;
 
+}
+.formulario-sec{
+height: 50%;
+overflow: scroll;
+}
+
+.previsualizacion-sec{
+height: 50%;
+overflow: scroll;
 }
 
 /*Estilos generales de la sección de desplegables*/
