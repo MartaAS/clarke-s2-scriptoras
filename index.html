@@ -93,14 +93,40 @@
 				</form>
 
 				<!--Sección de Formación-->
-				<section>
-					<h2 class="title-section">Formación</h2>
-						<h3>Nombre de titulación</h3>
-						<ul>
-							<li>Centro de estudios</li>
-							<li>Duración</li>
-						</ul>
-				</section>
+				<form class="education" action="" method="post">
+				<div>
+					<h2 class="title-section" onclick="editar('education-box')">Formación</h2>
+					<div id="education-box">
+					<div>
+						<label for="educ-title"><h3>Nombre de titulación</h3></label>
+						<input class="form-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" />
+					</div>
+
+					<div >
+						<label for="center">Centro de estudios</label>
+						<input class="form-box" id="center" type="text" name="center-name" placeholder="Indica el nombre del centro de estudios">
+					</div>
+
+					<div>
+						<label for="start-training">Fecha de inicio</label>
+						<select class="" id='start-training' name="start-course">
+
+						</select>
+					</div>
+
+					<div>
+						<label for="end-training">Fecha de finalización</label>
+						<select class="" id='end-training' name="end-course">
+
+						</select>
+					</div>
+
+					<input type="button" name="save" value="Guardar">
+					<input type="button" value="Cerrar" onclick="ocultar('education-box')">
+					</div>
+				</div>
+				</form>
+
 
 				<!--Skills -->
 				<div class="skills">
@@ -160,9 +186,9 @@
 				<!--Sección de Experiencia-->
 				<section class="experience">
 					<h2 class="title-section">Prueba para comprobar scroll</h2>
-						<h3 id="job">Puesto de trabajo</h3>
+						<h3 id="job-pre">Puesto de trabajo</h3>
 						<ul>
-							<li id="company">Empresa</li>
+							<li id="company-pre">Empresa</li>
 							<li>Fecha de Inicio</li>
 							<li>Fecha de Finalización</li>
 						</ul>
