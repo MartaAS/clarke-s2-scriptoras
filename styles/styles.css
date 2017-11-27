@@ -56,9 +56,19 @@ main{
    }
 
 /*About*/
-.about{
-
+input{
+	display: block;
 }
+input[type=button]{
+	display: inline-block;
+	border-radius: 10px;
+	border: #ccc;
+	background: #ffff;
+}
+.content {
+	display: none;
+}
+
 /*Experience*/
 
 

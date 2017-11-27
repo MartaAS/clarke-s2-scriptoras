@@ -1,5 +1,14 @@
 'use strict';
 //About
+//función para abrir el desplegable
+function editar(idContent){
+document.getElementById(idContent).style.display = 'block';
+}
+//función para cerrar sección
+function ocultar(idContent){
+	document.getElementById(idContent).style.display = 'none';
+}
+
 /*var aboutMe = document.querySelector("#about");
 var aboutInput = prompt("Haz una breve descripción sobre ti.");
 aboutMe.innerHTML = aboutInput;
