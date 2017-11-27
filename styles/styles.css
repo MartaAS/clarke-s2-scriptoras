@@ -1,5 +1,8 @@
 body{
 background-color: #FFFEFA;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 /*header*/
 header{
@@ -63,9 +66,19 @@ overflow: scroll;
    }
 
 /*About*/
-.about{
-
+input{
+	display: block;
 }
+input[type=button]{
+	display: inline-block;
+	border-radius: 10px;
+	border: #ccc;
+	background: #ffff;
+}
+.content {
+	display: none;
+}
+
 /*Experience*/
 
 
@@ -76,9 +89,33 @@ overflow: scroll;
 
 }
 /*Languages*/
-.languages{
-
+.languagesTitle {
+	color: #2E2B24;
 }
+
+.languagesBar{
+	width: 90%;
+	background-color: #eeeeee;
+}
+
+.textBar{
+	text-align: left;
+	color: #ffffff;
+	line-height: 1.5em;
+}
+#percentajeBar1 {
+	width: 50% ;
+	background-color: #A19680;
+}
+#percentajeBar2 {
+	width: 70% ;
+	background-color: #A19680;
+}
+#percentajeBar3{
+	width: 10% ;
+	background-color: #A19680;
+}
+
 /*Hobbies*/
 .hobbies{
 
@@ -121,12 +158,19 @@ overflow: scroll;
 	width: 40px;
 }
 /*footer*/
-.footer{
+footer{
 	background-color: #252525;
 	padding-top: 50px;
 	padding-bottom: 50px;
 	box-sizing: border-box;
 	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.infooter{
+	display: flex;
+	flex-direction: column;
 }
 .end{
 	width: 100%;
@@ -137,7 +181,8 @@ overflow: scroll;
 }
 .copy{
 	color: #555555;
-	margin-left: 50px;
+	margin-left: 40px;
+
 }
 .contacto{
 	color: #d5d4cd;
@@ -146,9 +191,13 @@ overflow: scroll;
 }
 .logo{
 	width: 100%;
-	margin-right:50px;
+	margin-left:50px;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
+}
+.logoadalab{
+	height: 50px;
+	width: 100px;
 }
 /*formulario*/
 .seccion{
@@ -189,4 +238,25 @@ label{
 	font-weight: bold;
 	line-height: 2.8;
   border-radius: 0.33em;
+}
+/*mediaqueries*/
+@media all and (min-width:600px) {
+	/*footer{
+		flex-direction: row;
+	  justify-content: flex-start;
+	  align-items: center;
+	}*/
+	.logo{
+		width: 100%;
+		margin-right:50px;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.infooter{
+		display: flex;
+		flex-direction: row;
+	}
+	.end{
+			width: auto;
+	}
 }
