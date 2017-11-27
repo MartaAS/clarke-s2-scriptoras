@@ -1,4 +1,7 @@
 'use strict';
+//Datos principales
+var profesionIntroducida = prompt("¿Cuál es tu nombre");
+document.getElementById('nombreformulario').value=profesionIntroducida;
 //About
 //función para abrir el desplegable
 function editar(idContent){
