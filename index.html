@@ -9,40 +9,31 @@
   <body>
 		<!-- Header -->
 		<header>
-
+				<img src="images/logoPrueba.png" alt="logoscriptoras" class="logoscriptoras">
 		</header>
+
 		<!-- End Header -->
 		<!-- Container -->
 
 		<main>
 			<!--cabecera-->
 			<section class="formulario-sec">
-				<form method="post" class="formulario">
+				<form method="post" class="form">
 					<div class="containerinfo">
-						<div class="parte1">
-							<div class="containerfoto">
-								<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt"foto" class="foto">
-							</div>
-							<div class="profesionformu">
-								<input type="text" name="profesion" placeholder="Profesion" class="profesion" required>
-							</div>
+						<div class="containerfoto">
+							<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt"foto" class="foto">
 						</div>
-						<div class="parte2">
-							<div class="nombreformu">
-								<input type="text" name="name" placeholder="Nombre" class="name" required>
-							</div>
-							<div nombre="apellidoformu">
-								<input type="text" name="surname" placeholder="Apellidos" class="apellidos" required>
-							</div>
-							<div class="correoformu">
-								<input type="email" name="mail" placeholder="email" class="email">
-							</div>
-							<div class="telefonoformu">
-								<input type="tel" name="telephone" placeholder="Teléfono" class="telefono">
-							</div>
+
+						<div class="datosprin">
+							<input type="text" name="name" placeholder="Nombre" class="datosprincipales" required id="nombreformulario">
+							<input type="text" name="surname" placeholder="Apellidos" class="datosprincipales" required>
+							<input type="text" name="profesion" placeholder="Profesion" class="datosprincipales" required>
+							<input type="email" name="mail" placeholder="Email" class="datosprincipales">
+							<input type="tel" name="telephone" placeholder="Teléfono" class="datosprincipales">
 						</div>
 					</div>
 				</form>
+
 				<!--about -->
 				<form class="" action="" method="post"> <!--Mostrado-->
 					<div class="">
@@ -55,8 +46,10 @@
 						<input type="button" name="save" value="Guardar">
 						<input type="button" value="Cerrar" onclick="ocultar('content-about')">
 					</div>
+
 				</form>
 				<!--End about-->
+
 				<!--Sección de Experiencia-->
 				<form class="experience" action="" method="post">
 				<div>
@@ -214,19 +207,15 @@
 	  <footer>
 			<div class="infooter">
 				<div class="end">
-					<div class="copy">
-				<h3>Scriptoras &copy;2017</h3>
+				   <h3>Scriptoras &copy;2017</h3>
+  					<a class="contacto" href="contact.html"> Contacta con nosotras</a>
 			  </div>
-				<div>
-					<a class="contacto" href="contact.html"> Contacta con nosotras</a>
-				</div>
-			 </div>
-			<div class="logo">
-				<a href="http://adalab.es/" target="blank">
-					<img src="images/logo-adalab.png" alt="Logo Adalab" class="logoadalab">
-				</a>
-			</div>
-		</div>
+			  <div class="logo">
+				  <a href="http://adalab.es/" target="blank">
+					  <img src="images/logo-adalab.png" alt="Logo Adalab" class="logoadalab">
+				  </a>
+			  </div>
+		  </div>
 	  </footer>
 	  <!-- End Footer-->
 		<!-- JavaScript Code -->

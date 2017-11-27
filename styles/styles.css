@@ -4,10 +4,16 @@ box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
-/*header*/
+/*header parte marta*/
+.logoscriptoras{
+	height: auto;
+	width: 65px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
 header{
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	background-color: grey;
 	position: fixed;
 	display: flex;
@@ -20,9 +26,40 @@ header{
 main{
 	padding-top: 50px;
 	box-sizing: border-box;
-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 
 }
+.containerinfo{
+	display: flex;
+	flex-direction: column;
+}
+.containerfoto{
+	display: flex;
+	justify-content: center;
+}
+.datosprin{
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.datosprin input{
+	margin-bottom: 5px;
+	display: flex;
+	text-align: center;
+	border: none;
+	font-size: 20px;
+	text-transform: capitalize;
+}
+.foto{
+		 width: 200px;
+     height: 200px;
+     border-radius: 100px;
+		 margin-top: 20px;
+}
+/*fin parte marta*/
 .formulario-sec{
 height: 50%;
 overflow: scroll;
@@ -160,40 +197,30 @@ input[type=button]{
 /*footer*/
 footer{
 	background-color: #252525;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	height: 170px;
 	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
 }
 .infooter{
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 .end{
 	width: 100%;
+  color: #555555;
 	padding: 15px;
 	display: flex;
+	flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.copy{
-	color: #555555;
-	margin-left: 40px;
-
-}
 .contacto{
 	color: #d5d4cd;
-	margin-left: 25px;
 	text-decoration: none;
 }
 .logo{
 	width: 100%;
-	margin-left:50px;
-	display: flex;
-	justify-content: flex-start;
+  text-align: center;
 }
 .logoadalab{
 	height: 50px;
@@ -241,22 +268,23 @@ label{
 }
 /*mediaqueries*/
 @media all and (min-width:600px) {
-	/*footer{
-		flex-direction: row;
-	  justify-content: flex-start;
-	  align-items: center;
-	}*/
 	.logo{
 		width: 100%;
-		margin-right:50px;
+		margin-right:80px;
 		display: flex;
 		justify-content: flex-end;
 	}
 	.infooter{
 		display: flex;
 		flex-direction: row;
+		padding-top: 25px;
+	}
+}
+@media all and (min-width:900px) {
+	.logo{
+		margin-right:120px;
 	}
 	.end{
-			width: auto;
+		margin-left: auto;
 	}
 }
