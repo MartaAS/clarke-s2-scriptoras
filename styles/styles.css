@@ -157,6 +157,9 @@ input[type=button]{
 
 }
 /* Redes sociales*/
+.social {
+	display: flex;
+}
 .linkedin a{
 	background: url('../images/linkedin.png');
 	overflow: hidden;
