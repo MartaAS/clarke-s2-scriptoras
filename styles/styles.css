@@ -69,6 +69,10 @@ main{
 
 }
 /*Languages*/
+.languages {
+	align-items: center;
+}
+
 .languagesTitle {
 	color: #2E2B24;
 }
