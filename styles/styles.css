@@ -246,7 +246,7 @@ input[type=button]{
 /*footer*/
 footer{
 	background-color: #252525;
-	height: 170px;
+	height: 120px;
 	box-sizing: border-box;
 }
 .infooter{
@@ -256,8 +256,8 @@ footer{
 }
 .end{
 	width: 100%;
+	font-size: 0.8em;
   color: #555555;
-	padding: 15px;
 	display: flex;
 	flex-direction: column;
   justify-content: flex-start;
