@@ -168,9 +168,11 @@ input[type=button]{
 }
 
 #languagesPreview {
-	display: flex;
+	/*display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: center;*/
+	padding-left: 10%;
+	padding-right: 5%;
 }
 
 .languagesBarPreview {
@@ -184,18 +186,19 @@ input[type=button]{
 	text-align: left;
 	color: #ffffff;
 	line-height: 2em;
+	padding-left: 1em;
 }
 
-#percentajeBar1 {
+#percentageBar1 {
 	width: 50% ;
 	background-color: #A19680;
 }
-#percentajeBar2 {
+#percentageBar2 {
 	width: 70% ;
 	background-color: #A19680;
 }
-#percentajeBar3 {
-	width: 10% ;
+#percentageBar3 {
+	width: 40% ;
 	background-color: #A19680;
 }
 
