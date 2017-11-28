@@ -130,20 +130,20 @@ input[type=button]{
 
 }
 /*Languages*/
-.languages {
+.languagesPreview {
 	align-items: center;
 }
 
-.languagesTitle {
+.languagesTitlePreview {
 	color: #2E2B24;
 }
 
-.languagesBar{
+.languagesBarPreview {
 	width: 90%;
 	background-color: #eeeeee;
 }
 
-.textBar{
+.textBarPreview {
 	text-align: left;
 	color: #ffffff;
 	line-height: 1.5em;
@@ -156,7 +156,7 @@ input[type=button]{
 	width: 70% ;
 	background-color: #A19680;
 }
-#percentajeBar3{
+#percentajeBar3 {
 	width: 10% ;
 	background-color: #A19680;
 }
