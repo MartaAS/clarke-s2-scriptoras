@@ -13,8 +13,8 @@
 		</header>
 
 		<!-- End Header -->
-		<!-- Container -->
 
+		<!-- Container -->
 		<main>
 			<!--cabecera-->
 			<section class="formulario-sec">
@@ -134,16 +134,17 @@
 				<!--End Skills-->
 
         <!--Languages form section-->
-        <section id="languagesForm">
+        <section id="languagesFormContainer">
           <div class="languagesContainer">
-            <form class="languagesFormContainer" action="index.html" method="post">
-              <label for=""></label>
-
-            </form>
+            <h3 class="textFormButton">Añade idiomas a tu CV</h3>
+            <button class="addLanguageButton" type="button" name="languagesButton" onclick="function showForm()"><img src="images/addButton32px.png" alt="addButton"></button>
 
           </div>
-
+          <form class="languagesForm" action="index.html" method="post">
+            <input class="inputsLanguageForm" placeholder="Añade un dioma" id="newLanguage" type="text" name="newLanguage">
+          </form>
         </section>
+
         <!--Hobbies form section-->
 
 				<!--Sección de Redes sociales -->
@@ -207,6 +208,7 @@
 							<li>Duración</li>
 						</ul>
 				</section>
+
         <!--Languages preview section-->
         <section id="languagesPreview">
           <h2 class="languagesTitlePreview">Lenguajes</h2>

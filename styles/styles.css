@@ -3,6 +3,7 @@ background-color: #FFFEFA;
 box-sizing: border-box;
 margin: 0;
 padding: 0;
+font-family: 'Arial';
 }
 /*header parte marta*/
 .logoscriptoras{
@@ -96,11 +97,13 @@ overflow: scroll;
 	font-size: 20px;
 	vertical-align: middle;
 	}
+
 .title-section:hover {
    border-top-color: #6f1614;
    background: #6f1614;
    color: #ccc;
    }
+
 .title-section:active {
    border-top-color: #6f1614;
    background: #6f1614;
@@ -129,25 +132,60 @@ input[type=button]{
 .skills{
 
 }
-/*Languages*/
-.languagesPreview {
+/*Languages form container*/
+#languagesFormContainer {
+	display:flex;
+	flex-direction: column;
 	align-items: center;
 }
 
+.languagesContainer {
+	width: 90%;
+	height: 50px;
+	background-color: #a19680;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
+}
+.textFormButton {
+	color: #ffffff;
+}
+.addLanguageButton{
+	background: none;
+	border: none;
+}
+
+.languagesForm{
+
+}
+.inputsLanguageForm {
+}
+
 .languagesTitlePreview {
-	color: #2E2B24;
+	color: #6F1514;
+}
+
+#languagesPreview {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .languagesBarPreview {
+	/*display: flex;*/
 	width: 90%;
 	background-color: #eeeeee;
+	margin-bottom: 1em;
 }
 
 .textBarPreview {
 	text-align: left;
 	color: #ffffff;
-	line-height: 1.5em;
+	line-height: 2em;
 }
+
 #percentajeBar1 {
 	width: 50% ;
 	background-color: #A19680;
