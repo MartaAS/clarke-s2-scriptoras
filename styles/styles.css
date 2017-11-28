@@ -295,7 +295,4 @@ label{
 	header, footer, nav {
   display: none;
 }
-.printNet a[href^=http]:after {
-	content:" <" attr(href) ">";
-}
 }
