@@ -46,18 +46,22 @@ main{
 	align-items: center;
 }
 .datosprin input{
-	margin-bottom: 5px;
 	display: flex;
 	text-align: center;
-	border: none;
-	font-size: 20px;
-	text-transform: capitalize;
+	font-size: 18px;
+	margin-top: 5px;
+	padding: 0px;
+	border: solid 1px;
+	border-radius: 5px;
 }
 .foto{
 		 width: 200px;
      height: 200px;
      border-radius: 100px;
 		 margin-top: 20px;
+}
+.guardarprincipal{
+	width: 80px;
 }
 /*fin parte marta*/
 .formulario-sec{

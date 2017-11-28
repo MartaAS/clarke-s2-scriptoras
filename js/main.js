@@ -1,7 +1,16 @@
 'use strict';
 //Datos principales
-var profesionIntroducida = prompt("¿Cuál es tu nombre");
-document.getElementById('nombreformulario').value=profesionIntroducida;
+var nombreIntroducido = prompt("¿Cuál es tu nombre");
+document.getElementById('nombreformulario').value=nombreIntroducido;
+var apellidoIntroducido = prompt("¿Cuáles son tus apellidos?");
+document.getElementById('apellidoformulario').value=apellidoIntroducido;
+var profesionIntroducido = prompt("¿Cuál es tu profesión");
+document.getElementById('profesionformulario').value=profesionIntroducido;
+var emailIntroducido = prompt("¿Cuál es tu email");
+document.getElementById('emailformulario').value=emailIntroducido;
+var telefonoIntroducido = prompt("¿Cuál es tu teléfono móvil?");
+document.getElementById('telefonoformulario').value=telefonoIntroducido;
+
 //About
 //función para abrir el desplegable
 function editar(idContent){
