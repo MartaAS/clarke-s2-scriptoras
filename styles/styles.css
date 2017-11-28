@@ -130,6 +130,10 @@ input[type=button]{
 
 }
 /*Languages*/
+.languages {
+	align-items: center;
+}
+
 .languagesTitle {
 	color: #2E2B24;
 }
@@ -294,4 +298,12 @@ label{
 	.end{
 		margin-left: auto;
 	}
+}
+@media print {
+	header, footer, nav {
+  display: none;
+}
+.printNet a[href^=http]:after {
+	content:" <" attr(href) ">";
+}
 }

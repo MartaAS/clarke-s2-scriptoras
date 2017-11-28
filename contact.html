@@ -22,7 +22,7 @@
 						<div class="">
 				 			<div class="campos">
 								<label for="name">Nombre*</label>
-								<input class="cajas" id="name" type="text" name="firstname" required/>
+								<input class="cajas" id="name" type="text" name="firstname"required/>
 				 			</div>
 				 			<div class="campos">
 								<label for="surname">Apellidos*</label>
@@ -44,6 +44,12 @@
 				</div>
 		</div>
 	</main>
+  <a href="javascript:verqr()">Carga el código QR</a> de esta página.
+<div id="qr"></div>
+<script>
+function verqr()
+{var dir=window.document.URL;document.getElementById('qr').innerHTML='<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl='+dir+'" width="150" height="150">';}
+</script>
 
   <footer>
     <div class="infooter">
