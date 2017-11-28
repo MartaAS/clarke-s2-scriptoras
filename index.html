@@ -23,14 +23,14 @@
 						<div class="containerfoto">
 							<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt"foto" class="foto">
 						</div>
-
+							<input type="button" value="Upload image" class="subirfoto">
 						<div class="datosprin">
 							<input type="text" name="name" placeholder="Introduce nombre" class="datosprincipales" required id="nombreformulario">
 							<input type="text" name="surname" placeholder="Introduce apellidos" class="datosprincipales" required id="apellidoformulario">
 							<input type="text" name="profesion" placeholder="Introduce profesión" class="datosprincipales" required id="profesionformulario">
 							<input type="email" name="mail" placeholder="Introduce email" class="datosprincipales" id="emailformulario">
 							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="datosprincipales" id="telefonoformulario">
-							 <input type="save" value="Guardar" class="guardarprincipal">
+							 <input type="button" value="Guardar" class="guardarprincipal" onclick="guardardatosprincipales();">
 						</div>
 					</div>
 				</form>
@@ -170,8 +170,17 @@
 			   </form>
        </section>
 <!--______Comienza la seccion de previsualización______-->
-			<section class="previsualizacion-sec">
 
+
+			<section class="previsualizacion-sec">
+				<!--datos principales-->
+				<section class=preprincipales>
+					<p id="prenombre"></p>
+					<p id="preapellidos"></p>
+					<p id="preprofesion"></p>
+					<p id="preemail"></p>
+					<p id="pretelefono"></p>
+				</section>
 				<!--Sección de Experiencia-->
 				<section class="experience">
 					<h2 class="title-section">Prueba para comprobar scroll</h2>
