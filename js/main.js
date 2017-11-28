@@ -10,7 +10,15 @@ var emailIntroducido = prompt("¿Cuál es tu email");
 document.getElementById('emailformulario').value=emailIntroducido;
 var telefonoIntroducido = prompt("¿Cuál es tu teléfono móvil?");
 document.getElementById('telefonoformulario').value=telefonoIntroducido;
-
+//fin promp datos principales
+//guardar datos principales introducidos
+function guardardatosprincipales(){
+document.getElementById('prenombre').innerHTML=nombreIntroducido;
+document.getElementById('preapellidos').innerHTML=apellidoIntroducido;
+document.getElementById('preprofesion').innerHTML=profesionIntroducido;
+document.getElementById('preemail').innerHTML=emailIntroducido;
+document.getElementById('pretelefono').innerHTML=telefonoIntroducido;
+}
 //About
 //función para abrir el desplegable
 function editar(idContent){
@@ -45,18 +53,14 @@ for(var i = 0; i < newSkill.length; i++){
 	//skill = prompt("Introduce skill");
 	newSkill[i].innerHTML = skill;
 }
-
-<<<<<<< HEAD
 /*languages preview section*/
 var newTextLanguage = document.querySelector('.textBarPreview');
 var text = prompt("Introduce un idioma");
-=======
 /*languages section*/
 
 
-var newTextLanguage = document.querySelector('.textBar');
 //var text = prompt("Introduce un idioma");
->>>>>>> d0b8eb627969bd70c9189395e3f32523c0eea725
+
 newTextLanguage.innerHTML = text;
 
 
