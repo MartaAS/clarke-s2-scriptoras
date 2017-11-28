@@ -46,19 +46,33 @@ for(var i = 0; i < newSkill.length; i++){
 	newSkill[i].innerHTML = skill;
 }
 
-<<<<<<< HEAD
 /*languages preview section*/
-var newTextLanguage = document.querySelector('.textBarPreview');
-var text = prompt("Introduce un idioma");
-=======
-/*languages section*/
-
-
 var newTextLanguage = document.querySelector('.textBar');
 //var text = prompt("Introduce un idioma");
->>>>>>> d0b8eb627969bd70c9189395e3f32523c0eea725
 newTextLanguage.innerHTML = text;
 
 
 
 /*languages section*/
+
+
+//Redes sociales*/
+
+function setValue(net){
+	var inputSocial = document.getElementById(net);
+	setSocialMedia(inputSocial.value, net);
+}
+
+function setSocialMedia(value, net){
+	var aNet = document.getElementById('a-'+net);
+	var url;
+	if(net == 'linkedin'){
+		aNet.href = aNet.href+value;
+	}else if(net == 'Facebook'){
+		aNet.href = aNet.href+value;
+	}else if(net == 'Github'){
+		aNet.href = aNet.href+value;
+	}else if(net == 'Twitter'){
+		aNet.href = aNet.href+value;
+	}
+}
