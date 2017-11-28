@@ -26,11 +26,11 @@
 				 			</div>
 				 			<div class="campos">
 								<label for="surname">Apellidos*</label>
-								<input class="cajas" id="surname" type="text" name="username"required/>
+								<input class="cajas" id="surname" type="text" name="username" required/>
 				 			</div>
 				 			<div class="campos">
 					 			<label for="email">Correo electrónico*</label>
-								<input class="cajas" id="email" type="email" name="mail"required/>
+								<input class="cajas" id="email" type="email" name="mail" required/>
 							</div>
 				 			<div class="campos">
 				 	 			<label for="mensajes">Mensaje</label>
@@ -44,24 +44,26 @@
 				</div>
 		</div>
 	</main>
+  <a href="javascript:verqr()">Carga el código QR</a> de esta página.
+<div id="qr"></div>
+<script>
+function verqr()
+{var dir=window.document.URL;document.getElementById('qr').innerHTML='<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl='+dir+'" width="150" height="150">';}
+</script>
 
-	<footer>
-		<div class="footer">
-			<div class="end">
-				<div class="copy">
-			<h3>Scriptoras &copy;2017</h3>
-			</div>
-			<div>
-				<a class="contacto" href="index.html"> Contacta con nosotras</a>
-			</div>
-		 </div>
-		<div class="logo">
-			<a href="http://adalab.es/" target="blank">
-				<img src="images/logo-adalab.png" alt="Logo Adalab" class="logoadalab">
-			</a>
-		</div>
-	</div>
-	</footer>
+  <footer>
+    <div class="infooter">
+      <div class="end">
+         <h3>Scriptoras &copy;2017</h3>
+          <a class="contacto" href="contact.html"> Contacta con nosotras</a>
+      </div>
+      <div class="logo">
+        <a href="http://adalab.es/" target="blank">
+          <img src="images/logo-adalab.png" alt="Logo Adalab" class="logoadalab">
+        </a>
+      </div>
+    </div>
+  </footer>
 	<!-- End Footer-->
 	<!-- JavaScript Code -->
 
