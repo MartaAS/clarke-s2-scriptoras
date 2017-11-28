@@ -69,8 +69,12 @@ newTextLanguage.innerHTML = text;
 /*languages section*/
 
 
-//Redes sociales*/
+/*Redes sociales*/
+var netSocial = document.querySelector('#a-linkedin');
+var text = prompt("Introduce tu usario");
+netSocial.href = netSocial.href + text;
 
+/*javascript de redes sociales
 function setValue(net){
 	var inputSocial = document.getElementById(net);
 	setSocialMedia(inputSocial.value, net);
@@ -89,3 +93,4 @@ function setSocialMedia(value, net){
 		aNet.href = aNet.href+value;
 	}
 }
+*/
