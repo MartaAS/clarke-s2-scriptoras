@@ -291,3 +291,11 @@ label{
 		margin-left: auto;
 	}
 }
+@media print {
+	header, footer, nav {
+  display: none;
+}
+.printNet a[href^=http]:after {
+	content:" <" attr(href) ">";
+}
+}
