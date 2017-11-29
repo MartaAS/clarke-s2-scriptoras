@@ -236,6 +236,10 @@ input[type=button]{
 
 }
 /* Redes sociales*/
+.sociality {
+	display: flex;
+	justify-content: space-around;
+}
 .social {
 	display: flex;
 }
@@ -274,6 +278,11 @@ input[type=button]{
 	padding-top: 40px;
 	height: 0;
 	width: 40px;
+}
+.load{
+     height: 20px;
+     border: 1px solid #000;
+     margin: 10px 5px 0 0;
 }
 /*footer*/
 footer{

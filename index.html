@@ -162,19 +162,19 @@
             <h2 class="title-section">Redes Sociales</h2>
             <div class="nets">
               <label for="linkedin">Linkedin</label>
-              <input class="" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
+              <input class="users" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
             </div>
             <div class="nets">
               <label for="facebook">Facebook</label>
-              <input class="" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario" onchange="setValue('facebook')">
+              <input class="users" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario" onchange="setValue('facebook')">
             </div>
             <div class="nets">
               <label for="github">Github</label>
-              <input class="" id="github" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('github')">
+              <input class="users" id="github" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('github')">
             </div>
             <div class="nets">
               <label for="twitter">Twitter</label>
-              <input class="" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
+              <input class="users" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
             </div>
 			   </form>
        </section>
@@ -240,23 +240,32 @@
 
         <!--Sección de Redes sociales -->
         <section>
-          <div class="socialNetworks">
-            <ul class="social">
-              <li class="linkedin">
-                <a id="a-linkedin" class="printnet" href="https://www.linkedin.com/in/" target="_blank">linkedin</a>
-              </li>
-              <li class="facebook">
-                <a class="printnet" href="https://www.facebook.com/" target="_blank">facebook</a>
-              </li>
-              <li class="github">
-                <a class="printnet" href="https://github.com/" target="_blank">github</a>
-              </li>
-              <li class="twitter">
-                <a class="printnet" href="https://twitter.com" target="_blank">twitter</a>
-              </li>
-            </ul>
-         </div>
+          <div class="sociality">
+            <div class="socialNetworks">
+              <ul class="social">
+                <li class="linkedin">
+                  <a id="a-linkedin" class="printnet" href="https://www.linkedin.com/in/" target="_blank">linkedin</a>
+                </li>
+                <li class="facebook">
+                  <a class="printnet" href="https://www.facebook.com/" target="_blank">facebook</a>
+                </li>
+                <li class="github">
+                  <a class="printnet" href="https://github.com/" target="_blank">github</a>
+                </li>
+                <li class="twitter">
+                  <a class="printnet" href="https://twitter.com" target="_blank">twitter</a>
+                </li>
+              </ul>
+            </div>
+            <div class="qr">
+              <input class="load" type="file" id="files" name="files[]" />
+              <br />
+              <output id="list"></output>
+            </div>
+           </div>
+
         </section>
+
       </section>
     </main>
 
@@ -275,6 +284,8 @@
 			  </div>
 		  </div>
 	  </footer>
+
+
 	  <!-- End Footer-->
 		<!-- JavaScript Code -->
 
