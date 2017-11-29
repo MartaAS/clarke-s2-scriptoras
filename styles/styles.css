@@ -15,7 +15,7 @@ font-family: 'Arial';
 header{
 	width: 100%;
 	height: 60px;
-	background-color: grey;
+	background-color: #2E2B24;
 	position: fixed;
 	display: flex;
   justify-content: space-between;
@@ -63,12 +63,18 @@ main{
 }
 
 .guardarprincipal{
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	width: 80px;
 	margin-top: 10px;
 	font-size: 18px;
+	background-color: #A19680;
+	color: white;
+}
+/*hover boton guardar*/
+.guardarprincipal:hover {
+  box-shadow: inset 0 0 20px #A19680, 0 0 20px #2E2B24;
+  outline-offset: 80px;
 }
 .subirfoto{
 	width: 95px;
