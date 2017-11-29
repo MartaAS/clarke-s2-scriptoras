@@ -60,28 +60,34 @@
 				<form class="experience" action="" method="post">
 				<div>
 					<h2 class="title-section" onclick="editar('job-box')">Experiencia laboral</h2>
+
+					<!--<button class="addLanguageButton" type="button" name="languagesButton" onclick="showFormLanguages()"><img src="images/addButton32px.png" alt="addButton"></button>-->
 					<div id="job-box">
 					<h3>Puesto de trabajo</h3>
 					<div>
-						<label for="job"></label>
 						<input class="form-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" />
 					</div>
 
 					<div >
-						<label for="company"></label>
 						<input class="form-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
 					</div>
 
 					<div>
-						<label for="start-job">Fecha de inicio</label>
-						<select class="" id='start-job' name="date">
+						<label for="start-job">Fecha de inicio:</label>
+						<select class="month" id="month-start" name="month-start">
+
+						</select>
+						<select class="year" id="year-start" name="year-start">
 
 						</select>
 					</div>
 
 					<div>
-						<label for="end-job">Fecha de finalización</label>
-						<select class="" id='end-job' name="date">
+						<label for="end-job">Fecha de finalización:</label>
+						<select class="month" id="month-end" name="month-end">
+
+						</select>
+						<select class="year" id="year-end" name="year-end" >
 
 						</select>
 					</div>
@@ -97,26 +103,32 @@
 				<div>
 					<h2 class="title-section" onclick="editar('education-box')">Formación</h2>
 					<div id="education-box">
+					<h3>Nombre de titulación</h3>
 					<div>
-						<label for="educ-title"><h3>Nombre de titulación</h3></label>
+
 						<input class="form-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" />
 					</div>
 
 					<div >
-						<label for="center">Centro de estudios</label>
 						<input class="form-box" id="center" type="text" name="center-name" placeholder="Indica el nombre del centro de estudios">
 					</div>
 
 					<div>
-						<label for="start-training">Fecha de inicio</label>
-						<select class="" id='start-training' name="start-course">
+						<label for="start-training">Fecha de inicio:</label>
+						<select class="month" id="month-start-training" name="month-start">
+
+						</select>
+						<select class="year" id="year-start" name="year-start">
 
 						</select>
 					</div>
 
 					<div>
-						<label for="end-training">Fecha de finalización</label>
-						<select class="" id='end-training' name="end-course">
+						<label for="end-training">Fecha de finalización:</label>
+						<select class="month" id="month-end-training" name="month-end">
+
+						</select>
+						<select class="year" id="year-end" name="year-end" >
 
 						</select>
 					</div>
@@ -143,19 +155,11 @@
         <section id="languagesFormContainer">
           <div class="languagesContainer">
             <h3 class="textFormButton">Añade idiomas a tu CV</h3>
-
-            <button class="addLanguageButton" type="button" name="languagesButton" onclick="showFormLanguages()"><img src="images/addButton32px.png" alt="addButton"></button>
-
+            <button class="addLanguageButton" type="button" name="languagesButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
+            <!-- <button type="button" name="addInputLanguagesForm" onclick="addInput()"></button> -->
           </div>
           <form class="languagesForm" action="index.html" method="post">
-            <input class="inputsLanguageForm" placeholder="Añade un dioma" id="newLanguage" type="text" name="newLanguage">
           </form>
-
-            <button class="addLanguageButton" type="button" name="languagesButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
-          </div>
-          <!-- <form class="languagesForm" action="index.html" method="post">
-          </form> -->
-
         </section>
 
         <!--Hobbies form section-->
@@ -164,22 +168,21 @@
 
 				<!--Sección de Redes sociales -->
         	<form class="networks" action="index.html" method="post">
-            <h2 class="title-section">Redes Sociales</h2>
             <div class="nets">
               <label for="linkedin">Linkedin</label>
-              <input class="" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
+              <input class="users" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
             </div>
             <div class="nets">
               <label for="facebook">Facebook</label>
-              <input class="" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario" onchange="setValue('facebook')">
+              <input class="users" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario" onchange="setValue('facebook')">
             </div>
             <div class="nets">
               <label for="github">Github</label>
-              <input class="" id="github" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('github')">
+              <input class="users" id="github" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('github')">
             </div>
             <div class="nets">
               <label for="twitter">Twitter</label>
-              <input class="" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
+              <input class="users" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
             </div>
 			   </form>
        </section>
@@ -218,7 +221,7 @@
 
         <!--Languages preview section-->
         <section id="languagesPreview">
-          <h2 class="languagesTitlePreview">Lenguajes</h2>
+          <h2 class="languagesTitlePreview">Idiomas</h2>
           <div class="languagesBarPreview">
             <div id="percentageBar1">
               <p class="textBarPreview">Inglés</p>
@@ -245,23 +248,32 @@
 
         <!--Sección de Redes sociales -->
         <section>
-          <div class="socialNetworks">
-            <ul class="social">
-              <li class="linkedin">
-                <a id="a-linkedin" class="printnet" href="https://www.linkedin.com/in/" target="_blank">linkedin</a>
-              </li>
-              <li class="facebook">
-                <a class="printnet" href="https://www.facebook.com/" target="_blank">facebook</a>
-              </li>
-              <li class="github">
-                <a class="printnet" href="https://github.com/" target="_blank">github</a>
-              </li>
-              <li class="twitter">
-                <a class="printnet" href="https://twitter.com" target="_blank">twitter</a>
-              </li>
-            </ul>
-         </div>
+          <div class="sociality">
+            <div class="socialNetworks">
+              <ul class="social">
+                <li class="linkedin">
+                  <a id="a-linkedin" class="printnet" href="https://www.linkedin.com/in/" target="_blank">linkedin</a>
+                </li>
+                <li class="facebook">
+                  <a class="printnet" href="https://www.facebook.com/" target="_blank">facebook</a>
+                </li>
+                <li class="github">
+                  <a class="printnet" href="https://github.com/" target="_blank">github</a>
+                </li>
+                <li class="twitter">
+                  <a class="printnet" href="https://twitter.com" target="_blank">twitter</a>
+                </li>
+              </ul>
+            </div>
+            <div class="qr">
+              <input class="load" type="file" id="files" name="files[]" />
+              <br />
+              <output id="list"></output>
+            </div>
+           </div>
+
         </section>
+
       </section>
     </main>
 
@@ -280,6 +292,8 @@
 			  </div>
 		  </div>
 	  </footer>
+
+
 	  <!-- End Footer-->
 		<!-- JavaScript Code -->
 
