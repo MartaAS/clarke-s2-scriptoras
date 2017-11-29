@@ -57,83 +57,83 @@
 				<!--End about-->
 
 				<!--Sección de Experiencia-->
-				<form class="experience" action="" method="post">
-				<div>
-					<h2 class="title-section" onclick="editar('job-box')">Experiencia laboral</h2>
-					<div id="job-box">
+				<form class="form-section-container" id=experience-section action="" method="post">
+
+					<div class="title-container">
+						<h2 class="textFormButton" onclick="editar('job-box')">Experiencia laboral</h2>
+						<button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
+					</div>
+					<div class="boxes-container"id="job-box">
 					<h3>Puesto de trabajo</h3>
 					<div>
 						<label for="job"></label>
-						<input class="form-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" />
+						<input class="form-text-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" />
 					</div>
 
 					<div >
 						<label for="company"></label>
-						<input class="form-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
+						<input class="form-text-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
 					</div>
 
-					<div>
-<<<<<<< HEAD
-
+					<div class="dates-boxes">
 						<label for="start-job">Fecha de inicio:</label>
 						<select class="month" id="month-start" name="month-start">
 
 						</select>
 						<select class="year" id="year-start" name="year-start">
-=======
-						<label for="start-job">Fecha de inicio</label>
-						<select class="" id='start-job' name="date">
->>>>>>> 0dff06a4302e4c3c5b8dbbf6305ee28f8ac1b1d3
 
 						</select>
 					</div>
 
-					<div>
+					<div class="dates-boxes">
 						<label for="end-job">Fecha de finalización</label>
 						<select class="" id='end-job' name="date">
 
 						</select>
 					</div>
-
-					<input type="button" name="save" value="Guardar">
-					<input type="button" value="Cerrar" onclick="ocultar('job-box')">
+					<div class="buttons-container">
+						<input type="button" name="save" value="Guardar">
+						<input type="button" value="Cerrar" onclick="ocultar('job-box')">
 					</div>
-				</div>
+					</div>
+
 				</form>
 
 				<!--Sección de Formación-->
-				<form class="education" action="" method="post">
-				<div>
-					<h2 class="title-section" onclick="editar('education-box')">Formación</h2>
-					<div id="education-box">
+				<form class="form-section-container" id="education-section" action="" method="post">
+				<div class="title-container">
+					<h2 class="textFormButton" onclick="editar('education-box')">Formación</h2>
+					<button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
+				</div>
+				<div class="boxes-container" id="education-box">
+					<h3>Titulación</h3>
 					<div>
-						<label for="educ-title"><h3>Nombre de titulación</h3></label>
-						<input class="form-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" />
+						<input class="form-text-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" />
 					</div>
 
 					<div >
-						<label for="center">Centro de estudios</label>
-						<input class="form-box" id="center" type="text" name="center-name" placeholder="Indica el nombre del centro de estudios">
+						<input class="form-text-box" id="center" type="text" name="center-name" placeholder="Indica el centro de estudios">
 					</div>
 
-					<div>
+					<div class="dates-boxes">
 						<label for="start-training">Fecha de inicio</label>
 						<select class="" id='start-training' name="start-course">
 
 						</select>
 					</div>
 
-					<div>
+					<div class="dates-boxes">
 						<label for="end-training">Fecha de finalización</label>
 						<select class="" id='end-training' name="end-course">
 
 						</select>
 					</div>
-
+					<div class="buttons-container">
 					<input type="button" name="save" value="Guardar">
 					<input type="button" value="Cerrar" onclick="ocultar('education-box')">
 					</div>
-				</div>
+					</div>
+
 				</form>
 
 				<!--Skills -->

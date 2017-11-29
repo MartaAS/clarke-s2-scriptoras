@@ -114,7 +114,29 @@ overflow: scroll;
 }
 
 /*Estilos generales de la sección de desplegables*/
+.title-container{
+	width: 90%;
+	height: 40px;
+	background-color: #a19680;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+}
+.title-container:hover {
+  border-top-color: #6f1614;
+  background: #6f1614;
+  color: #ccc;
+  }
+.title-container:active {
+	border-top-color: #6f1614;
+	background: #6f1614;
+	}
 
+/* Antiguo estilo de los títulos. Borrar si están todas de acuerdo
 .title-section{
 	max-width: 250px;
 	border-top: 1px solid #a19680;
@@ -136,17 +158,9 @@ overflow: scroll;
 	vertical-align: middle;
 	}
 
-.title-section:hover {
-   border-top-color: #6f1614;
-   background: #6f1614;
-   color: #ccc;
-   }
 
-.title-section:active {
-   border-top-color: #6f1614;
-   background: #6f1614;
-   }
 
+*/
 /*About*/
 input{
 	display: block;
@@ -162,7 +176,22 @@ input[type=button]{
 }
 
 /*Experience*/
+.form-section-container{
+	padding-left: 10%;
 
+}
+.boxes-container{
+	padding-left: 5%;
+}
+
+.form-text-box, .dates-boxes{
+margin: 8px 0px;
+padding-left: 3px;
+width: 200px;
+}
+.buttons-container{
+margin: 10px 0px;
+}
 
 /*Education*/
 
