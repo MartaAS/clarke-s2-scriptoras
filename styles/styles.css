@@ -284,10 +284,7 @@ margin-top: 5px;
 
 }
 /* Redes sociales*/
-.sociality {
-	display: flex;
-	justify-content: space-around;
-}
+
 .social {
 	display: flex;
 }
@@ -412,6 +409,10 @@ footer{
 }
 /*mediaqueries*/
 @media all and (min-width:600px) {
+	.sociality {
+		display: flex;
+		justify-content: space-around;
+	}
 	.logo{
 		width: 100%;
 		margin-right:80px;
