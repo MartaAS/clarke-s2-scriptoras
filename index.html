@@ -41,10 +41,13 @@
 				</form>
 
 				<!--about -->
-				<form class="" action="" method="post"> <!--Mostrado-->
-					<div class="">
-						<h2 class="title-section ">Sobre mi
+				<form class="form-section-container" action="" method="post"> <!--Mostrado-->
+					<div class="title-container">
+						<h2 class="textFormButton">Sobre mi
 							<input type="button" value="Editar" onclick="editar('content-about')"></h2>
+							<!-- Este sería tu botón, si te parece bien cambiarlo y no te trastoca mucho. Se pondría fuera del h2, aquí mismo:
+							<button class="open-section-button" type="button" name="about-me-button" onclick="editar('content-about')"><img src="images/addButton32px.png" alt="addButton"></button>
+							-->
 					</div>
 					<div id="content-about" class="content"> <!--Oculto-->
 						<label for="about"></label>
@@ -61,7 +64,7 @@
 
 					<div class="title-container">
 						<h2 class="textFormButton" onclick="editar('job-box')">Experiencia laboral</h2>
-						<button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
+						<button class="open-section-button" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
 					</div>
 					<div class="boxes-container"id="job-box">
 					<h3 class="subtitle-section">Puesto de trabajo</h3>
@@ -106,7 +109,7 @@
 				<form class="form-section-container" id="education-section" action="" method="post">
 				<div class="title-container">
 					<h2 class="textFormButton" onclick="editar('education-box')">Formación</h2>
-					<button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
+					<button class="open-section-button" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
 				</div>
 				<div class="boxes-container" id="education-box">
 					<h3 class="subtitle-section">Titulación</h3>
@@ -147,7 +150,10 @@
 
 				<!--Skills -->
 				<div class="skills">
-					<h2 class="title-section">Habilidades</h2>
+					<div class="title-container">
+						<h2 class="textFormButton">Habilidades</h2>
+						<button class="open-section-button" type="button" name="skillsButton" onclick=""><img src="images/addButton32px.png" alt="addButton"></button>
+					</div>
 					<ul>
 						<li class="skilli"></li>
 						<li class="skilli"></li>
@@ -159,8 +165,8 @@
 
         <!--Languages form section-->
         <section id="languagesFormContainer">
-          <div class="languagesContainer">
-            <h3 class="textFormButton">Añade idiomas a tu CV </h3>
+          <div class="title-container">
+            <h2 class="textFormButton">Añade idiomas a tu CV </h2>
             <button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
             <!-- <button type="button" name="addInputLanguagesForm" onclick="addInput()"></button> -->
           </div>
@@ -174,7 +180,11 @@
 
 				<!--Sección de Redes sociales -->
         	<form class="networks" action="index.html" method="post">
-            <h2 class="title-section">Redes Sociales</h2>
+						<div class="title-container">
+            	<h2 class="textFormButton">Redes Sociales</h2>
+							<button class="open-section-button" type="button" name="networksButton" onclick="">
+							<img src="images/addButton32px.png" alt="addButton"></button>
+						</div>
             <div class="nets">
               <label for="linkedin">Linkedin</label>
               <input class="users" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">

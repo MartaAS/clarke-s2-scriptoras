@@ -117,6 +117,7 @@ overflow: scroll;
 
 /*Estilos generales de la sección de desplegables*/
 .title-container{
+	margin-bottom: 10px;
 	width: 90%;
 	height: 40px;
 	background-color: #a19680;
@@ -137,32 +138,11 @@ overflow: scroll;
 	border-top-color: #6f1614;
 	background: #6f1614;
 	}
+.open-section-button{
+	background: none;
+	border: none;
+}
 
-/* Antiguo estilo de los títulos. Borrar si están todas de acuerdo
-.title-section{
-	max-width: 250px;
-	border-top: 1px solid #a19680;
-	background: #a19680;
-	background: -webkit-linear-gradient(top, #c2b8a3, #a19680);
-	background: -moz-linear-gradient(top, #c2b8a3, #a19680);
-	background: -ms-linear-gradient(top, #c2b8a3, #a19680);
-	background: -o-linear-gradient(top, #c2b8a3, #a19680);
-	padding: 9px 18px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-	box-shadow: rgba(0,0,0,1) 0 1px 0;
-	text-shadow: rgba(0,0,0,.4) 0 1px 0;
-	color: white;
-	font-size: 20px;
-	vertical-align: middle;
-	}
-
-
-
-*/
 /*About*/
 input{
 	display: block;
@@ -177,9 +157,11 @@ input[type=button]{
 	display: none;
 }
 
-/*Experience*/
+/*Experience and Education*/
 .form-section-container{
-	padding-left: 10%;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
 
 }
 .boxes-container{
@@ -202,7 +184,7 @@ margin: 10px 0px;
 margin-top: 5px;
 }
 
-/*Education*/
+
 
 /*Skills*/
 .skills{
