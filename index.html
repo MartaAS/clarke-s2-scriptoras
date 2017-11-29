@@ -56,13 +56,14 @@
 				<div>
 					<h2 class="title-section" onclick="editar('job-box')">Experiencia laboral</h2>
 					<div id="job-box">
+					<h3>Puesto de trabajo</h3>
 					<div>
-						<label for="job"><h3>Puesto de trabajo</h3></label>
+						<label for="job"></label>
 						<input class="form-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" />
 					</div>
 
 					<div >
-						<label for="company">Empresa</label>
+						<label for="company"></label>
 						<input class="form-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
 					</div>
 
@@ -137,11 +138,9 @@
         <section id="languagesFormContainer">
           <div class="languagesContainer">
             <h3 class="textFormButton">Añade idiomas a tu CV</h3>
-            <button class="addLanguageButton" type="button" name="languagesButton" onclick="showPrompt()"><img src="images/addButton32px.png" alt="addButton"></button>
-
+            <button class="addLanguageButton" type="button" name="languagesButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
           </div>
           <!-- <form class="languagesForm" action="index.html" method="post">
-            <input class="inputsLanguageForm" placeholder="Añade un dioma" id="newLanguage" type="text" name="newLanguage">
           </form> -->
         </section>
 
@@ -151,6 +150,7 @@
 
 				<!--Sección de Redes sociales -->
         	<form class="networks" action="index.html" method="post">
+            <h2 class="title-section">Redes Sociales</h2>
             <div class="nets">
               <label for="linkedin">linkedin</label>
               <input class="" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
