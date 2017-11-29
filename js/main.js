@@ -1,5 +1,6 @@
 'use strict';
 //Datos principales
+
 var nombreIntroducido = prompt("¿Cuál es tu nombre");
 document.getElementById('nombreformulario').value=nombreIntroducido;
 var apellidoIntroducido = prompt("¿Cuáles son tus apellidos?");
@@ -11,6 +12,8 @@ document.getElementById('emailformulario').value=emailIntroducido;
 var telefonoIntroducido = prompt("¿Cuál es tu teléfono móvil?");
 document.getElementById('telefonoformulario').value=telefonoIntroducido;
 //fin promp datos principales
+
+
 //guardar datos principales introducidos
 function guardardatosprincipales(){
 document.getElementById('prenombre').innerHTML=nombreIntroducido;
@@ -34,6 +37,42 @@ var aboutInput = prompt("Haz una breve descripción sobre ti.");
 aboutMe.innerHTML = aboutInput;
 */
 //Experience
+
+//Desplegable mes
+var monthOptions = '<option value="mes">Mes</option>';
+monthOptions = monthOptions + '<option value="enero"> Enero</option>';
+monthOptions = monthOptions + '<option value="febrero"> Febrero</option>';
+monthOptions = monthOptions + '<option value="marzo">Marzo</option>';
+monthOptions = monthOptions + '<option value="abril">Abril</option>';
+monthOptions = monthOptions + '<option value="mayo">Mayo</option>';
+monthOptions = monthOptions + '<option value="junio">Junio</option>';
+monthOptions = monthOptions + '<option value="julio">Julio</option>';
+monthOptions = monthOptions + '<option value="agosto">Agosto</option>';
+monthOptions = monthOptions + '<option value="septiembre">Septiembre</option>';
+monthOptions = monthOptions + '<option value="octubre">Octubre</option>';
+monthOptions = monthOptions + '<option value="noviembre">Noviembre</option>';
+monthOptions = monthOptions + '<option value="diciembre">Diciembre</option>';
+
+
+var months = document.querySelectorAll('.month');
+for (var i = 0; i < months.length; i++) {
+	months[i].innerHTML = monthOptions;
+}
+
+
+var years = 2030;
+var yearOptions = ''; //almacena options de html que van en el select
+
+for (var initialYear=1949; initialYear<years; initialYear++) {
+  yearOptions = yearOptions + '<option value=">' + (initialYear) + '</option>';
+}
+var yearsAll = document.querySelectorAll('.year');
+for (var i = 0; i < yearsAll.length; i++) {
+	yearsAll[i].innerHTML = yearOptions;
+}
+
+
+
 /*
 var jobName = document.querySelector('#job-pre');
 var jobInput = prompt('Introduce el nombre del puesto de trabajo');
@@ -78,10 +117,14 @@ for(var i = 0; i < newSkill.length; i++){
 
 /*languages section*/
 
+
 /*Redes sociales*/
 var netSocial = document.querySelector('#a-linkedin');
 var text = prompt("Introduce tu usario");
 netSocial.href = netSocial.href + text;
+
+
+
 
 /*javascript de redes sociales
 function setValue(net){
