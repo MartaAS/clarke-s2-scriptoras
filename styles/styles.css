@@ -153,7 +153,9 @@ input[type=button]{
 	border: #ccc;
 	background: #ffff;
 }
-.content {
+
+/*Estilo del contenedor de about, usado también en experiencia y formación para no repetir*/
+.content, .boxes-container {
 	display: none;
 }
 
