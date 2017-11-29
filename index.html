@@ -96,26 +96,32 @@
 				<div>
 					<h2 class="title-section" onclick="editar('education-box')">Formación</h2>
 					<div id="education-box">
+					<h3>Nombre de titulación</h3>
 					<div>
-						<label for="educ-title"><h3>Nombre de titulación</h3></label>
+
 						<input class="form-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" />
 					</div>
 
 					<div >
-						<label for="center">Centro de estudios</label>
 						<input class="form-box" id="center" type="text" name="center-name" placeholder="Indica el nombre del centro de estudios">
 					</div>
 
 					<div>
-						<label for="start-training">Fecha de inicio</label>
-						<select class="" id='start-training' name="start-course">
+						<label for="start-training">Fecha de inicio:</label>
+						<select class="month" id="month-start-training" name="month-start">
+
+						</select>
+						<select class="year" id="year-start" name="year-start">
 
 						</select>
 					</div>
 
 					<div>
-						<label for="end-training">Fecha de finalización</label>
-						<select class="" id='end-training' name="end-course">
+						<label for="end-training">Fecha de finalización:</label>
+						<select class="month" id="month-end-training" name="month-end">
+
+						</select>
+						<select class="year" id="year-end" name="year-end" >
 
 						</select>
 					</div>
