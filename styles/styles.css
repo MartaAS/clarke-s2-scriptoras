@@ -3,6 +3,7 @@ background-color: #FFFEFA;
 box-sizing: border-box;
 margin: 0;
 padding: 0;
+font-family: 'Arial';
 }
 /*header parte marta*/
 .logoscriptoras{
@@ -45,19 +46,46 @@ main{
 	flex-direction: column;
 	align-items: center;
 }
-.datosprin input{
-	margin-bottom: 5px;
+.datosprincipales{
 	display: flex;
 	text-align: center;
-	border: none;
-	font-size: 20px;
-	text-transform: capitalize;
+	font-size: 18px;
+	margin-top: 5px;
+	padding: 0px;
+	border: solid 1px;
+	border-radius: 5px;
 }
 .foto{
 		 width: 200px;
      height: 200px;
      border-radius: 100px;
 		 margin-top: 20px;
+}
+
+.guardarprincipal{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 80px;
+	margin-top: 10px;
+	font-size: 18px;
+}
+.subirfoto{
+	width: 95px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+}
+/*styles pre*/
+.preprincipales {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.preprincipales p{
+	margin: 2px;
 }
 /*fin parte marta*/
 .formulario-sec{
@@ -92,11 +120,13 @@ overflow: scroll;
 	font-size: 20px;
 	vertical-align: middle;
 	}
+
 .title-section:hover {
    border-top-color: #6f1614;
    background: #6f1614;
    color: #ccc;
    }
+
 .title-section:active {
    border-top-color: #6f1614;
    background: #6f1614;
@@ -125,31 +155,73 @@ input[type=button]{
 .skills{
 
 }
-/*Languages*/
-.languagesTitle {
-	color: #2E2B24;
+/*Languages form container*/
+#languagesFormContainer {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.languagesBar{
+.languagesContainer {
+	width: 90%;
+	height: 50px;
+	background-color: #a19680;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
+}
+.textFormButton {
+	color: #ffffff;
+}
+.addLanguageButton{
+	background: none;
+	border: none;
+}
+
+.languagesForm{
+
+}
+.inputsLanguageForm {
+}
+
+.languagesTitlePreview {
+	color: #6F1514;
+}
+
+#languagesPreview {
+	/*display: flex;
+	flex-direction: column;
+	align-items: center;*/
+	padding-left: 10%;
+	padding-right: 5%;
+}
+
+.languagesBarPreview {
+	/*display: flex;*/
 	width: 90%;
 	background-color: #eeeeee;
+	margin-bottom: 1em;
 }
 
-.textBar{
+.textBarPreview {
 	text-align: left;
 	color: #ffffff;
-	line-height: 1.5em;
+	line-height: 2em;
+	padding-left: 1em;
 }
-#percentajeBar1 {
+
+#percentageBar1 {
 	width: 50% ;
 	background-color: #A19680;
 }
-#percentajeBar2 {
+#percentageBar2 {
 	width: 70% ;
 	background-color: #A19680;
 }
-#percentajeBar3{
-	width: 10% ;
+#percentageBar3 {
+	width: 40% ;
 	background-color: #A19680;
 }
 
@@ -200,7 +272,7 @@ input[type=button]{
 /*footer*/
 footer{
 	background-color: #252525;
-	height: 170px;
+	height: 120px;
 	box-sizing: border-box;
 }
 .infooter{
@@ -210,8 +282,8 @@ footer{
 }
 .end{
 	width: 100%;
+	font-size: 0.8em;
   color: #555555;
-	padding: 15px;
 	display: flex;
 	flex-direction: column;
   justify-content: flex-start;
@@ -294,8 +366,5 @@ label{
 @media print {
 	header, footer, nav {
   display: none;
-}
-.printNet a[href^=http]:after {
-	content:" <" attr(href) ">";
 }
 }

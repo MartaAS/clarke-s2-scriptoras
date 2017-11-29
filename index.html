@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -13,8 +13,8 @@
 		</header>
 
 		<!-- End Header -->
-		<!-- Container -->
 
+		<!-- Container -->
 		<main>
 			<!--cabecera-->
 			<section class="formulario-sec">
@@ -23,13 +23,14 @@
 						<div class="containerfoto">
 							<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt"foto" class="foto">
 						</div>
-
+							<input type="button" value="Upload image" class="subirfoto">
 						<div class="datosprin">
-							<input type="text" name="name" placeholder="Nombre" class="datosprincipales" required id="nombreformulario">
-							<input type="text" name="surname" placeholder="Apellidos" class="datosprincipales" required>
-							<input type="text" name="profesion" placeholder="Profesion" class="datosprincipales" required>
-							<input type="email" name="mail" placeholder="Email" class="datosprincipales">
-							<input type="tel" name="telephone" placeholder="Teléfono" class="datosprincipales">
+							<input type="text" name="name" placeholder="Introduce nombre" class="datosprincipales" required id="nombreformulario">
+							<input type="text" name="surname" placeholder="Introduce apellidos" class="datosprincipales" required id="apellidoformulario">
+							<input type="text" name="profesion" placeholder="Introduce profesión" class="datosprincipales" required id="profesionformulario">
+							<input type="email" name="mail" placeholder="Introduce email" class="datosprincipales" id="emailformulario">
+							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="datosprincipales" id="telefonoformulario">
+							 <input type="button" value="Guardar" class="guardarprincipal" onclick="guardardatosprincipales();">
 						</div>
 					</div>
 				</form>
@@ -121,7 +122,6 @@
 				</div>
 				</form>
 
-
 				<!--Skills -->
 				<div class="skills">
 					<h2 class="title-section">Habilidades</h2>
@@ -133,34 +133,55 @@
 					</ul>
 				</div>
 				<!--End Skills-->
-        <!--Languages section-->
-        <section id="languages">
-          <h2 class="languagesTitle">Lenguajes</h2>
-          <div class="languagesBar">
-            <div id="percentajeBar1">
-              <p class="textBar">Inglés</p>
-            </div>
+
+        <!--Languages form section-->
+        <section id="languagesFormContainer">
+          <div class="languagesContainer">
+            <h3 class="textFormButton">Añade idiomas a tu CV</h3>
+            <button class="addLanguageButton" type="button" name="languagesButton" onclick="showPrompt()"><img src="images/addButton32px.png" alt="addButton"></button>
+
           </div>
-          <div class="languagesBar">
-            <div id="percentajeBar2">
-              <p class="textBar">Francés</p>
-            </div>
-          </div>
-          <div class="languagesBar">
-            <div id="percentajeBar3">
-              <p class="textBar">Español</p>
-            </div>
-          </div>
+          <!-- <form class="languagesForm" action="index.html" method="post">
+            <input class="inputsLanguageForm" placeholder="Añade un dioma" id="newLanguage" type="text" name="newLanguage">
+          </form> -->
         </section>
-        <!--Hobbies section-->
-        <div class="hobbies">
 
-        </div>
+        <!--Hobbies form section-->
 
-			</section>
+
+
+				<!--Sección de Redes sociales -->
+        	<form class="networks" action="index.html" method="post">
+            <div class="nets">
+              <label for="linkedin">linkedin</label>
+              <input class="" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
+            </div>
+            <div class="nets">
+              <label for="facebook">facebook</label>
+              <input class="" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario" onchange="setValue('facebook')">
+            </div>
+            <div class="nets">
+              <label for="github">github</label>
+              <input class="" id="github" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('github')">
+            </div>
+            <div class="nets">
+              <label for="twitter">twitter</label>
+              <input class="" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
+            </div>
+			   </form>
+       </section>
+<!--______Comienza la seccion de previsualización______-->
+
 
 			<section class="previsualizacion-sec">
-
+				<!--datos principales-->
+				<section class=preprincipales>
+					<p id="prenombre"></p>
+					<p id="preapellidos"></p>
+					<p id="preprofesion"></p>
+					<p id="preemail"></p>
+					<p id="pretelefono"></p>
+				</section>
 				<!--Sección de Experiencia-->
 				<section class="experience">
 					<h2 class="title-section">Prueba para comprobar scroll</h2>
@@ -181,27 +202,54 @@
 							<li>Duración</li>
 						</ul>
 				</section>
+
+        <!--Languages preview section-->
+        <section id="languagesPreview">
+          <h2 class="languagesTitlePreview">Lenguajes</h2>
+          <div class="languagesBarPreview">
+            <div id="percentageBar1">
+              <p class="textBarPreview">Inglés</p>
+            </div>
+          </div>
+          <div class="languagesBarPreview">
+            <div id="percentageBar2">
+              <p class="textBarPreview">Francés</p>
+            </div>
+          </div>
+          <div class="languagesBarPreview">
+            <div id="percentageBar3">
+              <p class="textBarPreview">Español</p>
+            </div>
+          </div>
+        </section>
+        <!--Hobbies section-->
+        <section id="hobbiesPreview">
+          <div class="hobbies">
+
+          </div>
+
+        </section>
+
         <!--Sección de Redes sociales -->
         <section>
           <div class="socialNetworks">
             <ul class="social">
               <li class="linkedin">
-                <a class="printnet" href="" target="_blank">linkedin</a>
+                <a id="a-linkedin" class="printnet" href="https://www.linkedin.com/in/" target="_blank">linkedin</a>
               </li>
               <li class="facebook">
-                <a class="printnet" href="" target="_blank">facebook</a>
+                <a class="printnet" href="https://www.facebook.com/" target="_blank">facebook</a>
               </li>
               <li class="github">
-                <a class="printnet" href="" target="_blank">github</a>
+                <a class="printnet" href="https://github.com/" target="_blank">github</a>
               </li>
               <li class="twitter">
-                <a class="printnet" href="" target="_blank">twitter</a>
+                <a class="printnet" href="https://twitter.com" target="_blank">twitter</a>
               </li>
             </ul>
          </div>
         </section>
-			</section>
-
+      </section>
     </main>
 
 		<!-- End Container -->
