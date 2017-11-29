@@ -59,7 +59,6 @@ for(var i = 0; i < newSkill.length; i++){
 		var newTextLanguage = document.querySelector('.textBarPreview');
 		var text = prompt("Introduce un idioma");
 		newTextLanguage.innerHTML = text;
-
 	}
 
 /*languages preview section*/
