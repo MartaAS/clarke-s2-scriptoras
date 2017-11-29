@@ -21,7 +21,7 @@
 				<form method="post" class="form">
 					<div class="containerinfo">
 						<div class="containerfoto">
-							<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt"foto" class="foto">
+							<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt="foto" class="foto">
 						</div>
 							<input type="button" value="Upload image" class="subirfoto">
 						<div class="datosprin">
@@ -66,21 +66,31 @@
 					</div>
 
 					<div>
+<<<<<<< HEAD
 						<label for="start-job">Fecha de inicio:</label>
 						<select class="month" id="month-start" name="month-start">
 
 						</select>
 						<select class="year" id="year-start" name="year-start">
+=======
+						<label for="start-job">Fecha de inicio</label>
+						<select class="" id='start-job' name="date">
+>>>>>>> 95271047d0c3ec7d873ee9775900b4fb151ea86a
 
 						</select>
 					</div>
 
 					<div>
+<<<<<<< HEAD
 						<label for="end-job">Fecha de finalización:</label>
 						<select class="month" id="month-end" name="month-end">
 
 						</select>
 						<select class="year" id="year-end" name="year-end" >
+=======
+						<label for="end-job">Fecha de finalización</label>
+						<select class="" id='end-job' name="date">
+>>>>>>> 95271047d0c3ec7d873ee9775900b4fb151ea86a
 
 						</select>
 					</div>
@@ -148,12 +158,19 @@
         <section id="languagesFormContainer">
           <div class="languagesContainer">
             <h3 class="textFormButton">Añade idiomas a tu CV</h3>
-            <button class="addLanguageButton" type="button" name="languagesButton" onclick="showPrompt()"><img src="images/addButton32px.png" alt="addButton"></button>
+
+            <button class="addLanguageButton" type="button" name="languagesButton" onclick="showFormLanguages()"><img src="images/addButton32px.png" alt="addButton"></button>
 
           </div>
-          <!-- <form class="languagesForm" action="index.html" method="post">
+          <form class="languagesForm" action="index.html" method="post">
             <input class="inputsLanguageForm" placeholder="Añade un dioma" id="newLanguage" type="text" name="newLanguage">
+          </form>
+
+            <button class="addLanguageButton" type="button" name="languagesButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
+          </div>
+          <!-- <form class="languagesForm" action="index.html" method="post">
           </form> -->
+
         </section>
 
         <!--Hobbies form section-->
@@ -163,19 +180,19 @@
 				<!--Sección de Redes sociales -->
         	<form class="networks" action="index.html" method="post">
             <div class="nets">
-              <label for="linkedin">linkedin</label>
+              <label for="linkedin">Linkedin</label>
               <input class="" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
             </div>
             <div class="nets">
-              <label for="facebook">facebook</label>
+              <label for="facebook">Facebook</label>
               <input class="" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario" onchange="setValue('facebook')">
             </div>
             <div class="nets">
-              <label for="github">github</label>
+              <label for="github">Github</label>
               <input class="" id="github" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('github')">
             </div>
             <div class="nets">
-              <label for="twitter">twitter</label>
+              <label for="twitter">Twitter</label>
               <input class="" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
             </div>
 			   </form>

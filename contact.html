@@ -15,26 +15,23 @@
 		<main>
 			<div class="seccion">
 				<div class="texto-formulario">
+          <h3>¿NECESITAS AYUDA?. ESCRÍBENOS</h3>
 					<p>Para consultas rellena el siguiente formulario y nos pondremos en contacto contigo. Gracias</p>
 				</div>
 				<div class="formulario">
 					<form class="rellenar" action="index.html" method="post">
-						<div class="">
+						<div class="complete">
 				 			<div class="campos">
-								<label for="name">Nombre</label>
-								<input class="cajas" id="name" type="text" name="firstname" required/>
+								<input class="cajas" id="name" type="text" placeholder="Nombre" name="firstname" required/>
 				 			</div>
 				 			<div class="campos">
-								<label for="surname">Apellidos</label>
-								<input class="cajas" id="surname" type="text" name="username" required/>
+								<input class="cajas" id="surname" type="text" placeholder="Apellidos" name="username" required/>
 				 			</div>
 				 			<div class="campos">
-					 			<label for="email">Correo electrónico</label>
-								<input class="cajas" id="email" type="email" name="mail" required/>
+								<input class="cajas" id="email" type="email" placeholder="Correo electrónico" name="mail" required/>
 							</div>
 				 			<div class="campos">
-				 	 			<label for="mensajes">Mensaje</label>
-					 			<textarea  class="cajas" name="comments" rows="8" cols="80"></textarea>
+					 			<textarea  class="cajas" placeholder="Comentarios" name="comments" rows="8" cols="80"></textarea>
 							</div>
 							<div>
 								<input class="boton" type="submit" value="Enviar">
@@ -44,13 +41,6 @@
 				</div>
 		</div>
 	</main>
-  <a href="javascript:verqr()">Carga el código QR</a> de esta página.
-<div id="qr"></div>
-<script>
-function verqr()
-{var dir=window.document.URL;document.getElementById('qr').innerHTML='<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl='+dir+'" width="150" height="150">';}
-</script>
-
   <footer>
     <div class="infooter">
       <div class="end">

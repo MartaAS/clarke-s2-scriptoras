@@ -1,6 +1,6 @@
 'use strict';
 //Datos principales
-/*Comentado
+
 var nombreIntroducido = prompt("¿Cuál es tu nombre");
 document.getElementById('nombreformulario').value=nombreIntroducido;
 var apellidoIntroducido = prompt("¿Cuáles son tus apellidos?");
@@ -13,7 +13,7 @@ var telefonoIntroducido = prompt("¿Cuál es tu teléfono móvil?");
 document.getElementById('telefonoformulario').value=telefonoIntroducido;
 //fin promp datos principales
 
-fin comentado*/
+
 //guardar datos principales introducidos
 function guardardatosprincipales(){
 document.getElementById('prenombre').innerHTML=nombreIntroducido;
@@ -94,10 +94,19 @@ for(var i = 0; i < newSkill.length; i++){
 }
 
 /*languages form section*/
-	function showPrompt() {
+	function showPromptLanguage() {
 		var newTextLanguage = document.querySelector('.textBarPreview');
 		var text = prompt("Introduce un idioma");
 		newTextLanguage.innerHTML = text;
+	}
+
+	function showPromptPercentage() {
+		var percentage = prompt("Introduce el porcentaje");
+		var newPercentageLanguage = document.getElementById('percentageBar1').style.width = percentage + '%';
+	}
+
+	function addInput() {
+
 	}
 
 /*languages preview section*/
@@ -107,12 +116,12 @@ for(var i = 0; i < newSkill.length; i++){
 /*languages section*/
 
 
-/*Redes sociales
+/*Redes sociales*/
 var netSocial = document.querySelector('#a-linkedin');
 var text = prompt("Introduce tu usario");
 netSocial.href = netSocial.href + text;
 
-*/
+
 
 
 /*javascript de redes sociales
