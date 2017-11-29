@@ -58,25 +58,29 @@
 					<div id="job-box">
 					<h3>Puesto de trabajo</h3>
 					<div>
-						<label for="job"></label>
 						<input class="form-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" />
 					</div>
 
 					<div >
-						<label for="company"></label>
 						<input class="form-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
 					</div>
 
 					<div>
-						<label for="start-job">Fecha de inicio</label>
-						<select class="" id='start-job' name="">
+						<label for="start-job">Fecha de inicio:</label>
+						<select class="month" id="month-start" name="month-start">
+
+						</select>
+						<select class="year" id="year-start" name="year-start">
 
 						</select>
 					</div>
 
 					<div>
-						<label for="end-job">Fecha de finalización</label>
-						<select class="" id='end-job' name="">
+						<label for="end-job">Fecha de finalización:</label>
+						<select class="month" id="month-end" name="month-end">
+
+						</select>
+						<select class="year" id="year-end" name="year-end" >
 
 						</select>
 					</div>
@@ -152,7 +156,6 @@
 
 				<!--Sección de Redes sociales -->
         	<form class="networks" action="index.html" method="post">
-            <h2 class="title-section">Redes Sociales</h2>
             <div class="nets">
               <label for="linkedin">linkedin</label>
               <input class="" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
