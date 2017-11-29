@@ -67,7 +67,9 @@ for(var i = 0; i < newSkill.length; i++){
 	}
 
 	function addInput() {
-
+		var addNewInput = document.querySelector('.languagesForm');
+		var addInput = document.createElement('input');
+		addNewInput.append(addInput);
 	}
 
 /*languages preview section*/
