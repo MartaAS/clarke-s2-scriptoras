@@ -95,7 +95,7 @@ for(var i = 0; i < newSkill.length; i++){
 
 /*languages form section*/
 	function showPromptLanguage() {
-		var newTextLanguage = document.querySelector('.textBarPreview');
+		var newTextLanguage = document.querySelectorAll('.textBarPreview');
 		var text = prompt("Introduce un idioma");
 		newTextLanguage.innerHTML = text;
 	}
@@ -106,7 +106,9 @@ for(var i = 0; i < newSkill.length; i++){
 	}
 
 	function addInput() {
-
+		var addNewInput = document.querySelector('.languagesForm');
+		var addInput = document.createElement('input');
+		addNewInput.append(addInput);
 	}
 
 /*languages preview section*/
