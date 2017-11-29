@@ -135,14 +135,9 @@ for(var i = 0; i < newSkill.length; i++){
 	function addInput() {
 		var addNewInput = document.querySelector('.languagesForm');
 		var addInput = document.createElement('input');
+    addInput.style.cssText = 'background-color: black;'
 		addNewInput.append(addInput);
 	}
-
-/*languages preview section*/
-// var newTextLanguage = document.querySelector('.textBarPreview');
-// newTextLanguage.innerHTML = text;
-
-/*languages section*/
 
 
 /*Redes sociales*/
