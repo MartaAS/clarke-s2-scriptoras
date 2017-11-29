@@ -55,10 +55,19 @@ for(var i = 0; i < newSkill.length; i++){
 }
 
 /*languages form section*/
-	function showPrompt() {
+	function showPromptLanguage() {
 		var newTextLanguage = document.querySelector('.textBarPreview');
 		var text = prompt("Introduce un idioma");
 		newTextLanguage.innerHTML = text;
+	}
+
+	function showPromptPercentage() {
+		var percentage = prompt("Introduce el porcentaje");
+		var newPercentageLanguage = document.getElementById('percentageBar1').style.width = percentage + '%';
+	}
+
+	function addInput() {
+
 	}
 
 /*languages preview section*/
