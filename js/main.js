@@ -46,19 +46,12 @@ for(var i = 0; i < newSkill.length; i++){
 	newSkill[i].innerHTML = skill;
 }
 
-<<<<<<< HEAD
+/*languages form section*/
+	function showFormLanguages() {
+		
+	}
+
 /*languages preview section*/
 var newTextLanguage = document.querySelector('.textBarPreview');
-/*var text = prompt("Introduce un idioma");
-=======
-/*languages section*/
-
-
-var newTextLanguage = document.querySelector('.textBar');
-//var text = prompt("Introduce un idioma");
->>>>>>> d0b8eb627969bd70c9189395e3f32523c0eea725
+// var text = prompt("Introduce un idioma");
 newTextLanguage.innerHTML = text;
-
-
-
-/*languages section*/
