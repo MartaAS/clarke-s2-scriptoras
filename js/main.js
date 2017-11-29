@@ -55,13 +55,15 @@ for(var i = 0; i < newSkill.length; i++){
 }
 
 /*languages form section*/
-	function showFormLanguages() {
+	function showPrompt() {
+		var newTextLanguage = document.querySelector('.textBarPreview');
+		var text = prompt("Introduce un idioma");
+		newTextLanguage.innerHTML = text;
 	}
 
 /*languages preview section*/
-var newTextLanguage = document.querySelector('.textBarPreview');
-// var text = prompt("Introduce un idioma");
-newTextLanguage.innerHTML = text;
+// var newTextLanguage = document.querySelector('.textBarPreview');
+// newTextLanguage.innerHTML = text;
 
 /*languages section*/
 
