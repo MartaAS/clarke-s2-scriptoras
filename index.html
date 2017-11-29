@@ -64,7 +64,7 @@
 						<button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
 					</div>
 					<div class="boxes-container"id="job-box">
-					<h3>Puesto de trabajo</h3>
+					<h3 class="subtitle-section">Puesto de trabajo</h3>
 					<div>
 						<label for="job"></label>
 						<input class="form-text-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" />
@@ -76,18 +76,21 @@
 					</div>
 
 					<div class="dates-boxes">
-						<label for="start-job">Fecha de inicio:</label>
-						<select class="month" id="month-start" name="month-start">
+						<label>Fecha de inicio:</label>
+						<select class="month" id="month-job-start" name="job-start-month">
 
 						</select>
-						<select class="year" id="year-start" name="year-start">
+						<select class="year" id="year-job-start" name="job-start-year">
 
 						</select>
 					</div>
 
 					<div class="dates-boxes">
-						<label for="end-job">Fecha de finalización</label>
-						<select class="" id='end-job' name="date">
+						<label>Fecha de finalización</label>
+						<select class="month" id="month-job-end" name="job-end-month">
+
+						</select>
+						<select class="year" id="year-job-end" name="job-end-year">
 
 						</select>
 					</div>
@@ -106,7 +109,7 @@
 					<button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
 				</div>
 				<div class="boxes-container" id="education-box">
-					<h3>Titulación</h3>
+					<h3 class="subtitle-section">Titulación</h3>
 					<div>
 						<input class="form-text-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" />
 					</div>
@@ -116,15 +119,21 @@
 					</div>
 
 					<div class="dates-boxes">
-						<label for="start-training">Fecha de inicio</label>
-						<select class="" id='start-training' name="start-course">
+						<label>Fecha de inicio</label>
+						<select class="month" id="month-training-start" name="training-start-month">
+
+						</select>
+						<select class="year" id="year-training-start" name="training-start-year">
 
 						</select>
 					</div>
 
 					<div class="dates-boxes">
-						<label for="end-training">Fecha de finalización</label>
-						<select class="" id='end-training' name="end-course">
+						<label>Fecha de finalización</label>
+						<select class="month" id="month-training-end" name="training-end-month">
+
+						</select>
+						<select class="year" id="year-training-end" name="training-end-year">
 
 						</select>
 					</div>

@@ -186,6 +186,10 @@ input[type=button]{
 	padding-left: 5%;
 }
 
+.subtitle-section{
+	margin: 10px 0;
+}
+
 .form-text-box, .dates-boxes{
 margin: 8px 0px;
 padding-left: 3px;
@@ -193,6 +197,9 @@ width: 200px;
 }
 .buttons-container{
 margin: 10px 0px;
+}
+.month, .year{
+margin-top: 5px;
 }
 
 /*Education*/
