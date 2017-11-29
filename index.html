@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -23,14 +23,14 @@
 						<div class="containerfoto">
 							<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt"foto" class="foto">
 						</div>
-
+							<input type="button" value="Upload image" class="subirfoto">
 						<div class="datosprin">
 							<input type="text" name="name" placeholder="Introduce nombre" class="datosprincipales" required id="nombreformulario">
 							<input type="text" name="surname" placeholder="Introduce apellidos" class="datosprincipales" required id="apellidoformulario">
 							<input type="text" name="profesion" placeholder="Introduce profesión" class="datosprincipales" required id="profesionformulario">
 							<input type="email" name="mail" placeholder="Introduce email" class="datosprincipales" id="emailformulario">
 							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="datosprincipales" id="telefonoformulario">
-							 <input type="save" value="Guardar" class="guardarprincipal">
+							 <input type="button" value="Guardar" class="guardarprincipal" onclick="guardardatosprincipales();">
 						</div>
 					</div>
 				</form>
@@ -147,47 +147,40 @@
 
         <!--Hobbies form section-->
 
-				<!--Sección de Redes sociales -->
-			  <div class="socialNetworks">
-					<ul class="social-networks">
-						<li class="linkedin">
-							<a href="" target="_blank">linkedin</a>
-						</li>
-						<li class="facebook">
-							<a href="" target="_blank">facebook</a>
-						</li>
-						<li class="github">
-							<a href="" target="_blank">github</a>
-						</li>
-						<li class="twitter">
-							<a href="" target="_blank">twitter</a>
-						</li>
-					</ul>
-			 	 </div>
+
 
 				<!--Sección de Redes sociales -->
-        	<form class="networks" action="" method="post">
+        	<form class="networks" action="index.html" method="post">
             <div class="nets">
               <label for="linkedin">linkedin</label>
-              <input class="" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario">
+              <input class="" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
             </div>
             <div class="nets">
               <label for="facebook">facebook</label>
-              <input class="" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario">
+              <input class="" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario" onchange="setValue('facebook')">
             </div>
             <div class="nets">
               <label for="github">github</label>
-              <input class="" id="github" type="text" name="net3" placeholder="rellena con tu usuario">
+              <input class="" id="github" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('github')">
             </div>
             <div class="nets">
               <label for="twitter">twitter</label>
-              <input class="" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario">
+              <input class="" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
             </div>
 			   </form>
        </section>
 <!--______Comienza la seccion de previsualización______-->
-			<section class="previsualizacion-sec">
 
+
+			<section class="previsualizacion-sec">
+				<!--datos principales-->
+				<section class=preprincipales>
+					<p id="prenombre"></p>
+					<p id="preapellidos"></p>
+					<p id="preprofesion"></p>
+					<p id="preemail"></p>
+					<p id="pretelefono"></p>
+				</section>
 				<!--Sección de Experiencia-->
 				<section class="experience">
 					<h2 class="title-section">Prueba para comprobar scroll</h2>
@@ -241,16 +234,16 @@
           <div class="socialNetworks">
             <ul class="social">
               <li class="linkedin">
-                <a class="printnet" href="" target="_blank">linkedin</a>
+                <a id="a-linkedin" class="printnet" href="https://www.linkedin.com/in/" target="_blank">linkedin</a>
               </li>
               <li class="facebook">
-                <a class="printnet" href="" target="_blank">facebook</a>
+                <a class="printnet" href="https://www.facebook.com/" target="_blank">facebook</a>
               </li>
               <li class="github">
-                <a class="printnet" href="" target="_blank">github</a>
+                <a class="printnet" href="https://github.com/" target="_blank">github</a>
               </li>
               <li class="twitter">
-                <a class="printnet" href="" target="_blank">twitter</a>
+                <a class="printnet" href="https://twitter.com" target="_blank">twitter</a>
               </li>
             </ul>
          </div>

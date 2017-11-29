@@ -46,7 +46,7 @@ main{
 	flex-direction: column;
 	align-items: center;
 }
-.datosprin input{
+.datosprincipales{
 	display: flex;
 	text-align: center;
 	font-size: 18px;
@@ -61,8 +61,31 @@ main{
      border-radius: 100px;
 		 margin-top: 20px;
 }
+
 .guardarprincipal{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	width: 80px;
+	margin-top: 10px;
+	font-size: 18px;
+}
+.subirfoto{
+	width: 95px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+}
+/*styles pre*/
+.preprincipales {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.preprincipales p{
+	margin: 2px;
 }
 /*fin parte marta*/
 .formulario-sec{
@@ -249,7 +272,7 @@ input[type=button]{
 /*footer*/
 footer{
 	background-color: #252525;
-	height: 170px;
+	height: 120px;
 	box-sizing: border-box;
 }
 .infooter{
@@ -259,8 +282,8 @@ footer{
 }
 .end{
 	width: 100%;
+	font-size: 0.8em;
   color: #555555;
-	padding: 15px;
 	display: flex;
 	flex-direction: column;
   justify-content: flex-start;

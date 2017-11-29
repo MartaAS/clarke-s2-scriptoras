@@ -10,7 +10,15 @@ var emailIntroducido = prompt("¿Cuál es tu email");
 document.getElementById('emailformulario').value=emailIntroducido;
 var telefonoIntroducido = prompt("¿Cuál es tu teléfono móvil?");
 document.getElementById('telefonoformulario').value=telefonoIntroducido;
-
+//fin promp datos principales
+//guardar datos principales introducidos
+function guardardatosprincipales(){
+document.getElementById('prenombre').innerHTML=nombreIntroducido;
+document.getElementById('preapellidos').innerHTML=apellidoIntroducido;
+document.getElementById('preprofesion').innerHTML=profesionIntroducido;
+document.getElementById('preemail').innerHTML=emailIntroducido;
+document.getElementById('pretelefono').innerHTML=telefonoIntroducido;
+}
 //About
 //función para abrir el desplegable
 function editar(idContent){
@@ -46,6 +54,7 @@ for(var i = 0; i < newSkill.length; i++){
 	newSkill[i].innerHTML = skill;
 }
 
+<<<<<<< HEAD
 /*languages form section*/
 	function showFormLanguages() {
 		
@@ -55,3 +64,45 @@ for(var i = 0; i < newSkill.length; i++){
 var newTextLanguage = document.querySelector('.textBarPreview');
 // var text = prompt("Introduce un idioma");
 newTextLanguage.innerHTML = text;
+=======
+/*languages preview section*/
+var newTextLanguage = document.querySelector('.textBarPreview');
+var text = prompt("Introduce un idioma");
+/*languages section*/
+
+
+//var text = prompt("Introduce un idioma");
+
+newTextLanguage.innerHTML = text;
+
+
+
+/*languages section*/
+
+
+/*Redes sociales*/
+var netSocial = document.querySelector('#a-linkedin');
+var text = prompt("Introduce tu usario");
+netSocial.href = netSocial.href + text;
+
+/*javascript de redes sociales
+function setValue(net){
+	var inputSocial = document.getElementById(net);
+	setSocialMedia(inputSocial.value, net);
+}
+
+function setSocialMedia(value, net){
+	var aNet = document.getElementById('a-'+net);
+	var url;
+	if(net == 'linkedin'){
+		aNet.href = aNet.href+value;
+	}else if(net == 'Facebook'){
+		aNet.href = aNet.href+value;
+	}else if(net == 'Github'){
+		aNet.href = aNet.href+value;
+	}else if(net == 'Twitter'){
+		aNet.href = aNet.href+value;
+	}
+}
+*/
+>>>>>>> af3fedd1a588768776d91c8ed50624de1126dee6
