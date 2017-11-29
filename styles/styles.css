@@ -303,7 +303,7 @@ footer{
 }
 /*formulario*/
 .seccion{
-	padding: 90px 0 50px 0;
+	padding: 60px 0 50px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -314,8 +314,17 @@ footer{
 .formulario{
 	width: 50%;
 }
+.complete{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
 .cajas{
-width: 100%;
+  width: 100%;
 	background-color: #f5f5f5;
 	border:1px;
 	padding: 0 12px;
@@ -329,9 +338,6 @@ width: 100%;
  margin: 0 0 1.5rem;
  display: flex;
  flex-direction: row;
-}
-label{
-	width: 40%
 }
 .boton{
 	color: white;
