@@ -122,8 +122,8 @@ for(var i = 0; i < newSkill.length; i++){
 
 /*languages form section*/
 	function showPromptLanguage() {
-		var newTextLanguage = document.querySelectorAll('.textBarPreview');
 		var text = prompt("Introduce un idioma");
+		var newTextLanguage = document.querySelector('.textBarPreview');
 		newTextLanguage.innerHTML = text;
 	}
 
