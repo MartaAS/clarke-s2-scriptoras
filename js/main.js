@@ -54,31 +54,16 @@ for(var i = 0; i < newSkill.length; i++){
 	newSkill[i].innerHTML = skill;
 }
 
-<<<<<<< HEAD
 /*languages form section*/
 	function showFormLanguages() {
-		
 	}
 
 /*languages preview section*/
 var newTextLanguage = document.querySelector('.textBarPreview');
 // var text = prompt("Introduce un idioma");
 newTextLanguage.innerHTML = text;
-=======
-/*languages preview section*/
-var newTextLanguage = document.querySelector('.textBarPreview');
-var text = prompt("Introduce un idioma");
-/*languages section*/
-
-
-//var text = prompt("Introduce un idioma");
-
-newTextLanguage.innerHTML = text;
-
-
 
 /*languages section*/
-
 
 /*Redes sociales*/
 var netSocial = document.querySelector('#a-linkedin');
@@ -105,4 +90,3 @@ function setSocialMedia(value, net){
 	}
 }
 */
->>>>>>> af3fedd1a588768776d91c8ed50624de1126dee6
