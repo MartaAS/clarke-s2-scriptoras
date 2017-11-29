@@ -172,9 +172,14 @@ for(var i = 0; i < newSkill.length; i++){
 
 
 /*Redes sociales*/
-var netSocial = document.querySelectorAll('.users');
-var text = prompt("Introduce tu usario");
-netSocial.href = netSocial.href + text;
+function showNetsocial() {
+  var netSocial = document.querySelectorAll('.printnet');
+  for (var i=0; i<netSocial.length; i++){
+    var text = prompt("Introduce tu usuario de "+netSocial[i].innerHTML);
+    netSocial[i].href = netSocial[i].href + text;
+  }
+}
+
 
 
 
