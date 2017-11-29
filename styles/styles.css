@@ -288,8 +288,8 @@ input[type=button]{
 	height: 0;
 	width: 40px;
 }
-.load{
-     height: 20px;
+.thumb{
+     height: 200px;
      border: 1px solid #000;
      margin: 10px 5px 0 0;
 }
