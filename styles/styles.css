@@ -259,7 +259,9 @@ margin: 10px 0px;
 }
 .month, .year{
 margin-top: 5px;
+
 }
+
 /*Botones guardar y cerrar*/
 .save-button, .out-button {
 
@@ -284,91 +286,101 @@ color: #6f1614;
 /* La timeline*/
 .timeline {
 
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 /* La propia timeline (línea vertical) */
 .timeline::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    background-color: #6f1614;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+  content: '';
+  position: absolute;
+  width: 10px;
+  background-color: #6f1614;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
 }
 /* Contenido alrededor de la timeline */
 .container-timeline {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
 }
 /* Círculos de la timeline */
 .container-timeline::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #6f1614;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #6f1614;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
 }
 /* Situar los contenidos de la izquierda*/
 .left {
-    left: 0;
+  left: 0;
 }
 
 /* Situar los contenidos de la derecha */
 .right {
-    left: 50%;
+  left: 50%;
 }
 /* Arregla la posición de los círculos del contenido de la derecha */
 .right::after {
-    left: -16px;
+  left: -16px;
 }
 /* Añade flechas en el contenido de la izquierda apuntando a la derecha */
 .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid pink;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent pink;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid pink;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent pink;
 }
 /* Añade flechas en el contenido de la derecha apuntando hacia la izquierda. */
 .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid pink;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent pink transparent transparent;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid pink;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent pink transparent transparent;
 }
 /* Estilo de las cajas con el contenido */
 .content-timeline {
-    padding: 10px 30px;
-    background-color: pink;
-    position: relative;
-    border-radius: 6px;
+  padding: 10px 30px;
+  background-color: pink;
+  position: relative;
+  border-radius: 6px;
+	font-size: 14px;
+}
+.dates-container {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0px;
+  margin-bottom: 7px;
 }
 /*Estilos de texto dentro de cajas*/
 .title-year{
   color: #6f1614;
 	margin: 8px;
+	line-height: 10px;
+  font-size: 22px;
 }
 .job-title, .education-title{
   font-weight: bold;
@@ -389,6 +401,8 @@ color: #6f1614;
  }
 .work-information-output-container > p{
   margin-top: 0px;
+	text-align: center;
+}
 }
 @media all and (max-width: 600px) {
   /* Poner la línea a la izquierda */

@@ -76,11 +76,11 @@
 						<h3 class="subtitle-section">Puesto de trabajo</h3>
 						<div>
 							<label for="job"></label>
-							<input class="form-text-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" />
+							<input class="form-text-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" onclick="clickCargo()"/>
 						</div>
 						<div >
 							<label for="company"></label>
-							<input class="form-text-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
+							<input class="form-text-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa" onclick="clickEmpresa()">
 						</div>
 						<div class="dates-boxes">
 							<label>Fecha de inicio:</label>
@@ -97,7 +97,7 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-							<input class="save-button"type="button" name="save" value="Guardar">
+							<input class="save-button"type="button" name="save" value="Guardar" onclick="saveExperience()">
 							<input class="out-button"type="button" value="Cerrar" onclick="ocultar('job-box')">
 						</div>
 					</div>
@@ -114,10 +114,10 @@
 					<div class="boxes-container" id="education-box">
 						<h3 class="subtitle-section">Titulación</h3>
 						<div>
-							<input class="form-text-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" />
+							<input class="form-text-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" onclick="clickEstudios()" />
 						</div>
 						<div >
-							<input class="form-text-box" id="center" type="text" name="center-name" placeholder="Indica el centro de estudios">
+							<input class="form-text-box" id="center" type="text" name="center-name" placeholder="Indica el centro de estudios"onclick="clickCentro()">
 						</div>
 						<div class="dates-boxes">
 							<label>Fecha de inicio</label>
@@ -134,7 +134,7 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-						<input class="save-button" type="button" name="save" value="Guardar">
+						<input class="save-button" type="button" name="save" value="Guardar" onclick="saveTraining()">
 						<input class="out-button" type="button" value="Cerrar" onclick="ocultar('education-box')">
 						</div>
 					</div>
@@ -257,43 +257,61 @@
 					<p id="pretelefono">Telefono</p>
 				</section>
 
-				<!--Sección de Experiencia-->
+				<!--Sección de Experiencia y Formación-->
 				<section class="">
 					<h2 class="experience-education-main-title">Experiencia y Formación</h2>
 					<section class="timeline">
 						<div class="container-timeline left">
 					    <div class="content-timeline">
 					      <div class="dates-output-container">
-						      <h2 class="title-year">2017</h2>
-						      <h2 class="title-year">-</h2>
-						      <h2 class="title-year" >2018</h2>
+									<div class="dates-container">
+						      	<h2 id="start-job-year-preview"class="title-year"> 2017</h2>
+										<p id="start-job-month-preview">Mes</p>
+									</div>
+									<h2 class="title-year">-</h2>
+									<div class="dates-container">
+							      <h2 id="end-job-year-preview" class="title-year" >2018</h2>
+										<p id="end-job-month-preview">Mes</p>
+									</div>
 					      </div>
 					      <div class="work-information-output-container">
-						      <p class='job-title'>Cargo</p>
-						      <p>Empresa</p>
+						      <p id="job-preview"class='job-title'>Cargo</p>
+						      <p id="company-preview">Empresa</p>
 					      </div>
 					    </div>
 						</div>
 						<div class="container-timeline right">
 					    <div class="content-timeline">
 					      <div class="dates-output-container">
-						      <h2 class="title-year">2017</h2>
-						      <h2 class="title-year">-</h2>
-						      <h2 class="title-year" >2018</h2>
+									<div class="dates-container">
+						      	<h2 id="start-education-year-preview"class="title-year"> 2017</h2>
+										<p id="start-education-month-preview">Mes</p>
+									</div>
+									<h2 class="title-year">-</h2>
+									<div class="dates-container">
+							      <h2 id="end-education-year-preview" class="title-year" >2018</h2>
+										<p id="end-education-month-preview">Mes</p>
+									</div>
 					      </div>
 					      <div class="work-information-output-container">
-						      <p class='education-title'>Título</p>
-						      <p>Centro de estudios</p>
+						      <p id="education-title-preview" class='education-title'>Título</p>
+						      <p id="education-center-preview">Centro de estudios</p>
 					      </div>
 					    </div>
 						</div>
 
 						<div class="container-timeline left">
 					    <div class="content-timeline">
-					      <div class="dates-output-container">
-						      <h2 class="title-year">2017</h2>
-						      <h2 class="title-year">-</h2>
-						      <h2 class="title-year" >2018</h2>
+								<div class="dates-output-container">
+									<div class="dates-container">
+						      	<h2 id=""class="title-year"> 2017</h2>
+										<p id="">Mes</p>
+									</div>
+									<h2 class="title-year">-</h2>
+									<div class="dates-container">
+							      <h2 id="" class="title-year" >2018</h2>
+										<p id="">Mes</p>
+									</div>
 					      </div>
 					      <div class="work-information-output-container">
 						      <p class='job-title'>Cargo</p>
@@ -303,10 +321,16 @@
 						</div>
 						<div class="container-timeline right">
 					    <div class="content-timeline">
-					      <div class="dates-output-container">
-						      <h2 class="title-year">2017</h2>
-						      <h2 class="title-year">-</h2>
-						      <h2 class="title-year" >2018</h2>
+								<div class="dates-output-container">
+									<div class="dates-container">
+						      	<h2 id=""class="title-year"> 2017</h2>
+										<p id="">Mes</p>
+									</div>
+									<h2 class="title-year">-</h2>
+									<div class="dates-container">
+							      <h2 id="" class="title-year" >2018</h2>
+										<p id="">Mes</p>
+									</div>
 					      </div>
 					      <div class="work-information-output-container">
 						      <p class='education-title'>Título</p>
@@ -316,10 +340,16 @@
 						</div>
 						<div class="container-timeline left">
 					    <div class="content-timeline">
-					      <div class="dates-output-container">
-						      <h2 class="title-year">2017</h2>
-						      <h2 class="title-year">-</h2>
-						      <h2 class="title-year" >2018</h2>
+								<div class="dates-output-container">
+									<div class="dates-container">
+						      	<h2 id=""class="title-year"> 2017</h2>
+										<p id="">Mes</p>
+									</div>
+									<h2 class="title-year">-</h2>
+									<div class="dates-container">
+							      <h2 id="" class="title-year" >2018</h2>
+										<p id="">Mes</p>
+									</div>
 					      </div>
 					      <div class="work-information-output-container">
 						      <p class='job-title'>Cargo</p>
@@ -329,10 +359,16 @@
 						</div>
 						<div class="container-timeline right">
 					    <div class="content-timeline">
-					      <div class="dates-output-container">
-						      <h2 class="title-year">2017</h2>
-						      <h2 class="title-year">-</h2>
-						      <h2 class="title-year" >2018</h2>
+								<div class="dates-output-container">
+									<div class="dates-container">
+						      	<h2 id=""class="title-year"> 2017</h2>
+										<p id="">Mes</p>
+									</div>
+									<h2 class="title-year">-</h2>
+									<div class="dates-container">
+							      <h2 id="" class="title-year" >2018</h2>
+										<p id="">Mes</p>
+									</div>
 					      </div>
 					      <div class="work-information-output-container">
 						      <p class='education-title'>Título</p>
