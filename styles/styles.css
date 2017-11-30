@@ -142,6 +142,21 @@ main{
 }
 .preprincipales p{
 	margin: 2px;
+	margin-top: 20px;
+}
+.containerprefoto{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+.thumb2{
+	border: 1px solid #000;
+	margin: 10px 5px 0 0;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
 /*mediaqueries*/
 @media all and (min-width: 600px){
@@ -177,20 +192,7 @@ overflow: scroll;
 height: 50%;
 overflow: scroll;
 }
-.containerprefoto{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 50px;
-}
-.thumb2{
-	border: 1px solid #000;
-	margin: 10px 5px 0 0;
-	width: 200px;
-	height: 200px;
-	border-radius: 100px;
-	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
-}
+
 /*Estilos generales de la sección de desplegables*/
 .title-container{
 	margin-bottom: 10px;
