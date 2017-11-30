@@ -69,7 +69,6 @@ main{
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-
 }
 .containerinfo{
 	display: flex;
@@ -108,8 +107,6 @@ main{
 		display: flex;
 		align-self: center;
 }
-
-
 
 .guardarprincipal{
 	flex-direction: column;
@@ -665,6 +662,19 @@ footer{
 	}
 	.end{
 		margin-left: auto;
+	}
+	main{
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: row;
+	}
+	.formulario-sec{
+		width: 40%;
+		height: 100%;
+	}
+	.previsualizacion-sec{
+		width: 60%;
+		height: 100%;
 	}
 }
 @media print {
