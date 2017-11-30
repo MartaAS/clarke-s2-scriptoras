@@ -345,6 +345,8 @@ color: #6f1614;
  }
 .work-information-output-container > p{
   margin-top: 0px;
+	text-align: center;
+}
 }
 @media all and (max-width: 600px) {
   /* Poner la línea a la izquierda */

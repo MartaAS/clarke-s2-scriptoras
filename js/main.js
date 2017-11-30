@@ -98,7 +98,7 @@ var aboutInput = prompt("Haz una breve descripción sobre ti.");
 aboutMe.innerHTML = aboutInput;
 */
 
-//Experience and Education
+//Experiencia y Formación
 
 //Desplegable mes
 var monthOptions = '<option value="mes">Mes</option>';
@@ -147,27 +147,32 @@ document.getElementById('company').value=empresaIntroducida;
 function saveExperience(){
 document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
 document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
-
 document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
-
 document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
-
 document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
-
 document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
 }
 
+//Funciones para obtener el valor de los campos de texto de Formación con prompt
+function clickEstudios(){
+var tituloIntroducido = prompt("Indica el nombre de la titulación.");
+document.getElementById('educ-title').value=tituloIntroducido;
+}
+function clickCentro(){
+var centroIntroducido = prompt("Indica el centro de estudios.");
+document.getElementById('center').value=centroIntroducido;
+}
 
-
-/*
-var jobName = document.querySelector('#job-pre');
-var jobInput = prompt('Introduce el nombre del puesto de trabajo');
-jobName.innerHTML = jobInput;
-
-var companyName = document.querySelector('#company-pre');
-var companyInput = prompt('Introduce el nombre de la empresa');
-companyName.innerHTML = companyInput;
-*/
+//Función para introducir en la previsualización los datos obtenidos de formación
+function saveTraining(){
+document.getElementById('education-title-preview').innerHTML=document.getElementById('educ-title').value;
+document.getElementById('education-center-preview').innerHTML=document.getElementById('center').value;
+document.getElementById('start-education-month-preview').innerHTML=document.getElementById('month-training-start').value;
+document.getElementById('end-education-month-preview').innerHTML=document.getElementById('month-training-end').value;
+document.getElementById('start-education-year-preview').innerHTML=document.getElementById('year-training-start').value;
+document.getElementById('end-education-year-preview').innerHTML=document.getElementById('year-training-end').value;
+}
+//Fin de Experiencia y Formación
 //Skills
 var newSkill = document.querySelectorAll(".skilli");
 var skill;
