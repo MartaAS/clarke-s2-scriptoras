@@ -1,3 +1,4 @@
+
 *{
 box-sizing: border-box;
 }
@@ -28,7 +29,31 @@ header{
 	margin-top: 0px;
   z-index: 1;
 }
-/*prueba cargar imagen*/
+.headercreatucv{
+	background-image: url(../images/vintage4.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 25vh;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+.textcrea{
+	display: flex;
+	align-self: flex-start;
+	margin-top: 30px;
+	margin-left: 20px;
+	color: white;
+	font-size: 25px;
+	font-family: 'Arial';
+}
+.imgcrea{
+	width: 100%;
+	height: 200px;
+
+}
+/* cargar imagen*/
 .thumb{
 border: 1px solid #000;
 margin: 10px 5px 0 0;
@@ -37,7 +62,7 @@ height: 200px;
 border-radius: 100px;
 -webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
-/*fin prueba cargar imagen*/
+/*fin cargar imagen*/
 main{
 	padding-top: 50px;
 	box-sizing: border-box;
@@ -54,8 +79,13 @@ main{
 	display: flex;
 	justify-content: center;
 }
+.form{
+
+	display: flex;
+	justify-content: center;
+}
 .datosprin{
-	margin-top: 10px;
+	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -75,7 +105,10 @@ main{
      border-radius: 100px;
 		 margin-top: 40px;
 		-webkit-box-shadow: 5px 8px 42px 1px #3d3d29;
+		display: flex;
+		align-self: center;
 }
+
 
 
 .guardarprincipal{
@@ -86,6 +119,8 @@ main{
 	font-size: 18px;
 	background-color: #A19680;
 	color: white;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 /*hover boton guardar*/
 .guardarprincipal:hover {
@@ -107,16 +142,7 @@ main{
 }
 .preprincipales p{
 	margin: 2px;
-}
-/*fin parte marta*/
-.formulario-sec{
-height: 50%;
-overflow: scroll;
-}
-
-.previsualizacion-sec{
-height: 50%;
-overflow: scroll;
+	margin-top: 20px;
 }
 .containerprefoto{
 	display: flex;
@@ -132,6 +158,41 @@ overflow: scroll;
 	border-radius: 100px;
 	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
+/*mediaqueries*/
+@media all and (min-width: 600px){
+	header{
+		height: auto;
+}
+}
+@media all and (min-width: 600px){
+	.logoscriptoras{
+		height: 90px;
+		width: 90px;
+}
+}
+@media all and (min-width: 600px){
+.headercreatucv{
+		height: 30vh;
+
+}
+}
+@media all and (min-width: 600px){
+	.textcrea{
+		font-size: 40px;
+		margin-top: 50px;
+	}
+}
+/*fin parte marta*/
+.formulario-sec{
+height: 50%;
+overflow: scroll;
+}
+
+.previsualizacion-sec{
+height: 50%;
+overflow: scroll;
+}
+
 /*Estilos generales de la sección de desplegables*/
 .title-container{
 	margin-bottom: 10px;
@@ -400,7 +461,7 @@ color: #6f1614;
 }
 
 /*Languages form container*/
-#languagesFormContainer {
+#languagesFormContainer, #hobbiesFormContainer {
 	display:flex;
 	flex-direction: column;
 	align-items: center;
@@ -456,22 +517,26 @@ color: #6f1614;
 	padding-left: 1em;
 }
 
-#percentageBar1 {
+.percentageBar1 {
 	width: 50% ;
 	background-color: #A19680;
 }
-#percentageBar2 {
+/*#percentageBar2 {
 	width: 70% ;
 	background-color: #A19680;
 }
 #percentageBar3 {
 	width: 40% ;
 	background-color: #A19680;
+}*/
+
+.inputStyles {
+	background-color: black;
 }
 
 /*Hobbies*/
-.hobbies{
-
+#hobbiesForm{
+	display: none;
 }
 /* Redes sociales*/
 
@@ -514,10 +579,13 @@ color: #6f1614;
 	height: 0;
 	width: 40px;
 }
-.thumb{
-     height: 200px;
-     border: 1px solid #000;
-     margin: 10px 5px 0 0;
+.port a {
+	background:url('..images/portfolio.jpg');
+	overflow: hidden;
+	display: block;
+	background-size:40px 40px;
+	padding-left: 40px;
+	padding-bottom: 30px;
 }
 /*footer*/
 footer{
@@ -598,6 +666,12 @@ footer{
   border-radius: 0.33em;
 }
 /*mediaqueries*/
+
+@media all and (max-width: 600px){
+	.textFormButton{
+		font-size: 18px;
+}
+}
 @media all and (min-width:600px) {
 	.sociality {
 		display: flex;

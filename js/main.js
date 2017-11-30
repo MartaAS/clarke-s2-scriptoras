@@ -56,24 +56,32 @@ function clicknombre(){
 var nombreIntroducido = prompt("¿Cuál es tu nombre");
 document.getElementById('nombreformulario').value=nombreIntroducido;
 }
+function clickapellido(){
 var apellidoIntroducido = prompt("¿Cuáles son tus apellidos?");
 document.getElementById('apellidoformulario').value=apellidoIntroducido;
+}
+function clickprofesion(){
 var profesionIntroducido = prompt("¿Cuál es tu profesión");
 document.getElementById('profesionformulario').value=profesionIntroducido;
+}
+function clickemail(){
 var emailIntroducido = prompt("¿Cuál es tu email");
 document.getElementById('emailformulario').value=emailIntroducido;
+}
+function clicktelefono(){
 var telefonoIntroducido = prompt("¿Cuál es tu teléfono móvil?");
-document.getElementById('telefonoformulario').value=telefonoIntroducido;
+document.getElementById('telefonoformulario').value=telefonoIntroducido;}
+
 //fin promp datos principales
 
 
 //guardar datos principales introducidos
 function guardardatosprincipales(){
 document.getElementById('prenombre').innerHTML=document.getElementById('nombreformulario').value;
-document.getElementById('preapellidos').innerHTML=apellidoIntroducido;
-document.getElementById('preprofesion').innerHTML=profesionIntroducido;
-document.getElementById('preemail').innerHTML=emailIntroducido;
-document.getElementById('pretelefono').innerHTML=telefonoIntroducido;
+document.getElementById('preapellidos').innerHTML=document.getElementById('apellidoformulario').value;
+document.getElementById('preprofesion').innerHTML=document.getElementById('profesionformulario').value;
+document.getElementById('preemail').innerHTML=document.getElementById('emailformulario').value;
+document.getElementById('pretelefono').innerHTML=document.getElementById('telefonoformulario').value;
 }
 //About
 function showPromptAbout() {
@@ -158,29 +166,46 @@ function showPromptSkill(){
 }
 
 
-/*languages form section*/
+//languages form section
+// function showPromptLanguage() {
+//   var newTextLanguage = document.querySelectorAll('.textBarPreview');
+//     for (var i = 0; i < newTextLanguage.length; i++) {
+//       var text = prompt("Introduce un idioma");
+//       newTextLanguage[i].innerHTML = text;
+//       var percentage = prompt("Introduce el porcentaje");
+//       var newPercentageLanguage = document.querySelectorAll('.percentageBar').style.width = percentage + '%';
+//       newPercentageLanguage[i].innerHTML = percentage;
+//     }
+// 	}
+
 	function showPromptLanguage() {
-		var text = prompt("Introduce un idioma");
-		var newTextLanguage = document.querySelector('.textBarPreview');
-		newTextLanguage.innerHTML = text;
+    var newTextLanguage = document.querySelectorAll('.textBarPreview');
+    for (var i = 0; i < newTextLanguage.length; i++) {
+      var text = prompt("Introduce un idioma");
+      newTextLanguage[i].innerHTML = text;
+    }
+
 	}
 
 	function showPromptPercentage() {
-		var percentage = prompt("Introduce el porcentaje");
-		var newPercentageLanguage = document.getElementById('percentageBar1').style.width = percentage + '%';
+    var newPercentageLanguage = document.querySelectorAll('.percentageBar1');
+    for (var i = 0; i < newPercentageLanguage.length; i++) {
+      var percentage = prompt("Introduce el porcentaje");
+      // newPercentageLanguage[i] = percentage + '%';
+      // newPercentageLanguage[i].innerHTML = newPercentageLanguage[i].style.width = percentage + '%';
+    }
 	}
+	// function addInput() {
+	// 	var addNewInput = document.querySelector('.languagesForm');
+	// 	var addInput = document.createElement('input');
+  //   addInput.style.cssText = 'background-color: black;'
+	// 	addNewInput.append(addInput);
+	// }
 
-	function addInput() {
-		var addNewInput = document.querySelector('.languagesForm');
-		var addInput = document.createElement('input');
-		addNewInput.append(addInput);
-	}
-
-/*languages preview section*/
-// var newTextLanguage = document.querySelector('.textBarPreview');
-// newTextLanguage.innerHTML = text;
-
-/*languages section*/
+//Hobbies form
+function showHobbiesForm() {
+  document.getElementById('hobbiesForm').style.display = 'block';
+}
 
 
 /*Redes sociales*/
@@ -217,7 +242,7 @@ function setSocialMedia(value, net){
 }
 */
 /*qr*/
-function archivo(evt) {
+function archivo1(evt) {
                   var files = evt.target.files; // FileList object
 
                   // Obtenemos la imagen del campo "file".
@@ -232,7 +257,7 @@ function archivo(evt) {
                     reader.onload = (function(theFile) {
                         return function(e) {
                           // Insertamos la imagen
-                         document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                         document.getElementById("list1").innerHTML = ['<img class="thumb1" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
                         };
                     })(f);
 
@@ -240,4 +265,4 @@ function archivo(evt) {
                   }
               }
 
-              document.getElementById('files').addEventListener('change', archivo, false);
+              document.getElementById('files1').addEventListener('change', archivo1, false);
