@@ -177,8 +177,8 @@ for(var i = 0; i < newSkill.length; i++){
     var newPercentageLanguage = document.querySelectorAll('.percentageBar1');
     for (var i = 0; i < newPercentageLanguage.length; i++) {
       var percentage = prompt("Introduce el porcentaje");
-      newPercentageLanguage[i].style.width = percentage + '%';
-      newPercentageLanguage[i].innerHTML = percentage;
+      // newPercentageLanguage[i] = percentage + '%';
+      // newPercentageLanguage[i].innerHTML = newPercentageLanguage[i].style.width = percentage + '%';
     }
 	}
 	// function addInput() {
@@ -187,6 +187,11 @@ for(var i = 0; i < newSkill.length; i++){
   //   addInput.style.cssText = 'background-color: black;'
 	// 	addNewInput.append(addInput);
 	// }
+
+//Hobbies form
+function showHobbiesForm() {
+  document.getElementById('hobbiesForm').style.display = 'block';
+}
 
 
 /*Redes sociales*/

@@ -367,7 +367,7 @@ color: #6f1614;
 
 }
 /*Languages form container*/
-#languagesFormContainer {
+#languagesFormContainer, #hobbiesFormContainer {
 	display:flex;
 	flex-direction: column;
 	align-items: center;
@@ -441,8 +441,8 @@ color: #6f1614;
 }
 
 /*Hobbies*/
-.hobbies{
-
+#hobbiesForm{
+	display: none;
 }
 /* Redes sociales*/
 
