@@ -153,6 +153,8 @@ for(var i = 0; i < newSkill.length; i++){
 }
 
 //languages form section
+//showPromptLanguage()
+
 // function showPromptLanguage() {
 //   var newTextLanguage = document.querySelectorAll('.textBarPreview');
 //     for (var i = 0; i < newTextLanguage.length; i++) {
@@ -164,23 +166,16 @@ for(var i = 0; i < newSkill.length; i++){
 //     }
 // 	}
 
-	function showPromptLanguage() {
+  function showPromptLanguage() {
     var newTextLanguage = document.querySelectorAll('.textBarPreview');
     for (var i = 0; i < newTextLanguage.length; i++) {
       var text = prompt("Introduce un idioma");
       newTextLanguage[i].innerHTML = text;
-    }
-
-	}
-
-	function showPromptPercentage() {
-    var newPercentageLanguage = document.querySelectorAll('.percentageBar1');
-    for (var i = 0; i < newPercentageLanguage.length; i++) {
-      var percentage = prompt("Introduce el porcentaje");
-      // newPercentageLanguage[i] = percentage + '%';
-      // newPercentageLanguage[i].innerHTML = newPercentageLanguage[i].style.width = percentage + '%';
+      var pct = prompt("Introduce el porcentaje");
+      newTextLanguage[i].parentElement.style.width = pct + "%";
     }
 	}
+
 	// function addInput() {
 	// 	var addNewInput = document.querySelector('.languagesForm');
 	// 	var addInput = document.createElement('input');
@@ -193,7 +188,15 @@ function showHobbiesForm() {
   document.getElementById('hobbiesForm').style.display = 'block';
 }
 
-
+//Hobbies Preview
+function showHobbiesPreview(elementId) {
+  var check = document.getElementById(elementId);
+  if (check.style.visibility == "visible"){
+    check.style.visibility = "hidden";
+  } else {
+    check.style.visibility = "visible";
+  }
+}
 /*Redes sociales*/
 function showNetsocial() {
   var netSocial = document.querySelectorAll('.printnet');

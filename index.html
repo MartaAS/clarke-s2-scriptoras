@@ -171,32 +171,32 @@
         <section id="hobbiesFormContainer">
           <div class="title-container">
             <h2 class="textFormButton">Pasatiempos</h2>
-            <button class="addLanguageButton" type="button" name="languageButton" onclick="showHobbiesForm()"><img src="images/addButton32px.png" alt="addButton"></button>
+            <button class="addLanguageButton" type="button" name="languageButton" onclick="showHobbiesForm(); showHobbiesPreview()"><img src="images/addButton32px.png" alt="addButton"></button>
           </div>
           <form id="hobbiesForm" action="index.html" method="post">
             <div class="checkBoxHobbies">
               <label for="hobbie1">Leer</label>
-              <input id ="hobbie1" type="checkbox" name="read" value="hobbies">
+              <input id ="hobbie1" type="checkbox" name="read" value="hobbies" onchange="showHobbiesPreview('read')">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie2">Viajar</label>
-              <input id ="hobbie2" type="checkbox" name="travel" value="hobbies">
+              <input id ="hobbie2" type="checkbox" name="travel" value="hobbies" onchange="showHobbiesPreview('travel')">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie3">Videojuegos</label>
-              <input id ="hobbie3" type="checkbox" name="game" value="hobbies">
+              <input id ="hobbie3" type="checkbox" name="game" value="hobbies" onchange="showHobbiesPreview('game')">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie4">Deportes</label>
-              <input id ="hobbie4" type="checkbox" name="sports" value="hobbies">
+              <input id ="hobbie4" type="checkbox" name="sports" value="hobbies" onchange="showHobbiesPreview('sports')">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie5">Cine</label>
-              <input id ="hobbie5" type="checkbox" name="movies" value="hobbies">
+              <input id ="hobbie5" type="checkbox" name="movies" value="hobbies" onchange="showHobbiesPreview('movies')">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie6">Música</label>
-              <input id ="hobbie6" type="checkbox" name="music" value="hobbies">
+              <input id ="hobbie6" type="checkbox" name="music" value="hobbies" onchange="showHobbiesPreview('music')">
             </div>
           </form>
         </section>
@@ -365,10 +365,15 @@
 
         <!--Hobbies section-->
         <section id="hobbiesPreview">
-          <div class="hobbies">
-
+          <h2 class="hobbiesTitlePreview">Pasatiempos</h2>
+          <div class="allHobbiesPreview">
+            <img id="read" src="images/read.png" alt="read hobbie">
+            <img id="travel" src="images/travel.png" alt="travel hobbie">
+            <img id="game" src="images/videogame.png" alt="game hobbie">
+            <img id="sports" src="images/sports.png" alt="sports hobbie">
+            <img id="cinema" src="images/cinema.png" alt="cinema hobbie">
+            <img id="music" src="images/music.png" alt="music hobbie">
           </div>
-
         </section>
 
         <!--Sección de Redes sociales -->
