@@ -148,28 +148,17 @@ for(var i = 0; i < newSkill.length; i++){
 
 /*languages form section*/
 	function showPromptLanguage() {
-		var text = prompt("Introduce un idioma");
-		var newTextLanguage = document.querySelector('.textBarPreview');
-		newTextLanguage.innerHTML = text;
+		var newTextLanguage = document.querySelectorAll('.textBarPreview');
+    for (var i = 0; i < newTextLanguage.length; i++) {
+      var text = prompt("Introduce un idioma");
+      newTextLanguage[i].innerHTML = text;
+    }
 	}
 
-	function showPromptPercentage() {
-		var percentage = prompt("Introduce el porcentaje");
-		var newPercentageLanguage = document.getElementById('percentageBar1').style.width = percentage + '%';
+	// function showPromptPercentage() {
+	// 	var percentage = prompt("Introduce el porcentaje");
+	// 	var newPercentageLanguage = document.getElementById('percentageBar1').style.width = percentage + '%';
 	}
-
-	function addInput() {
-		var addNewInput = document.querySelector('.languagesForm');
-		var addInput = document.createElement('input');
-		addNewInput.append(addInput);
-	}
-
-/*languages preview section*/
-// var newTextLanguage = document.querySelector('.textBarPreview');
-// newTextLanguage.innerHTML = text;
-
-/*languages section*/
-
 
 /*Redes sociales*/
 function showNetsocial() {
