@@ -485,14 +485,13 @@ color: #6f1614;
 	height: 0;
 	width: 40px;
 }
-.portfolio{
-	background: url('../images/portfolio.png') center no-repeat;
+.port a {
+	background:url('..images/portfolio.jpg');
 	overflow: hidden;
 	display: block;
-	background-size: cover;
-	padding-top: 40px;
-	height: 0;
-	width: 40px;
+	background-size:40px 40px;
+	padding-left: 40px;
+	padding-bottom: 30px;
 }
 /*footer*/
 footer{
