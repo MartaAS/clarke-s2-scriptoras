@@ -120,7 +120,7 @@ for(var i = 0; i < newSkill.length; i++){
 	newSkill[i].innerHTML = skill;
 }
 
-/*languages form section*/
+//languages form section
 	function showPromptLanguage() {
 		var text = prompt("Introduce un idioma");
 		var newTextLanguage = document.querySelector('.textBarPreview');
