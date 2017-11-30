@@ -545,14 +545,6 @@ color: #6f1614;
 	height: 0;
 	width: 40px;
 }
-.port a {
-	background:url('..images/portfolio.jpg');
-	overflow: hidden;
-	display: block;
-	background-size:40px 40px;
-	padding-left: 40px;
-	padding-bottom: 30px;
-}
 /*footer*/
 footer{
 	background-color: #252525;
