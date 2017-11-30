@@ -107,7 +107,6 @@ main{
 		display: flex;
 		align-self: center;
 }
-
 .guardarprincipal{
 	flex-direction: column;
 	justify-content: center;
@@ -155,30 +154,7 @@ main{
 	border-radius: 100px;
 	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
-/*mediaqueries*/
-@media all and (min-width: 600px){
-	header{
-		height: auto;
-}
-}
-@media all and (min-width: 600px){
-	.logoscriptoras{
-		height: 90px;
-		width: 90px;
-}
-}
-@media all and (min-width: 600px){
-.headercreatucv{
-		height: 30vh;
 
-}
-}
-@media all and (min-width: 600px){
-	.textcrea{
-		font-size: 40px;
-		margin-top: 50px;
-	}
-}
 /*fin parte marta*/
 .formulario-sec{
 height: 50%;
@@ -391,33 +367,7 @@ color: #6f1614;
 .work-information-output-container > p{
   margin-top: 0px;
 }
-@media all and (max-width: 600px) {
-  /* Poner la línea a la izquierda */
-  .timeline::after {
-    left: 31px;
-  }
-  /* Para que se ajusten los contenedores a la pantalla */
-  .container-timeline {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-  /* Poner los contenedores de la derecha debajo de los de la izquierda */
-  .right {
-    left: 0%;
-  }
-  /* Para que todas las flechas apunten a la izquierda */
-  .container-timeline::before {
-    left: 60px;
-    border: medium solid pink;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent pink transparent transparent;
-  }
-  /* Para que todos los círculos estén alineados */
-  .left::after, .right::after {
-    left: 15px;
-  }
-}
+
 /*End Experience and Education preview*/
 /*Skills*/
 .skills{
@@ -633,13 +583,49 @@ footer{
   border-radius: 0.33em;
 }
 /*mediaqueries*/
-
-@media all and (max-width: 600px){
+@media all and (min-width:600px) {
+	header{
+		height: auto;
+}
+	.logoscriptoras{
+		height: 90px;
+		width: 90px;
+}
+.headercreatucv{
+		height: 30vh;
+}
+.textcrea{
+	font-size: 40px;
+	margin-top: 50px;
+}
+/* Poner la línea a la izquierda */
+	.timeline::after {
+		left: 31px;
+	}
+	/* Para que se ajusten los contenedores a la pantalla */
+	.container-timeline {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	}
+	/* Poner los contenedores de la derecha debajo de los de la izquierda */
+	.right {
+		left: 0%;
+	}
+	/* Para que todas las flechas apunten a la izquierda */
+	.container-timeline::before {
+		left: 60px;
+		border: medium solid pink;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent pink transparent transparent;
+	}
+	/* Para que todos los círculos estén alineados */
+	.left::after, .right::after {
+		left: 15px;
+	}
 	.textFormButton{
 		font-size: 18px;
-}
-}
-@media all and (min-width:600px) {
+  }
 	.sociality {
 		display: flex;
 		justify-content: space-around;
@@ -649,12 +635,12 @@ footer{
 		margin-right:80px;
 		display: flex;
 		justify-content: flex-end;
-	}
+	 }
 	.infooter{
 		display: flex;
 		flex-direction: row;
 		padding-top: 25px;
-	}
+	 }
 }
 @media all and (min-width:900px) {
 	.logo{
