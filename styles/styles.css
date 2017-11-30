@@ -404,33 +404,7 @@ color: #6f1614;
 	text-align: center;
 }
 }
-@media all and (max-width: 600px) {
-  /* Poner la línea a la izquierda */
-  .timeline::after {
-    left: 31px;
-  }
-  /* Para que se ajusten los contenedores a la pantalla */
-  .container-timeline {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-  /* Poner los contenedores de la derecha debajo de los de la izquierda */
-  .right {
-    left: 0%;
-  }
-  /* Para que todas las flechas apunten a la izquierda */
-  .container-timeline::before {
-    left: 60px;
-    border: medium solid pink;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent pink transparent transparent;
-  }
-  /* Para que todos los círculos estén alineados */
-  .left::after, .right::after {
-    left: 15px;
-  }
-}
+
 /*End Experience and Education preview*/
 /*Skills*/
 .skills{
@@ -695,4 +669,32 @@ footer{
 	header, footer, nav {
   display: none;
 }
+}
+/*Mediaq del timeline*/
+@media all and (max-width: 600px) {
+  /* Poner la línea a la izquierda */
+  .timeline::after {
+    left: 31px;
+  }
+  /* Para que se ajusten los contenedores a la pantalla */
+  .container-timeline {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  /* Poner los contenedores de la derecha debajo de los de la izquierda */
+  .right {
+    left: 0%;
+  }
+  /* Para que todas las flechas apunten a la izquierda */
+  .container-timeline::before {
+    left: 60px;
+    border: medium solid pink;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent pink transparent transparent;
+  }
+  /* Para que todos los círculos estén alineados */
+  .left::after, .right::after {
+    left: 15px;
+  }
 }
