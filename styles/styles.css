@@ -505,7 +505,10 @@ color: #6f1614;
 	display: none;
 }
 /* Redes sociales*/
-
+.users {
+	border: solid 1px;
+	border-radius: 4px;
+}
 .social {
 	display: flex;
 }
@@ -544,6 +547,11 @@ color: #6f1614;
 	padding-top: 40px;
 	height: 0;
 	width: 40px;
+}
+.codigoqr > img{
+	width: 120px;
+	height: 120px;
+
 }
 /*footer*/
 footer{
