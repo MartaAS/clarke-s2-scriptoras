@@ -136,8 +136,6 @@ var companyInput = prompt('Introduce el nombre de la empresa');
 companyName.innerHTML = companyInput;
 */
 //Skills
-
-
 var newSkill = document.querySelectorAll(".skilli");
 var skill;
 //alert(newSkill.length);
