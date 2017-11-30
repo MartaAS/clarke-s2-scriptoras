@@ -397,16 +397,20 @@ color: #6f1614;
 .inputsLanguageForm {
 }
 
-.languagesTitlePreview {
+.languagesTitlePreview, .hobbiesTitlePreview {
 	color: #6F1514;
 }
 
-#languagesPreview {
+#languagesPreview, #hobbiesPreview {
 	/*display: flex;
 	flex-direction: column;
 	align-items: center;*/
 	padding-left: 10%;
 	padding-right: 5%;
+}
+
+#read, #travel, #game, #spots, #cinema, #music {
+	visibility: hidden;
 }
 
 .languagesBarPreview {
