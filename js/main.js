@@ -24,14 +24,42 @@ function archivo(evt) {
 }
 
       document.getElementById('files').addEventListener('change', archivo, false);
+			// duplico para img prev
+			function archivo2(evt) {
+			      var files = evt.target.files; // FileList object
+
+			        //Obtenemos la imagen del campo "file".
+			      for (var i = 0, f; f = files[i]; i++) {
+			           //Solo admitimos imágenes.
+			           if (!f.type.match('image.*')) {
+			                continue;
+			           }
+
+			           var reader = new FileReader();
+
+			           reader.onload = (function(theFile) {
+			               return function(e) {
+			               // Creamos la imagen.
+			                      document.getElementById("prefoto").innerHTML = ['<img class="thumb2" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+			               };
+			           })(f);
+
+			           reader.readAsDataURL(f);
+			       }
+			}
+
+			      document.getElementById('files').addEventListener('change', archivo2, false);
 	//fin prueba cargar imagen
 
 //Datos principales
-
+function clicknombre(){
 var nombreIntroducido = prompt("¿Cuál es tu nombre");
 document.getElementById('nombreformulario').value=nombreIntroducido;
+}
+function clickapellido(){
 var apellidoIntroducido = prompt("¿Cuáles son tus apellidos?");
 document.getElementById('apellidoformulario').value=apellidoIntroducido;
+}
 var profesionIntroducido = prompt("¿Cuál es tu profesión");
 document.getElementById('profesionformulario').value=profesionIntroducido;
 var emailIntroducido = prompt("¿Cuál es tu email");
@@ -43,8 +71,8 @@ document.getElementById('telefonoformulario').value=telefonoIntroducido;
 
 //guardar datos principales introducidos
 function guardardatosprincipales(){
-document.getElementById('prenombre').innerHTML=nombreIntroducido;
-document.getElementById('preapellidos').innerHTML=apellidoIntroducido;
+document.getElementById('prenombre').innerHTML=document.getElementById('nombreformulario').value;
+document.getElementById('preapellidos').innerHTML=document.getElementById('apellidoformulario').value;
 document.getElementById('preprofesion').innerHTML=profesionIntroducido;
 document.getElementById('preemail').innerHTML=emailIntroducido;
 document.getElementById('pretelefono').innerHTML=telefonoIntroducido;
@@ -110,8 +138,6 @@ var companyInput = prompt('Introduce el nombre de la empresa');
 companyName.innerHTML = companyInput;
 */
 //Skills
-
-
 var newSkill = document.querySelectorAll(".skilli");
 var skill;
 //alert(newSkill.length);
@@ -141,9 +167,14 @@ for(var i = 0; i < newSkill.length; i++){
 
 
 /*Redes sociales*/
-var netSocial = document.querySelectorAll('.users');
-var text = prompt("Introduce tu usario");
-netSocial.href = netSocial.href + text;
+function showNetsocial() {
+  var netSocial = document.querySelectorAll('.printnet');
+  for (var i=0; i<netSocial.length; i++){
+    var text = prompt("Introduce tu usuario de "+netSocial[i].innerHTML);
+    netSocial[i].href = netSocial[i].href + text;
+  }
+}
+
 
 
 
@@ -169,7 +200,7 @@ function setSocialMedia(value, net){
 }
 */
 /*qr*/
-function archivo(evt) {
+function archivo1(evt) {
                   var files = evt.target.files; // FileList object
 
                   // Obtenemos la imagen del campo "file".
@@ -184,7 +215,7 @@ function archivo(evt) {
                     reader.onload = (function(theFile) {
                         return function(e) {
                           // Insertamos la imagen
-                         document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                         document.getElementById("list1").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
                         };
                     })(f);
 
@@ -192,4 +223,4 @@ function archivo(evt) {
                   }
               }
 
-              document.getElementById('files').addEventListener('change', archivo, false);
+              document.getElementById('files1').addEventListener('change', archivo1, false);
