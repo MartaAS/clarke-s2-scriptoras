@@ -152,7 +152,7 @@ for(var i = 0; i < newSkill.length; i++){
 	newSkill[i].innerHTML = skill;
 }
 
-/*languages form section*/
+//languages form section
 	function showPromptLanguage() {
 		var text = prompt("Introduce un idioma");
 		var newTextLanguage = document.querySelector('.textBarPreview');
@@ -167,14 +167,9 @@ for(var i = 0; i < newSkill.length; i++){
 	function addInput() {
 		var addNewInput = document.querySelector('.languagesForm');
 		var addInput = document.createElement('input');
+    addInput.style.cssText = 'background-color: black;'
 		addNewInput.append(addInput);
 	}
-
-/*languages preview section*/
-// var newTextLanguage = document.querySelector('.textBarPreview');
-// newTextLanguage.innerHTML = text;
-
-/*languages section*/
 
 
 /*Redes sociales*/
