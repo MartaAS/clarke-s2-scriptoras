@@ -156,49 +156,48 @@
 
         <!--Languages form section-->
         <section id="languagesFormContainer">
-
-
-
           <div class="title-container">
-            <h2 class="textFormButton">Añade idiomas a tu CV </h2>
+            <h2 class="textFormButton">Idiomas</h2>
             <button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
 
             <!-- <button type="button" name="addInputLanguagesForm" onclick="addInput()"></button> -->
           </div>
-          <form class="languagesForm" action="index.html" method="post">
-          </form>
+          <!-- <form class="languagesForm" action="index.html" method="post">
+          </form> -->
         </section>
 
         <!--Hobbies form section-->
         <section id="hobbiesFormContainer">
-          <div class="hobbiesContainer">
-            <form class="hobbiesForm" action="index.html" method="post">
-              <div class="checkBoxHobbies">
-                <label for="hobbie1">Leer</label>
-                <input id ="hobbie1" type="checkbox" name="read" value="hobbies">
-              </div>
-              <div class="checkBoxHobbies">
-                <label for="hobbie2">Viajar</label>
-                <input id ="hobbie2" type="checkbox" name="travel" value="hobbies">
-              </div>
-              <div class="checkBoxHobbies">
-                <label for="hobbie3">videojuegos</label>
-                <input id ="hobbie3" type="checkbox" name="game" value="hobbies">
-              </div>
-              <div class="checkBoxHobbies">
-                <label for="hobbie4">Deportes</label>
-                <input id ="hobbie4" type="checkbox" name="sports" value="hobbies">
-              </div>
-              <div class="checkBoxHobbies">
-                <label for="hobbie5">Cine</label>
-                <input id ="hobbie5" type="checkbox" name="movies" value="hobbies">
-              </div>
-              <div class="checkBoxHobbies">
-                <label for="hobbie6">Música</label>
-                <input id ="hobbie6" type="checkbox" name="music" value="hobbies">
-              </div>
-            </form>
+          <div class="title-container">
+            <h2 class="textFormButton">Pasatiempos</h2>
+            <button class="addLanguageButton" type="button" name="languageButton" onclick="showHobbiesForm()"><img src="images/addButton32px.png" alt="addButton"></button>
           </div>
+          <form id="hobbiesForm" action="index.html" method="post">
+            <div class="checkBoxHobbies">
+              <label for="hobbie1">Leer</label>
+              <input id ="hobbie1" type="checkbox" name="read" value="hobbies">
+            </div>
+            <div class="checkBoxHobbies">
+              <label for="hobbie2">Viajar</label>
+              <input id ="hobbie2" type="checkbox" name="travel" value="hobbies">
+            </div>
+            <div class="checkBoxHobbies">
+              <label for="hobbie3">Videojuegos</label>
+              <input id ="hobbie3" type="checkbox" name="game" value="hobbies">
+            </div>
+            <div class="checkBoxHobbies">
+              <label for="hobbie4">Deportes</label>
+              <input id ="hobbie4" type="checkbox" name="sports" value="hobbies">
+            </div>
+            <div class="checkBoxHobbies">
+              <label for="hobbie5">Cine</label>
+              <input id ="hobbie5" type="checkbox" name="movies" value="hobbies">
+            </div>
+            <div class="checkBoxHobbies">
+              <label for="hobbie6">Música</label>
+              <input id ="hobbie6" type="checkbox" name="music" value="hobbies">
+            </div>
+          </form>
         </section>
 
 
@@ -333,21 +332,22 @@
         <section id="languagesPreview">
           <h2 class="languagesTitlePreview">Idiomas</h2>
           <div class="languagesBarPreview">
-            <div id="percentageBar1">
+            <div class="percentageBar1">
               <p class="textBarPreview">Inglés</p>
             </div>
           </div>
           <div class="languagesBarPreview">
-            <div id="percentageBar2">
+            <div class="percentageBar1">
               <p class="textBarPreview">Francés</p>
             </div>
           </div>
           <div class="languagesBarPreview">
-            <div id="percentageBar3">
+            <div class="percentageBar1">
               <p class="textBarPreview">Español</p>
             </div>
           </div>
         </section>
+
         <!--Hobbies section-->
         <section id="hobbiesPreview">
           <div class="hobbies">

@@ -425,7 +425,7 @@ color: #6f1614;
 
 }
 /*Languages form container*/
-#languagesFormContainer {
+#languagesFormContainer, #hobbiesFormContainer {
 	display:flex;
 	flex-direction: column;
 	align-items: center;
@@ -481,26 +481,26 @@ color: #6f1614;
 	padding-left: 1em;
 }
 
-#percentageBar1 {
+.percentageBar1 {
 	width: 50% ;
 	background-color: #A19680;
 }
-#percentageBar2 {
+/*#percentageBar2 {
 	width: 70% ;
 	background-color: #A19680;
 }
 #percentageBar3 {
 	width: 40% ;
 	background-color: #A19680;
-}
+}*/
 
 .inputStyles {
 	background-color: black;
 }
 
 /*Hobbies*/
-.hobbies{
-
+#hobbiesForm{
+	display: none;
 }
 /* Redes sociales*/
 

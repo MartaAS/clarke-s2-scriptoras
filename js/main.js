@@ -153,23 +153,45 @@ for(var i = 0; i < newSkill.length; i++){
 }
 
 //languages form section
+// function showPromptLanguage() {
+//   var newTextLanguage = document.querySelectorAll('.textBarPreview');
+//     for (var i = 0; i < newTextLanguage.length; i++) {
+//       var text = prompt("Introduce un idioma");
+//       newTextLanguage[i].innerHTML = text;
+//       var percentage = prompt("Introduce el porcentaje");
+//       var newPercentageLanguage = document.querySelectorAll('.percentageBar').style.width = percentage + '%';
+//       newPercentageLanguage[i].innerHTML = percentage;
+//     }
+// 	}
+
 	function showPromptLanguage() {
-		var text = prompt("Introduce un idioma");
-		var newTextLanguage = document.querySelector('.textBarPreview');
-		newTextLanguage.innerHTML = text;
+    var newTextLanguage = document.querySelectorAll('.textBarPreview');
+    for (var i = 0; i < newTextLanguage.length; i++) {
+      var text = prompt("Introduce un idioma");
+      newTextLanguage[i].innerHTML = text;
+    }
+
 	}
 
 	function showPromptPercentage() {
-		var percentage = prompt("Introduce el porcentaje");
-		var newPercentageLanguage = document.getElementById('percentageBar1').style.width = percentage + '%';
+    var newPercentageLanguage = document.querySelectorAll('.percentageBar1');
+    for (var i = 0; i < newPercentageLanguage.length; i++) {
+      var percentage = prompt("Introduce el porcentaje");
+      // newPercentageLanguage[i] = percentage + '%';
+      // newPercentageLanguage[i].innerHTML = newPercentageLanguage[i].style.width = percentage + '%';
+    }
 	}
+	// function addInput() {
+	// 	var addNewInput = document.querySelector('.languagesForm');
+	// 	var addInput = document.createElement('input');
+  //   addInput.style.cssText = 'background-color: black;'
+	// 	addNewInput.append(addInput);
+	// }
 
-	function addInput() {
-		var addNewInput = document.querySelector('.languagesForm');
-		var addInput = document.createElement('input');
-    addInput.style.cssText = 'background-color: black;'
-		addNewInput.append(addInput);
-	}
+//Hobbies form
+function showHobbiesForm() {
+  document.getElementById('hobbiesForm').style.display = 'block';
+}
 
 
 /*Redes sociales*/
