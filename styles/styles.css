@@ -27,7 +27,7 @@ header{
   flex-direction: column;
 	padding-top: 0px;
 	margin-top: 0px;
-  z-index: 1;
+  z-index: 2;
 }
 .headercreatucv{
 	background-image: url(../images/vintage4.jpg);
