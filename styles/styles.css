@@ -165,15 +165,8 @@ input{
 	display: block;
 }
 
-input[type=button]{
-	display: inline-block;
-	border-radius: 10px;
-	border: #ccc;
-	background: #ffff;
-}
-
 /*Estilo del contenedor de about, usado también en experiencia y formación para no repetir*/
-.content, .boxes-container {
+.boxes-container {
 	display: none;
 }
 
@@ -205,11 +198,11 @@ margin-top: 5px;
 }
 /*Botones guardar y cerrar*/
 .save-button, .out-button {
-
 	background-color: buttonface!important;
 	padding: 5px;
 	text-shadow: rgba(0,0,0,.4) 0 1px 0;
 	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	display: inline-block;
 }
 .save-button:hover, .out-button:hover {
 	background: #6f1614!important;
@@ -217,6 +210,7 @@ margin-top: 5px;
   outline-offset: 80px;
 	color: #fff;
 }
+
 
 /*Experience and Education preview*/
 .experience-education-main-title{

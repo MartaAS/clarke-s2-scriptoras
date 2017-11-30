@@ -41,23 +41,19 @@
 					</div>
 				</form>
 
-				<!--about -->
-				<form class="form-section-container" action="" method="post"> <!--Mostrado-->
-					<div class="title-container">
-						<h2 class="textFormButton">Sobre mi
-							<input type="button" value="Editar" onclick="editar('content-about')"></h2>
-							<!-- Este sería tu botón, si te parece bien cambiarlo y no te trastoca mucho. Se pondría fuera del h2, aquí mismo:
+			<!--about -->
+			<form class="form-section-container" action="" method="post"> <!--Mostrado-->
+				<div class="title-container">
+					<h2 class="textFormButton">Sobre mi</h2>
 							<button class="open-section-button" type="button" name="about-me-button" onclick="editar('content-about')"><img src="images/addButton32px.png" alt="addButton"></button>
-							-->
-					</div>
-					<div id="content-about" class="content"> <!--Oculto-->
-						<label for="about"></label>
-						<input type="text" name="name" id="about">
-						<input type="button" name="save" value="Guardar">
-						<input type="button" value="Cerrar" onclick="ocultar('content-about')">
-					</div>
-
-				</form>
+				</div>
+				<div  id="content-about" class="boxes-container"><!--Oculto-->
+					<label for="about"></label>
+					<input type="text" name="name" id="about">
+					<input class="save-button"type="button" name="save" value="Guardar">
+					<input class="out-button"type="button" value="Cerrar" onclick="ocultar('content-about')">
+				</div>
+			</form>
 				<!--End about-->
 
 				<!--Sección de Experiencia-->
@@ -137,18 +133,22 @@
 				</form>
 
 				<!--Skills -->
-				<div class="skills">
-					<div class="title-container">
-						<h2 class="textFormButton">Habilidades</h2>
-						<button class="open-section-button" type="button" name="skillsButton" onclick=""><img src="images/addButton32px.png" alt="addButton"></button>
-					</div>
-					<ul>
-						<li class="skilli"></li>
-						<li class="skilli"></li>
-						<li class="skilli"></li>
-						<li class="skilli"></li>
-					</ul>
-				</div>
+				<form class="form-section-container" action="" method="post"> <!--Mostrado-->
+						<div class="title-container">
+							<h2 class="textFormButton">Habilidades</h2>
+								<button class="open-section-button" type="button" name="skills-button" onclick="editar('content-skills')"><img src="images/addButton32px.png" alt="addButton"></button>
+						</div>
+						<div  id="content-skills" class="boxes-container"><!--Oculto-->
+							<ul>
+								<li class="skilli"></li>
+								<li class="skilli"></li>
+								<li class="skilli"></li>
+								<li class="skilli"></li>
+							</ul>
+							<input class="save-button"type="button" name="save" value="Guardar">
+							<input class="out-button"type="button" value="Cerrar" onclick="ocultar('content-skills')">
+						</div>
+				</form>
 				<!--End Skills-->
 
         <!--Languages form section-->
