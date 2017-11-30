@@ -56,8 +56,10 @@ function clicknombre(){
 var nombreIntroducido = prompt("¿Cuál es tu nombre");
 document.getElementById('nombreformulario').value=nombreIntroducido;
 }
+function clickapellido(){
 var apellidoIntroducido = prompt("¿Cuáles son tus apellidos?");
 document.getElementById('apellidoformulario').value=apellidoIntroducido;
+}
 var profesionIntroducido = prompt("¿Cuál es tu profesión");
 document.getElementById('profesionformulario').value=profesionIntroducido;
 var emailIntroducido = prompt("¿Cuál es tu email");
@@ -70,7 +72,7 @@ document.getElementById('telefonoformulario').value=telefonoIntroducido;
 //guardar datos principales introducidos
 function guardardatosprincipales(){
 document.getElementById('prenombre').innerHTML=document.getElementById('nombreformulario').value;
-document.getElementById('preapellidos').innerHTML=apellidoIntroducido;
+document.getElementById('preapellidos').innerHTML=document.getElementById('apellidoformulario').value;
 document.getElementById('preprofesion').innerHTML=profesionIntroducido;
 document.getElementById('preemail').innerHTML=emailIntroducido;
 document.getElementById('pretelefono').innerHTML=telefonoIntroducido;
@@ -205,7 +207,7 @@ function setSocialMedia(value, net){
 }
 */
 /*qr*/
-function archivo(evt) {
+function archivo1(evt) {
                   var files = evt.target.files; // FileList object
 
                   // Obtenemos la imagen del campo "file".
@@ -220,7 +222,7 @@ function archivo(evt) {
                     reader.onload = (function(theFile) {
                         return function(e) {
                           // Insertamos la imagen
-                         document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                         document.getElementById("list1").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
                         };
                     })(f);
 
@@ -228,4 +230,4 @@ function archivo(evt) {
                   }
               }
 
-              document.getElementById('files').addEventListener('change', archivo, false);
+              document.getElementById('files1').addEventListener('change', archivo1, false);
