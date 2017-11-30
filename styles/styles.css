@@ -481,10 +481,14 @@ color: #6f1614;
 	height: 0;
 	width: 40px;
 }
-.thumb{
-     height: 200px;
-     border: 1px solid #000;
-     margin: 10px 5px 0 0;
+.portfolio{
+	background: url('../images/portfolio.png') center no-repeat;
+	overflow: hidden;
+	display: block;
+	background-size: cover;
+	padding-top: 40px;
+	height: 0;
+	width: 40px;
 }
 /*footer*/
 footer{
