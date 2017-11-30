@@ -161,8 +161,8 @@ overflow: scroll;
 }
 
 /*About*/
-input{
-	display: block;
+.aboutMe{
+		display: block;
 }
 
 /*Estilo del contenedor de about, usado también en experiencia y formación para no repetir*/
@@ -356,9 +356,49 @@ color: #6f1614;
 }
 /*End Experience and Education preview*/
 /*Skills*/
-.skills{
+.skillBar{
 
 }
+.skillName{
+
+}
+#skillPreview{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	display: block;
+}
+.skill {
+    width: 100%;
+    margin: 20px 20px;
+		color: #6F1514;
+}
+.skill_title {
+    /*font-family: sans-serif;*/
+    font-size: 14px;
+
+}
+.barra {
+    background-color: #a19680 ;
+    border-radius: 10px;
+    width: 75%;
+    height: 10px;
+    margin: 4x 0;
+    position: relative;
+		display: flex;
+}
+
+.barra_front {
+    width: 0;
+    /* background: green; */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: #6f1614;
+}
+
 /*Languages form container*/
 #languagesFormContainer {
 	display:flex;

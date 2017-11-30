@@ -76,9 +76,15 @@ document.getElementById('preemail').innerHTML=emailIntroducido;
 document.getElementById('pretelefono').innerHTML=telefonoIntroducido;
 }
 //About
+function showPromptAbout() {
+	var textAbout = prompt("Haz una breve descripción sobre ti");
+	var textAboutMe = document.querySelector('.aboutMe');
+	textAboutMe.innerHTML = textAbout;
+	editar('content-about');
+}
 //función para abrir el desplegable
 function editar(idContent){
-document.getElementById(idContent).style.display = 'block';
+	document.getElementById(idContent).style.display = 'block';
 }
 //función para cerrar sección
 function ocultar(idContent){
@@ -124,8 +130,6 @@ for (var i = 0; i < yearsAll.length; i++) {
 	yearsAll[i].innerHTML = yearOptions;
 }
 
-
-
 /*
 var jobName = document.querySelector('#job-pre');
 var jobInput = prompt('Introduce el nombre del puesto de trabajo');
@@ -135,14 +139,24 @@ var companyName = document.querySelector('#company-pre');
 var companyInput = prompt('Introduce el nombre de la empresa');
 companyName.innerHTML = companyInput;
 */
+
+
 //Skills
-var newSkill = document.querySelectorAll(".skilli");
-var skill;
-//alert(newSkill.length);
-for(var i = 0; i < newSkill.length; i++){
-	//skill = prompt("Introduce skill");
-	newSkill[i].innerHTML = skill;
+function showPromptSkill(){
+	var skillsNameList = document.querySelectorAll(".skillName");
+	var skillName;
+	var skillPercList = document.querySelectorAll(".skillBar");
+	var skillPercentage;
+	//alert(newSkill.length);
+	for(var i = 0; i < skillsNameList.length; i++){
+		skillName = prompt("Introduce una habilidad");
+		skillPercentage = prompt("De 1 a 10, ¿cuánto sabes?")
+		skillsNameList[i].innerHTML = skillName;
+		skillPercList[i].innerHTML = skillPercentage;
+	}
+	editar('content-skills');
 }
+
 
 /*languages form section*/
 	function showPromptLanguage() {
