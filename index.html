@@ -33,7 +33,7 @@
 						<div class="datosprin">
 							<input type="text" name="name" placeholder="Introduce nombre" class="datosprincipales" required id="nombreformulario" onclick="clicknombre()">
 							<input type="text" name="surname" placeholder="Introduce apellidos" class="datosprincipales" required id="apellidoformulario" onclick="clickapellido()">
-							<input type="text" name="profesion" placeholder="Introduce profesión" class="datosprincipales" required id="profesionformulario" onclick="clickformulario()">
+							<input type="text" name="profesion" placeholder="Introduce profesión" class="datosprincipales" required id="profesionformulario" onclick="clickprofesion()">
 							<input type="email" name="mail" placeholder="Introduce email" class="datosprincipales" id="emailformulario" onclick="clickemail()">
 							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="datosprincipales" id="telefonoformulario" onclick="clicktelefono()">
 							 <input type="button" value="Guardar" class="guardarprincipal" onclick="guardardatosprincipales();">
@@ -153,9 +153,13 @@
 
         <!--Languages form section-->
         <section id="languagesFormContainer">
+
+
+
           <div class="title-container">
             <h2 class="textFormButton">Añade idiomas a tu CV </h2>
             <button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage(); showPromptPercentage()"><img src="images/addButton32px.png" alt="addButton"></button>
+
             <!-- <button type="button" name="addInputLanguagesForm" onclick="addInput()"></button> -->
           </div>
           <form class="languagesForm" action="index.html" method="post">
@@ -163,7 +167,36 @@
         </section>
 
         <!--Hobbies form section-->
-
+        <section id="hobbiesFormContainer">
+          <div class="hobbiesContainer">
+            <form class="hobbiesForm" action="index.html" method="post">
+              <div class="checkBoxHobbies">
+                <label for="hobbie1">Leer</label>
+                <input id ="hobbie1" type="checkbox" name="read" value="hobbies">
+              </div>
+              <div class="checkBoxHobbies">
+                <label for="hobbie2">Viajar</label>
+                <input id ="hobbie2" type="checkbox" name="travel" value="hobbies">
+              </div>
+              <div class="checkBoxHobbies">
+                <label for="hobbie3">videojuegos</label>
+                <input id ="hobbie3" type="checkbox" name="game" value="hobbies">
+              </div>
+              <div class="checkBoxHobbies">
+                <label for="hobbie4">Deportes</label>
+                <input id ="hobbie4" type="checkbox" name="sports" value="hobbies">
+              </div>
+              <div class="checkBoxHobbies">
+                <label for="hobbie5">Cine</label>
+                <input id ="hobbie5" type="checkbox" name="movies" value="hobbies">
+              </div>
+              <div class="checkBoxHobbies">
+                <label for="hobbie6">Música</label>
+                <input id ="hobbie6" type="checkbox" name="music" value="hobbies">
+              </div>
+            </form>
+          </div>
+        </section>
 
 
 				<!--Sección de Redes sociales -->
@@ -201,10 +234,10 @@
 				</section>
 				<section class="preprincipales">
 					<p id="prenombre">Nombre</p>
-					<p id="preapellidos"></p>
-					<p id="preprofesion"></p>
-					<p id="preemail"></p>
-					<p id="pretelefono"></p>
+					<p id="preapellidos">Apellido</p>
+					<p id="preprofesion">Profesion</p>
+					<p id="preemail">Email</p>
+					<p id="pretelefono">Telefono</p>
 				</section>
 
 				<!--Sección de Experiencia-->
@@ -295,7 +328,7 @@
 
         <!--Languages preview section-->
         <section id="languagesPreview">
-          <h2 class="languagesTitlePreview">Lenguajes</h2>
+          <h2 class="languagesTitlePreview">Idiomas</h2>
           <div class="languagesBarPreview">
             <div id="percentageBar1">
               <p class="textBarPreview">Inglés</p>
@@ -339,10 +372,10 @@
                 </li>
               </ul>
             </div>
-            <div class="qr">
-              <input type="file" id="files" name="files[]" />
-              <br />
-              <output id="list"></output>
+            <div class="portfolio">
+              <span class="port">
+                <a class="" href="https://google.com" target="_blank">portfolio</a>
+              </span>
             </div>
            </div>
 

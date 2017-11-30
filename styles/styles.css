@@ -78,6 +78,7 @@ main{
 }
 
 
+
 .guardarprincipal{
 	flex-direction: column;
 	justify-content: center;
@@ -435,6 +436,10 @@ color: #6f1614;
 	background-color: #A19680;
 }
 
+.inputStyles {
+	background-color: black;
+}
+
 /*Hobbies*/
 .hobbies{
 
@@ -480,10 +485,13 @@ color: #6f1614;
 	height: 0;
 	width: 40px;
 }
-.thumb{
-     height: 200px;
-     border: 1px solid #000;
-     margin: 10px 5px 0 0;
+.port a {
+	background:url('..images/portfolio.jpg');
+	overflow: hidden;
+	display: block;
+	background-size:40px 40px;
+	padding-left: 40px;
+	padding-bottom: 30px;
 }
 /*footer*/
 footer{
