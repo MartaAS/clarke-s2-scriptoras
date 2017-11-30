@@ -79,7 +79,7 @@ document.getElementById('pretelefono').innerHTML=telefonoIntroducido;
 function showPromptAbout() {
 	var textAbout = prompt("Haz una breve descripción sobre ti");
 	var textAboutMe = document.querySelector('.aboutMe');
-	textAboutMe.innerHTML = textAbout;
+	textAboutMe.value = textAbout;
 	editar('content-about');
 }
 //función para abrir el desplegable
