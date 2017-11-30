@@ -60,12 +60,18 @@ function clickapellido(){
 var apellidoIntroducido = prompt("¿Cuáles son tus apellidos?");
 document.getElementById('apellidoformulario').value=apellidoIntroducido;
 }
+function clickprofesion(){
 var profesionIntroducido = prompt("¿Cuál es tu profesión");
 document.getElementById('profesionformulario').value=profesionIntroducido;
+}
+function clickemail(){
 var emailIntroducido = prompt("¿Cuál es tu email");
 document.getElementById('emailformulario').value=emailIntroducido;
+}
+function clicktelefono(){
 var telefonoIntroducido = prompt("¿Cuál es tu teléfono móvil?");
-document.getElementById('telefonoformulario').value=telefonoIntroducido;
+document.getElementById('telefonoformulario').value=telefonoIntroducido;}
+
 //fin promp datos principales
 
 
@@ -73,9 +79,9 @@ document.getElementById('telefonoformulario').value=telefonoIntroducido;
 function guardardatosprincipales(){
 document.getElementById('prenombre').innerHTML=document.getElementById('nombreformulario').value;
 document.getElementById('preapellidos').innerHTML=document.getElementById('apellidoformulario').value;
-document.getElementById('preprofesion').innerHTML=profesionIntroducido;
-document.getElementById('preemail').innerHTML=emailIntroducido;
-document.getElementById('pretelefono').innerHTML=telefonoIntroducido;
+document.getElementById('preprofesion').innerHTML=document.getElementById('profesionformulario').value;
+document.getElementById('preemail').innerHTML=document.getElementById('emailformulario').value;
+document.getElementById('pretelefono').innerHTML=document.getElementById('telefonoformulario').value;
 }
 //About
 //función para abrir el desplegable
