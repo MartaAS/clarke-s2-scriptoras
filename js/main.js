@@ -147,11 +147,14 @@ for(var i = 0; i < newSkill.length; i++){
 }
 
 /*languages form section*/
-	function showPromptLanguage() {
+	function showPrompts() {
 		var newTextLanguage = document.querySelectorAll('.textBarPreview');
+    var newPercentageLanguage = document.querySelectorAll('.percentageBar').style.width = percentage + '%';
     for (var i = 0; i < newTextLanguage.length; i++) {
       var text = prompt("Introduce un idioma");
       newTextLanguage[i].innerHTML = text;
+      var percentage = prompt("Introduce el porcentaje");
+      newPercentageLanguage[i].innerHTML = percentage;
     }
 	}
 
