@@ -371,7 +371,7 @@ color: #6f1614;
 .skill {
     width: 100%;
     margin: 20px 20px;
-		color: #6F1514;
+		color: #5A392B;
 }
 .skill_title {
     /*font-family: sans-serif;*/
@@ -379,7 +379,7 @@ color: #6f1614;
 
 }
 .barra {
-    background-color: #a19680 ;
+    background-color: #E0E0E0 ;
     border-radius: 10px;
     width: 75%;
     height: 10px;
@@ -396,7 +396,7 @@ color: #6f1614;
     top: 0;
     left: 0;
     border-radius: 10px;
-    background: #6f1614;
+    background: #7DBEA5;
 }
 
 /*Languages form container*/
