@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scriptoras</title>
 		<link rel="stylesheet" href="styles/styles.css">
+    <script type="text/javascript" src="js/qrcode.js"></script>
   </head>
   <body>
 		<!-- Header -->
@@ -225,6 +226,20 @@
               <input class="users" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
             </div>
 			   </form>
+
+         <!--Sección de Portfolio-->
+         	<form class="form-section-container" action="index.html" method="post">
+ 						<div class="title-container">
+             	<h2 class="textFormButton">Portfolio</h2>
+ 							<button class="open-section-button" type="button" name="networksButton" onclick="">
+ 							<img src="images/addButton32px.png" alt="addButton"></button>
+ 						</div>
+             <div class="nets">
+               <label for="linkedin">Introdcue el portfolio para generar su código QR</label>
+               <input class="users" id="inputQr" type="text" name="inputQr" placeholder="Introduce url del portfolio">
+               <input type="button" value="Generar" onclick="update_qrcode()">
+             </div>
+ 			   </form>
        </section>
 <!--______Comienza la seccion de previsualización______-->
 
@@ -375,12 +390,17 @@
                 </li>
               </ul>
             </div>
-            <div class="portfolio">
-              <span class="port">
-                <a class="" href="https://google.com" target="_blank">portfolio</a>
-              </span>
+            <div id="codigoqr" class="codigoqr">
             </div>
            </div>
+           <!-- <script type="text/javascript" src="qrcode.js"></script>
+           <div data-role="content">
+           <form>
+           <textarea name="msg" rows="10" cols="40">Texto a codificar</textarea><br>
+           <input type="button" value="Generar" onclick="update_qrcode()">
+           </form>
+           <div id="qr"></div>
+           </div> -->
 
         </section>
 
