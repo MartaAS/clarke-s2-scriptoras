@@ -152,7 +152,7 @@ document.getElementById('company').value=empresaIntroducida;
 //Función para introducir en la previsualización los datos obtenidos de experiencia
 function saveExperience(){
 document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
-.document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
+document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
 document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
 document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
 document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
