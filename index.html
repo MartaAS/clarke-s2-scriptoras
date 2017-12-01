@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scriptoras</title>
 		<link rel="stylesheet" href="styles/styles.css">
-    <script type="text/javascript" src="js/qrcode.js"></script>
   </head>
   <body>
 		<!-- Header -->
 		<header>
-				<img src="images/logoPrueba.png" alt="logoscriptoras" class="logoscriptoras">
+				<img src="images/logofinal.png" alt="logoscriptoras" class="logoscriptoras">
+				<input type="buttom" onclick="viewprev()" id="btnview"><!-- value="Ver mi CV">-->
 		</header>
 
 		<!-- End Header -->
@@ -19,7 +19,7 @@
 		<main>
 
 			<!--cabecera-->
-			<section class="formulario-sec">
+			<section class="formulario-sec" id="ventana1">
 				<div class="headercreatucv">
 					<span class="textcrea">Haz tu CV con estilo</span>
 				</div>
@@ -76,11 +76,11 @@
 						<h3 class="subtitle-section">Puesto de trabajo</h3>
 						<div>
 							<label for="job"></label>
-							<input class="form-text-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" onclick="clickCargo()"/>
+							<input class="form-text-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo" />
 						</div>
 						<div >
 							<label for="company"></label>
-							<input class="form-text-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa" onclick="clickEmpresa()">
+							<input class="form-text-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
 						</div>
 						<div class="dates-boxes">
 							<label>Fecha de inicio:</label>
@@ -97,7 +97,7 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-							<input class="save-button"type="button" name="save" value="Guardar" onclick="saveExperience()">
+							<input class="save-button"type="button" name="save" value="Guardar">
 							<input class="out-button"type="button" value="Cerrar" onclick="ocultar('job-box')">
 						</div>
 					</div>
@@ -114,10 +114,10 @@
 					<div class="boxes-container" id="education-box">
 						<h3 class="subtitle-section">Titulación</h3>
 						<div>
-							<input class="form-text-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" onclick="clickEstudios()" />
+							<input class="form-text-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación" />
 						</div>
 						<div >
-							<input class="form-text-box" id="center" type="text" name="center-name" placeholder="Indica el centro de estudios"onclick="clickCentro()">
+							<input class="form-text-box" id="center" type="text" name="center-name" placeholder="Indica el centro de estudios">
 						</div>
 						<div class="dates-boxes">
 							<label>Fecha de inicio</label>
@@ -134,7 +134,7 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-						<input class="save-button" type="button" name="save" value="Guardar" onclick="saveTraining()">
+						<input class="save-button" type="button" name="save" value="Guardar">
 						<input class="out-button" type="button" value="Cerrar" onclick="ocultar('education-box')">
 						</div>
 					</div>
@@ -171,37 +171,33 @@
         <section id="hobbiesFormContainer">
           <div class="title-container">
             <h2 class="textFormButton">Pasatiempos</h2>
-            <button class="addLanguageButton" type="button" name="languageButton" onclick="showHobbiesForm(); showHobbiesPreview()"><img src="images/addButton32px.png" alt="addButton"></button>
+            <button class="addLanguageButton" type="button" name="languageButton" onclick="showHobbiesForm()"><img src="images/addButton32px.png" alt="addButton"></button>
           </div>
           <form id="hobbiesForm" action="index.html" method="post">
             <div class="checkBoxHobbies">
               <label for="hobbie1">Leer</label>
-              <input id ="hobbie1" type="checkbox" name="read" value="hobbies" onchange="showHobbiesPreview('read')">
+              <input id ="hobbie1" type="checkbox" name="read" value="hobbies">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie2">Viajar</label>
-              <input id ="hobbie2" type="checkbox" name="travel" value="hobbies" onchange="showHobbiesPreview('travel')">
+              <input id ="hobbie2" type="checkbox" name="travel" value="hobbies">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie3">Videojuegos</label>
-              <input id ="hobbie3" type="checkbox" name="game" value="hobbies" onchange="showHobbiesPreview('game')">
+              <input id ="hobbie3" type="checkbox" name="game" value="hobbies">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie4">Deportes</label>
-              <input id ="hobbie4" type="checkbox" name="sports" value="hobbies" onchange="showHobbiesPreview('sports')">
+              <input id ="hobbie4" type="checkbox" name="sports" value="hobbies">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie5">Cine</label>
-              <input id ="hobbie5" type="checkbox" name="movies" value="hobbies" onchange="showHobbiesPreview('movies')">
+              <input id ="hobbie5" type="checkbox" name="movies" value="hobbies">
             </div>
             <div class="checkBoxHobbies">
               <label for="hobbie6">Música</label>
-              <input id ="hobbie6" type="checkbox" name="music" value="hobbies" onchange="showHobbiesPreview('music')">
+              <input id ="hobbie6" type="checkbox" name="music" value="hobbies">
             </div>
-						<div class="buttons-container">
-
-						<input class="out-button" type="button" value="Cerrar" onclick="ocultar('hobbiesForm')">
-						</div>
           </form>
         </section>
 
@@ -215,44 +211,26 @@
 						</div>
             <div class="nets">
               <label for="linkedin">Linkedin</label>
-              <input class="users" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onchange="setValue('linkedin')">
+              <input class="users" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
             </div>
             <div class="nets">
               <label for="facebook">Facebook</label>
-              <input class="users" id="facebook" type="text" name="net2" placeholder=" Rellena con tu usuario" onchange="setValue('facebook')">
+              <input class="users" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario" onchange="setValue('facebook')">
             </div>
             <div class="nets">
               <label for="github">Github</label>
-              <input class="users" id="github" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('github')">
+              <input class="users" id="github" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('github')">
             </div>
             <div class="nets">
               <label for="twitter">Twitter</label>
-              <input class="users" id="twitter" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('twitter')">
+              <input class="users" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
             </div>
-            <div class="buttons-container">
-							<input class="save-button"type="button" name="save" value="Guardar">
-							<input class="out-button"type="button" value="Cerrar" onclick="ocultar('job-box')">
-						</div>
 			   </form>
-
-         <!--Sección de Portfolio-->
-         	<form class="form-section-container" action="index.html" method="post">
- 						<div class="title-container">
-             	<h2 class="textFormButton">Portfolio</h2>
- 							<button class="open-section-button" type="button" name="networksButton" onclick="">
- 							<img src="images/addButton32px.png" alt="addButton"></button>
- 						</div>
-             <div class="nets">
-               <label for="linkedin">Introdcue el portfolio para generar su código QR</label>
-               <input class="users" id="inputQr" type="text" name="inputQr" placeholder="Introduce url del portfolio">
-               <input type="button" value="Generar" onclick="update_qrcode()">
-             </div>
- 			   </form>
        </section>
 <!--______Comienza la seccion de previsualización______-->
 
 
-			<section class="previsualizacion-sec">
+			<section class="previsualizacion-sec" id="ventana2">
 				<!--datos principales-->
 				<section class="containerprefoto">
 					<div id="prefoto" class="prefoto"></div>
@@ -265,61 +243,16 @@
 					<p id="pretelefono">Telefono</p>
 				</section>
 
-				<!--Sección de Experiencia y Formación-->
+				<!--Sección de Experiencia-->
 				<section class="">
 					<h2 class="experience-education-main-title">Experiencia y Formación</h2>
 					<section class="timeline">
 						<div class="container-timeline left">
 					    <div class="content-timeline">
 					      <div class="dates-output-container">
-									<div class="dates-container">
-						      	<h2 id="start-job-year-preview"class="title-year"> 2017</h2>
-										<p id="start-job-month-preview">Mes</p>
-									</div>
-									<h2 class="title-year">-</h2>
-									<div class="dates-container">
-							      <h2 id="end-job-year-preview" class="title-year" >2018</h2>
-										<p id="end-job-month-preview">Mes</p>
-									</div>
-					      </div>
-					      <div class="work-information-output-container">
-						      <p id="job-preview"class='job-title'>Cargo</p>
-						      <p id="company-preview">Empresa</p>
-					      </div>
-					    </div>
-						</div>
-						<div class="container-timeline right">
-					    <div class="content-timeline">
-					      <div class="dates-output-container">
-									<div class="dates-container">
-						      	<h2 id="start-education-year-preview"class="title-year"> 2017</h2>
-										<p id="start-education-month-preview">Mes</p>
-									</div>
-									<h2 class="title-year">-</h2>
-									<div class="dates-container">
-							      <h2 id="end-education-year-preview" class="title-year" >2018</h2>
-										<p id="end-education-month-preview">Mes</p>
-									</div>
-					      </div>
-					      <div class="work-information-output-container">
-						      <p id="education-title-preview" class='education-title'>Título</p>
-						      <p id="education-center-preview">Centro de estudios</p>
-					      </div>
-					    </div>
-						</div>
-
-						<div class="container-timeline left">
-					    <div class="content-timeline">
-								<div class="dates-output-container">
-									<div class="dates-container">
-						      	<h2 id=""class="title-year"> 2017</h2>
-										<p id="">Mes</p>
-									</div>
-									<h2 class="title-year">-</h2>
-									<div class="dates-container">
-							      <h2 id="" class="title-year" >2018</h2>
-										<p id="">Mes</p>
-									</div>
+						      <h2 class="title-year">2017</h2>
+						      <h2 class="title-year">-</h2>
+						      <h2 class="title-year" >2018</h2>
 					      </div>
 					      <div class="work-information-output-container">
 						      <p class='job-title'>Cargo</p>
@@ -329,16 +262,37 @@
 						</div>
 						<div class="container-timeline right">
 					    <div class="content-timeline">
-								<div class="dates-output-container">
-									<div class="dates-container">
-						      	<h2 id=""class="title-year"> 2017</h2>
-										<p id="">Mes</p>
-									</div>
-									<h2 class="title-year">-</h2>
-									<div class="dates-container">
-							      <h2 id="" class="title-year" >2018</h2>
-										<p id="">Mes</p>
-									</div>
+					      <div class="dates-output-container">
+						      <h2 class="title-year">2017</h2>
+						      <h2 class="title-year">-</h2>
+						      <h2 class="title-year" >2018</h2>
+					      </div>
+					      <div class="work-information-output-container">
+						      <p class='education-title'>Título</p>
+						      <p>Centro de estudios</p>
+					      </div>
+					    </div>
+						</div>
+
+						<div class="container-timeline left">
+					    <div class="content-timeline">
+					      <div class="dates-output-container">
+						      <h2 class="title-year">2017</h2>
+						      <h2 class="title-year">-</h2>
+						      <h2 class="title-year" >2018</h2>
+					      </div>
+					      <div class="work-information-output-container">
+						      <p class='job-title'>Cargo</p>
+						      <p>Empresa</p>
+					      </div>
+					    </div>
+						</div>
+						<div class="container-timeline right">
+					    <div class="content-timeline">
+					      <div class="dates-output-container">
+						      <h2 class="title-year">2017</h2>
+						      <h2 class="title-year">-</h2>
+						      <h2 class="title-year" >2018</h2>
 					      </div>
 					      <div class="work-information-output-container">
 						      <p class='education-title'>Título</p>
@@ -348,16 +302,10 @@
 						</div>
 						<div class="container-timeline left">
 					    <div class="content-timeline">
-								<div class="dates-output-container">
-									<div class="dates-container">
-						      	<h2 id=""class="title-year"> 2017</h2>
-										<p id="">Mes</p>
-									</div>
-									<h2 class="title-year">-</h2>
-									<div class="dates-container">
-							      <h2 id="" class="title-year" >2018</h2>
-										<p id="">Mes</p>
-									</div>
+					      <div class="dates-output-container">
+						      <h2 class="title-year">2017</h2>
+						      <h2 class="title-year">-</h2>
+						      <h2 class="title-year" >2018</h2>
 					      </div>
 					      <div class="work-information-output-container">
 						      <p class='job-title'>Cargo</p>
@@ -367,16 +315,10 @@
 						</div>
 						<div class="container-timeline right">
 					    <div class="content-timeline">
-								<div class="dates-output-container">
-									<div class="dates-container">
-						      	<h2 id=""class="title-year"> 2017</h2>
-										<p id="">Mes</p>
-									</div>
-									<h2 class="title-year">-</h2>
-									<div class="dates-container">
-							      <h2 id="" class="title-year" >2018</h2>
-										<p id="">Mes</p>
-									</div>
+					      <div class="dates-output-container">
+						      <h2 class="title-year">2017</h2>
+						      <h2 class="title-year">-</h2>
+						      <h2 class="title-year" >2018</h2>
 					      </div>
 					      <div class="work-information-output-container">
 						      <p class='education-title'>Título</p>
@@ -409,15 +351,10 @@
 
         <!--Hobbies section-->
         <section id="hobbiesPreview">
-          <h2 class="hobbiesTitlePreview">Pasatiempos</h2>
-          <div class="allHobbiesPreview">
-            <img id="read" src="images/read.png" alt="read hobbie">
-            <img id="travel" src="images/travel.png" alt="travel hobbie">
-            <img id="game" src="images/videogame.png" alt="game hobbie">
-            <img id="sports" src="images/sports.png" alt="sports hobbie">
-            <img id="cinema" src="images/cinema.png" alt="cinema hobbie">
-            <img id="music" src="images/music.png" alt="music hobbie">
+          <div class="hobbies">
+
           </div>
+
         </section>
 
         <!--Sección de Redes sociales -->
@@ -439,9 +376,13 @@
                 </li>
               </ul>
             </div>
-            <div id="codigoqr" class="codigoqr">
+            <div class="portfolio">
+              <span class="port">
+                <a class="" href="https://google.com" target="_blank">portfolio</a>
+              </span>
             </div>
            </div>
+
         </section>
 
       </section>

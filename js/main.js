@@ -1,4 +1,5 @@
 'use strict';
+//marta
 //prueba cargar imagen
 function archivo(evt) {
       var files = evt.target.files; // FileList object
@@ -83,6 +84,14 @@ document.getElementById('preprofesion').innerHTML=document.getElementById('profe
 document.getElementById('preemail').innerHTML=document.getElementById('emailformulario').value;
 document.getElementById('pretelefono').innerHTML=document.getElementById('telefonoformulario').value;
 }
+
+//previsualizacion en hotra hoja
+function viewprev(){
+	document.getElementById('ventana2').style.display="block";
+	document.getElementById('ventana1').style.display="none";
+}
+
+//fin parte marta
 //About
 //función para abrir el desplegable
 function editar(idContent){
@@ -97,82 +106,52 @@ function ocultar(idContent){
 var aboutInput = prompt("Haz una breve descripción sobre ti.");
 aboutMe.innerHTML = aboutInput;
 */
-
-//Experiencia y Formación
+//Experience
 
 //Desplegable mes
 var monthOptions = '<option value="mes">Mes</option>';
-monthOptions = monthOptions + '<option value="Ene"> Enero</option>';
-monthOptions = monthOptions + '<option value="Feb"> Feb</option>';
-monthOptions = monthOptions + '<option value="Mar">Marzo</option>';
-monthOptions = monthOptions + '<option value="Abr">Abril</option>';
-monthOptions = monthOptions + '<option value="May">Mayo</option>';
-monthOptions = monthOptions + '<option value="Jun">Junio</option>';
-monthOptions = monthOptions + '<option value="Jul">Julio</option>';
-monthOptions = monthOptions + '<option value="Ago">Agosto</option>';
-monthOptions = monthOptions + '<option value="Sep">Septiembre</option>';
-monthOptions = monthOptions + '<option value="Oct">Octubre</option>';
-monthOptions = monthOptions + '<option value="Nov">Noviembre</option>';
-monthOptions = monthOptions + '<option value="Dic">Diciembre</option>';
+monthOptions = monthOptions + '<option value="enero"> Enero</option>';
+monthOptions = monthOptions + '<option value="febrero"> Febrero</option>';
+monthOptions = monthOptions + '<option value="marzo">Marzo</option>';
+monthOptions = monthOptions + '<option value="abril">Abril</option>';
+monthOptions = monthOptions + '<option value="mayo">Mayo</option>';
+monthOptions = monthOptions + '<option value="junio">Junio</option>';
+monthOptions = monthOptions + '<option value="julio">Julio</option>';
+monthOptions = monthOptions + '<option value="agosto">Agosto</option>';
+monthOptions = monthOptions + '<option value="septiembre">Septiembre</option>';
+monthOptions = monthOptions + '<option value="octubre">Octubre</option>';
+monthOptions = monthOptions + '<option value="noviembre">Noviembre</option>';
+monthOptions = monthOptions + '<option value="diciembre">Diciembre</option>';
 
-//Se aplica en todos los que tengan la clase .month
+
 var months = document.querySelectorAll('.month');
 for (var i = 0; i < months.length; i++) {
 	months[i].innerHTML = monthOptions;
 }
 
-//desplegable años
+
 var years = 2030;
 var yearOptions = ''; //almacena options de html que van en el select
 
-for (var initialYear=1950; initialYear<years; initialYear++) {
-  yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
+for (var initialYear=1949; initialYear<years; initialYear++) {
+  yearOptions = yearOptions + '<option value=">' + (initialYear) + '</option>';
 }
-//Se aplica en todos los que tengan la clase year
 var yearsAll = document.querySelectorAll('.year');
 for (var i = 0; i < yearsAll.length; i++) {
 	yearsAll[i].innerHTML = yearOptions;
 }
-//Funciones para obtener el valor de los campos de texto experiencia con prompt
-function clickCargo(){
-var cargoIntroducido = prompt("Introduce el nombre del puesto de trabajo.");
-document.getElementById('job').value=cargoIntroducido;
-}
-function clickEmpresa(){
-var empresaIntroducida = prompt("Introduce el nombre de la empresa.");
-document.getElementById('company').value=empresaIntroducida;
-}
 
-//Función para introducir en la previsualización los datos obtenidos de experiencia
-function saveExperience(){
-document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
-document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
-document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
-document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
-document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
-document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
-}
 
-//Funciones para obtener el valor de los campos de texto de Formación con prompt
-function clickEstudios(){
-var tituloIntroducido = prompt("Indica el nombre de la titulación.");
-document.getElementById('educ-title').value=tituloIntroducido;
-}
-function clickCentro(){
-var centroIntroducido = prompt("Indica el centro de estudios.");
-document.getElementById('center').value=centroIntroducido;
-}
 
-//Función para introducir en la previsualización los datos obtenidos de formación
-function saveTraining(){
-document.getElementById('education-title-preview').innerHTML=document.getElementById('educ-title').value;
-document.getElementById('education-center-preview').innerHTML=document.getElementById('center').value;
-document.getElementById('start-education-month-preview').innerHTML=document.getElementById('month-training-start').value;
-document.getElementById('end-education-month-preview').innerHTML=document.getElementById('month-training-end').value;
-document.getElementById('start-education-year-preview').innerHTML=document.getElementById('year-training-start').value;
-document.getElementById('end-education-year-preview').innerHTML=document.getElementById('year-training-end').value;
-}
-//Fin de Experiencia y Formación
+/*
+var jobName = document.querySelector('#job-pre');
+var jobInput = prompt('Introduce el nombre del puesto de trabajo');
+jobName.innerHTML = jobInput;
+
+var companyName = document.querySelector('#company-pre');
+var companyInput = prompt('Introduce el nombre de la empresa');
+companyName.innerHTML = companyInput;
+*/
 //Skills
 var newSkill = document.querySelectorAll(".skilli");
 var skill;
@@ -199,12 +178,10 @@ for(var i = 0; i < newSkill.length; i++){
     for (var i = 0; i < newTextLanguage.length; i++) {
       var text = prompt("Introduce un idioma");
       newTextLanguage[i].innerHTML = text;
-			var pct = prompt("Introduce el porcentaje");
-  		newTextLanguage[i].parentElement.style.width = pct + "%";
     }
 
 	}
-/*
+
 	function showPromptPercentage() {
     var newPercentageLanguage = document.querySelectorAll('.percentageBar1');
     for (var i = 0; i < newPercentageLanguage.length; i++) {
@@ -212,7 +189,7 @@ for(var i = 0; i < newSkill.length; i++){
       // newPercentageLanguage[i] = percentage + '%';
       // newPercentageLanguage[i].innerHTML = newPercentageLanguage[i].style.width = percentage + '%';
     }
-	}*/
+	}
 	// function addInput() {
 	// 	var addNewInput = document.querySelector('.languagesForm');
 	// 	var addInput = document.createElement('input');
@@ -224,15 +201,6 @@ for(var i = 0; i < newSkill.length; i++){
 function showHobbiesForm() {
   document.getElementById('hobbiesForm').style.display = 'block';
 }
-//Hobbies Preview
- function showHobbiesPreview(elementId) {
- 		var check = document.getElementById(elementId);
- 		if (check.style.visibility == "visible"){
-   			check.style.visibility = "hidden";
- } else {
-     check.style.visibility = "visible";
-   }
- }
 
 
 /*Redes sociales*/
@@ -243,6 +211,10 @@ function showNetsocial() {
     netSocial[i].href = netSocial[i].href + text;
   }
 }
+
+
+
+
 
 /*javascript de redes sociales
 function setValue(net){
@@ -264,3 +236,28 @@ function setSocialMedia(value, net){
 	}
 }
 */
+/*qr*/
+function archivo1(evt) {
+                  var files = evt.target.files; // FileList object
+
+                  // Obtenemos la imagen del campo "file".
+                  for (var i = 0, f; f = files[i]; i++) {
+                    //Solo admitimos imágenes.
+                    if (!f.type.match('image.*')) {
+                        continue;
+                    }
+
+                    var reader = new FileReader();
+
+                    reader.onload = (function(theFile) {
+                        return function(e) {
+                          // Insertamos la imagen
+                         document.getElementById("list1").innerHTML = ['<img class="thumb1" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                        };
+                    })(f);
+
+                    reader.readAsDataURL(f);
+                  }
+              }
+
+              document.getElementById('files1').addEventListener('change', archivo1, false);
