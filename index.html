@@ -204,35 +204,41 @@
 
 				<!--Sección de Redes sociales -->
         	<form class="form-section-container" action="index.html" method="post">
-						<div class="title-container">
-            	<h2 class="textFormButton">Redes Sociales</h2>
-							<button class="open-section-button" type="button" name="networksButton" onclick="showNetsocial()">
-							<img src="images/addButton32px.png" alt="addButton"></button>
+             <div class="title-container">
+              <h2 class="textFormButton">Redes Sociales</h2>
+  						  <button class="open-section-button" type="button" name="networksButton" onclick="showNetsocial()">
+  							 <img src="images/addButton32px.png" alt="addButton"></button>
+  					 </div>
+              <div class="netsocialhidden">
+                <div class="nets">
+                  <label for="linkedin">Linkedin</label>
+                  <input class="users" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onchange="setValue('linkedin')">
+              </div>
+              <div class="nets">
+                <label for="facebook">Facebook</label>
+                <input class="users" id="facebook" type="text" name="net2" placeholder=" Rellena con tu usuario" onchange="setValue('facebook')">
+              </div>
+              <div class="nets">
+                <label for="github">Github</label>
+                <input class="users" id="github" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('github')">
+              </div>
+              <div class="nets">
+                <label for="twitter">Twitter</label>
+                <input class="users" id="twitter" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('twitter')">
+              </div>
+              <div class="buttons-container">
+  							<input class="out-button"type="button" value="Cerrar" onclick="ocultar('job-box')">
+  						</div>
 						</div>
-            <div class="nets">
-              <label for="linkedin">Linkedin</label>
-              <input class="users" id="linkedin" type="text" name="net1" placeholder="rellena con tu usuario" onchange="setValue('linkedin')">
-            </div>
-            <div class="nets">
-              <label for="facebook">Facebook</label>
-              <input class="users" id="facebook" type="text" name="net2" placeholder="rellena con tu usuario" onchange="setValue('facebook')">
-            </div>
-            <div class="nets">
-              <label for="github">Github</label>
-              <input class="users" id="github" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('github')">
-            </div>
-            <div class="nets">
-              <label for="twitter">Twitter</label>
-              <input class="users" id="twitter" type="text" name="net3" placeholder="rellena con tu usuario" onchange="setValue('twitter')">
-            </div>
 			   </form>
          <!--Sección de Portfolio-->
          	<form class="form-section-container" action="index.html" method="post">
  						<div class="title-container">
              	<h2 class="textFormButton">Portfolio</h2>
- 							<button class="open-section-button" type="button" name="networksButton" onclick="">
+ 							<button class="open-section-button" type="button" name="networksButton" onclick="editar('showNetsocial')">
  							<img src="images/addButton32px.png" alt="addButton"></button>
  						</div>
+            <div class="netsocialhidden" id="showNetsocial">
              <div class="nets">
                <label for="portfolio">Introduce url del portfolio </label>
                <input class="users" id="portfolio" type="text" name="portfolio" placeholder=" Introduce url del portfolio">
@@ -241,9 +247,9 @@
                <input type="button" value="Generar" onclick="update_qrcode()">
              </div>
              <div class="buttons-container">
- 							<input class="save-button"type="button" name="save" value="Guardar">
- 							<input class="out-button"type="button" value="Cerrar" onclick="ocultar('job-box')">
+ 							<input class="out-button"type="button" value="Cerrar" onclick="ocultar('showNetsocial')">
  						</div>
+           </div>
  			   </form>
        </section>
 <!--______Comienza la seccion de previsualización______-->
