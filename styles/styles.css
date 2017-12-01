@@ -10,9 +10,16 @@ body{
 /*header parte marta*/
 .logoscriptoras{
 	height: auto;
-	width: 65px;
-	margin-left: 20px;
+	width: 40%;
+	margin-left: 10px;
 	margin-top: 10px;
+}
+#btnview{
+	width: 40px;
+	height: 40px;
+	margin-right: 20px;
+	background-image: url("../images/btnview2.jpg");
+	background-size: contain;
 }
 header{
 	width: 100%;
@@ -20,11 +27,12 @@ header{
 	background-color: #2E2B24;
 	position: fixed;
 	display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+	justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 	padding-top: 0px;
 	margin-top: 0px;
-  z-index: 2;
+  z-index: 1;
 }
 .headercreatucv{
 	background-image: url(../images/vintage8.jpg);
@@ -64,7 +72,8 @@ main{
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	min-height: 100vh;
+
 }
 .containerinfo{
 	display: flex;
@@ -102,6 +111,9 @@ main{
 	display: flex;
 	align-self: center;
 }
+
+
+
 .guardarprincipal{
 	flex-direction: column;
 	justify-content: center;
@@ -149,6 +161,11 @@ main{
 	border-radius: 100px;
 	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
+
+/*ventana previsualizar*/
+#ventana2{
+	display: none;
+}
 /*mediaqueries*/
 @media all and (min-width: 600px){
 	header{
@@ -181,6 +198,7 @@ main{
 	}
 }
 /*fin parte marta*/
+/*
 .formulario-sec{
 	height: 50%;
 	overflow: scroll;
@@ -255,9 +273,7 @@ margin: 10px 0px;
 }
 .month, .year{
 margin-top: 5px;
-
 }
-
 /*Botones guardar y cerrar*/
 .save-button, .out-button {
 	background-color: buttonface!important;
@@ -283,9 +299,9 @@ color: #5A392B;
 /* La timeline*/
 .timeline {
 
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 /* La propia timeline (línea vertical) */
 .timeline::after {
@@ -300,10 +316,10 @@ color: #5A392B;
 }
 /* Contenido alrededor de la timeline */
 .container-timeline {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
 }
 /* Círculos de la timeline */
 .container-timeline::after {
@@ -320,16 +336,16 @@ color: #5A392B;
 }
 /* Situar los contenidos de la izquierda*/
 .left {
-  left: 0;
+    left: 0;
 }
 
 /* Situar los contenidos de la derecha */
 .right {
-  left: 50%;
+    left: 50%;
 }
 /* Arregla la posición de los círculos del contenido de la derecha */
 .right::after {
-  left: -16px;
+    left: -16px;
 }
 /* Añade flechas en el contenido de la izquierda apuntando a la derecha */
 .left::before {
@@ -376,8 +392,6 @@ color: #5A392B;
 .title-year{
   color: #5A392B;
 	margin: 8px;
-	line-height: 10px;
-  font-size: 22px;
 }
 .job-title, .education-title{
   font-weight: bold;
@@ -398,10 +412,34 @@ color: #5A392B;
  }
 .work-information-output-container > p{
   margin-top: 0px;
-	text-align: center;
 }
+@media all and (max-width: 600px) {
+  /* Poner la línea a la izquierda */
+  .timeline::after {
+    left: 31px;
+  }
+  /* Para que se ajusten los contenedores a la pantalla */
+  .container-timeline {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  /* Poner los contenedores de la derecha debajo de los de la izquierda */
+  .right {
+    left: 0%;
+  }
+  /* Para que todas las flechas apunten a la izquierda */
+  .container-timeline::before {
+    left: 60px;
+    border: medium solid pink;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent pink transparent transparent;
+  }
+  /* Para que todos los círculos estén alineados */
+  .left::after, .right::after {
+    left: 15px;
+  }
 }
-
 /*End Experience and Education preview*/
 /*Skills*/
 .skillBar{
@@ -413,12 +451,12 @@ color: #5A392B;
 #skillPreview{
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	display: block;
 }
 .skill {
     width: 100%;
-    margin: 20px 20px;
+    margin: 20px 20px 0 0;
 		color: #5A392B;
 }
 .skill_title {
@@ -431,7 +469,7 @@ color: #5A392B;
     border-radius: 10px;
     width: 75%;
     height: 10px;
-    margin: 4x 0;
+    margin-left: 0;
     position: relative;
 		display: flex;
 }
@@ -483,16 +521,12 @@ color: #5A392B;
 	color: #5A392B;
 }
 
-#languagesPreview, #hobbiesPreview {
+#languagesPreview {
 	/*display: flex;
 	flex-direction: column;
 	align-items: center;*/
 	padding-left: 10%;
 	padding-right: 5%;
-}
-
-#read, #travel, #game, #sports, #cinema, #music {
-	visibility: hidden;
 }
 
 .languagesBarPreview {
@@ -531,12 +565,11 @@ color: #5A392B;
 	display: none;
 }
 /* Redes sociales*/
-.users {
-	border: solid 1px;
-	border-radius: 4px;
-}
+
 .social {
 	display: flex;
+	justify-content: space-between;
+	width: 70%;
 }
 .linkedin a{
 	background: url('../images/linkedin.png');
@@ -574,10 +607,18 @@ color: #5A392B;
 	height: 0;
 	width: 40px;
 }
+.instagram a{
+	background: url('../images/instagram.png');
+	overflow: hidden;
+	display: block;
+	background-size: 40px 40px;
+	padding-top: 40px;
+	height: 0;
+	width: 40px;
+}
 .codigoqr > img{
 	width: 120px;
 	height: 120px;
-
 }
 /*footer*/
 footer{
@@ -683,6 +724,9 @@ footer{
 		display: flex;
 		justify-content: space-around;
 	}
+	.social {
+		width: 300px;
+	}
 	.logo{
 		width: 100%;
 		margin-right:80px;
@@ -696,6 +740,7 @@ footer{
 	}
 }
 @media all and (min-width:900px) {
+
 	main{
 		box-sizing: border-box;
 		display: flex;
@@ -705,16 +750,23 @@ footer{
 	height: 100%;
 	width: 40%
 	}
-
 	.previsualizacion-sec{
 		height: 100%;
 		width: 60%
 	}
+
 	.logo{
 		margin-right:120px;
 	}
 	.end{
 		margin-left: auto;
+	}
+	.social {
+		width: 300px;
+	}
+	.sociality{
+		display: flex;
+		justify-content:space-between;
 	}
 }
 @media print {
