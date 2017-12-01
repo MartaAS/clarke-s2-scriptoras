@@ -239,10 +239,16 @@
  							<img src="images/addButton32px.png" alt="addButton"></button>
  						</div>
              <div class="nets">
-               <label for="linkedin">Introdcue el portfolio para generar su código QR</label>
-               <input class="users" id="inputQr" type="text" name="inputQr" placeholder="Introduce url del portfolio">
+               <label for="portfolio">Introduce url del portfolio </label>
+               <input class="users" id="portfolio" type="text" name="portfolio" placeholder=" Introduce url del portfolio">
+               <label for="inputQr">Introduce contenido para generar código QR</label>
+               <input class="users" id="inputQr" type="text" name="inputQr" placeholder=" Contenido para generar QR">
                <input type="button" value="Generar" onclick="update_qrcode()">
              </div>
+             <div class="buttons-container">
+ 							<input class="save-button"type="button" name="save" value="Guardar">
+ 							<input class="out-button"type="button" value="Cerrar" onclick="ocultar('job-box')">
+ 						</div>
  			   </form>
        </section>
 <!--______Comienza la seccion de previsualización______-->

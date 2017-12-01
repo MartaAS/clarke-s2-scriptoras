@@ -253,3 +253,9 @@ function setSocialMedia(value, net){
 	}
 }
 */
+/*enlace codigo qr*/
+var listElem = document.querySelector('.list');
+
+var content = '<li><a href="#">Home</a></li><li><a href="#">Contact</a></li>';
+
+listElem.innerHTML = content;
