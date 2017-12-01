@@ -238,7 +238,7 @@ input[type=button]{
 }
 
 /*Estilo del contenedor de about, usado también en experiencia y formación para no repetir*/
-.content, .boxes-container {
+.content, .boxes-container, .netsocialhidden {
 	display: none;
 }
 
@@ -586,7 +586,8 @@ footer{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-		align-content: center;
+	align-content: center;
+	background-image: url("images/vintage8.jpg");
 }
 .seccion{
 	padding: 60px 0 50px 0;
