@@ -544,6 +544,15 @@ color: #6f1614;
 	height: 0;
 	width: 40px;
 }
+.instagram a{
+	background: url('../images/instagram.png');
+	overflow: hidden;
+	display: block;
+	background-size: 40px 40px;
+	padding-top: 40px;
+	height: 0;
+	width: 40px;
+}
 .codigoqr > img{
 	width: 120px;
 	height: 120px;
