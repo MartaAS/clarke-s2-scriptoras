@@ -199,10 +199,12 @@ for(var i = 0; i < newSkill.length; i++){
     for (var i = 0; i < newTextLanguage.length; i++) {
       var text = prompt("Introduce un idioma");
       newTextLanguage[i].innerHTML = text;
+			var pct = prompt("Introduce el porcentaje");
+  		newTextLanguage[i].parentElement.style.width = pct + "%";
     }
 
 	}
-
+/*
 	function showPromptPercentage() {
     var newPercentageLanguage = document.querySelectorAll('.percentageBar1');
     for (var i = 0; i < newPercentageLanguage.length; i++) {
@@ -210,7 +212,7 @@ for(var i = 0; i < newSkill.length; i++){
       // newPercentageLanguage[i] = percentage + '%';
       // newPercentageLanguage[i].innerHTML = newPercentageLanguage[i].style.width = percentage + '%';
     }
-	}
+	}*/
 	// function addInput() {
 	// 	var addNewInput = document.querySelector('.languagesForm');
 	// 	var addInput = document.createElement('input');
@@ -222,6 +224,15 @@ for(var i = 0; i < newSkill.length; i++){
 function showHobbiesForm() {
   document.getElementById('hobbiesForm').style.display = 'block';
 }
+//Hobbies Preview
+ function showHobbiesPreview(elementId) {
+ 		var check = document.getElementById(elementId);
+ 		if (check.style.visibility == "visible"){
+   			check.style.visibility = "hidden";
+ } else {
+     check.style.visibility = "visible";
+   }
+ }
 
 
 /*Redes sociales*/
