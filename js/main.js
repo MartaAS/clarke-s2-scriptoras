@@ -243,7 +243,7 @@ function setValue(net){
     liSocial.classList.remove('visible');
     liSocial.classList.add('invisible');
   }
-	setSocialMedia('a-'+inputSocial.value, net);
+	setSocialMedia(inputSocial.value, net);
 }
 
 function setSocialMedia(value, net){
@@ -251,11 +251,11 @@ function setSocialMedia(value, net){
 	var url;
 	if(net == 'linkedin'){
 		aNet.href = aNet.href+value;
-	}else if(net == 'Facebook'){
+	}else if(net == 'facebook'){
 		aNet.href = aNet.href+value;
-	}else if(net == 'Github'){
+	}else if(net == 'github'){
 		aNet.href = aNet.href+value;
-	}else if(net == 'Twitter'){
+	}else if(net == 'twitter'){
 		aNet.href = aNet.href+value;
 	}
 }
