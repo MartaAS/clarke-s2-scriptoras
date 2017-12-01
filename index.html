@@ -243,9 +243,6 @@
  						</div>
             <div class="netsocialhidden" id="showNetsocial">
              <div class="nets">
-               <label for="portfolio">Introduce url del portfolio </label>
-               <input class="users" id="portfolio" type="text" name="portfolio" placeholder=" Introduce url del portfolio">
-               <label for="inputQr">Introduce contenido para generar código QR</label>
                <input class="users" id="inputQr" type="text" name="inputQr" placeholder=" Contenido para generar QR">
                <input type="button" value="Generar" onclick="update_qrcode()">
              </div>
@@ -430,27 +427,24 @@ document.getElementById('barra3').style.width = '95%';
           <div class="sociality">
             <div class="socialNetworks">
               <ul class="social">
-                <li class="linkedin">
+                <li class="linkedin invisible">
                   <a id="a-linkedin" class="printnet" href="https://www.linkedin.com/in/" target="_blank">linkedin</a>
                 </li>
-                <li class="facebook">
+                <li class="facebook invisible">
                   <a class="printnet" href="https://www.facebook.com/" target="_blank">facebook</a>
                 </li>
-                <li class="github">
+                <li class="github invisible">
                   <a class="printnet" href="https://github.com/" target="_blank">github</a>
                 </li>
-                <li class="twitter">
+                <li class="twitter invisible">
                   <a class="printnet" href="https://twitter.com/" target="_blank">twitter</a>
                 </li>
-                <li class="instagram">
+                <li class="instagram invisible">
                   <a class="printnet" href="https://www.instagram.com/" target="_blank">instagram</a>
                 </li>
               </ul>
             </div>
-            <div class="portfolio">
-              <span class="port">
-                <a class="" href="https://google.com" target="_blank">portfolio</a>
-              </span>
+            <div id="codigoqr" class="codigoqr">
             </div>
            </div>
 
@@ -477,5 +471,6 @@ document.getElementById('barra3').style.width = '95%';
 	  <!-- End Footer-->
 		<!-- JavaScript Code -->
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/qrcode.js"></script>
   </body>
 </html>

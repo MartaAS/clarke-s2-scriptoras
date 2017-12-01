@@ -620,6 +620,12 @@ color: #5A392B;
 	width: 120px;
 	height: 120px;
 }
+.invisible{
+	display:none;
+}
+.visible{
+	display:block;
+}
 /*footer*/
 footer{
 	background-color: #252525;

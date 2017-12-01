@@ -219,21 +219,31 @@ function showHobbiesForm() {
 
 /*Redes sociales*/
 function showNetsocial() {
-  var netSocial = document.querySelectorAll('.printnet');
-  for (var i=0; i<netSocial.length; i++){
-    var text = prompt("Introduce tu usuario de "+netSocial[i].innerHTML);
-    netSocial[i].href = netSocial[i].href + text;
-  }
+  var netSocialDiv = document.querySelector('.netsocialhidden');
+  netSocialDiv.style.display = 'block';
+  // var netSocial = document.querySelectorAll('.printnet');
+  // for (var i=0; i<netSocial.length; i++){
+  //   var text = prompt("Introduce tu usuario de "+netSocial[i].innerHTML);
+  //   netSocial[i].href = netSocial[i].href + text;
+  // }
 }
 
 
 
 
 
-/*javascript de redes sociales
+/*javascript de redes sociales*/
 function setValue(net){
 	var inputSocial = document.getElementById(net);
-	setSocialMedia(inputSocial.value, net);
+  var liSocial = document.querySelector('.'+net);
+  if(inputSocial.value != ""){//Si tiene valor el input mostramos el icono
+    liSocial.classList.remove('invisible');
+    liSocial.classList.add('visible');
+  }else{//Si NO tiene valor el input ocultamos el icono
+    liSocial.classList.remove('visible');
+    liSocial.classList.add('invisible');
+  }
+	setSocialMedia('a-'+inputSocial.value, net);
 }
 
 function setSocialMedia(value, net){
@@ -249,4 +259,3 @@ function setSocialMedia(value, net){
 		aNet.href = aNet.href+value;
 	}
 }
-*/
