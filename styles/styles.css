@@ -30,11 +30,11 @@ header{
   z-index: 2;
 }
 .headercreatucv{
-	background-image: url(../images/vintage4.jpg);
+	background-image: url(../images/vintage8.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 25vh;
+	height: 40vh;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -177,6 +177,14 @@ main{
 		font-size: 40px;
 		margin-top: 50px;
 	}
+	.headercreatucv{
+	height: 80vh;
+}
+}
+@media all and (min-width: 810px){
+.headercreatucv{
+	height: 100vh;
+}
 }
 /*fin parte marta*/
 .formulario-sec{
