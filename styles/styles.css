@@ -507,6 +507,8 @@ color: #6f1614;
 }
 .social {
 	display: flex;
+	justify-content: space-between;
+	width: 70%;
 }
 .linkedin a{
 	background: url('../images/linkedin.png');
@@ -662,6 +664,9 @@ footer{
 		display: flex;
 		justify-content: space-around;
 	}
+	.social {
+		width: 300px;
+	}
 	.logo{
 		width: 100%;
 		margin-right:80px;
@@ -684,7 +689,6 @@ footer{
 	height: 100%;
 	width: 40%
 	}
-
 	.previsualizacion-sec{
 		height: 100%;
 		width: 60%
@@ -694,6 +698,13 @@ footer{
 	}
 	.end{
 		margin-left: auto;
+	}
+	.social {
+		width: 300px;
+	}
+	.sociality{
+		display: flex;
+		justify-content:space-between;
 	}
 }
 @media print {
