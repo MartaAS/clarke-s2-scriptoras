@@ -1,21 +1,25 @@
-
 *{
-box-sizing: border-box;
+	box-sizing: border-box;
 }
 body{
-background-color: #FFFEFA;
-
-margin: 0;
-padding: 0;
-font-family: 'Arial';
+	background-color: #FFFEFA;
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial';
 }
 /*header parte marta*/
-
 .logoscriptoras{
 	height: auto;
-	width: 65px;
-	margin-left: 20px;
+	width: 40%;
+	margin-left: 10px;
 	margin-top: 10px;
+}
+#btnview{
+	width: 40px;
+	height: 40px;
+	margin-right: 20px;
+	background-image: url("../images/btnview2.jpg");
+	background-size: contain;
 }
 header{
 	width: 100%;
@@ -23,11 +27,12 @@ header{
 	background-color: #2E2B24;
 	position: fixed;
 	display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+	justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 	padding-top: 0px;
 	margin-top: 0px;
-  z-index: 2;
+  z-index: 1;
 }
 .headercreatucv{
 	background-image: url(../images/vintage8.jpg);
@@ -51,16 +56,15 @@ header{
 .imgcrea{
 	width: 100%;
 	height: 200px;
-
 }
 /* cargar imagen*/
 .thumb{
-border: 1px solid #000;
-margin: 10px 5px 0 0;
-width: 200px;
-height: 200px;
-border-radius: 100px;
--webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
+	border: 1px solid #000;
+	margin: 10px 5px 0 0;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
 /*fin cargar imagen*/
 main{
@@ -68,7 +72,8 @@ main{
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	min-height: 100vh;
+
 }
 .containerinfo{
 	display: flex;
@@ -79,7 +84,6 @@ main{
 	justify-content: center;
 }
 .form{
-
 	display: flex;
 	justify-content: center;
 }
@@ -99,14 +103,17 @@ main{
 	border-radius: 5px;
 }
 .foto{
-		 width: 200px;
-     height: 200px;
-     border-radius: 100px;
-		 margin-top: 40px;
-		-webkit-box-shadow: 5px 8px 42px 1px #3d3d29;
-		display: flex;
-		align-self: center;
+	width: 200px;
+  height: 200px;
+	border-radius: 100px;
+	margin-top: 40px;
+	-webkit-box-shadow: 5px 8px 42px 1px #3d3d29;
+	display: flex;
+	align-self: center;
 }
+
+
+
 .guardarprincipal{
 	flex-direction: column;
 	justify-content: center;
@@ -154,23 +161,27 @@ main{
 	border-radius: 100px;
 	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
+
+/*ventana previsualizar*/
+#ventana2{
+	display: none;
+}
 /*mediaqueries*/
 @media all and (min-width: 600px){
 	header{
 		height: auto;
-}
+	}
 }
 @media all and (min-width: 600px){
 	.logoscriptoras{
 		height: 90px;
 		width: 90px;
-}
+	}
 }
 @media all and (min-width: 600px){
-.headercreatucv{
+	.headercreatucv{
 		height: 30vh;
-
-}
+	}
 }
 @media all and (min-width: 600px){
 	.textcrea{
@@ -179,22 +190,23 @@ main{
 	}
 	.headercreatucv{
 	height: 80vh;
-}
+	}
 }
 @media all and (min-width: 810px){
-.headercreatucv{
-	height: 100vh;
-}
+	.headercreatucv{
+		height: 100vh;
+	}
 }
 /*fin parte marta*/
+/*
 .formulario-sec{
-height: 50%;
-overflow: scroll;
+	height: 50%;
+	overflow: scroll;
 }
 
 .previsualizacion-sec{
-height: 50%;
-overflow: scroll;
+	height: 50%;
+	overflow: scroll;
 }
 
 /*Estilos generales de la sección de desplegables*/
@@ -202,7 +214,7 @@ overflow: scroll;
 	margin-bottom: 10px;
 	width: 90%;
 	height: 40px;
-	background-color: #a19680;
+	background-color: #7DBEA5;
 	border-radius: 8px;
 	display: flex;
 	justify-content: center;
@@ -213,7 +225,7 @@ overflow: scroll;
 }
 .title-container:hover {
   border-top-color: #6f1614;
-  background: #6f1614;
+  background: #5A392B;
   color: #ccc;
   }
 .title-container:active {
@@ -226,19 +238,13 @@ overflow: scroll;
 }
 
 /*About*/
-input{
-	display: block;
-}
-
-input[type=button]{
-	display: inline-block;
-	border-radius: 10px;
-	border: #ccc;
-	background: #ffff;
+.aboutMe{
+		display: block;
 }
 
 /*Estilo del contenedor de about, usado también en experiencia y formación para no repetir*/
 .content, .boxes-container, .netsocialhidden {
+
 	display: none;
 }
 
@@ -267,16 +273,14 @@ margin: 10px 0px;
 }
 .month, .year{
 margin-top: 5px;
-
 }
-
 /*Botones guardar y cerrar*/
 .save-button, .out-button {
-
 	background-color: buttonface!important;
 	padding: 5px;
 	text-shadow: rgba(0,0,0,.4) 0 1px 0;
 	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	display: inline-block;
 }
 .save-button:hover, .out-button:hover {
 	background: #6f1614!important;
@@ -285,25 +289,26 @@ margin-top: 5px;
 	color: #fff;
 }
 
+
 /*Experience and Education preview*/
 .experience-education-main-title{
 text-align: center;
-color: #6f1614;
+color: #5A392B;
 
 }
 /* La timeline*/
 .timeline {
 
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 /* La propia timeline (línea vertical) */
 .timeline::after {
   content: '';
   position: absolute;
   width: 10px;
-  background-color: #6f1614;
+  background-color: #5A392B;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -311,10 +316,10 @@ color: #6f1614;
 }
 /* Contenido alrededor de la timeline */
 .container-timeline {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
 }
 /* Círculos de la timeline */
 .container-timeline::after {
@@ -324,23 +329,23 @@ color: #6f1614;
   height: 25px;
   right: -17px;
   background-color: white;
-  border: 4px solid #6f1614;
+  border: 4px solid #5A392B;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
 }
 /* Situar los contenidos de la izquierda*/
 .left {
-  left: 0;
+    left: 0;
 }
 
 /* Situar los contenidos de la derecha */
 .right {
-  left: 50%;
+    left: 50%;
 }
 /* Arregla la posición de los círculos del contenido de la derecha */
 .right::after {
-  left: -16px;
+    left: -16px;
 }
 /* Añade flechas en el contenido de la izquierda apuntando a la derecha */
 .left::before {
@@ -351,9 +356,9 @@ color: #6f1614;
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid pink;
+  border: medium solid rgba(125, 190, 165, 0.36);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent pink;
+  border-color: transparent transparent transparent rgba(125, 190, 165, 0.36);
 }
 /* Añade flechas en el contenido de la derecha apuntando hacia la izquierda. */
 .right::before {
@@ -364,14 +369,14 @@ color: #6f1614;
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid pink;
+  border: medium solid rgba(125, 190, 165, 0.36);
   border-width: 10px 10px 10px 0;
-  border-color: transparent pink transparent transparent;
+  border-color: transparent rgba(125, 190, 165, 0.36) transparent transparent;
 }
 /* Estilo de las cajas con el contenido */
 .content-timeline {
   padding: 10px 30px;
-  background-color: pink;
+  background-color: rgba(125, 190, 165, 0.36);
   position: relative;
   border-radius: 6px;
 	font-size: 14px;
@@ -385,10 +390,8 @@ color: #6f1614;
 }
 /*Estilos de texto dentro de cajas*/
 .title-year{
-  color: #6f1614;
+  color: #5A392B;
 	margin: 8px;
-	line-height: 10px;
-  font-size: 22px;
 }
 .job-title, .education-title{
   font-weight: bold;
@@ -409,15 +412,79 @@ color: #6f1614;
  }
 .work-information-output-container > p{
   margin-top: 0px;
-	text-align: center;
 }
+@media all and (max-width: 600px) {
+  /* Poner la línea a la izquierda */
+  .timeline::after {
+    left: 31px;
+  }
+  /* Para que se ajusten los contenedores a la pantalla */
+  .container-timeline {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  /* Poner los contenedores de la derecha debajo de los de la izquierda */
+  .right {
+    left: 0%;
+  }
+  /* Para que todas las flechas apunten a la izquierda */
+  .container-timeline::before {
+    left: 60px;
+    border: medium solid pink;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent pink transparent transparent;
+  }
+  /* Para que todos los círculos estén alineados */
+  .left::after, .right::after {
+    left: 15px;
+  }
 }
-
 /*End Experience and Education preview*/
 /*Skills*/
-.skills{
+.skillBar{
 
 }
+.skillName{
+
+}
+#skillPreview{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	display: block;
+}
+.skill {
+    width: 100%;
+    margin: 20px 20px 0 0;
+		color: #5A392B;
+}
+.skill_title {
+    /*font-family: sans-serif;*/
+    font-size: 14px;
+
+}
+.barra {
+    background-color: #E0E0E0 ;
+    border-radius: 10px;
+    width: 75%;
+    height: 10px;
+    margin-left: 0;
+    position: relative;
+		display: flex;
+}
+
+.barra_front {
+    width: 0;
+    /* background: green; */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: #7DBEA5;
+}
+
 /*Languages form container*/
 #languagesFormContainer, #hobbiesFormContainer {
 	display:flex;
@@ -438,6 +505,7 @@ color: #6f1614;
 .textFormButton {
 	color: #ffffff;
 }
+
 .addLanguageButton{
 	background: none;
 	border: none;
@@ -450,19 +518,15 @@ color: #6f1614;
 }
 
 .languagesTitlePreview, .hobbiesTitlePreview {
-	color: #6F1514;
+	color: #5A392B;
 }
 
-#languagesPreview, #hobbiesPreview {
+#languagesPreview {
 	/*display: flex;
 	flex-direction: column;
 	align-items: center;*/
 	padding-left: 10%;
 	padding-right: 5%;
-}
-
-#read, #travel, #game, #sports, #cinema, #music {
-	visibility: hidden;
 }
 
 .languagesBarPreview {
@@ -501,12 +565,11 @@ color: #6f1614;
 	display: none;
 }
 /* Redes sociales*/
-.users {
-	border: solid 1px;
-	border-radius: 4px;
-}
+
 .social {
 	display: flex;
+	justify-content: space-between;
+	width: 70%;
 }
 .linkedin a{
 	background: url('../images/linkedin.png');
@@ -544,10 +607,24 @@ color: #6f1614;
 	height: 0;
 	width: 40px;
 }
+.instagram a{
+	background: url('../images/instagram.png');
+	overflow: hidden;
+	display: block;
+	background-size: 40px 40px;
+	padding-top: 40px;
+	height: 0;
+	width: 40px;
+}
 .codigoqr > img{
 	width: 120px;
 	height: 120px;
-
+}
+.invisible{
+	display:none;
+}
+.visible{
+	display:block;
 }
 /*footer*/
 footer{
@@ -587,13 +664,18 @@ footer{
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
-	background-image: url("images/vintage8.jpg");
+	background-image: url(../images/vintage8.jpg);
+	flex:1;
+	opacity: 0.6;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .seccion{
 	padding: 60px 0 50px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 }
 .titleForm{
 		text-align: center;
@@ -615,14 +697,14 @@ footer{
 }
 .cajas{
   width: 100%;
-	background-color: #f5f5f5;
-	border:1px;
+	background-color: #F4EDDD;
+	border: solid 1px #514336;
 	padding: 0 12px;
 	height: 40px;
-	border-radius: 3px;
+	border-radius: 9px;
 }
 .cajas:focus{
-	border-color: #6F1514;
+	border-color: #514336;
 }
 .campos{
  margin: 0 0 1.5rem;
@@ -630,12 +712,12 @@ footer{
  flex-direction: row;
 }
 .boton{
-	color: white;
-	background-color: #6F1514;
+	color: #514336;
+	background-color: #7DBEA5;
 	font-size: 15px;
 	font-weight: bold;
 	line-height: 2.8;
-  border-radius: 0.33em;
+  border-radius: 0.6em;
 }
 /*mediaqueries*/
 
@@ -648,6 +730,9 @@ footer{
 	.sociality {
 		display: flex;
 		justify-content: space-around;
+	}
+	.social {
+		width: 300px;
 	}
 	.logo{
 		width: 100%;
@@ -662,6 +747,7 @@ footer{
 	}
 }
 @media all and (min-width:900px) {
+
 	main{
 		box-sizing: border-box;
 		display: flex;
@@ -671,16 +757,23 @@ footer{
 	height: 100%;
 	width: 40%
 	}
-
 	.previsualizacion-sec{
 		height: 100%;
 		width: 60%
 	}
+
 	.logo{
 		margin-right:120px;
 	}
 	.end{
 		margin-left: auto;
+	}
+	.social {
+		width: 300px;
+	}
+	.sociality{
+		display: flex;
+		justify-content:space-between;
 	}
 }
 @media print {
@@ -709,7 +802,7 @@ footer{
     left: 60px;
     border: medium solid pink;
     border-width: 10px 10px 10px 0;
-    border-color: transparent pink transparent transparent;
+    border-color: transparent rgba(125, 190, 165, 0.36) transparent transparent;
   }
   /* Para que todos los círculos estén alineados */
   .left::after, .right::after {
