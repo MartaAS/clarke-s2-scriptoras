@@ -459,11 +459,13 @@ color: #5A392B;
   align-items: center;
   line-height: 0px;
   margin-bottom: 7px;
+	margin-top: 5px;
 }
 /*Estilos de texto dentro de cajas*/
 .title-year{
   color: #5A392B;
 	margin: 8px;
+	font-size: 20px;
 }
 .job-title, .education-title{
   font-weight: bold;
@@ -474,7 +476,7 @@ color: #5A392B;
   display:flex;
   flex-direction: row;
   justify-content: space-around;
-
+	padding: 0 20px;
 }
 .work-information-output-container{
 
@@ -484,6 +486,7 @@ color: #5A392B;
  }
 .work-information-output-container > p{
   margin-top: 0px;
+	text-align: center;
 }
 @media all and (max-width: 600px) {
   /* Poner la línea a la izquierda */
