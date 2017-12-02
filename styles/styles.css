@@ -181,34 +181,41 @@ main{
 	display: none;
 }
 /*mediaqueries*/
-@media all and (min-width: 600px){
+@media all and (min-width: 400px){
+	.headercreatucv{
+	height: 60vh;
+	}
+}
+@media all and (min-width: 490px){
+	.headercreatucv{
+	height: 80vh;
+	}
+}
+@media all and (min-width: 650px){
 	header{
 		height: auto;
 	}
-}
-@media all and (min-width: 600px){
 	.logoscriptoras{
 		height: 90px;
 		width: 90px;
 	}
-}
-@media all and (min-width: 600px){
-	.headercreatucv{
-		height: 30vh;
-	}
-}
-@media all and (min-width: 600px){
 	.textcrea{
 		font-size: 40px;
 		margin-top: 50px;
 	}
 	.headercreatucv{
-	height: 80vh;
+	height: 100vh;
 	}
 }
 @media all and (min-width: 810px){
 	.headercreatucv{
-		height: 100vh;
+		height: 120vh;
+	}
+}
+@media all and (min-width: 900px){
+	.headercreatucv{
+		height: 120vh;
+		width: 100%;
 	}
 }
 /*fin parte marta*/
