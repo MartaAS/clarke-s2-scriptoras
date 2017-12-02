@@ -238,7 +238,7 @@ input[type=button]{
 }
 
 /*Estilo del contenedor de about, usado también en experiencia y formación para no repetir*/
-.content, .boxes-container {
+.content, .boxes-container, .netsocialhidden {
 	display: none;
 }
 
@@ -582,11 +582,21 @@ footer{
 	width: 100px;
 }
 /*formulario*/
+.flexible{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	background-image: url("images/vintage8.jpg");
+}
 .seccion{
 	padding: 60px 0 50px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+.titleForm{
+		text-align: center;
 }
 .texto-formulario{
 	margin: 15px 35px;
