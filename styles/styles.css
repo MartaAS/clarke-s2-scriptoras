@@ -15,12 +15,57 @@ body{
 	margin-top: 6px;
 }
 #btnview{
-	width: 40px;
-	height: 40px;
-	margin-right: 20px;
+	width: 30px;
+	height: 30px;
+	margin-left: auto;
 	background-image: url("../images/btnfile.png");
 	background-size: contain;
+	align-items: flex-end;
+  text-align: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-style: none;
 }
+#btnshare{
+		width: 30px;
+		height: 30px;
+		margin-right: 15px;
+		background-image: url("../images/btnshare.png");
+		background-size: contain;
+		background-size: contain;
+		align-items: flex-end;
+	  text-align: center;
+	  background-color: transparent;
+	  box-sizing: border-box;
+	  border-style: none;
+}
+#btnprint{
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		background-image: url("../images/btnprint.png");
+		background-size: contain;
+		background-size: contain;
+		align-items: flex-end;
+	  text-align: center;
+	  background-color: transparent;
+	  box-sizing: border-box;
+	  border-style: none;
+}
+#btndownload{
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		background-image: url("../images/btndownload.png");
+		background-size: contain;
+		background-size: contain;
+		align-items: flex-end;
+	  text-align: center;
+	  background-color: transparent;
+	  box-sizing: border-box;
+	  border-style: none;
+}
+
 header{
 	width: 100%;
 	height: 60px;
