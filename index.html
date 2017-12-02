@@ -23,7 +23,17 @@
 				<div class="headercreatucv">
 					<span class="textcrea">Haz tu CV con estilo</span>
 				</div>
-				<form method="post" class="form">
+				<form class="form-section-container" id=principal-section action="" method="post">
+					<div class="title-container">
+						<h2 class="textFormButton" onclick="editar('principal-box')">Datos principales</h2>
+						<button class="open-section-button" type="button" name="principales-button" onclick="editar('principal-box')">
+							<img src="images/addButton32px.png" alt="addButton">
+						</button>
+						<button class="close-section-button" type="button" name="principales-button" onclick="ocultar('principal-box')">
+						<img src="images/menos.png" alt="minusbuttom">
+					</button>
+					</div>
+					<div class="boxes-container" id="principal-box">
 					<div class="containerinfo">
 						<!--<div class="containerfoto" id="list">
 							<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt="foto" class="foto">
@@ -35,14 +45,15 @@
 						<!--fin prueba cargar imagen-->
 							<!-- posiblemente se quite por el boton que genera la prueba cargar imagen<input type="button" value="Upload image" class="subirfoto"> -->
 						<div class="datosprin">
-							<input type="text" name="name" placeholder="Introduce nombre" class="datosprincipales" required id="nombreformulario" onclick="clicknombre()">
-							<input type="text" name="surname" placeholder="Introduce apellidos" class="datosprincipales" required id="apellidoformulario" onclick="clickapellido()">
-							<input type="text" name="profesion" placeholder="Introduce profesión" class="datosprincipales" required id="profesionformulario" onclick="clickprofesion()">
-							<input type="email" name="mail" placeholder="Introduce email" class="datosprincipales" id="emailformulario" onclick="clickemail()">
-							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="datosprincipales" id="telefonoformulario" onclick="clicktelefono()">
+							<input type="text" name="name" placeholder="Introduce nombre" class="datosprincipales name" required id="nombreformulario">
+							<input type="text" name="surname" placeholder="Introduce apellidos" class="datosprincipales" required id="apellidoformulario">
+							<input type="text" name="profesion" placeholder="Introduce profesión" class="datosprincipales" required id="profesionformulario">
+							<input type="email" name="mail" placeholder="Introduce email" class="datosprincipales" id="emailformulario">
+							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="datosprincipales" id="telefonoformulario">
 							 <input type="button" value="Guardar" class="guardarprincipal" onclick="guardardatosprincipales();">
 						</div>
 					</div>
+				</div>
 				</form>
 
 			<!--about -->
@@ -50,6 +61,10 @@
 				<div class="title-container">
 					<h2 class="textFormButton">Sobre mi</h2>
 							<button class="open-section-button" type="button" name="about-me-button" onclick="showPromptAbout()"><img src="images/addButton32px.png" alt="addButton"></button>
+							<button class="close-section-button" type="button" name="about-me-button" onclick="ocultar('content-about')">
+							<img src="images/menos.png" alt="minusbuttom">
+						</button>
+
 				</div>
 				<div  id="content-about" class="boxes-container"><!--Oculto-->
 					<input class="aboutMe" type="text" name="name" value="text">
@@ -66,6 +81,9 @@
 						<button class="open-section-button" type="button" name="experience-button" onclick="editar('job-box')">
 							<img src="images/addButton32px.png" alt="addButton">
 						</button>
+						<button class="close-section-button" type="button" name="job-box-button" onclick="ocultar('job-box')">
+						<img src="images/menos.png" alt="minusbuttom">
+					</button>
 					</div>
 					<div class="boxes-container" id="job-box">
 						<h3 class="subtitle-section">Puesto de trabajo</h3>
@@ -105,6 +123,9 @@
 						<button class="open-section-button" type="button" name="languageButton" onclick="editar('education-box')">
 							<img src="images/addButton32px.png" alt="addButton">
 						</button>
+						<button class="close-section-button" type="button" name="education-button" onclick="ocultar('education-box')">
+						<img src="images/menos.png" alt="minusbuttom">
+					</button>
 					</div>
 					<div class="boxes-container" id="education-box">
 						<h3 class="subtitle-section">Titulación</h3>
@@ -140,6 +161,9 @@
 						<div class="title-container">
 							<h2 class="textFormButton">Habilidades</h2>
 								<button class="open-section-button" type="button" name="skills-button" onclick="showPromptSkill()"><img src="images/addButton32px.png" alt="addButton"></button>
+								<button class="close-section-button" type="button" name="content-skills-button" onclick="ocultar('content-skills')">
+								<img src="images/menos.png" alt="minusbuttom">
+							</button>
 						</div>
 						<div id="content-skills" class="boxes-container"><!--Oculto-->
 							<ul>
@@ -158,7 +182,10 @@
         <section id="languagesFormContainer">
           <div class="title-container">
             <h2 class="textFormButton">Idiomas</h2>
-            <button class="addLanguageButton" type="button" name="languageButton" onclick="showPromptLanguage()"><img src="images/addButton32px.png" alt="addButton"></button>
+            <button class="addLanguageButton open-section-button" type="button" name="languageButton" onclick="showPromptLanguage()"><img src="images/addButton32px.png" alt="addButton"></button>
+						<button class="close-section-button" type="button" name="job-box-button" onclick="">
+						<img src="images/menos.png" alt="minusbuttom">
+					</button>
 
             <!-- <button type="button" name="addInputLanguagesForm" onclick="addInput()"></button> -->
           </div>
@@ -170,7 +197,11 @@
         <section id="hobbiesFormContainer">
           <div class="title-container">
             <h2 class="textFormButton">Hobbies</h2>
-            <button class="addLanguageButton" type="button" name="languageButton" onclick="showHobbiesForm(); showHobbiesPreview()"><img src="images/addButton32px.png" alt="addButton"></button>
+            <button class="addLanguageButton open-section-button" type="button" name="languageButton" onclick="showHobbiesForm(); showHobbiesPreview()"><img src="images/addButton32px.png" alt="addButton"></button>
+						<button class="close-section-button" type="button" name="hobbiesForm-button" onclick="ocultar('hobbiesForm')">
+						<img src="images/menos.png" alt="minusbuttom">
+					</button>
+
           </div>
           <form id="hobbiesForm" action="index.html" method="post">
             <div class="checkBoxHobbies">
@@ -207,8 +238,11 @@
               <h2 class="textFormButton">Redes Sociales</h2>
   						  <button class="open-section-button" type="button" name="networksButton" onclick="showNetsocial()">
   							 <img src="images/addButton32px.png" alt="addButton"></button>
+								 <button class="close-section-button" type="button" name="minredes-button" onclick="ocultar('minredes')">
+	 							<img src="images/menos.png" alt="minusbuttom">
+	 						</button>
   					 </div>
-              <div class="netsocialhidden">
+              <div class="netsocialhidden" id="minredes">
                 <div class="nets">
                   <label for="linkedin">Linkedin</label>
                   <input class="users" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onchange="setValue('linkedin')">
@@ -240,6 +274,9 @@
              	<h2 class="textFormButton">Portfolio</h2>
  							<button class="open-section-button" type="button" name="networksButton" onclick="editar('showNetsocial')">
  							<img src="images/addButton32px.png" alt="addButton"></button>
+							<button class="close-section-button" type="button" name="showNetsocial-button" onclick="ocultar('showNetsocial')">
+							<img src="images/menos.png" alt="minusbuttom">
+						</button>
  						</div>
             <div class="netsocialhidden" id="showNetsocial">
              <div class="nets">
@@ -260,8 +297,9 @@
 				<section class="containerprefoto">
 					<div id="prefoto" class="prefoto"></div>
 				</section>
+				<hr class="separador">
 				<section class="preprincipales">
-					<p id="prenombre">Nombre</p>
+					<p id="prenombre" class="name">Nombre</p>
 					<p id="preapellidos">Apellido</p>
 					<p id="preprofesion">Profesion</p>
 					<p id="preemail">Email</p>

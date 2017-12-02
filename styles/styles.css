@@ -10,9 +10,9 @@ body{
 /*header parte marta*/
 .logoscriptoras{
 	height: auto;
-	width: 40%;
+	width: 39%;
 	margin-left: 10px;
-	margin-top: 10px;
+	margin-top: 6px;
 }
 #btnview{
 	width: 40px;
@@ -39,10 +39,11 @@ header{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 40vh;
+	height: 50vh;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
+	margin-bottom: 30px;
 }
 .textcrea{
 	display: flex;
@@ -75,6 +76,15 @@ main{
 	min-height: 100vh;
 
 }
+.separador {
+	border: 3px;
+	background-color: #7DBEA5;
+  border-radius: 90px /30px;
+	height: 5px;
+	width: 60%;
+	text-align: center;
+	margin-top: 50px;
+	}
 .containerinfo{
 	display: flex;
 	flex-direction: column;
@@ -86,6 +96,10 @@ main{
 .form{
 	display: flex;
 	justify-content: center;
+}
+.name{
+	font-size: 25px;
+	font-weight: bold;
 }
 .datosprin{
 	margin-top: 30px;
@@ -211,6 +225,7 @@ main{
 
 /*Estilos generales de la sección de desplegables*/
 .title-container{
+	padding-left: 20px;
 	margin-bottom: 10px;
 	width: 90%;
 	height: 40px;
@@ -233,6 +248,11 @@ main{
 	background: #6f1614;
 	}
 .open-section-button{
+	background: none;
+	border: none;
+	margin-left: auto;
+}
+.close-section-button{
 	background: none;
 	border: none;
 }
@@ -631,6 +651,7 @@ footer{
 	background-color: #252525;
 	height: 120px;
 	box-sizing: border-box;
+	margin-top: 20px;
 }
 .infooter{
 	display: flex;

@@ -53,36 +53,38 @@ function archivo(evt) {
 	//fin prueba cargar imagen
 
 //Datos principales
-function clicknombre(){
-var nombreIntroducido = prompt("¿Cuál es tu nombre");
-document.getElementById('nombreformulario').value=nombreIntroducido;
-}
-function clickapellido(){
-var apellidoIntroducido = prompt("¿Cuáles son tus apellidos?");
-document.getElementById('apellidoformulario').value=apellidoIntroducido;
-}
-function clickprofesion(){
-var profesionIntroducido = prompt("¿Cuál es tu profesión");
-document.getElementById('profesionformulario').value=profesionIntroducido;
-}
-function clickemail(){
-var emailIntroducido = prompt("¿Cuál es tu email");
-document.getElementById('emailformulario').value=emailIntroducido;
-}
-function clicktelefono(){
-var telefonoIntroducido = prompt("¿Cuál es tu teléfono móvil?");
-document.getElementById('telefonoformulario').value=telefonoIntroducido;}
-
-//fin promp datos principales
-
-
 //guardar datos principales introducidos
 function guardardatosprincipales(){
-document.getElementById('prenombre').innerHTML=document.getElementById('nombreformulario').value;
-document.getElementById('preapellidos').innerHTML=document.getElementById('apellidoformulario').value;
-document.getElementById('preprofesion').innerHTML=document.getElementById('profesionformulario').value;
-document.getElementById('preemail').innerHTML=document.getElementById('emailformulario').value;
-document.getElementById('pretelefono').innerHTML=document.getElementById('telefonoformulario').value;
+	var nombreformulario = document.getElementById('nombreformulario').value;
+	if(nombreformulario == ""){
+		}
+	else {
+		document.getElementById('prenombre').innerHTML = nombreformulario;
+	}
+	var apellidoformulario = document.getElementById('apellidoformulario').value;
+	if(apellidoformulario ==""){
+	}
+	else {
+		document.getElementById('preapellidos').innerHTML = apellidoformulario;
+	}
+	var profesionformulario = document.getElementById('profesionformulario').value;
+	if(profesionformulario ==""){
+	}
+	else {
+		document.getElementById('preprofesion').innerHTML = profesionformulario;
+	}
+	var emailformulario = document.getElementById('emailformulario').value;
+	if(emailformulario ==""){
+	}
+	else {
+		document.getElementById('preemail').innerHTML = emailformulario;
+	}
+	var telefonoformulario = document.getElementById('telefonoformulario').value;
+	if(telefonoformulario ==""){
+	}
+	else {
+		document.getElementById('pretelefono').innerHTML = telefonoformulario;
+	}
 }
 
 //previsualizacion en hotra hoja
@@ -107,7 +109,6 @@ function editar(idContent){
 function ocultar(idContent){
 	document.getElementById(idContent).style.display = 'none';
 }
-
 /*var aboutMe = document.querySelector("#about");
 var aboutInput = prompt("Haz una breve descripción sobre ti.");
 aboutMe.innerHTML = aboutInput;
