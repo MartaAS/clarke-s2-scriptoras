@@ -7,63 +7,51 @@ body{
 	padding: 0;
 	font-family: 'Arial';
 }
-/*header parte marta*/
-.logoscriptoras{
-	height: auto;
-	width: 39%;
-	margin-left: 10px;
-	margin-top: 6px;
+/*Header logo formulario*/
+.headlog{
+	min-width: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 }
-#btnview{
-	width: 30px;
-	height: 30px;
-	margin-left: auto;
-	background-image: url("../images/btnfile.png");
-	background-size: contain;
-	align-items: flex-end;
+.machinelog{
+	margin-top: 5px;
+	display: block;
+	margin-left: 5px;
+	max-width: 60px;
+	width: 100%;
+}
+.letterslog{
+	margin top: 10px;
+	margin-left: 5px;
+	margin-right: 10px;
+	max-width: 150px;
+	width: 100%;
+}
+.icons{
+	height: 18px;
+  width: 18px;
+  margin-left: 5px;
+  background-size: cover;
+  align-items: flex-end;
   text-align: center;
   background-color: transparent;
   box-sizing: border-box;
   border-style: none;
+  cursor: pointer;
+}
+/*header parte marta*/
+#btnview{
+	background-image: url("../images/btnfile.png");
 }
 #btnshare{
-		width: 30px;
-		height: 30px;
-		margin-right: 15px;
 		background-image: url("../images/btnshare.png");
-		background-size: contain;
-		background-size: contain;
-		align-items: flex-end;
-	  text-align: center;
-	  background-color: transparent;
-	  box-sizing: border-box;
-	  border-style: none;
 }
 #btnprint{
-		width: 30px;
-		height: 30px;
-		margin-right: 10px;
 		background-image: url("../images/btnprint.png");
-		background-size: contain;
-		background-size: contain;
-		align-items: flex-end;
-	  text-align: center;
-	  background-color: transparent;
-	  box-sizing: border-box;
-	  border-style: none;
 }
 #btndownload{
-		width: 30px;
-		height: 30px;
-		margin-right: 10px;
 		background-image: url("../images/btndownload.png");
-		background-size: contain;
-		background-size: contain;
-		align-items: flex-end;
-	  text-align: center;
-	  background-color: transparent;
-	  box-sizing: border-box;
-	  border-style: none;
 }
 
 header{
@@ -74,10 +62,10 @@ header{
 	display: flex;
 	justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  flex-wrap: wrap;
 	padding-top: 0px;
 	margin-top: 0px;
-  z-index: 2;
+  z-index: 99;
 }
 .headercreatucv{
 	background-image: url(../images/vintage8.jpg);
@@ -119,7 +107,6 @@ main{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-
 }
 .separador {
 	border: 3px;
@@ -129,7 +116,7 @@ main{
 	width: 60%;
 	text-align: center;
 	margin-top: 50px;
-	}
+}
 .containerinfo{
 	display: flex;
 	flex-direction: column;
@@ -203,7 +190,6 @@ main{
 	border-radius: 100px;
 	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
-
 /*ventana previsualizar*/
 #ventana2{
 	display: none;
@@ -223,10 +209,7 @@ main{
 	header{
 		height: auto;
 	}
-	.logoscriptoras{
-		height: 90px;
-		width: 90px;
-	}
+
 	.textcrea{
 		font-size: 40px;
 		margin-top: 50px;
@@ -244,6 +227,9 @@ main{
 	.headercreatucv{
 		height: 120vh;
 		width: 100%;
+	}
+	#ventana2{
+		display: block;
 	}
 }
 /*fin parte marta*/
@@ -274,13 +260,13 @@ main{
 	text-shadow: rgba(0,0,0,.4) 0 1px 0;
 }
 .title-container:hover {
-  border-top-color: #6f1614;
+  border-top-color: #5A392B;
   background: #5A392B;
   color: #ccc;
   }
 .title-container:active {
-	border-top-color: #6f1614;
-	background: #6f1614;
+	border-top-color: #5A392B;
+	background: #5A392B;
 	}
 .open-section-button{
 	background: none;
@@ -310,6 +296,7 @@ main{
 	border-color:#7DBEA5;
 }
 /*Ocultar sección*/
+
 .content, .boxes-container, .netsocialhidden {
 	display: none;
 }
@@ -324,12 +311,10 @@ main{
 	display:flex;
 	flex-direction: column;
 	align-items: center;
-
 }
 .boxes-container{
 	padding-left: 5%;
 }
-
 .subtitle-section{
 	margin: 10px 0;
 }
@@ -344,21 +329,19 @@ width: 200px;
 padding: 3px;
 }
 .buttons-container{
-margin: 10px 0px;
+	margin: 10px 0px;
 }
 .month, .year{
-margin-top: 5px;
+	margin-top: 5px;
 }
 
 /*Experience and Education preview*/
 .experience-education-main-title{
 text-align: center;
 color: #5A392B;
-
 }
 /* La timeline*/
 .timeline {
-
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -376,10 +359,10 @@ color: #5A392B;
 }
 /* Contenido alrededor de la timeline */
 .container-timeline {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
 }
 /* Círculos de la timeline */
 .container-timeline::after {
@@ -396,16 +379,16 @@ color: #5A392B;
 }
 /* Situar los contenidos de la izquierda*/
 .left {
-    left: 0;
+  left: 0;
 }
 
 /* Situar los contenidos de la derecha */
 .right {
-    left: 50%;
+  left: 50%;
 }
 /* Arregla la posición de los círculos del contenido de la derecha */
 .right::after {
-    left: -16px;
+  left: -16px;
 }
 /* Añade flechas en el contenido de la izquierda apuntando a la derecha */
 .left::before {
@@ -457,17 +440,15 @@ color: #5A392B;
 }
 .job-title, .education-title{
   font-weight: bold;
-
 }
-
 .dates-output-container{
   display:flex;
   flex-direction: row;
   justify-content: space-around;
 	padding: 0 20px;
+	margin: 0px 40px;
 }
 .work-information-output-container{
-
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -479,10 +460,8 @@ color: #5A392B;
 /*End Experience and Education preview*/
 /*Skills*/
 .skillBar{
-
 }
 .skillName{
-
 }
 #skillPreview{
 	display: flex;
@@ -491,34 +470,33 @@ color: #5A392B;
 	display: block;
 }
 .skill {
-    width: 100%;
-    margin: 20px 20px 0 0;
-		color: #5A392B;
+  width: 100%;
+  margin: 20px 20px 0 0;
+	color: #5A392B;
 }
 .skill_title {
-    /*font-family: sans-serif;*/
-    font-size: 14px;
-
+  /*font-family: sans-serif;*/
+  font-size: 14px;
 }
 .barra {
-    background-color: #E0E0E0 ;
-    border-radius: 10px;
-    width: 75%;
-    height: 10px;
-    margin-left: 0;
-    position: relative;
-		display: flex;
+  background-color: #E0E0E0 ;
+  border-radius: 10px;
+  width: 75%;
+  height: 10px;
+  margin-left: 0;
+  position: relative;
+	display: flex;
 }
 
 .barra_front {
-    width: 0;
-    /* background: green; */
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    background: #7DBEA5;
+	width: 0;
+  /* background: green; */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: #7DBEA5;
 }
 
 /*Languages form container*/
@@ -663,37 +641,47 @@ color: #5A392B;
 	display:block;
 }
 /*footer*/
-footer{
+.infooter{
 	background-color: #252525;
-	height: 120px;
-	box-sizing: border-box;
+	font-size: 0.8em;
+	color: #555555;
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	margin-top: 20px;
 }
-.infooter{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+
 .end{
-	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	/*width: 100%;
 	font-size: 0.8em;
   color: #555555;
 	display: flex;
 	flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center;*/
 }
 .contacto{
 	color: #d5d4cd;
 	text-decoration: none;
+	margin-top: 20px;
+}
+.contacto:hover{
+	color: #7DBEA5;
 }
 .logo{
-	width: 100%;
-  text-align: center;
+	min-width: 200px ;
+	margin-left: auto;
+	margin-right: auto;
 }
 .logoadalab{
-	height: 50px;
-	width: 100px;
+	display: block;
+	margin: 5px auto;
+	max-width: 200px;
+	width: 75%;
 }
 /*formulario*/
 .flexible{
@@ -757,7 +745,6 @@ footer{
   border-radius: 0.6em;
 }
 /*mediaqueries*/
-
 @media all and (max-width: 600px){
 	.textFormButton{
 		font-size: 18px;
@@ -798,16 +785,10 @@ footer{
 	.social {
 		width: 300px;
 	}
-	.logo{
-		width: 100%;
-		margin-right:80px;
-		display: flex;
-		justify-content: flex-end;
-	}
+	/*Footer*/
 	.infooter{
 		display: flex;
 		flex-direction: row;
-		padding-top: 25px;
 	}
 }
 @media all and (min-width:900px) {
@@ -815,7 +796,7 @@ footer{
 	main{
 		box-sizing: border-box;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 	}
 	.formulario-sec{
 	height: 100%;
@@ -825,7 +806,7 @@ footer{
 		height: 100%;
 		width: 60%
 	}
-
+	/*Footer*/
 	.logo{
 		margin-right:120px;
 	}

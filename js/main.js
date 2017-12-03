@@ -87,10 +87,11 @@ function guardardatosprincipales(){
 	}
 }
 
-//previsualizacion en hotra hoja
+//previsualizacion en otra hoja
 function viewprev(){
 	document.getElementById('ventana2').style.display="block";
 	document.getElementById('ventana1').style.display="none";
+	document.getElementById('headerfondo').style.display="none";
 }
 
 //fin parte marta
@@ -186,36 +187,16 @@ function showPromptSkill(){
 	editar('content-skills');
 }
 
-
-//languages form section
-// function showPromptLanguage() {
-//   var newTextLanguage = document.querySelectorAll('.textBarPreview');
-//     for (var i = 0; i < newTextLanguage.length; i++) {
-//       var text = prompt("Introduce un idioma");
-//       newTextLanguage[i].innerHTML = text;
-//       var percentage = prompt("Introduce el porcentaje");
-//       var newPercentageLanguage = document.querySelectorAll('.percentageBar').style.width = percentage + '%';
-//       newPercentageLanguage[i].innerHTML = percentage;
-//     }
-// 	}
-
 	function showPromptLanguage() {
     var newTextLanguage = document.querySelectorAll('.textBarPreview');
     for (var i = 0; i < newTextLanguage.length; i++) {
       var text = prompt("Introduce un idioma");
       newTextLanguage[i].innerHTML = text;
-    }
-
-	}
-
-	function showPromptPercentage() {
-    var newPercentageLanguage = document.querySelectorAll('.percentageBar1');
-    for (var i = 0; i < newPercentageLanguage.length; i++) {
-      var percentage = prompt("Introduce el porcentaje");
-      // newPercentageLanguage[i] = percentage + '%';
-      // newPercentageLanguage[i].innerHTML = newPercentageLanguage[i].style.width = percentage + '%';
+      var pct = prompt("Introduce el porcentaje");
+      newTextLanguage[i].parentElement.style.width = pct + "%";
     }
 	}
+
 	// function addInput() {
 	// 	var addNewInput = document.querySelector('.languagesForm');
 	// 	var addInput = document.createElement('input');
