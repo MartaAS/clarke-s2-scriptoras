@@ -561,7 +561,7 @@ color: #5A392B;
 	align-items: center;
 }
 
-.languagesContainer {
+/*.languagesContainer {
 	width: 90%;
 	height: 50px;
 	background-color: #a19680;
@@ -570,7 +570,7 @@ color: #5A392B;
 	justify-content: center;
 	align-items: center;
 	justify-content: space-around;
-}
+}*/
 .textFormButton {
 	color: #ffffff;
 }
@@ -587,7 +587,7 @@ color: #5A392B;
 }
 
 .languagesTitlePreview, .hobbiesTitlePreview {
-	color: #5A392B;
+	color: #000000;
 }
 
 #languagesPreview {
@@ -612,9 +612,9 @@ color: #5A392B;
 	padding-left: 1em;
 }
 
-.percentageBar1 {
+.percentageBar {
 	width: 50% ;
-	background-color: #A19680;
+	background-color: #5a392b;
 }
 /*#percentageBar2 {
 	width: 70% ;
