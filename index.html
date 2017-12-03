@@ -186,27 +186,37 @@
         <section id="languagesFormContainer">
           <div class="title-container">
             <h2 class="textFormButton">Idiomas</h2>
-            <button class="addLanguageButton open-section-button" type="button" name="languageButton" onclick="showPromptLanguage()"><img src="images/addButton32px.png" alt="addButton"></button>
+            <button class="open-section-button" type="button" name="languageButton" onclick="showLanguageForm()"><img src="images/addButton32px.png" alt="addButton"></button>
 						<button class="close-section-button" type="button" name="job-box-button" onclick="">
 						<img src="images/menos.png" alt="minusbuttom">
 					</button>
-
-            <!-- <button type="button" name="addInputLanguagesForm" onclick="addInput()"></button> -->
           </div>
-          <!-- <form class="languagesForm" action="index.html" method="post">
-          </form> -->
+          <form class="form-show" action="index.html" method="post">
+            <div class="inputs">
+              <input id="language1" type="text" name="language1" value="" placeholder="Escribe un idioma">
+              <input id="percentage1" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
+            </div>
+            <div class="inputs">
+              <input id="language2" type="text" name="language2" value="" placeholder="Escribe un idioma">
+              <input id="percentage2" type="text" name="percentage2" value="" placeholder="Escribe un porcentaje">
+            </div>
+            <div class="inputs">
+              <input id="language3" type="text" name="language3" value="" placeholder="Escribe un idioma">
+              <input id="percentage3" type="text" name="percentage3" value="" placeholder="Escribe un porcentaje">
+            </div>
+          </form>
         </section>
 
         <!--Hobbies form section-->
         <section id="hobbiesFormContainer">
           <div class="title-container">
             <h2 class="textFormButton">Hobbies</h2>
-            <button class="addLanguageButton open-section-button" type="button" name="languageButton" onclick="showHobbiesForm(); showHobbiesPreview()"><img src="images/addButton32px.png" alt="addButton"></button>
+            <button class="addLanguageButton open-section-button" type="button" name="languageButton" onclick="showHobbiesForm()"><img src="images/addButton32px.png" alt="addButton"></button>
 						<button class="close-section-button" type="button" name="hobbiesForm-button" onclick="ocultar('hobbiesForm')">
 						<img src="images/menos.png" alt="minusbuttom">
 					  </button>
           </div>
-          <form id="hobbiesForm" action="index.html" method="post">
+          <form class="show-form" action="index.html" method="post">
             <div class="checkBoxHobbies">
               <label for="hobbie1">Leer</label>
               <input id ="hobbie1" type="checkbox" name="read" value="hobbies">

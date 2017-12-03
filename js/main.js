@@ -175,28 +175,20 @@ function showPromptSkill(){
 	editar('content-skills');
 }
 
-	function showPromptLanguage() {
-    var newTextLanguage = document.querySelectorAll('.textBarPreview');
-    for (var i = 0; i < newTextLanguage.length; i++) {
-      var text = prompt("Introduce un idioma");
-      newTextLanguage[i].innerHTML = text;
-      var pct = prompt("Introduce el porcentaje");
-      newTextLanguage[i].parentElement.style.width = pct + "%";
-    }
-	}
-
-	// function addInput() {
-	// 	var addNewInput = document.querySelector('.languagesForm');
-	// 	var addInput = document.createElement('input');
-  //   addInput.style.cssText = 'background-color: black;'
-	// 	addNewInput.append(addInput);
-	// }
+/*function showPromptLanguage() {
+  var newTextLanguage = document.querySelectorAll('.textBarPreview');
+  for (var i = 0; i < newTextLanguage.length; i++) {
+    var text = prompt("Introduce un idioma");
+    newTextLanguage[i].innerHTML = text;
+    var pct = prompt("Introduce el porcentaje");
+    newTextLanguage[i].parentElement.style.width = pct + "%";
+  }
+}*/
 
 //Hobbies form
 function showHobbiesForm() {
-  document.getElementById('hobbiesForm').style.display = 'block';
+  document.getElementById('show-form').style.display = 'block';
 }
-
 
 /*Redes sociales*/
 function showNetsocial() {

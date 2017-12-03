@@ -607,7 +607,7 @@ color: #5A392B;
 }
 
 /*Hobbies*/
-#hobbiesForm{
+.form-show {
 	display: none;
 }
 
