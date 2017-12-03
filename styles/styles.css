@@ -298,8 +298,15 @@ main{
 }
 /*Ocultar sección*/
 
-.content, .boxes-container, .netsocialhidden, #languages-form, #hobbies-form {
+.content, .boxes-container, .netsocialhidden, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music {
 	display: none;
+}
+
+.allHobbiesPreview {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 /*Fin de estilos generales*/
@@ -526,13 +533,12 @@ color: #5A392B;
 	color: #000000;
 }
 
-#languagesPreview {
-	padding-left: 10%;
-	padding-right: 5%;
+#languagesPreview, #hobbiesPreview {
+	padding-left: 7%;
+	padding-right: 7%;
 }
 
 .languagesBarPreview {
-	width: 90%;
 	background-color: #eeeeee;
 	margin-bottom: 1em;
 }
