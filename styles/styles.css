@@ -297,9 +297,10 @@ main{
 }
 /*Ocultar sección*/
 
-.content, .boxes-container, .netsocialhidden {
+.content, .boxes-container, .netsocialhidden, #languages-form, #hobbies-form {
 	display: none;
 }
+
 /*Fin de estilos generales*/
 /*About*/
 .aboutMe{
@@ -552,9 +553,6 @@ color: #5A392B;
 }
 
 /*Hobbies*/
-.form-show {
-	display: none;
-}
 
 /* Redes sociales*/
 .social {

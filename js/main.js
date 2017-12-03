@@ -198,9 +198,7 @@ function showPromptSkill(){
 }*/
 
 //Hobbies form
-function showHobbiesForm() {
-  document.getElementById('show-form').style.display = 'block';
-}
+
 
 /*Redes sociales*/
 function showNetsocial() {

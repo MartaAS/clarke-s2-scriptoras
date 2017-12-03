@@ -193,12 +193,11 @@
         <section id="languagesFormContainer">
           <div class="title-container">
             <h2 class="textFormButton">Idiomas</h2>
-            <button class="open-section-button" type="button" name="languageButton" onclick="showLanguageForm()"><img src="images/addButton32px.png" alt="addButton"></button>
-						<button class="close-section-button" type="button" name="job-box-button" onclick="">
-						<img src="images/menos.png" alt="minusbuttom">
-					</button>
+            <button class="open-section-button" type="button" name="languageButton" onclick="editar('languages-form')"><img src="images/addButton32px.png" alt="addButton"></button>
+						<button class="close-section-button" type="button" name="job-box-button" onclick="ocultar('languages-form')">
+						<img src="images/menos.png" alt="minusbuttom"></button>
           </div>
-          <form class="form-show" action="index.html" method="post">
+          <form id="languages-form" action="index.html" method="post">
             <div class="inputs">
               <input id="language1" type="text" name="language1" value="" placeholder="Escribe un idioma">
               <input id="percentage1" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
@@ -218,12 +217,12 @@
         <section id="hobbiesFormContainer">
           <div class="title-container">
             <h2 class="textFormButton">Hobbies</h2>
-            <button class="addLanguageButton open-section-button" type="button" name="languageButton" onclick="showHobbiesForm()"><img src="images/addButton32px.png" alt="addButton"></button>
-						<button class="close-section-button" type="button" name="hobbiesForm-button" onclick="ocultar('hobbiesForm')">
+            <button class="addLanguageButton open-section-button" type="button" name="languageButton" onclick="editar('hobbies-form')"><img src="images/addButton32px.png" alt="addButton"></button>
+						<button class="close-section-button" type="button" name="hobbiesForm-button" onclick="ocultar('hobbies-form')">
 						<img src="images/menos.png" alt="minusbuttom">
 					  </button>
           </div>
-          <form class="show-form" action="index.html" method="post">
+          <form id="hobbies-form" action="index.html" method="post">
             <div class="checkBoxHobbies">
               <label for="hobbie1">Leer</label>
               <input id ="hobbie1" type="checkbox" name="read" value="hobbies">
