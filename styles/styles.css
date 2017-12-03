@@ -275,6 +275,9 @@ main{
 		height: 120vh;
 		width: 100%;
 	}
+	#ventana2{
+		display: block;
+	}
 }
 /*fin parte marta*/
 /*
@@ -827,7 +830,7 @@ color: #5A392B;
 	main{
 		box-sizing: border-box;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 	}
 	.formulario-sec{
 	height: 100%;

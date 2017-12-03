@@ -87,10 +87,11 @@ function guardardatosprincipales(){
 	}
 }
 
-//previsualizacion en hotra hoja
+//previsualizacion en otra hoja
 function viewprev(){
 	document.getElementById('ventana2').style.display="block";
 	document.getElementById('ventana1').style.display="none";
+	document.getElementById('headerfondo').style.display="none";
 }
 
 //fin parte marta
