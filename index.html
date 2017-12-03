@@ -8,12 +8,19 @@
   </head>
   <body>
 		<!-- Header -->
-		<header>
-				<img src="images/logofinal.png" alt="logoscriptoras" class="logoscriptoras">
-				<input type="button" onclick="viewprev()" id="btnview">
-				<input type="button" onclick="share()" id="btnshare">
-				<input type="button" onclick="print()" id="btnprint">
-				<input type="button" onclick="down()" id="btndownload">
+		<header class="headlog">
+			<div>
+				<a href="index.html"><img src="images/logoMaquina.png" alt="logoscriptoras" class="machinelog"></a>
+			</div>
+			<div>
+				<a href="index.html"><img src="images/logoLetras.png" alt="logoscriptoras" class="letterslog"></a>
+			</div>
+			<div>
+				<input class="icons" type="button" onclick="viewprev()" id="btnview" title="Vista previa">
+				<input class="icons" type="button" onclick="share()" id="btnshare" title="Compartir">
+				<input class="icons" type="button" onclick="print()" id="btnprint" title="Imprimir">
+				<input class="icons" type="button" onclick="down()" id="btndownload" title="Descargar">
+			</div>
 				<!-- value="Ver mi CV">-->
 		</header>
 
@@ -23,10 +30,10 @@
 		<main>
 
 			<!--cabecera-->
+			<div class="headercreatucv" id="headerfondo">
+				<span class="textcrea">Haz tu CV con estilo</span>
+			</div>
 			<section class="formulario-sec" id="ventana1">
-				<div class="headercreatucv">
-					<span class="textcrea">Haz tu CV con estilo</span>
-				</div>
 				<form class="form-section-container" id=principal-section action="" method="post">
 					<div class="title-container">
 						<h2 class="textFormButton" onclick="editar('principal-box')">Datos principales</h2>
