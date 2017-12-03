@@ -7,6 +7,24 @@ body{
 	padding: 0;
 	font-family: 'Arial';
 }
+/*Header logo formulario*/
+.headlog{
+	min-width: 60px;
+	display: flex;
+	justify-content: center;
+}
+.machinelog{
+	display: block;
+	margin-left: 5px;
+	max-width: 60px;
+	width: 100%;
+}
+.letterslog{
+	margin-left: 5px;
+	margin-right: 10px;
+	max-width: 150px;
+	width: 100%;
+}
 /*header parte marta*/
 .logoscriptoras{
 	height: auto;
@@ -119,7 +137,6 @@ main{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-
 }
 .separador {
 	border: 3px;
@@ -129,7 +146,7 @@ main{
 	width: 60%;
 	text-align: center;
 	margin-top: 50px;
-	}
+}
 .containerinfo{
 	display: flex;
 	flex-direction: column;
@@ -170,9 +187,6 @@ main{
 	display: flex;
 	align-self: center;
 }
-
-
-
 .guardarprincipal{
 	flex-direction: column;
 	justify-content: center;
@@ -220,7 +234,6 @@ main{
 	border-radius: 100px;
 	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
-
 /*ventana previsualizar*/
 #ventana2{
 	display: none;
@@ -313,10 +326,8 @@ main{
 .aboutMe{
 		display: block;
 }
-
 /*Estilo del contenedor de about, usado también en experiencia y formación para no repetir*/
 .content, .boxes-container, .netsocialhidden {
-
 	display: none;
 }
 
@@ -325,26 +336,23 @@ main{
 	display:flex;
 	flex-direction: column;
 	align-items: center;
-
 }
 .boxes-container{
 	padding-left: 5%;
 }
-
 .subtitle-section{
 	margin: 10px 0;
 }
-
 .form-text-box, .dates-boxes{
-margin: 8px 0px;
-padding-left: 3px;
-width: 200px;
+	margin: 8px 0px;
+	padding-left: 3px;
+	width: 200px;
 }
 .buttons-container{
-margin: 10px 0px;
+	margin: 10px 0px;
 }
 .month, .year{
-margin-top: 5px;
+	margin-top: 5px;
 }
 /*Botones guardar y cerrar*/
 .save-button, .out-button {
@@ -360,17 +368,13 @@ margin-top: 5px;
   outline-offset: 80px;
 	color: #fff;
 }
-
-
 /*Experience and Education preview*/
 .experience-education-main-title{
 text-align: center;
 color: #5A392B;
-
 }
 /* La timeline*/
 .timeline {
-
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -388,10 +392,10 @@ color: #5A392B;
 }
 /* Contenido alrededor de la timeline */
 .container-timeline {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
 }
 /* Círculos de la timeline */
 .container-timeline::after {
@@ -413,11 +417,11 @@ color: #5A392B;
 
 /* Situar los contenidos de la derecha */
 .right {
-    left: 50%;
+  left: 50%;
 }
 /* Arregla la posición de los círculos del contenido de la derecha */
 .right::after {
-    left: -16px;
+  left: -16px;
 }
 /* Añade flechas en el contenido de la izquierda apuntando a la derecha */
 .left::before {
@@ -467,17 +471,13 @@ color: #5A392B;
 }
 .job-title, .education-title{
   font-weight: bold;
-
 }
-
 .dates-output-container{
   display:flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
 .work-information-output-container{
-
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -515,10 +515,8 @@ color: #5A392B;
 /*End Experience and Education preview*/
 /*Skills*/
 .skillBar{
-
 }
 .skillName{
-
 }
 #skillPreview{
 	display: flex;
@@ -527,34 +525,33 @@ color: #5A392B;
 	display: block;
 }
 .skill {
-    width: 100%;
-    margin: 20px 20px 0 0;
-		color: #5A392B;
+  width: 100%;
+  margin: 20px 20px 0 0;
+	color: #5A392B;
 }
 .skill_title {
-    /*font-family: sans-serif;*/
-    font-size: 14px;
-
+  /*font-family: sans-serif;*/
+  font-size: 14px;
 }
 .barra {
-    background-color: #E0E0E0 ;
-    border-radius: 10px;
-    width: 75%;
-    height: 10px;
-    margin-left: 0;
-    position: relative;
-		display: flex;
+  background-color: #E0E0E0 ;
+  border-radius: 10px;
+  width: 75%;
+  height: 10px;
+  margin-left: 0;
+  position: relative;
+	display: flex;
 }
 
 .barra_front {
-    width: 0;
-    /* background: green; */
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    background: #7DBEA5;
+	width: 0;
+  /* background: green; */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: #7DBEA5;
 }
 
 /*Languages form container*/
@@ -699,37 +696,50 @@ color: #5A392B;
 	display:block;
 }
 /*footer*/
-footer{
-	background-color: #252525;
-	height: 120px;
+/*footer{
 	box-sizing: border-box;
 	margin-top: 20px;
-}
+}*/
 .infooter{
+	background-color: #252525;
+	font-size: 0.8em;
+	color: #555555;
+	padding: 5px;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	align-items: center;
+	margin-top: 20px;
 }
 .end{
-	width: 100%;
+	min-width: 200px ;
+	margin-left: auto;
+	margin-right: auto;
+	/*width: 100%;
 	font-size: 0.8em;
   color: #555555;
 	display: flex;
 	flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center;*/
 }
 .contacto{
 	color: #d5d4cd;
 	text-decoration: none;
+	margin-top: 20px;
+}
+.contacto:hover{
+	color: #7DBEA5;
 }
 .logo{
-	width: 100%;
-  text-align: center;
+	min-width: 200px ;
+	margin-left: auto;
+	margin-right: auto;
 }
 .logoadalab{
-	height: 50px;
-	width: 100px;
+	display: block;
+	margin: 14px auto;
+	max-width: 200px;
+	width: 100%;
 }
 /*formulario*/
 .flexible{
@@ -793,11 +803,10 @@ footer{
   border-radius: 0.6em;
 }
 /*mediaqueries*/
-
 @media all and (max-width: 600px){
 	.textFormButton{
 		font-size: 18px;
-}
+	}
 }
 @media all and (min-width:600px) {
 	.sociality {
@@ -807,16 +816,10 @@ footer{
 	.social {
 		width: 300px;
 	}
-	.logo{
-		width: 100%;
-		margin-right:80px;
-		display: flex;
-		justify-content: flex-end;
-	}
+	/*Footer*/
 	.infooter{
 		display: flex;
 		flex-direction: row;
-		padding-top: 25px;
 	}
 }
 @media all and (min-width:900px) {
@@ -834,7 +837,7 @@ footer{
 		height: 100%;
 		width: 60%
 	}
-
+	/*Footer*/
 	.logo{
 		margin-right:120px;
 	}
