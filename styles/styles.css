@@ -446,7 +446,7 @@ color: #5A392B;
   flex-direction: row;
   justify-content: space-around;
 	padding: 0 20px;
-	margin: 0px 40px;
+	margin: 4px 40px;
 }
 .work-information-output-container{
   display:flex;
@@ -506,7 +506,7 @@ color: #5A392B;
 	align-items: center;
 }
 
-.languagesContainer {
+/*.languagesContainer {
 	width: 90%;
 	height: 50px;
 	background-color: #a19680;
@@ -515,36 +515,21 @@ color: #5A392B;
 	justify-content: center;
 	align-items: center;
 	justify-content: space-around;
-}
+}*/
 .textFormButton {
 	color: #ffffff;
 }
 
-.addLanguageButton{
-	background: none;
-	border: none;
-}
-
-.languagesForm{
-
-}
-.inputsLanguageForm {
-}
-
 .languagesTitlePreview, .hobbiesTitlePreview {
-	color: #5A392B;
+	color: #000000;
 }
 
 #languagesPreview {
-	/*display: flex;
-	flex-direction: column;
-	align-items: center;*/
 	padding-left: 10%;
 	padding-right: 5%;
 }
 
 .languagesBarPreview {
-	/*display: flex;*/
 	width: 90%;
 	background-color: #eeeeee;
 	margin-bottom: 1em;
@@ -557,29 +542,21 @@ color: #5A392B;
 	padding-left: 1em;
 }
 
-.percentageBar1 {
+.percentageBar {
 	width: 50% ;
-	background-color: #A19680;
+	background-color: #5a392b;
 }
-/*#percentageBar2 {
-	width: 70% ;
-	background-color: #A19680;
-}
-#percentageBar3 {
-	width: 40% ;
-	background-color: #A19680;
-}*/
 
 .inputStyles {
 	background-color: black;
 }
 
 /*Hobbies*/
-#hobbiesForm{
+.form-show {
 	display: none;
 }
-/* Redes sociales*/
 
+/* Redes sociales*/
 .social {
 	display: flex;
 	justify-content: space-between;
