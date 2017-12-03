@@ -197,7 +197,16 @@ function showPromptSkill(){
   }
 }*/
 
-//Hobbies form
+//Hobbies Preview
+function showHobbiesPreview(elementId) {
+  var check = document.getElementById(elementId);
+  if (check.style.visibility == "visible"){
+    check.style.visibility = "hidden";
+   } else {
+     check.style.visibility = "visible";
+   }
+ }
+
 
 
 /*Redes sociales*/
