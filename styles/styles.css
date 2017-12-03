@@ -206,17 +206,11 @@ main{
 	height: 80vh;
 	}
 }
-@media all and (min-width: 650px){
-	header{
-		height: auto;
-	}
+
 
 	.textcrea{
 		font-size: 40px;
 		margin-top: 50px;
-	}
-	.headercreatucv{
-	height: 100vh;
 	}
 }
 @media all and (min-width: 810px){
@@ -234,16 +228,7 @@ main{
 	}
 }
 /*fin parte marta*/
-/*
-.formulario-sec{
-	height: 50%;
-	overflow: scroll;
-}
 
-.previsualizacion-sec{
-	height: 50%;
-	overflow: scroll;
-}
 
 /*Estilos generales de la sección de desplegables*/
 .title-container{
@@ -278,6 +263,14 @@ main{
 	background: none;
 	border: none;
 }
+.cruz-section-button{
+	background: none;
+	border: none;
+	margin-top: 30px;
+	margin-left: 400px;
+
+}
+
 /*Botones añadir y cerrar*/
 .save-button, .out-button, .guardarprincipal {
 	background-color: ;

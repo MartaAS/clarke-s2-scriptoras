@@ -110,6 +110,12 @@ function editar(idContent){
 function ocultar(idContent){
 	document.getElementById(idContent).style.display = 'none';
 }
+//funcion cerrar preview
+function closePreview(idContent){
+	document.getElementById(idContent).style.display = 'none';
+	document.getElementById('ventana1').style.display = 'block';
+	document.getElementById('headerfondo').style.display = 'block';
+}
 /*var aboutMe = document.querySelector("#about");
 var aboutInput = prompt("Haz una breve descripción sobre ti.");
 aboutMe.innerHTML = aboutInput;
