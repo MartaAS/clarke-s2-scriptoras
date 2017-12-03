@@ -200,10 +200,10 @@ function showPromptSkill(){
 //Hobbies Preview
 function showHobbiesPreview(elementId) {
   var check = document.getElementById(elementId);
-  if (check.style.visibility == "visible"){
-    check.style.visibility = "hidden";
+  if (check.style.display == "inline-block"){
+    check.style.display = "none";
    } else {
-     check.style.visibility = "visible";
+     check.style.display = "inline-block";
    }
  }
 

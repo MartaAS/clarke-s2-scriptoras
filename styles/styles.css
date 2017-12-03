@@ -301,6 +301,13 @@ main{
 	display: none;
 }
 
+.allHobbiesPreview {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
 /*Fin de estilos generales*/
 /*About*/
 .aboutMe{
@@ -526,12 +533,11 @@ color: #5A392B;
 }
 
 #languagesPreview, #hobbiesPreview {
-	padding-left: 10%;
-	padding-right: 5%;
+	padding-left: 7%;
+	padding-right: 7%;
 }
 
 .languagesBarPreview {
-	width: 90%;
 	background-color: #eeeeee;
 	margin-bottom: 1em;
 }
