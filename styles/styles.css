@@ -525,7 +525,7 @@ color: #5A392B;
 	color: #000000;
 }
 
-#languagesPreview {
+#languagesPreview, #hobbiesPreview {
 	padding-left: 10%;
 	padding-right: 5%;
 }
