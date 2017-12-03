@@ -130,19 +130,20 @@ monthOptions = monthOptions + '<option value="Oct">Octubre</option>';
 monthOptions = monthOptions + '<option value="Nov">Noviembre</option>';
 monthOptions = monthOptions + '<option value="Dic">Diciembre</option>';
 
-
+//Se aplica en todos los que tengan la clase .month
 var months = document.querySelectorAll('.month');
 for (var i = 0; i < months.length; i++) {
 	months[i].innerHTML = monthOptions;
 }
 
-
+//desplegable años
 var years = 2030;
 var yearOptions = ''; //almacena options de html que van en el select
 
 for (var initialYear=1950; initialYear<years; initialYear++) {
   yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
 }
+//Se aplica en todos los que tengan la clase year
 var yearsAll = document.querySelectorAll('.year');
 for (var i = 0; i < yearsAll.length; i++) {
 	yearsAll[i].innerHTML = yearOptions;
