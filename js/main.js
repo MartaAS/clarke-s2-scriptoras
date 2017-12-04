@@ -195,15 +195,16 @@ function showPromptSkill(){
 	editar('content-skills');
 }
 
-/*function showPromptLanguage() {
+function showPromptLanguage() {
   var newTextLanguage = document.querySelectorAll('.textBarPreview');
   for (var i = 0; i < newTextLanguage.length; i++) {
-    var text = prompt("Introduce un idioma");
+    var text = document.querySelector('language'+ i).value;
     newTextLanguage[i].innerHTML = text;
-    var pct = prompt("Introduce el porcentaje");
+    var pct = document.querySelector('percentage'+ i).value;
+    // var pct = prompt("Introduce el porcentaje");
     newTextLanguage[i].parentElement.style.width = pct + "%";
   }
-}*/
+}
 
 //Hobbies Preview
 function showHobbiesPreview(elementId) {

@@ -254,6 +254,7 @@ main{
   background: #5A392B;
   color: #ccc;
   }
+
 .title-container:active {
 	border-top-color: #5A392B;
 	background: #5A392B;
@@ -363,6 +364,14 @@ color: #5A392B;
   left: 50%;
   margin-left: -3px;
 }
+
+/*Checkbox styles*/
+.hobbies-form {
+	display: flex;
+	font-size: 1em;
+	
+}
+
 /* Contenido alrededor de la timeline */
 .container-timeline {
   padding: 10px 40px;
