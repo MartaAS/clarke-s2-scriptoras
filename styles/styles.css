@@ -369,7 +369,7 @@ color: #5A392B;
 .hobbies-form {
 	display: flex;
 	font-size: 1em;
-	
+
 }
 
 /* Contenido alrededor de la timeline */
@@ -678,8 +678,8 @@ color: #5A392B;
 	 opacity: 0.9;
 }
 #arriba img{
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 }
 /*formulario*/
 .flexible{
@@ -752,6 +752,13 @@ color: #5A392B;
 
 }
 /*mediaqueries*/
+@media all and (min-width: 460px){
+#arriba {
+	 bottom: 15px;
+	 right: 27px;
+ }
+
+}
 @media all and (max-width: 600px){
 	.textFormButton{
 		font-size: 18px;
@@ -796,6 +803,15 @@ color: #5A392B;
 	.infooter{
 		display: flex;
 		flex-direction: row;
+	}
+	#arriba {
+		 width: 5px;
+		 padding: 5px;
+		 position: fixed;
+		 bottom: 15px;
+		 right: 45px;
+		 z-index: 1;
+		 opacity: 0.9;
 	}
 }
 @media all and (min-width:900px) {
