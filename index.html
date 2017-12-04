@@ -70,17 +70,17 @@
 			<!--about -->
 			<form class="form-section-container" action="" method="post"> <!--Mostrado-->
 				<div class="title-container">
-					<h2 class="textFormButton">Sobre mi</h2>
-							<button class="open-section-button" type="button" name="about-me-button" onclick="showPromptAbout()"><img src="images/addButton32px.png" alt="addButton"></button>
+					<h2 class="textFormButton" onclick="editar('content-about')">Sobre mí</h2>
+							<button class="open-section-button" type="button" name="about-me-button" onclick="editar('content-about')"><img src="images/addButton32px.png" alt="addButton"></button>
 							<button class="close-section-button" type="button" name="about-me-button" onclick="ocultar('content-about')">
 							<img src="images/menos.png" alt="minusbuttom">
 						</button>
-
 				</div>
 				<div  id="content-about" class="boxes-container"><!--Oculto-->
-					<input class="aboutMe" type="text" name="name" value="text">
-					<input class="save-button" type="button" name="save" value="Añadir">
-					<input class="out-button" type="button" value="Cerrar" onclick="ocultar('content-about')">
+
+					<label for="about"></label>
+					<textarea name="about-me" rows="6" cols="20"placeholder="Introduce una breve descripción sobre ti." class="aboutMe" id="about"></textarea>
+					<input class="save-button" type="button" name="save" value="Añadir" onclick="showPromptAbout()">
 				</div>
 			</form>
 				<!--End about-->
@@ -184,7 +184,6 @@
 								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
 							</ul>
 							<input class="save-button" type="button" name="save" value="Añadir">
-							<input class="out-button" type="button" value="Cerrar" onclick="ocultar('content-skills')">
 						</div>
 				</form>
 				<!--End Skills-->
@@ -324,6 +323,13 @@
 					<p id="preprofesion">Profesion</p>
 					<p id="preemail">Email</p>
 					<p id="pretelefono">Telefono</p>
+				</section>
+
+				<!--Sección About Me-->
+				<hr class="separador">
+				<section class="">
+					<h2 class="section-title">Sobre mí</h2>
+						<p id="aboutMe-preview" class="section-title"></p>
 				</section>
 
 				<!--Sección de Experiencia y Formación-->

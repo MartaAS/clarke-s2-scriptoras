@@ -96,11 +96,13 @@ function viewprev(){
 
 //fin parte marta
 //About
+
 function showPromptAbout() {
-	var textAbout = prompt("Haz una breve descripción sobre ti");
+	document.getElementById('aboutMe-preview').innerHTML=document.getElementById('aboutMe').value;
+	/*var textAbout = prompt("Haz una breve descripción sobre ti");
 	var textAboutMe = document.querySelector('.aboutMe');
 	textAboutMe.value = textAbout;
-	editar('content-about');
+	editar('content-about');*/
 }
 //función para abrir el desplegable
 function editar(idContent){
@@ -158,22 +160,22 @@ for (var i = 0; i < yearsAll.length; i++) {
 
 //Función para introducir en la previsualización los datos obtenidos de experiencia
 function saveExperience(){
-document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
-document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
-document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
-document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
-document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
-document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
+	document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
+	document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
+	document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
+	document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
+	document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
+	document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
 }
 
 //Función para introducir en la previsualización los datos obtenidos de formación
 function saveTraining(){
-document.getElementById('education-title-preview').innerHTML=document.getElementById('educ-title').value;
-document.getElementById('education-center-preview').innerHTML=document.getElementById('center').value;
-document.getElementById('start-education-month-preview').innerHTML=document.getElementById('month-training-start').value;
-document.getElementById('end-education-month-preview').innerHTML=document.getElementById('month-training-end').value;
-document.getElementById('start-education-year-preview').innerHTML=document.getElementById('year-training-start').value;
-document.getElementById('end-education-year-preview').innerHTML=document.getElementById('year-training-end').value;
+	document.getElementById('education-title-preview').innerHTML=document.getElementById('educ-title').value;
+	document.getElementById('education-center-preview').innerHTML=document.getElementById('center').value;
+	document.getElementById('start-education-month-preview').innerHTML=document.getElementById('month-training-start').value;
+	document.getElementById('end-education-month-preview').innerHTML=document.getElementById('month-training-end').value;
+	document.getElementById('start-education-year-preview').innerHTML=document.getElementById('year-training-start').value;
+	document.getElementById('end-education-year-preview').innerHTML=document.getElementById('year-training-end').value;
 }
 //Fin de Experiencia y Formación
 
@@ -185,8 +187,8 @@ function showPromptSkill(){
 	var skillPercentage;
 	//alert(newSkill.length);
 	for(var i = 0; i < skillsNameList.length; i++){
-		skillName = prompt("Introduce una habilidad");
-		skillPercentage = prompt("De 1 a 10, ¿cuánto sabes?")
+		//skillName = prompt("Introduce una habilidad");
+		//skillPercentage = prompt("De 1 a 10, ¿cuánto sabes?")
 		skillsNameList[i].innerHTML = skillName;
 		skillPercList[i].innerHTML = skillPercentage;
 	}
@@ -213,8 +215,6 @@ function showHobbiesPreview(elementId) {
    }
  }
 
-
-
 /*Redes sociales*/
 function showNetsocial() {
   var netSocialDiv = document.querySelector('.netsocialhidden');
@@ -225,10 +225,6 @@ function showNetsocial() {
   //   netSocial[i].href = netSocial[i].href + text;
   // }
 }
-
-
-
-
 
 /*javascript de redes sociales*/
 function setValue(net){

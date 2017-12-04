@@ -246,7 +246,7 @@ main{
 	box-shadow: rgba(0,0,0,1) 0 1px 0;
 	text-shadow: rgba(0,0,0,.4) 0 1px 0;
 }
-.title-container:hover {
+.title-container:hover{
   border-top-color: #5A392B;
   background: #5A392B;
   color: #ccc;
