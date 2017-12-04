@@ -702,6 +702,7 @@ color: #5A392B;
 	padding: 0 12px;
 	height: 40px;
 	border-radius: 9px;
+	font:13px arial ;
 }
 .cajas:focus{
 	border-color: #514336;
@@ -716,8 +717,12 @@ color: #5A392B;
 	background-color: #7DBEA5;
 	font-size: 15px;
 	font-weight: bold;
+	z-index: 1;
 	line-height: 2.8;
   border-radius: 0.6em;
+	width: 100px;
+  margin-left: auto;
+
 }
 /*mediaqueries*/
 @media all and (max-width: 600px){
