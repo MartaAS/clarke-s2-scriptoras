@@ -116,8 +116,8 @@ main{
 	height: 5px;
 	width: 60%;
 	text-align: center;
-	margin-top: 5em;
-	margin-bottom: 3em;
+	margin-top: 2.5em;
+	margin-bottom: 1em;
 }
 .containerinfo{
 	display: flex;
@@ -168,6 +168,9 @@ main{
 	align-items: center;
 	-webkit-box-shadow: 5px 8px 42px 1px #3d3d29;
 }
+#files{
+	display: none;
+}
 /*styles pre*/
 .preprincipales {
 	display: flex;
@@ -182,7 +185,7 @@ main{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 50px;
+	margin-top: -20px;
 }
 .thumb2{
 	border: 1px solid #000;
@@ -268,8 +271,8 @@ main{
 .cruz-section-button{
 	background: none;
 	border: none;
-	margin-top: 30px;
-	margin-left: 400px;
+	margin-top: 45px;
+	margin-left: 295px;
 
 }
 
@@ -664,6 +667,20 @@ color: #5A392B;
 	max-width: 200px;
 	width: 75%;
 }
+/*flecha subir arriba*/
+#arriba {
+	 width: 5px;
+	 padding: 5px;
+	 position: fixed;
+	 bottom: 15px;
+	 right: 45px;
+	 z-index: 1;
+	 opacity: 0.9;
+}
+#arriba img{
+	width: 40px;
+	height: 40px;
+}
 /*formulario*/
 .flexible{
 	display: flex;
@@ -708,6 +725,11 @@ color: #5A392B;
 	padding: 0 12px;
 	height: 40px;
 	border-radius: 9px;
+	font:15px arial ;
+}
+#comentarios{
+	height: 80px;
+	padding-top: 6px;
 }
 .cajas:focus{
 	border-color: #514336;
@@ -722,8 +744,12 @@ color: #5A392B;
 	background-color: #7DBEA5;
 	font-size: 15px;
 	font-weight: bold;
+	z-index: 1;
 	line-height: 2.8;
   border-radius: 0.6em;
+	width: 100px;
+  margin-left: auto;
+
 }
 /*mediaqueries*/
 @media all and (max-width: 600px){

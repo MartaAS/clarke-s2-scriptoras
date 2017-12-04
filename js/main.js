@@ -51,7 +51,9 @@ function archivo(evt) {
 
 			      document.getElementById('files').addEventListener('change', archivo2, false);
 	//fin prueba cargar imagen
-
+function simularClick(){
+	document.getElementById('files').click()
+}
 //Datos principales
 //guardar datos principales introducidos
 function guardardatosprincipales(){
