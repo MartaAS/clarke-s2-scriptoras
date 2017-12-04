@@ -655,6 +655,20 @@ color: #5A392B;
 	max-width: 200px;
 	width: 75%;
 }
+/*flecha subir arriba*/
+#arriba {
+	 width: 5px;
+	 padding: 5px;
+	 position: fixed;
+	 bottom: 15px;
+	 right: 45px;
+	 z-index: 1;
+	 opacity: 0.9;
+}
+#arriba img{
+	width: 40px;
+	height: 40px;
+}
 /*formulario*/
 .flexible{
 	display: flex;
@@ -699,7 +713,11 @@ color: #5A392B;
 	padding: 0 12px;
 	height: 40px;
 	border-radius: 9px;
-	font:13px arial ;
+	font:15px arial ;
+}
+#comentarios{
+	height: 80px;
+	padding-top: 6px;
 }
 .cajas:focus{
 	border-color: #514336;
