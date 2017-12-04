@@ -159,6 +159,11 @@ main{
 	-webkit-box-shadow: 5px 8px 42px 1px #3d3d29;
 	display: flex;
 	align-self: center;
+	background-image: url("../images/addimg.png");
+	background-color: #cdf7e6;
+	background-size: 150px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .subirfoto{
