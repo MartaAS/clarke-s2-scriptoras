@@ -569,6 +569,10 @@ color: #5A392B;
 /*Hobbies*/
 
 /* Redes sociales*/
+.nets{
+	display: flex;
+	justify-content: space-between;
+}
 .social {
 	display: flex;
 	justify-content: space-between;
