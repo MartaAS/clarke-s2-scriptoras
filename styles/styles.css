@@ -344,19 +344,19 @@ color: #5A392B;
 	font-size: 15px;
 	color: #757575;
 	padding-bottom: 4%;
+	width: 35%;
 }
 
 .checkBoxHobbies {
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 1%;
+	padding-bottom: 2%;
 }
 
 input[type=checkbox]
 {
-   /*Double-sized Checkboxes */
   -webkit-transform: scale(1.2); /* Safari and Chrome */
-  padding: 10px;
+	color: black;
 }
 
 /* Contenido alrededor de la timeline */
