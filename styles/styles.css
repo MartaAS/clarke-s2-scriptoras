@@ -651,6 +651,8 @@ color: #5A392B;
 #arriba img{
 	width: 30px;
 	height: 30px;
+	background-color: white;
+	border-radius: 14px;
 }
 /*formulario*/
 .flexible{
@@ -658,17 +660,28 @@ color: #5A392B;
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
-	background-image: url(../images/vintage8.jpg);
-	flex:1;
-	opacity: 0.6;
-	background-repeat: no-repeat;
-	background-size: cover;
+	position: relative;
+  height: 300px;
+ }
+ .flexible::before {
+  content:'';
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/vintage8.jpg) left top no-repeat;
+  background-size: 100% auto;
+  z-index: 1;
+  opacity: .5;
 }
 .seccion{
 	padding: 60px 0 50px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+  z-index: 2;
 
 }
 .titleForm{
