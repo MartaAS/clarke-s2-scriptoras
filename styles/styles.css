@@ -356,7 +356,7 @@ color: #5A392B;
 input[type=checkbox]
 {
   -webkit-transform: scale(1.2); /* Safari and Chrome */
-	color: black;
+	color: #000000;
 }
 
 /* Contenido alrededor de la timeline */
@@ -511,6 +511,7 @@ input[type=checkbox]
 #languages-form {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	padding-bottom: 4%;
 }
 

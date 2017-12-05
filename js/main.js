@@ -185,12 +185,15 @@ function showPromptSkill(){
 	editar('content-skills');
 }
 
-function showPromptLanguage() {
+var addLangs = document.getElementById('addLang');
+addLangs.addEventListener('click', addLanguages);
+
+function addLanguages() {
   var newTextLanguage = document.querySelectorAll('.textBarPreview');
   for (var i = 0; i < newTextLanguage.length; i++) {
-    var text = document.querySelector('language'+ i).value;
+    var text = document.getElementById('language1').value;
     newTextLanguage[i].innerHTML = text;
-    var pct = document.querySelector('percentage'+ i).value;
+    var pct = document.getElementById('percentage1').value;
     // var pct = prompt("Introduce el porcentaje");
     newTextLanguage[i].parentElement.style.width = pct + "%";
   }
@@ -205,8 +208,6 @@ function showHobbiesPreview(elementId) {
      check.style.display = "inline-block";
    }
  }
-
-
 
 /*Redes sociales*/
 function showNetsocial() {
