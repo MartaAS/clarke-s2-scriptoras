@@ -204,40 +204,6 @@ main{
 #ventana2{
 	display: none;
 }
-/*mediaqueries*/
-@media all and (min-width: 400px){
-	.headercreatucv{
-	height: 60vh;
-	}
-}
-@media all and (min-width: 490px){
-	.headercreatucv{
-	height: 80vh;
-	}
-}
-
-
-	.textcrea{
-		font-size: 40px;
-		margin-top: 50px;
-	}
-}
-@media all and (min-width: 810px){
-	.headercreatucv{
-		height: 120vh;
-	}
-}
-@media all and (min-width: 900px){
-	.headercreatucv{
-		height: 120vh;
-		width: 100%;
-	}
-	#ventana2{
-		display: block;
-	}
-}
-/*fin parte marta*/
-
 
 /*Estilos generales de la sección de desplegables*/
 .title-container{
@@ -774,6 +740,11 @@ color: #5A392B;
 
 }
 /*mediaqueries*/
+@media all and (min-width: 400px){
+	.headercreatucv{
+	height: 60vh;
+	}
+}
 @media all and (min-width: 460px){
 #arriba {
 	 bottom: 15px;
@@ -781,6 +752,16 @@ color: #5A392B;
  }
 
 }
+@media all and (min-width: 490px){
+	.headercreatucv{
+	height: 80vh;
+	}
+}
+	.textcrea{
+		font-size: 40px;
+		margin-top: 50px;
+	}
+
 @media all and (max-width: 600px){
 	.textFormButton{
 		font-size: 18px;
@@ -836,8 +817,19 @@ color: #5A392B;
 		 opacity: 0.9;
 	}
 }
+@media all and (min-width: 810px){
+	.headercreatucv{
+		height: 120vh;
+	}
+}
 @media all and (min-width:900px) {
-
+	.headercreatucv{
+		height: 120vh;
+		width: 100%;
+	}
+	#ventana2{
+		display: block;
+		}
 	main{
 		box-sizing: border-box;
 		display: flex;
