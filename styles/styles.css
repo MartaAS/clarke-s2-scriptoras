@@ -875,4 +875,7 @@ input[type=checkbox]
 	header, footer, nav {
   display: none;
 }
+.formulario-sec ,.secondBackground
+	  display: none;
+}
 }

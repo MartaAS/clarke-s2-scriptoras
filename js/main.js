@@ -251,10 +251,17 @@ function setSocialMedia(value, net){
 		aNet.href = aNet.href+value;
 	}
 }
-/*imprimir
-function print() {
-     var contenido= document.getElementById('ventana2').innerHTML;
+/*imprimir*/
+ function printCurriculum(){
+  var divPrint = document.getElementById('ventana2');
+  divPrint.style.display="block";
 
-     window.print();
+  var contenido= divPrint.innerHTML;
+  var contenidoOriginal= document.body.innerHTML;
+
+  document.body.innerHTML = contenido;
+
+  window.print();
+
+  document.body.innerHTML = contenidoOriginal;
 }
-*/
