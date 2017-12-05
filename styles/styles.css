@@ -270,8 +270,8 @@ main{
 	font-weight: bold;
 	border-color:#7DBEA5;
 }
-/*Ocultar sección*/
 
+/*Ocultar secciones*/
 .content, .boxes-container, .netsocialhidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
 }
