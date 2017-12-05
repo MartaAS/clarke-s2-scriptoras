@@ -260,3 +260,10 @@ function setSocialMedia(value, net){
 		aNet.href = aNet.href+value;
 	}
 }
+/*imprimir
+function print() {
+     var contenido= document.getElementById('ventana2').innerHTML;
+
+     window.print();
+}
+*/
