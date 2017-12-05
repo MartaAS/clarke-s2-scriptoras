@@ -306,7 +306,10 @@ main{
 /*Fin de estilos generales*/
 /*About*/
 .aboutMe{
-		display: block;
+	display: block;
+}
+#aboutMe-preview{
+	color: black;
 }
 
 /*Experience and Education form*/

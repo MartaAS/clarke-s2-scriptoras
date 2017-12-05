@@ -2,26 +2,23 @@
 //marta
 //prueba cargar imagen
 function archivo(evt) {
-      var files = evt.target.files; // FileList object
-
-        //Obtenemos la imagen del campo "file".
-      for (var i = 0, f; f = files[i]; i++) {
-           //Solo admitimos imágenes.
-           if (!f.type.match('image.*')) {
-                continue;
-           }
-
-           var reader = new FileReader();
-
-           reader.onload = (function(theFile) {
-               return function(e) {
-               // Creamos la imagen.
-                      document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
-               };
+  var files = evt.target.files; // FileList object
+  //Obtenemos la imagen del campo "file".
+    for (var i = 0, f; f = files[i]; i++){
+			//Solo admitimos imágenes.
+    	if (!f.type.match('image.*')) {
+      	continue;
+    	}
+    	var reader = new FileReader();
+      	reader.onload = (function(theFile) {
+         	return function(e) {
+         	// Creamos la imagen.
+          document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+      	};
            })(f);
 
-           reader.readAsDataURL(f);
-       }
+      reader.readAsDataURL(f);
+   	}
 }
 
       document.getElementById('files').addEventListener('change', archivo, false);
@@ -96,14 +93,14 @@ function viewprev(){
 
 //fin parte marta
 //About
-
 function showPromptAbout() {
-	document.getElementById('aboutMe-preview').innerHTML=document.getElementById('aboutMe').value;
+	document.getElementById('aboutMe-preview').innerHTML=document.getElementById('text-about').value;
 	/*var textAbout = prompt("Haz una breve descripción sobre ti");
 	var textAboutMe = document.querySelector('.aboutMe');
-	textAboutMe.value = textAbout;
-	editar('content-about');*/
+	textAboutMe.value = textAbout;*/
+	editar('content-about');
 }
+
 //función para abrir el desplegable
 function editar(idContent){
 	document.getElementById(idContent).style.display = 'block';
@@ -118,12 +115,8 @@ function closePreview(idContent){
 	document.getElementById('ventana1').style.display = 'block';
 	document.getElementById('headerfondo').style.display = 'block';
 }
-/*var aboutMe = document.querySelector("#about");
-var aboutInput = prompt("Haz una breve descripción sobre ti.");
-aboutMe.innerHTML = aboutInput;
-*/
-//Experience
 
+//Experience
 //Desplegable mes
 var monthOptions = '<option value="mes">Mes</option>';
 monthOptions = monthOptions + '<option value="Ene"> Enero</option>';
@@ -141,17 +134,16 @@ monthOptions = monthOptions + '<option value="Dic">Diciembre</option>';
 
 //Se aplica en todos los que tengan la clase .month
 var months = document.querySelectorAll('.month');
-for (var i = 0; i < months.length; i++) {
-	months[i].innerHTML = monthOptions;
-}
+	for (var i = 0; i < months.length; i++){
+		months[i].innerHTML = monthOptions;
+	}
 
 //desplegable años
 var years = 2030;
 var yearOptions = ''; //almacena options de html que van en el select
-
-for (var initialYear=1950; initialYear<years; initialYear++) {
-  yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
-}
+	for (var initialYear=1950; initialYear<years; initialYear++) {
+	  yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
+	}
 //Se aplica en todos los que tengan la clase year
 var yearsAll = document.querySelectorAll('.year');
 for (var i = 0; i < yearsAll.length; i++) {
@@ -179,21 +171,28 @@ function saveTraining(){
 }
 //Fin de Experiencia y Formación
 
+//cosis
+//document.getElementById('barra1').style.width = '50%';
+//document.getElementById('barra2').style.width = '25%';
+//document.getElementById('barra3').style.width = '95%';
+
 //Skills
-function showPromptSkill(){
+function saveSkills(){
+document.getElementById('skillsPreview').innerHTML=document.getElementById('addSkills').value;
 	var skillsNameList = document.querySelectorAll(".skillName");
 	var skillName;
 	var skillPercList = document.querySelectorAll(".skillBar");
 	var skillPercentage;
 	//alert(newSkill.length);
-	for(var i = 0; i < skillsNameList.length; i++){
-		//skillName = prompt("Introduce una habilidad");
-		//skillPercentage = prompt("De 1 a 10, ¿cuánto sabes?")
+	/*for(var i = 0; i < skillsNameList.length; i++){
+		skillName = prompt("Introduce una habilidad");
+		skillPercentage = prompt("De 1 a 10, ¿cuánto sabes?")
 		skillsNameList[i].innerHTML = skillName;
 		skillPercList[i].innerHTML = skillPercentage;
-	}
+	}*/
 	editar('content-skills');
 }
+
 
 /*function showPromptLanguage() {
   var newTextLanguage = document.querySelectorAll('.textBarPreview');

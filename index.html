@@ -23,12 +23,9 @@
 			</div>
 				<!-- value="Ver mi CV">-->
 		</header>
-
 		<!-- End Header -->
-
 		<!-- Container -->
 		<main>
-
 			<!--cabecera-->
 			<div class="headercreatucv" id="headerfondo">
 				<span class="textcrea">Haz tu CV con estilo</span>
@@ -65,26 +62,26 @@
 						</div>
 					</div>
 				</div>
-				</form>
-
-			<!--about -->
+			</form>
+<!---About --->
 			<form class="form-section-container" action="" method="post"> <!--Mostrado-->
 				<div class="title-container">
 					<h2 class="textFormButton" onclick="editar('content-about')">Sobre mí</h2>
-							<button class="open-section-button" type="button" name="about-me-button" onclick="editar('content-about')"><img src="images/addButton32px.png" alt="addButton"></button>
-							<button class="close-section-button" type="button" name="about-me-button" onclick="ocultar('content-about')">
-							<img src="images/menos.png" alt="minusbuttom">
-						</button>
+					<button class="open-section-button" type="button" name="about-me-button" onclick="editar('content-about')">
+						<img src="images/addButton32px.png" alt="addButton">
+					</button>
+					<button class="close-section-button" type="button" name="about-me-button" onclick="ocultar('content-about')">
+						<img src="images/menos.png" alt="minusbuttom">
+					</button>
 				</div>
 				<div  id="content-about" class="boxes-container"><!--Oculto-->
-
 					<label for="about"></label>
-					<textarea name="about-me" rows="6" cols="20"placeholder="Introduce una breve descripción sobre ti." class="aboutMe" id="about"></textarea>
+					<textarea name="about-me" rows="6" cols="20"placeholder="Introduce una breve descripción sobre ti." class="aboutMe-preview" id="text-about"></textarea>
 					<input class="save-button" type="button" name="save" value="Añadir" onclick="showPromptAbout()">
+
 				</div>
 			</form>
-				<!--End about-->
-
+<!---End about--->
 				<!--Sección de Experiencia-->
 				<form class="form-section-container" id=experience-section action="" method="post">
 					<div class="title-container">
@@ -136,7 +133,7 @@
 						</button>
 						<button class="close-section-button" type="button" name="education-button" onclick="ocultar('education-box')">
 						<img src="images/menos.png" alt="minusbuttom">
-					</button>
+						</button>
 					</div>
 					<div class="boxes-container" id="education-box">
 						<h3 class="subtitle-section">Titulación</h3>
@@ -170,20 +167,32 @@
 				<!--Skills -->
 				<form class="form-section-container" action="" method="post"> <!--Mostrado-->
 						<div class="title-container">
-							<h2 class="textFormButton">Habilidades</h2>
-								<button class="open-section-button" type="button" name="skills-button" onclick="showPromptSkill()"><img src="images/addButton32px.png" alt="addButton"></button>
+							<h2 class="textFormButton" onclick="editar('content-skills')">Habilidades</h2>
+								<button class="open-section-button" type="button" name="skills-button" onclick="editar('content-skills')">
+									<img src="images/addButton32px.png" alt="addButton">
+								</button>
 								<button class="close-section-button" type="button" name="content-skills-button" onclick="ocultar('content-skills')">
 								<img src="images/menos.png" alt="minusbuttom">
 							</button>
 						</div>
 						<div id="content-skills" class="boxes-container"><!--Oculto-->
-							<ul>
+							<div class="inputs ">
+								<input id="skill1" type="text" name="skill1" value="" placeholder="Escribe una habilidad">
+								<input id="percentage1" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
+								<input id="skill1" type="text" name="skill1" value="" placeholder="Escribe una habilidad">
+								<input id="percentage1" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
+								<input id="skill1" type="text" name="skill1" value="" placeholder="Escribe una habilidad">
+								<input id="percentage1" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
+								<input id="skill1" type="text" name="skill1" value="" placeholder="Escribe una habilidad">
+								<input id="percentage1" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
+							</div>
+							<!--<ul >
 								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
 								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
 								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
 								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
-							</ul>
-							<input class="save-button" type="button" name="save" value="Añadir">
+							</ul>-->
+							<input class="save-button" type="button" name="save" value="Añadir" id="addSkills">
 						</div>
 				</form>
 				<!--End Skills-->
@@ -459,12 +468,12 @@
         <hr class="separador">
 				<section id="skillPreview">
 					<h2 class="section-title">Habilidades</h2>
-						<div class="skill">
-    					<div class="skill_title">Habilidad 1</div>
-    					<div class="barra">
-        				<div class="barra_front" id="barra1"></div>
-    					</div>
-						</div>
+					<div class="skill">
+    				<div class="skill_title">Habilidad 1</div>
+    				<div class="barra">
+        			<div class="barra_front" id="barra1"></div>
+    				</div>
+					</div>
 						<div class="skill">
     					<div class="skill_title">Habilidad 2</div>
     					<div class="barra">
@@ -483,12 +492,6 @@
 								<div class="barra_front" id="barra4"></div>
 							</div>
 						</div>
-
-<script>
-document.getElementById('barra1').style.width = '50%';
-document.getElementById('barra2').style.width = '25%';
-document.getElementById('barra3').style.width = '95%';
-</script>
 				</section>
 
         <!--Languages preview section-->
