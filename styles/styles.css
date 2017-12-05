@@ -183,9 +183,7 @@ main{
 	align-items: center;
 	-webkit-box-shadow: 5px 8px 42px 1px #3d3d29;
 }
-#files{
-	display: none;
-}
+
 /*styles pre*/
 .preprincipales {
 	display: flex;
@@ -211,9 +209,6 @@ main{
 	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
 /*ventana previsualizar*/
-#ventana2{
-	display: none;
-}
 
 /*Estilos generales de la sección de desplegables*/
 .title-container{
@@ -277,7 +272,7 @@ main{
 }
 /*Ocultar sección*/
 
-.content, .boxes-container, .netsocialhidden, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music {
+.content, .boxes-container, .netsocialhidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
 }
 
@@ -613,9 +608,7 @@ input[type=checkbox]
 	width: 120px;
 	height: 120px;
 }
-.invisible{
-	display:none;
-}
+
 .visible{
 	display:block;
 }
