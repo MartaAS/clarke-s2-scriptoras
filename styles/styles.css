@@ -77,15 +77,25 @@ header{
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
+
+.secondBackground {
+	background-image: url(../images/secondBackground.png);
+	background-position: center;
+	background-size: cover;
+	height: 35vh;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
 .textcrea{
 	display: flex;
 	align-self: flex-start;
-	margin-top: 30px;
+	margin-top: 20%;
 	margin-left: 20px;
-	color: white;
-	font-size: 25px;
+	font-size: 1.5em;
 	font-family: 'Arial';
 }
 .imgcrea{
@@ -767,10 +777,10 @@ input[type=checkbox]
 	height: 80vh;
 	}
 }
-	.textcrea{
+	/*.textcrea{
 		font-size: 40px;
 		margin-top: 50px;
-	}
+	}*/
 
 @media all and (max-width: 600px){
 	.textFormButton{
