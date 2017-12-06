@@ -19,7 +19,7 @@
 				<input class="icons" type="button" onclick="viewprev()" id="btnview" title="Vista previa">
 				<input class="icons" type="button" onclick="share()" id="btnshare" title="Compartir">
 				<input class="icons" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
-				<input class="icons" type="button" onclick="down()" id="btndownload" title="Descargar">
+				<input class="icons" type="button" onclick="download()" id="btndownload" title="Descargar">
 			</div>
 				<!-- value="Ver mi CV">-->
 		</header>
@@ -80,8 +80,7 @@
 				</div>
 				<div  id="content-about" class="boxes-container"><!--Oculto-->
 					<input class="aboutMe" type="text" name="name" value="text">
-					<input class="save-button" type="button" name="save" value="Añadir">
-					<input class="out-button" type="button" value="Cerrar" onclick="ocultar('content-about')">
+					<input type="button" value="Guardar" id="addLang" class="guardarprincipal">
 				</div>
 			</form>
 				<!--End about-->
@@ -123,7 +122,7 @@
 						</div>
 						<div class="buttons-container">
 							<input class="save-button" type="button" name="save" value="Añadir" onclick="saveExperience()">
-							<input class="out-button" type="button" value="Cerrar" onclick="ocultar('job-box')">
+							<input type="button" value="Guardar" id="addLang" class="guardarprincipal">
 						</div>
 					</div>
 				</form>
@@ -163,7 +162,7 @@
 						</div>
 						<div class="buttons-container">
 						<input class="save-button" type="button" name="save" value="Añadir" onclick="saveTraining()">
-						<input class="out-button" type="button" value="Cerrar" onclick="ocultar('education-box')">
+						<input type="button" value="Guardar" id="addLang" class="guardarprincipal">
 						</div>
 					</div>
 				</form>
@@ -185,7 +184,7 @@
 								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
 							</ul>
 							<input class="save-button" type="button" name="save" value="Añadir">
-							<input class="out-button" type="button" value="Cerrar" onclick="ocultar('content-skills')">
+							<input type="button" value="Guardar" id="addLang" class="guardarprincipal">
 						</div>
 				</form>
 				<!--End Skills-->
@@ -284,7 +283,7 @@
                 <input class="users" id="instagram" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('instagram')">
               </div>
               <div class="buttons-container">
-  							<input class="out-button" type="button" value="Cerrar" onclick="ocultar('job-box')">
+  							<input type="button" value="Guardar" id="addLang" class="guardarprincipal">
   						</div>
 						</div>
 			   </form>
@@ -304,7 +303,7 @@
                <input type="button" value="Generar" onclick="update_qrcode()">
              </div>
              <div class="buttons-container">
- 							<input class="out-button" type="button" value="Cerrar" onclick="ocultar('showNetsocial')">
+ 							<input type="button" value="Guardar" id="addLang" class="guardarprincipal">
  						</div>
            </div>
  			   </form>
