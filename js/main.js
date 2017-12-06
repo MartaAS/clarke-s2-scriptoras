@@ -189,20 +189,21 @@ function showPromptSkill(){
 var addLangs = document.getElementById('addLang');
 addLangs.addEventListener('click', addLanguages);
 
-function addLanguages() {
+function addLanguages(){
   var newTextLanguage = document.querySelectorAll('.textBarPreview');
+  var inputsLanguage = document.querySelectorAll('.language');
+  var inputsPercentage = document.querySelectorAll('.percentage');
+
   for (var i = 0; i < newTextLanguage.length; i++) {
-    var text = document.querySelectorAll('language').value;
-    newTextLanguage[i].innerHTML = text;
-    var pct = document.querySelectorAll('percentage').value;
-    // var pct = prompt("Introduce el porcentaje");
-    newTextLanguage[i].parentElement.style.width = pct + "%";
+    newTextLanguage[i].innerHTML = inputsLanguage[i].value;
+    newTextLanguage[i].parentElement.style.width = inputsPercentage[i].value + '%';
   }
 }
 
 //Hobbies Preview
 function showHobbiesPreview(elementId) {
   var check = document.getElementById(elementId);
+
   if (check.style.display == "inline-block"){
     check.style.display = "none";
    } else {
