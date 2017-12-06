@@ -261,6 +261,7 @@ main{
 	display: inline-block;
 	margin: 13px 0;
 	width: 70px;
+	border-radius:7px;
 }
 .save-button:hover, .out-button:hover, .guardarprincipal:hover {
 	background: #7DBEA5;
