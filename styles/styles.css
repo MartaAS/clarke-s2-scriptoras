@@ -273,6 +273,10 @@ main{
 	flex-wrap: wrap;
 }
 
+#hobbies-form {
+	padding-bottom: 2%;
+}
+
 /*Fin de estilos generales*/
 /*About*/
 .aboutMe{
@@ -336,7 +340,7 @@ color: #5A392B;
 .checkBoxHobbies {
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 2%;
+	padding-bottom: 4%;
 }
 
 input[type=checkbox]
@@ -494,13 +498,6 @@ input[type=checkbox]
 	align-items: center;
 }
 
-/*#languages-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: 4%;
-}*/
-
 .textFormButton {
 	color: #ffffff;
 }
@@ -530,7 +527,6 @@ input[type=checkbox]
 .input-lang {
 	padding-bottom: 1em;
 }
-
 
 /* Redes sociales*/
 .nets{
@@ -853,12 +849,27 @@ input[type=checkbox]
 		display: flex;
 		justify-content:space-between;
 	}
+
+.headercreatucv {
+		background-image: url(../images/group.png);
+		height: 95vh;
 }
+
+.textcrea {
+	margin-top: 5%;
+	margin-left: 20px;
+	font-size: 3em;
+}
+
+.input-lang {
+	display:flex;
+}
+
 @media print {
 	header, footer, nav {
   display: none;
 }
-.formulario-sec
+.formulario-sec {
 	  display: none;
-}
+	}
 }
