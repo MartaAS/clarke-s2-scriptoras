@@ -343,8 +343,8 @@ color: #5A392B;
 
 /*Checkbox styles*/
 #hobbies-form {
-	display: flex;
-	flex-direction: column;
+	/*display: flex;
+	flex-direction: column;*/
 	text-align: left;
 	font-size: 15px;
 	color: #757575;
@@ -513,12 +513,12 @@ input[type=checkbox]
 	align-items: center;
 }
 
-#languages-form {
+/*#languages-form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding-bottom: 4%;
-}
+}*/
 
 .textFormButton {
 	color: #ffffff;
@@ -546,8 +546,6 @@ input[type=checkbox]
 	background-color: #5a392b;
 }
 
-
-/*Hobbies*/
 
 /* Redes sociales*/
 .nets{
