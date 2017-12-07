@@ -87,6 +87,16 @@ function viewprev(){
 }
 
 //fin parte marta
+
+//Typed text
+var type = ['C','r','e','a',' ','t','u',' ','C','V ',' ','c','o','n',' ','e','s','t','i','l','o',' ','.','.'];
+var h1 = document.querySelector('.textcrea');
+document.addEventListener('DOMContentLoaded', function() {
+  for (var i = 0; i < type.length; i++) {
+      setTimeout(h1.innerHTML += type[i], 1000);
+  }
+});
+
 //About
 function showPromptAbout() {
 	var textAbout = prompt("Haz una breve descripción sobre ti");
@@ -149,17 +159,14 @@ for (var i = 0; i < yearsAll.length; i++) {
 }
 
 //Función para introducir en la previsualización los datos obtenidos de experiencia
-// function saveExperience(){
-// document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
-// document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
-// document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
-// document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
-// document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
-// document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
-// }
-
-
-
+function saveExperience(){
+document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
+document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
+document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
+document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
+document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
+document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
+}
 
 //Función para introducir en la previsualización los datos obtenidos de formación
 function saveTraining(){
