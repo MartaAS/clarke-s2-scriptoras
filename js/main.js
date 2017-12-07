@@ -179,14 +179,35 @@ function saveExperience(){
 	saveNewExperience();
 }
 
-//Función para introducir en la previsualización los datos obtenidos de formación
-function saveTraining(){
+//Guardar primera formación
+function saveFirstTraining(){
 document.getElementById('education-title-preview').innerHTML=document.getElementById('educ-title').value;
 document.getElementById('education-center-preview').innerHTML=document.getElementById('center').value;
 document.getElementById('start-education-month-preview').innerHTML=document.getElementById('month-training-start').value;
 document.getElementById('end-education-month-preview').innerHTML=document.getElementById('month-training-end').value;
 document.getElementById('start-education-year-preview').innerHTML=document.getElementById('year-training-start').value;
 document.getElementById('end-education-year-preview').innerHTML=document.getElementById('year-training-end').value;
+}
+function addFirstTraining(){
+	var timeLineRight = document.querySelector('.right');
+	timeLineRight.classList.add('show');
+  var buttonSaveFirst = document.querySelector('.formacion');
+  buttonSaveFirst.classList.add('hider');
+  var buttonAddNew = document.querySelector('.add-new-ed');
+  buttonAddNew.classList.add('show');
+	saveFirstTraining();
+}
+
+//Añadir más titulaciones
+function saveNewTraining(){
+	var educationSectionPreview = '<div class="container-timeline right"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-education-year-preview" class="title-year">' + document.getElementById("year-training-start").value + '</h3><p id="start-education-month-preview">' + document.getElementById("month-training-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-education-year-preview" class="title-year">' + document.getElementById("year-training-end").value + '</h3><p id="end-education-month-preview">' + document.getElementById("month-training-end").value + '</p></div></div><div class="work-information-output-container"><p id="education-title-preview" class="education-title">' + document.getElementById("educ-title").value + '</p><p id="education-center-preview">' + document.getElementById("center").value + '</p></div></div></div>'
+	var educationPreviewBox = document.querySelector('.timeline');
+  educationPreviewBox.insertAdjacentHTML('beforeend', educationSectionPreview);
+}
+function saveTraining(){
+	var timeLineRight = document.querySelector('.right');
+	timeLineRight.classList.add('show');
+	saveNewTraining();
 }
 //Fin de Experiencia y Formación
 
