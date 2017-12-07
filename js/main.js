@@ -149,14 +149,17 @@ for (var i = 0; i < yearsAll.length; i++) {
 }
 
 //Función para introducir en la previsualización los datos obtenidos de experiencia
-function saveExperience(){
-document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
-document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
-document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
-document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
-document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
-document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
-}
+// function saveExperience(){
+// document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
+// document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
+// document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
+// document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
+// document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
+// document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
+// }
+
+
+
 
 //Función para introducir en la previsualización los datos obtenidos de formación
 function saveTraining(){
@@ -186,7 +189,7 @@ function showPromptSkill(){
 }
 
 //Get languages and percentages
-var addLangs = document.getElementById('addLang');
+var addLangs = document.getElementById('button-save');
 addLangs.addEventListener('click', addLanguages);
 
 function addLanguages(){
