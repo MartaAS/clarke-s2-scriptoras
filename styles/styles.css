@@ -263,10 +263,12 @@ main{
 }
 
 /*Ocultar secciones*/
-.content, .boxes-container, .netsocialhidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
+.content, .boxes-container, .netsocialhidden, .invisible, .hider,#languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
 }
-
+.show{
+display: block;
+}
 .allHobbiesPreview {
 	width: 100%;
 	display: flex;

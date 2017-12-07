@@ -148,14 +148,35 @@ for (var i = 0; i < yearsAll.length; i++) {
 	yearsAll[i].innerHTML = yearOptions;
 }
 
-//Función para introducir en la previsualización los datos obtenidos de experiencia
-function saveExperience(){
+//Guardar primera experiencia
+function saveFirstExperience(){
 document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
 document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
 document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
 document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
 document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
 document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
+}
+function addFirstExperience(){
+	var timeLineLeft = document.querySelector('.left');
+	timeLineLeft.classList.add('show');
+  var buttonSaveFirt = document.querySelector('.experiencia');
+  buttonSaveFirt.classList.add('hider');
+  var buttonAddNew = document.querySelector('.add-new');
+  buttonAddNew.classList.add('show');
+	saveFirstExperience();
+}
+
+//Añadir más puestos de trabajo
+function saveNewExperience(){
+  var jobSectionPreview = '<div class="container-timeline left" id="container-timeline-left"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-job-year-preview"class="title-year">' + document.getElementById("year-job-start").value +'</h3><p id="start-job-month-preview">' + document.getElementById("month-job-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-job-year-preview"class="title-year">' + document.getElementById("year-job-end").value + '</h3><p id="end-job-month-preview">' + document.getElementById("month-job-end").value + '</p></div></div><div class="work-information-output-container"><p id="job-preview"class="job-title">' + document.getElementById("job").value + '</p><p id="company-preview">' + document.getElementById("company").value + '</p></div></div></div>'
+  var container = document.querySelector('.timeline');
+  container.insertAdjacentHTML('beforeend', jobSectionPreview);
+}
+function saveExperience(){
+	var timeLineLeft = document.querySelector('.left');
+	timeLineLeft.classList.add('show');
+	saveNewExperience();
 }
 
 //Función para introducir en la previsualización los datos obtenidos de formación
