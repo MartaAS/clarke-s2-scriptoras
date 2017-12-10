@@ -169,11 +169,11 @@ document.getElementById('end-job-year-preview').innerHTML=document.getElementByI
 }
 function addFirstExperience(){
 	var timeLineLeft = document.querySelector('.left');
-	timeLineLeft.classList.add('show');
+	timeLineLeft.classList.add('visible');
   var buttonSaveFirt = document.querySelector('.experiencia');
-  buttonSaveFirt.classList.add('hider');
+  buttonSaveFirt.classList.add('invisible');
   var buttonAddNew = document.querySelector('.add-new');
-  buttonAddNew.classList.add('show');
+  buttonAddNew.classList.add('visible');
 	saveFirstExperience();
 }
 
@@ -185,7 +185,7 @@ function saveNewExperience(){
 }
 function saveExperience(){
 	var timeLineLeft = document.querySelector('.left');
-	timeLineLeft.classList.add('show');
+	timeLineLeft.classList.add('visible');
 	saveNewExperience();
 }
 
@@ -200,11 +200,11 @@ document.getElementById('end-education-year-preview').innerHTML=document.getElem
 }
 function addFirstTraining(){
 	var timeLineRight = document.querySelector('.right');
-	timeLineRight.classList.add('show');
+	timeLineRight.classList.add('visible');
   var buttonSaveFirst = document.querySelector('.formacion');
-  buttonSaveFirst.classList.add('hider');
+  buttonSaveFirst.classList.add('invisible');
   var buttonAddNew = document.querySelector('.add-new-ed');
-  buttonAddNew.classList.add('show');
+  buttonAddNew.classList.add('visible');
 	saveFirstTraining();
 }
 
@@ -216,7 +216,7 @@ function saveNewTraining(){
 }
 function saveTraining(){
 	var timeLineRight = document.querySelector('.right');
-	timeLineRight.classList.add('show');
+	timeLineRight.classList.add('visible');
 	saveNewTraining();
 }
 //Fin de Experiencia y Formación
