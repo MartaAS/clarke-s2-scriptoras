@@ -53,8 +53,9 @@ main{
 .cruz-section-button{
 	background: none;
 	border: none;
-	margin-top: 45px;
-	margin-left: 295px;
+	margin-top: 10%;
+	margin-left: 70%;
+	cursor: pointer;
 }
 .inputs{
 	display: flex;
