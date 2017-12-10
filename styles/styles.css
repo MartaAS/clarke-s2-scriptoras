@@ -824,6 +824,11 @@ input[type=checkbox]
 		height: 120vh;
 		width: 100%;
 	}
+	.main-web-sections{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+}
 	#ventana2{
 		display: block;
 		}
@@ -838,8 +843,15 @@ input[type=checkbox]
 	}
 	.previsualizacion-sec{
 		height: 100%;
-		width: 60%
+		width: 50%
 	}
+	.cruz-section-button{
+		margin-top: 0%;
+		margin-left: 90%;
+}
+	.separador{
+		margin-top: 1.5em;
+}
 	/*Footer*/
 	.logo{
 		margin-right:120px;
