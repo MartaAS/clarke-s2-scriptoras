@@ -1,3 +1,5 @@
+/*Estilos generales*/
+
 *{
 	box-sizing: border-box;
 }
@@ -7,6 +9,92 @@ body{
 	padding: 0;
 	font-family: 'Arial';
 }
+main{
+	padding-top: 50px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+/*Estilos generales de la sección de desplegables*/
+.title-container{
+	padding-left: 20px;
+	margin-bottom: 10px;
+	width: 90%;
+	height: 40px;
+	background-color: #7DBEA5;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+}
+.title-container:hover {
+  border-top-color: #5A392B;
+  background: #5A392B;
+  color: #ccc;
+}
+
+.title-container:active {
+	border-top-color: #5A392B;
+	background: #5A392B;
+}
+.open-section-button{
+	background: none;
+	border: none;
+	margin-left: auto;
+}
+.close-section-button{
+	background: none;
+	border: none;
+}
+.cruz-section-button{
+	background: none;
+	border: none;
+	margin-top: 10%;
+	margin-left: 70%;
+	cursor: pointer;
+}
+.inputs{
+	display: flex;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 5px;
+	padding: 2px;
+	border: solid 1px;
+	border-radius: 5px;
+	width: 225px;
+}
+
+/*Botones añadir y guardar*/
+.buttons-save-general {
+	background-color: #E1F7E7;
+	padding: 5px;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	box-shadow: #E1F7E7 0 1px 0;
+	display: inline-block;
+	margin: 13px 0;
+	width: 70px;
+	border-radius:7px;
+}
+.buttons-save-general:hover {
+	background: #7DBEA5;
+  box-shadow: inset 0 0 20px #7DBEA5, 0 0 20px #7DBEA5;
+  outline-offset: 80px;
+	color: #fff;
+	font-weight: bold;
+	border-color:#7DBEA5;
+}
+/*Ocultar secciones*/
+.boxes-container, .netsocialhidden, .invisible,#languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
+	display: none;
+}
+.visible{
+	display: block;
+}
+/*Fin estilos generales*/
 /*Header logo formulario*/
 .headlog{
 	min-width: 60px;
@@ -102,13 +190,6 @@ header{
 	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
 /*fin cargar imagen*/
-main{
-	padding-top: 50px;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
 .separador {
 	border: 3px;
 	background-color: #7DBEA5;
@@ -132,7 +213,7 @@ main{
 	justify-content: center;
 }
 .name{
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: bold;
 }
 .datosprin{
@@ -140,16 +221,6 @@ main{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-.inputs{
-	display: flex;
-	text-align: center;
-	font-size: 15px;
-	margin-top: 5px;
-	padding: 0px;
-	border: solid 1px;
-	border-radius: 5px;
-	width: 200px;
 }
 .foto{
 	width: 200px;
@@ -200,87 +271,6 @@ main{
 }
 /*ventana previsualizar*/
 
-/*Estilos generales de la sección de desplegables*/
-.title-container{
-	padding-left: 20px;
-	margin-bottom: 10px;
-	width: 90%;
-	height: 40px;
-	background-color: #7DBEA5;
-	border-radius: 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	justify-content: space-around;
-	box-shadow: rgba(0,0,0,1) 0 1px 0;
-	text-shadow: rgba(0,0,0,.4) 0 1px 0;
-}
-.title-container:hover {
-  border-top-color: #5A392B;
-  background: #5A392B;
-  color: #ccc;
-  }
-
-.title-container:active {
-	border-top-color: #5A392B;
-	background: #5A392B;
-	}
-.open-section-button{
-	background: none;
-	border: none;
-	margin-left: auto;
-}
-.close-section-button{
-	background: none;
-	border: none;
-}
-.cruz-section-button{
-	background: none;
-	border: none;
-	margin-top: 45px;
-	margin-left: 295px;
-
-}
-
-/*Botones añadir y cerrar*/
-.save-button, .out-button, .guardarprincipal {
-	background-color: ;
-	padding: 5px;
-	text-shadow: rgba(0,0,0,.4) 0 1px 0;
-	box-shadow: rgba(0,0,0,1) 0 1px 0;
-	display: inline-block;
-	margin: 13px 0;
-	width: 70px;
-	border-radius:7px;
-}
-.save-button:hover, .out-button:hover, .guardarprincipal:hover {
-	background: #7DBEA5;
-  box-shadow: inset 0 0 20px #7DBEA5, 0 0 20px #7DBEA5;
-  outline-offset: 80px;
-	color: #fff;
-	font-weight: bold;
-	border-color:#7DBEA5;
-}
-
-/*Ocultar secciones*/
-.content, .boxes-container, .netsocialhidden, .invisible, .hider,#languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
-	display: none;
-}
-.show{
-display: block;
-}
-.allHobbiesPreview {
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
-
-#hobbies-form {
-	padding-bottom: 2%;
-}
-
-/*Fin de estilos generales*/
 /*About*/
 .aboutMe{
 		display: block;
@@ -297,19 +287,26 @@ display: block;
 }
 .subtitle-section{
 	margin: 10px 0;
+	text-align: center;
 }
-.form-text-box{
-	border: solid 1px;
-	border-radius: 5px;
+.dates-boxes{
+	margin: 8px 8px;
+	width: 200px;
+	padding: 3px;
+	text-align: center;
 }
-.form-text-box, .dates-boxes{
-margin: 8px 0px;
-padding-left: 3px;
-width: 200px;
-padding: 3px;
+.select-styles{
+text-shadow: rgba(0,0,0,.4) 0 1px 0;
+padding: 2px;
+border: solid 1px;
+background-color: #fff;
+border-radius: 5px;
 }
 .buttons-container{
 	margin: 10px 0px;
+	display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .month, .year{
 	margin-top: 5px;
@@ -530,7 +527,16 @@ input[type=checkbox]
 .input-lang {
 	padding-bottom: 1em;
 }
-
+/*Hobbies*/
+.allHobbiesPreview {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#hobbies-form {
+	padding-bottom: 2%;
+}
 /* Redes sociales*/
 .nets{
 	display: flex;
@@ -589,10 +595,6 @@ input[type=checkbox]
 .codigoqr > img{
 	width: 120px;
 	height: 120px;
-}
-
-.visible{
-	display:block;
 }
 /*footer*/
 .infooter{
@@ -684,7 +686,7 @@ input[type=checkbox]
 
 }
 .titleForm{
-		text-align: center;
+	text-align: center;
 }
 .texto-formulario{
 	margin: 15px 35px;
@@ -822,6 +824,11 @@ input[type=checkbox]
 		height: 120vh;
 		width: 100%;
 	}
+	.main-web-sections{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+}
 	#ventana2{
 		display: block;
 		}
@@ -836,8 +843,15 @@ input[type=checkbox]
 	}
 	.previsualizacion-sec{
 		height: 100%;
-		width: 60%
+		width: 50%
 	}
+	.cruz-section-button{
+		margin-top: 0%;
+		margin-left: 90%;
+}
+	.separador{
+		margin-top: 1.5em;
+}
 	/*Footer*/
 	.logo{
 		margin-right:120px;

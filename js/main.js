@@ -46,7 +46,7 @@ function simularClick(){
 }
 //Datos principales
 //guardar datos principales introducidos
-function guardardatosprincipales(){
+function guardarDatosPrincipales(){
 	var nombreformulario = document.getElementById('nombreformulario').value;
 	if(nombreformulario == ""){
 		}
@@ -78,6 +78,8 @@ function guardardatosprincipales(){
 		document.getElementById('pretelefono').innerHTML = telefonoformulario;
 	}
 }
+var buttonSavePersonal = document.getElementById('button-save-personal');
+buttonSavePersonal.addEventListener('click', guardarDatosPrincipales);
 
 //previsualizacion en otra hoja
 function viewprev(){
@@ -196,13 +198,15 @@ document.getElementById('end-job-year-preview').innerHTML=document.getElementByI
 }
 function addFirstExperience(){
 	var timeLineLeft = document.querySelector('.left');
-	timeLineLeft.classList.add('show');
-  var buttonSaveFirt = document.querySelector('.experiencia');
-  buttonSaveFirt.classList.add('hider');
+	timeLineLeft.classList.add('visible');
+  var buttonSaveFirst = document.querySelector('.experiencia');
+  buttonSaveFirst.classList.add('invisible');
   var buttonAddNew = document.querySelector('.add-new');
-  buttonAddNew.classList.add('show');
+  buttonAddNew.classList.add('visible');
 	saveFirstExperience();
 }
+var buttonSaveFirstExp = document.getElementById('button-save-first-exp');
+buttonSaveFirstExp.addEventListener('click', addFirstExperience);
 
 //Añadir más puestos de trabajo
 function saveNewExperience(){
@@ -210,11 +214,13 @@ function saveNewExperience(){
   var container = document.querySelector('.timeline');
   container.insertAdjacentHTML('beforeend', jobSectionPreview);
 }
-function saveExperience(){
+function addNewExperience(){
 	var timeLineLeft = document.querySelector('.left');
-	timeLineLeft.classList.add('show');
+	timeLineLeft.classList.add('visible');
 	saveNewExperience();
 }
+var buttonSaveNewExp = document.getElementById('add-new-exp');
+buttonSaveNewExp.addEventListener('click', addNewExperience);
 
 //Guardar primera formación
 function saveFirstTraining(){
@@ -227,13 +233,15 @@ document.getElementById('end-education-year-preview').innerHTML=document.getElem
 }
 function addFirstTraining(){
 	var timeLineRight = document.querySelector('.right');
-	timeLineRight.classList.add('show');
+	timeLineRight.classList.add('visible');
   var buttonSaveFirst = document.querySelector('.formacion');
-  buttonSaveFirst.classList.add('hider');
+  buttonSaveFirst.classList.add('invisible');
   var buttonAddNew = document.querySelector('.add-new-ed');
-  buttonAddNew.classList.add('show');
+  buttonAddNew.classList.add('visible');
 	saveFirstTraining();
 }
+var buttonSaveFirstEd = document.getElementById('save-first-ed');
+buttonSaveFirstEd.addEventListener('click', addFirstTraining);
 
 //Añadir más titulaciones
 function saveNewTraining(){
@@ -241,11 +249,14 @@ function saveNewTraining(){
 	var educationPreviewBox = document.querySelector('.timeline');
   educationPreviewBox.insertAdjacentHTML('beforeend', educationSectionPreview);
 }
-function saveTraining(){
+function addNewTraining(){
 	var timeLineRight = document.querySelector('.right');
-	timeLineRight.classList.add('show');
+	timeLineRight.classList.add('visible');
 	saveNewTraining();
 }
+var buttonSaveNewEd = document.getElementById('add-new-edu');
+buttonSaveNewEd.addEventListener('click', addNewTraining);
+
 //Fin de Experiencia y Formación
 
 //Skills
