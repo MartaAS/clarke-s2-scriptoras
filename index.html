@@ -62,7 +62,7 @@
 							<input type="text" name="profesion" placeholder="Introduce profesión" class="inputs" required id="profesionformulario">
 							<input type="email" name="mail" placeholder="Introduce email" class="inputs" id="emailformulario">
 							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="inputs" id="telefonoformulario">
-							 <input type="button" value="Guardar" class="buttons-save-general" onclick="guardardatosprincipales();">
+							<input type="button" value="Guardar" class="buttons-save-general" id="button-save-personal">
 						</div>
 					</div>
 				</div>
@@ -121,8 +121,8 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-							<input class="buttons-save-general add-new invisible" type="button" name="add" value="Añadir" onclick="saveExperience()">
-							<input class="buttons-save-general experiencia" type="button" name="save" value="Guardar" id="addLang"  onclick="addFirstExperience()">
+							<input class="buttons-save-general add-new invisible" id="add-new-exp" type="button" name="add" value="Añadir">
+							<input class="buttons-save-general experiencia" id="button-save-first-exp" type="button" name="save" value="Guardar">
 						</div>
 					</div>
 				</form>
@@ -161,8 +161,8 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-							<input class="buttons-save-general add-new-ed invisible" type="button" name="save" value="Añadir" onclick="saveTraining()">
-							<input type="button" value="Guardar" id="addLang" class="buttons-save-general formacion" onclick="addFirstTraining()">
+							<input class="buttons-save-general add-new-ed invisible" id="add-new-edu" type="button" name="save" value="Añadir">
+							<input type="button" value="Guardar" id="save-first-ed" class="buttons-save-general formacion">
 						</div>
 					</div>
 				</form>
