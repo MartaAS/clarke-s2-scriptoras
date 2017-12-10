@@ -89,13 +89,40 @@ function viewprev(){
 //fin parte marta
 
 //Typed text
-var type = ['C','r','e','a',' ','t','u',' ','C','V ',' ','c','o','n',' ','e','s','t','i','l','o',' ','.','.'];
-var h1 = document.querySelector('.textcrea');
-document.addEventListener('DOMContentLoaded', function() {
-  for (var i = 0; i < type.length; i++) {
-      setTimeout(h1.innerHTML += type[i], 1000);
+// var type = ['C','r','e','a',' ','t','u',' ','C','V ',' ','c','o','n',' ','e','s','t','i','l','o',' ','.','.'];
+// var h1 = document.querySelector('.textcrea');
+// document.addEventListener('DOMContentLoaded', function() {
+//   for (var i = 0; i < type.length; i++) {
+//       setTimeout(h1.innerHTML += type[i], 1000);
+//   }
+// });
+
+// Add typed text.
+var idx = 0;
+var txt = 'Crea tu CV con estilo...'.split('');
+var speed = 150;
+var waitOnFinish = 3000;
+var textCreaEl = document.querySelector('.textcrea');
+
+document.addEventListener('DOMContentLoaded', typeWriter);
+
+function typeWriter() {
+  if (idx < txt.length) {
+    var tempTxt = textCreaEl.innerHTML;
+    textCreaEl.innerHTML += '|';
+    setTimeout(function() {
+      textCreaEl.innerHTML = tempTxt + txt[idx];
+      idx++;
+      setTimeout(typeWriter, speed);
+    }, speed/2);
+  } else {
+    idx = 0;
+    setTimeout(function(){
+      textCreaEl.innerHTML = '';
+      typeWriter();
+    }, waitOnFinish);
   }
-});
+}
 
 //About
 function showPromptAbout() {
