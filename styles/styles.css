@@ -130,16 +130,16 @@ main{
 }
 /*header parte marta*/
 #btnview{
-	background-image: url("../images/btnfile.png");
+	background-image: url("../images/btnfile2.png");
 }
 #btnshare{
-		background-image: url("../images/btnshare.png");
+		background-image: url("../images/btnshare2.png");
 }
 #btnprint{
-		background-image: url("../images/btnprint.png");
+		background-image: url("../images/btnprint2.png");
 }
 #btndownload{
-		background-image: url("../images/btndownload.png");
+		background-image: url("../images/btndownload2.png");
 }
 
 header{
