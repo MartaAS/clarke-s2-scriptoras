@@ -102,6 +102,10 @@ main{
 	flex-wrap: wrap;
 	justify-content: flex-end;
 }
+.containerlogo{
+	display: flex;
+	flex-direction: row;
+}
 .machinelog{
 	margin-top: 5px;
 	display: block;
@@ -115,6 +119,7 @@ main{
 	margin-right: 10px;
 	max-width: 150px;
 	width: 100%;
+	margin-top: 10px;
 }
 .icons{
 	height: 18px;
@@ -737,6 +742,20 @@ input[type=checkbox]
 
 }
 /*mediaqueries*/
+@media all and (min-width: 350px){
+	.headlog{
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+		}
+	.containerlogo{
+		margin-left: 30px;
+	}
+	.containericonos{
+		margin-right: 20px;
+	}
+
+}
 @media all and (min-width: 400px){
 	.headercreatucv{
 	height: 60vh;
