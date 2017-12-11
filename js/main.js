@@ -274,11 +274,6 @@ buttonSaveNewEd.addEventListener('click', addNewTraining);
 
 //Fin de Experiencia y Formación
 
-//cosis
-//document.getElementById('barra1').style.width = '50%';
-//document.getElementById('barra2').style.width = '25%';
-//document.getElementById('barra3').style.width = '95%';
-
 /*--------------------------SKILLS FUNCTIONS------------------------------*/
 //SKILLS
 function saveSkills(){
