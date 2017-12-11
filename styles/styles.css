@@ -91,7 +91,8 @@ main{
 .boxes-container, .netsocialhidden, .invisible,#languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
 }
-.visible{
+
+.visible {
 	display: block;
 }
 /*Fin estilos generales*/
@@ -166,11 +167,11 @@ header{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 85vh;
+	height: 80vh;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	margin-bottom: 40px;
+	margin-bottom: 5px;
 }
 
 .textcrea{
@@ -546,6 +547,7 @@ input[type=checkbox]
 .nets{
 	display: flex;
 	justify-content: space-between;
+
 }
 .social {
 	display: flex;
@@ -597,9 +599,25 @@ input[type=checkbox]
 	height: 0;
 	width: 40px;
 }
+.socialLabel{
+	margin-top: 7px;
+	margin-right: 10px;
+}
 .codigoqr > img{
 	width: 120px;
 	height: 120px;
+}
+.inputPortfolio{
+	display: flex;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 13px;
+	padding: 2px;
+	border: solid 1px;
+	border-radius: 5px;
+	width: 225px;
+	height: 28px;
+	margin-right: 8px;
 }
 /*footer*/
 .infooter{
@@ -838,10 +856,12 @@ input[type=checkbox]
 		height: 120vh;
 	}
 }
+
 @media all and (min-width:900px) {
 	.headercreatucv{
-		height: 120vh;
 		width: 100%;
+		background-image: url(../images/group.png);
+		height: 95vh;
 	}
 	.main-web-sections{
 		display: flex;
@@ -885,11 +905,6 @@ input[type=checkbox]
 		display: flex;
 		justify-content:space-between;
 	}
-
-.headercreatucv {
-		background-image: url(../images/group.png);
-		height: 95vh;
-}
 
 .textcrea {
 	margin-top: 5%;
