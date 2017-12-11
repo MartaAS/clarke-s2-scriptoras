@@ -541,6 +541,7 @@ input[type=checkbox]
 .nets{
 	display: flex;
 	justify-content: space-between;
+
 }
 .social {
 	display: flex;
@@ -592,9 +593,25 @@ input[type=checkbox]
 	height: 0;
 	width: 40px;
 }
+.socialLabel{
+	margin-top: 7px;
+	margin-right: 10px;
+}
 .codigoqr > img{
 	width: 120px;
 	height: 120px;
+}
+.inputPortfolio{
+	display: flex;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 13px;
+	padding: 2px;
+	border: solid 1px;
+	border-radius: 5px;
+	width: 225px;
+	height: 28px;
+	margin-right: 8px;
 }
 /*footer*/
 .infooter{
