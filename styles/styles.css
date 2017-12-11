@@ -7,7 +7,7 @@ body{
 	background-color: #FFFEFA;
 	margin: 0;
 	padding: 0;
-	font-family: 'Arial';
+	font-family: 'Gabriela', serif;
 }
 main{
 	padding-top: 50px;
@@ -91,7 +91,8 @@ main{
 .boxes-container, .netsocialhidden, .invisible,#languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
 }
-.visible{
+
+.visible {
 	display: block;
 }
 /*Fin estilos generales*/
@@ -101,6 +102,10 @@ main{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
+}
+.containerlogo{
+	display: flex;
+	flex-direction: row;
 }
 .machinelog{
 	margin-top: 5px;
@@ -115,6 +120,7 @@ main{
 	margin-right: 10px;
 	max-width: 150px;
 	width: 100%;
+	margin-top: 10px;
 }
 .icons{
 	height: 18px;
@@ -130,16 +136,16 @@ main{
 }
 /*header parte marta*/
 #btnview{
-	background-image: url("../images/btnfile.png");
+	background-image: url("../images/btnfile2.png");
 }
 #btnshare{
-		background-image: url("../images/btnshare.png");
+		background-image: url("../images/btnshare2.png");
 }
 #btnprint{
-		background-image: url("../images/btnprint.png");
+		background-image: url("../images/btnprint2.png");
 }
 #btndownload{
-		background-image: url("../images/btndownload.png");
+		background-image: url("../images/btndownload2.png");
 }
 
 header{
@@ -161,11 +167,11 @@ header{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 85vh;
+	height: 80vh;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	margin-bottom: 40px;
+	margin-bottom: 5px;
 }
 
 .textcrea{
@@ -635,6 +641,7 @@ input[type=checkbox]
 .nets{
 	display: flex;
 	justify-content: space-between;
+
 }
 .social {
 	display: flex;
@@ -686,9 +693,25 @@ input[type=checkbox]
 	height: 0;
 	width: 40px;
 }
+.socialLabel{
+	margin-top: 7px;
+	margin-right: 10px;
+}
 .codigoqr > img{
 	width: 120px;
 	height: 120px;
+}
+.inputPortfolio{
+	display: flex;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 13px;
+	padding: 2px;
+	border: solid 1px;
+	border-radius: 5px;
+	width: 225px;
+	height: 28px;
+	margin-right: 8px;
 }
 /*footer*/
 .infooter{
@@ -831,6 +854,20 @@ input[type=checkbox]
 
 }
 /*mediaqueries*/
+@media all and (min-width: 350px){
+	.headlog{
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+		}
+	.containerlogo{
+		margin-left: 30px;
+	}
+	.containericonos{
+		margin-right: 20px;
+	}
+
+}
 @media all and (min-width: 400px){
 	.headercreatucv{
 	height: 60vh;
@@ -913,10 +950,12 @@ input[type=checkbox]
 		height: 120vh;
 	}
 }
+
 @media all and (min-width:900px) {
 	.headercreatucv{
-		height: 120vh;
 		width: 100%;
+		background-image: url(../images/group.png);
+		height: 95vh;
 	}
 	.main-web-sections{
 		display: flex;
@@ -960,11 +999,6 @@ input[type=checkbox]
 		display: flex;
 		justify-content:space-between;
 	}
-
-.headercreatucv {
-		background-image: url(../images/group.png);
-		height: 95vh;
-}
 
 .textcrea {
 	margin-top: 5%;
