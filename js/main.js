@@ -1,4 +1,21 @@
 'use strict';
+//https://stackoverflow.com/questions/11409895/whats-the-most-elegant-way-to-cap-a-number-to-a-segment
+/**
+ * Returns a number whose value is limited to the given range.
+ *
+ * Example: limit the output of this computation to between 0 and 255
+ * (x * 255).clamp(0, 255)
+ *
+ * @param {Number} min The lower boundary of the output range
+ * @param {Number} max The upper boundary of the output range
+ * @returns A number in the range [min, max]
+ * @type Number
+ */
+Number.prototype.clamp = function(min, max) {
+  return Math.min(Math.max(this, min), max);
+};
+
+
 //marta
 //prueba cargar imagen
 function archivo(evt) {
@@ -126,12 +143,16 @@ function typeWriter() {
   }
 }
 
-//ABOUT FUNCTION
+/*--------------------------- ABOUT FUNCTION---------------------------------------*/
 function saveAbout(){
 	document.getElementById('aboutMe-preview').innerHTML=document.getElementById('text-about').value;
 }
 var buttonSaveAbout = document.getElementById('button-save-about');
 buttonSaveAbout.addEventListener('click', saveAbout);
+
+var aboutTextArea = document.getElementById('text-about');
+aboutTextArea.onkeyup = saveAbout;
+/*---------------------------END ABOUT FUNCTION--------------------------------------*/
 
 //función para abrir el desplegable
 function editar(idContent){
@@ -258,23 +279,52 @@ buttonSaveNewEd.addEventListener('click', addNewTraining);
 //document.getElementById('barra2').style.width = '25%';
 //document.getElementById('barra3').style.width = '95%';
 
-//Skills
+/*--------------------------SKILLS FUNCTIONS------------------------------*/
+//SKILLS
 function saveSkills(){
-	document.getElementById('skillsPreview').innerHTML=document.getElementById('addSkills').value;
-	var skillsNameList = document.querySelectorAll(".skillName");
-	var skillName;
-	var skillPercList = document.querySelectorAll(".skillBar");
-	var skillPercentage;
+	document.getElementById('skill1-preview').innerHTML = document.getElementById('skill1').value;
+	document.getElementById('skill2-preview').innerHTML = document.getElementById('skill2').value;
+	document.getElementById('skill3-preview').innerHTML = document.getElementById('skill3').value;
+	document.getElementById('skill4-preview').innerHTML = document.getElementById('skill4').value;
 }
-	/*for(var i = 0; i < skillsNameList.length; i++){
-		skillName = prompt("Introduce una habilidad");
-		skillPercentage = prompt("De 1 a 10, ¿cuánto sabes?")
-		skillsNameList[i].innerHTML = skillName;
-		skillPercList[i].innerHTML = skillPercentage;
-	}*/
-	editar('content-skills');
-var addSkills = getElementById('saveSkills');
-addSkills.addEventListener('click', saveSkills);
+var skillsText1 = document.getElementById("skill1");
+skillsText1.onkeyup = saveSkills;
+var skillsText2 = document.getElementById("skill2");
+skillsText2.onkeyup = saveSkills;
+var skillsText3 = document.getElementById("skill3");
+skillsText3.onkeyup = saveSkills;
+var skillsText4 = document.getElementById("skill4");
+skillsText4.onkeyup = saveSkills;
+
+//PERCENTAGES
+function percentageSkill(){
+	var auxValue = parseInt(document.getElementById('percentage1').value) || 0;
+	document.getElementById('barra1').style.width = auxValue.clamp(0,100) + "%";
+
+	auxValue = parseInt(document.getElementById('percentage2').value) || 0;
+	document.getElementById('barra2').style.width = auxValue.clamp(0,100) + "%";
+
+	auxValue = parseInt(document.getElementById('percentage3').value) || 0;
+	document.getElementById('barra3').style.width = auxValue.clamp(0,100) + "%";
+
+	auxValue = parseInt(document.getElementById('percentage4').value) || 0;
+	document.getElementById('barra4').style.width = auxValue.clamp(0,100) + "%";
+}
+var percentageBar1 = document.getElementById("percentage1");
+percentageBar1.onkeyup = percentageSkill;
+
+var percentageBar2 = document.getElementById("percentage2");
+percentageBar2.onkeyup = percentageSkill;
+
+var percentageBar3 = document.getElementById("percentage3");
+percentageBar3.onkeyup = percentageSkill;
+
+var percentageBar4 = document.getElementById("percentage4");
+percentageBar4.onkeyup = percentageSkill;
+
+/*var addSkills = document.getElementById("saveSkills");
+addSkills.addEventListener('click', saveSkills); ESTE BOTON YA NO TENDRÍA SENTIDO*/
+/*----------------------END SKILLS FUNCTIONS--------------------------*/
 
 //Get languages and percentages
 var addLangs = document.getElementById('button-save');

@@ -182,20 +182,20 @@
 					<form action="index.html" method="post">
 						<div id="content-skills" class="boxes-container"><!--Oculto-->
 								<div class="input-skill">
-									<input class="inputs" type="text" name="skill1" value="" placeholder="Escribe una habilidad" autocomplete="off">
-									<input class="inputs" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje" autocomplete="off">
+									<input class="inputs skill" type="text" name="skill1" value="" placeholder="Escribe una habilidad" id="skill1">
+									<input class="inputs skill" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje" id="percentage1">
 								</div>
 								<div class="input-skill">
-									<input class="inputs" type="text" name="skill2" value="" placeholder="Escribe una habilidad" autocomplete="off">
-									<input class="inputs"  type="text" name="percentage2" value="" placeholder="Escribe un porcentaje" autocomplete="off">
+									<input class="inputs skill" type="text" name="skill2" value="" placeholder="Escribe una habilidad" id="skill2">
+									<input class="inputs skill"  type="text" name="percentage2" value="" placeholder="Escribe un porcentaje" id="percentage2">
 								</div>
 								<div class="input-skill">
-									<input class="inputs"  type="text" name="skill3" value="" placeholder="Escribe una habilidad" autocomplete="off">
-									<input class="inputs"  type="text" name="percentage3" value="" placeholder="Escribe un porcentaje" autocomplete="off">
+									<input class="inputs skill"  type="text" name="skill3" value="" placeholder="Escribe una habilidad" id="skill3">
+									<input class="inputs skill"  type="text" name="percentage3" value="" placeholder="Escribe un porcentaje" id="percentage3">
 								</div>
 								<div class="input-skill">
-									<input class="inputs" type="text" name="skill4" value="" placeholder="Escribe una habilidad" autocomplete="off">
-									<input class="inputs" type="text" name="percentage4" value="" placeholder="Escribe un porcentaje"autocomplete="off">
+									<input class="inputs skill" type="text" name="skill4" value="" placeholder="Escribe una habilidad" id="skill4">
+									<input class="inputs skill" type="text" name="percentage4" value="" placeholder="Escribe un porcentaje" id="percentage4">
 								</div>
 							<input type="button" value="Guardar" class="buttons-save-general" id="saveSkills">
 						</div>
@@ -395,36 +395,31 @@
 					</section>
 				</section>
 
-        <!--Skills-->
+<!--___________________________Skills_______________________________________-->
         <hr class="separador">
-				<section id="skillPreview">
+				<section>
 					<h2 class="section-title">Habilidades</h2>
-					<div class="skill">
-    				<div class="skill_title">Habilidad 1</div>
+					<div class="skill-pre">
+    				<div class="skill_title" id="skill1-preview"></div>
     				<div class="barra">
         			<div class="barra_front" id="barra1"></div>
     				</div>
-					</div>
-						<div class="skill">
-    					<div class="skill_title">Habilidad 2</div>
+    					<div class="skill_title" id="skill2-preview"></div>
     					<div class="barra">
         				<div class="barra_front" id="barra2"></div>
     					</div>
-						</div>
-						<div class="skill">
-    					<div class="skill_title">Habilidad 3</div>
+    					<div class="skill_title" id="skill3-preview"></div>
     					<div class="barra">
         				<div class="barra_front" id="barra3"></div>
     					</div>
-						</div>
-						<div class="skill">
-							<div class="skill_title">Habilidad 4</div>
+
+							<div class="skill_title" id="skill4-preview"></div>
 							<div class="barra">
 								<div class="barra_front" id="barra4"></div>
 							</div>
 						</div>
 				</section>
-
+<!--___________________________END SKILLS_______________________________________-->
         <!--Languages preview section-->
         <hr class="separador">
         <section id="languagesPreview">

@@ -562,22 +562,27 @@ input[type=checkbox]
 	display: block;
 }
 .skill {
-  width: 100%;
-  margin: 20px 20px 0 0;
+  margin-top: 5px;
+	margin-right: 1%;
 	color: #5A392B;
+}
+.skill-pre{
+	margin-left: 7%;
 }
 .skill_title {
   /*font-family: sans-serif;*/
   font-size: 14px;
+	margin-top: 5px;
 }
 .barra {
   background-color: #E0E0E0 ;
   border-radius: 10px;
-  width: 75%;
+  width: 94%;
   height: 10px;
   margin-left: 0;
   position: relative;
 	display: flex;
+	margin-top: 5px;
 }
 
 .barra_front {
@@ -1010,7 +1015,7 @@ input[type=checkbox]
 	display:flex;
 }
 
-.language {
+.language{
 	margin-right: 1%;
 }
 
