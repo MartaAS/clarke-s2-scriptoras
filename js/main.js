@@ -178,7 +178,7 @@ function saveTraining(){
 
 //Skills
 function saveSkills(){
-document.getElementById('skillsPreview').innerHTML=document.getElementById('addSkills').value;
+	document.getElementById('skillsPreview').innerHTML=document.getElementById('addSkills').value;
 	var skillsNameList = document.querySelectorAll(".skillName");
 	var skillName;
 	var skillPercList = document.querySelectorAll(".skillBar");
