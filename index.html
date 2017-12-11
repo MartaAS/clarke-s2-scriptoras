@@ -6,7 +6,7 @@
     <title>Scriptoras</title>
 		<link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body>
+  <body id="contenedorPrincipal">
 		<!-- Header -->
 		<header class="headlog">
 			<div>
@@ -18,8 +18,8 @@
 			<div>
 				<input class="icons" type="button" onclick="viewprev()" id="btnview" title="Vista previa">
 				<input class="icons" type="button" onclick="share()" id="btnshare" title="Compartir">
-				<input class="icons" type="button" onclick="print()" id="btnprint" title="Imprimir">
-				<input class="icons" type="button" onclick="down()" id="btndownload" title="Descargar">
+				<input class="icons" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
+				<input class="icons" type="button" onclick="download()" id="btndownload" title="Descargar">
 			</div>
 				<!-- value="Ver mi CV">-->
 		</header>
@@ -28,8 +28,9 @@
 		<main>
 			<!--cabecera-->
 			<div class="headercreatucv" id="headerfondo">
-				<span class="textcrea">Haz tu CV con estilo</span>
+      <h1 class="textcrea"></h1>
 			</div>
+			<div class="main-web-sections">
 			<section class="formulario-sec" id="ventana1">
 				<form class="form-section-container" id=principal-section action="" method="post">
 					<div class="title-container">
@@ -46,19 +47,20 @@
 						<!--<div class="containerfoto" id="list">
 							<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt="foto" class="foto">
 						</div> -->
-						<input type="file" id="files" name="files[]" class="foto"/>
+						<input type="file" id="files" name="files[]" class=""/>
+						<div class="foto" title="Subir imagen" onclick="simularClick()"></div>
 						<!--prueba cargar imagen-->
 
 						<!--<output id="list"></output>-->
 						<!--fin prueba cargar imagen-->
 							<!-- posiblemente se quite por el boton que genera la prueba cargar imagen<input type="button" value="Upload image" class="subirfoto"> -->
 						<div class="datosprin">
-							<input type="text" name="name" placeholder="Introduce nombre" class="datosprincipales name" required id="nombreformulario">
-							<input type="text" name="surname" placeholder="Introduce apellidos" class="datosprincipales" required id="apellidoformulario">
-							<input type="text" name="profesion" placeholder="Introduce profesión" class="datosprincipales" required id="profesionformulario">
-							<input type="email" name="mail" placeholder="Introduce email" class="datosprincipales" id="emailformulario">
-							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="datosprincipales" id="telefonoformulario">
-							 <input type="button" value="Añadir" class="guardarprincipal" onclick="guardardatosprincipales();">
+							<input type="text" name="name" placeholder="Introduce nombre" class="inputs name" required id="nombreformulario">
+							<input type="text" name="surname" placeholder="Introduce apellidos" class="inputs" required id="apellidoformulario">
+							<input type="text" name="profesion" placeholder="Introduce profesión" class="inputs" required id="profesionformulario">
+							<input type="email" name="mail" placeholder="Introduce email" class="inputs" id="emailformulario">
+							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="inputs" id="telefonoformulario">
+							<input type="button" value="Guardar" class="buttons-save-general" id="button-save-personal">
 						</div>
 					</div>
 				</div>
@@ -76,9 +78,8 @@
 				</div>
 				<div  id="content-about" class="boxes-container"><!--Oculto-->
 					<label for="about"></label>
-					<textarea name="about-me" rows="6" cols="20"placeholder="Introduce una breve descripción sobre ti." class="aboutMe-preview" id="text-about"></textarea>
-					<input class="save-button" type="button" name="save" value="Añadir" onclick="showPromptAbout()">
-
+					<textarea name="about-me" rows="6" cols="20" placeholder="Introduce una breve descripción sobre ti." class="inputs" id="text-about"></textarea>
+					<input type="button" value="Guardar" class="buttons-save-general" id="button-save-about">
 				</div>
 			</form>
 <!---End about--->
@@ -97,29 +98,29 @@
 						<h3 class="subtitle-section">Puesto de trabajo</h3>
 						<div>
 							<label for="job"></label>
-							<input class="form-text-box" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo"/>
+							<input class="inputs" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo"/>
 						</div>
 						<div >
 							<label for="company"></label>
-							<input class="form-text-box" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
+							<input class="inputs" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
 						</div>
 						<div class="dates-boxes">
 							<label>Fecha de inicio:</label>
-							<select class="month" id="month-job-start" name="job-start-month">
+							<select class="select-styles month" id="month-job-start" name="job-start-month">
 							</select>
-							<select class="year" id="year-job-start" name="job-start-year">
+							<select class="select-styles year" id="year-job-start" name="job-start-year">
 							</select>
 						</div>
 						<div class="dates-boxes">
 							<label>Fecha de finalización</label>
-							<select class="month" id="month-job-end" name="job-end-month">
+							<select class="select-styles month" id="month-job-end" name="job-end-month">
 							</select>
-							<select class="year" id="year-job-end" name="job-end-year">
+							<select class="select-styles year" id="year-job-end" name="job-end-year">
 							</select>
 						</div>
 						<div class="buttons-container">
-							<input class="save-button" type="button" name="save" value="Añadir" onclick="saveExperience()">
-							<input class="out-button" type="button" value="Cerrar" onclick="ocultar('job-box')">
+							<input class="buttons-save-general add-new invisible" id="add-new-exp" type="button" name="add" value="Añadir">
+							<input class="buttons-save-general experiencia" id="button-save-first-exp" type="button" name="save" value="Guardar">
 						</div>
 					</div>
 				</form>
@@ -138,63 +139,64 @@
 					<div class="boxes-container" id="education-box">
 						<h3 class="subtitle-section">Titulación</h3>
 						<div>
-							<input class="form-text-box" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación"/>
+							<input class="inputs" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación"/>
 						</div>
 						<div >
-							<input class="form-text-box" id="center" type="text" name="center-name" placeholder="Indica el centro de estudios">
+							<input class="inputs" id="center" type="text" name="center-name" placeholder="Indica el centro de estudios">
 						</div>
 						<div class="dates-boxes">
 							<label>Fecha de inicio</label>
-							<select class="month" id="month-training-start" name="training-start-month">
+							<select class="select-styles month" id="month-training-start" name="training-start-month">
 							</select>
-							<select class="year" id="year-training-start" name="training-start-year">
+							<select class="select-styles year" id="year-training-start" name="training-start-year">
 							</select>
 						</div>
 						<div class="dates-boxes">
 							<label>Fecha de finalización</label>
-							<select class="month" id="month-training-end" name="training-end-month">
+							<select class="select-styles month" id="month-training-end" name="training-end-month">
 							</select>
-							<select class="year" id="year-training-end" name="training-end-year">
+							<select class="select-styles year" id="year-training-end" name="training-end-year">
 							</select>
 						</div>
 						<div class="buttons-container">
-						<input class="save-button" type="button" name="save" value="Añadir" onclick="saveTraining()">
-						<input class="out-button" type="button" value="Cerrar" onclick="ocultar('education-box')">
+							<input class="buttons-save-general add-new-ed invisible" id="add-new-edu" type="button" name="save" value="Añadir">
+							<input type="button" value="Guardar" id="save-first-ed" class="buttons-save-general formacion">
 						</div>
 					</div>
 				</form>
-
 				<!--Skills -->
-				<form class="form-section-container" action="" method="post"> <!--Mostrado-->
-						<div class="title-container">
-							<h2 class="textFormButton" onclick="editar('content-skills')">Habilidades</h2>
-								<button class="open-section-button" type="button" name="skills-button" onclick="editar('content-skills')">
-									<img src="images/addButton32px.png" alt="addButton">
-								</button>
-								<button class="close-section-button" type="button" name="content-skills-button" onclick="ocultar('content-skills')">
+				<section  class="form-section-container">
+					<div class="title-container">
+						<h2 class="textFormButton">Habilidades</h2><!--Mostrado-->
+						<button class="open-section-button" type="button" name="skills-button" onclick="editar('content-skills')">
+							<img src="images/addButton32px.png" alt="addButton">
+						</button>
+						<button class="close-section-button" type="button" name="content-skills-button" onclick="ocultar('content-skills')">
 								<img src="images/menos.png" alt="minusbuttom">
-							</button>
-						</div>
+						</button>
+					</div>
+					<form action="index.html" method="post">
 						<div id="content-skills" class="boxes-container"><!--Oculto-->
-							<div class="inputs ">
-								<input id="skill1" type="text" name="skill1" value="" placeholder="Escribe una habilidad">
-								<input id="percentage1" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
-								<input id="skill2" type="text" name="skill1" value="" placeholder="Escribe una habilidad">
-								<input id="percentage2" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
-								<input id="skill3" type="text" name="skill1" value="" placeholder="Escribe una habilidad">
-								<input id="percentage3" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
-								<input id="skill4" type="text" name="skill1" value="" placeholder="Escribe una habilidad">
-								<input id="percentage4" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
-							</div>
-							<!--<ul >
-								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
-								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
-								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
-								<li class="skilli"><span class="skillName"></span><span class="skillBar"></span></li>
-							</ul>-->
-							<input class="save-button" type="button" name="save" value="Añadir" id="addSkills">
+								<div class="input-skill">
+									<input class="inputs" type="text" name="skill1" value="" placeholder="Escribe una habilidad" autocomplete="off">
+									<input class="inputs" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje" autocomplete="off">
+								</div>
+								<div class="input-skill">
+									<input class="inputs" type="text" name="skill2" value="" placeholder="Escribe una habilidad" autocomplete="off">
+									<input class="inputs"  type="text" name="percentage2" value="" placeholder="Escribe un porcentaje" autocomplete="off">
+								</div>
+								<div class="input-skill">
+									<input class="inputs"  type="text" name="skill3" value="" placeholder="Escribe una habilidad" autocomplete="off">
+									<input class="inputs"  type="text" name="percentage3" value="" placeholder="Escribe un porcentaje" autocomplete="off">
+								</div>
+								<div class="input-skill">
+									<input class="inputs" type="text" name="skill4" value="" placeholder="Escribe una habilidad" autocomplete="off">
+									<input class="inputs" type="text" name="percentage4" value="" placeholder="Escribe un porcentaje"autocomplete="off">
+								</div>
+							<input type="button" value="Guardar" class="buttons-save-general" id="saveSkills">
 						</div>
 				</form>
+			</section>
 				<!--End Skills-->
 
         <!--Languages form section-->
@@ -206,18 +208,19 @@
 						<img src="images/menos.png" alt="minusbuttom"></button>
           </div>
           <form id="languages-form" action="index.html" method="post">
-            <div class="inputs">
-              <input id="language1" type="text" name="language1" value="" placeholder="Escribe un idioma">
-              <input id="percentage1" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje">
+            <div class="input-lang">
+              <input class="language inputs" type="text" name="language1" value="" placeholder="Escribe un idioma">
+              <input class="percentage inputs" type="text" name="percentage1" value="" placeholder="Escribe su porcentaje">
             </div>
-            <div class="inputs">
-              <input id="language2" type="text" name="language2" value="" placeholder="Escribe un idioma">
-              <input id="percentage2" type="text" name="percentage2" value="" placeholder="Escribe un porcentaje">
+            <div class="input-lang">
+              <input class="language inputs" type="text" name="language2" value="" placeholder="Escribe un idioma">
+              <input class="percentage inputs" type="text" name="percentage2" value="" placeholder="Escribe su porcentaje">
             </div>
-            <div class="inputs">
-              <input id="language3" type="text" name="language3" value="" placeholder="Escribe un idioma">
-              <input id="percentage3" type="text" name="percentage3" value="" placeholder="Escribe un porcentaje">
+            <div class="input-lang">
+              <input class="language inputs" type="text" name="language3" value="" placeholder="Escribe un idioma">
+              <input class="percentage inputs" type="text" name="percentage3" value="" placeholder="Escribe su porcentaje">
             </div>
+            <input type="button" value="Guardar" class="buttons-save-general" id="button-save">
           </form>
         </section>
 
@@ -268,7 +271,7 @@
 	 							<img src="images/menos.png" alt="minusbuttom">
 	 						</button>
   					 </div>
-              <div class="netsocialhidden" id="minredes">
+              <div class="boxes-container netsocialhidden" id="minredes">
                 <div class="nets">
                   <label for="linkedin">Linkedin</label>
                   <input class="users" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onchange="setValue('linkedin')">
@@ -290,7 +293,7 @@
                 <input class="users" id="instagram" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('instagram')">
               </div>
               <div class="buttons-container">
-  							<input class="out-button" type="button" value="Cerrar" onclick="ocultar('job-box')">
+  							<input type="button" value="Guardar" class="buttons-save-general">
   						</div>
 						</div>
 			   </form>
@@ -304,13 +307,13 @@
 							<img src="images/menos.png" alt="minusbuttom">
 						</button>
  						</div>
-            <div class="netsocialhidden" id="showNetsocial">
+            <div class="boxes-container netsocialhidden" id="showNetsocial">
              <div class="nets">
                <input class="users" id="inputQr" type="text" name="inputQr" placeholder=" Contenido para generar QR">
                <input type="button" value="Generar" onclick="update_qrcode()">
              </div>
              <div class="buttons-container">
- 							<input class="out-button" type="button" value="Cerrar" onclick="ocultar('showNetsocial')">
+ 							<input type="button" value="Guardar" class="buttons-save-general">
  						</div>
            </div>
  			   </form>
@@ -319,6 +322,7 @@
 
 
 			<section class="previsualizacion-sec" id="ventana2">
+				<div class="containerprev">
 				<button class="cruz-section-button" type="button" name="cruz-button" onclick="closePreview('ventana2')">
 				<img src="images/btnclose.png" alt="cruzbuttom"></button>
 				<!--datos principales-->
@@ -346,7 +350,7 @@
 				<section class="">
 					<h2 class="section-title">Experiencia y Formación</h2>
 					<section class="timeline">
-						<div class="container-timeline left">
+						<div class="container-timeline left invisible" id="container-timeline-left">
 					    <div class="content-timeline">
 					      <div class="dates-output-container">
 									<div class="dates-container">
@@ -365,85 +369,8 @@
 					      </div>
 					    </div>
 						</div>
-						<div class="container-timeline right">
+						<div class="container-timeline right invisible">
 					    <div class="content-timeline">
-					      <div class="dates-output-container">
-									<div class="dates-container">
-	 					      	<h3 id="start-education-year-preview"class="title-year"> 2017</h3>
-	 									<p id="start-education-month-preview">Mes</p>
- 									</div>
- 									<h3 class="title-year">-</h3>
-	 								<div class="dates-container">
-	 						      <h3 id="end-education-year-preview" class="title-year" >2018</h3>
-	 									<p id="end-education-month-preview">Mes</p>
-	 								</div>
-					      </div>
-					      <div class="work-information-output-container">
-									<p id="education-title-preview" class='education-title'>Título</p>
-						      <p id="education-center-preview">Centro de estudios</p>
-					      </div>
-					    </div>
-						</div>
-
-						<div class="container-timeline left">
-							<div class="content-timeline">
-					      <div class="dates-output-container">
-									<div class="dates-container">
- 					      		<h3 id="start-job-year-preview"class="title-year"> 2017</h3>
- 										<p id="start-job-month-preview">Mes</p>
- 									</div>
- 									<h3 class="title-year">-</h3>
- 									<div class="dates-container">
-	 						      <h3 id="end-job-year-preview" class="title-year" >2018</h3>
-	 									<p id="end-job-month-preview">Mes</p>
- 									</div>
-					      </div>
-					      <div class="work-information-output-container">
-									<p id="job-preview"class='job-title'>Cargo</p>
- 							    <p id="company-preview">Empresa</p>
-					      </div>
-					    </div>
-						</div>
-						<div class="container-timeline right">
-							<div class="content-timeline">
-					      <div class="dates-output-container">
-									<div class="dates-container">
-	 					      	<h3 id="start-education-year-preview"class="title-year"> 2017</h3>
-	 									<p id="start-education-month-preview">Mes</p>
- 									</div>
- 									<h3 class="title-year">-</h3>
-	 								<div class="dates-container">
-	 						      <h3 id="end-education-year-preview" class="title-year" >2018</h3>
-	 									<p id="end-education-month-preview">Mes</p>
-	 								</div>
-					      </div>
-					      <div class="work-information-output-container">
-									<p id="education-title-preview" class='education-title'>Título</p>
-						      <p id="education-center-preview">Centro de estudios</p>
-					      </div>
-					    </div>
-						</div>
-						<div class="container-timeline left">
-							<div class="content-timeline">
-					      <div class="dates-output-container">
-									<div class="dates-container">
- 					      		<h3 id="start-job-year-preview"class="title-year"> 2017</h3>
- 										<p id="start-job-month-preview">Mes</p>
- 									</div>
- 									<h3 class="title-year">-</h3>
- 									<div class="dates-container">
-	 						      <h3 id="end-job-year-preview" class="title-year" >2018</h3>
-	 									<p id="end-job-month-preview">Mes</p>
- 									</div>
-					      </div>
-					      <div class="work-information-output-container">
-									<p id="job-preview"class='job-title'>Cargo</p>
- 							    <p id="company-preview">Empresa</p>
-					      </div>
-					    </div>
-						</div>
-						<div class="container-timeline right">
-							<div class="content-timeline">
 					      <div class="dates-output-container">
 									<div class="dates-container">
 	 					      	<h3 id="start-education-year-preview"class="title-year"> 2017</h3>
@@ -505,7 +432,7 @@
           </div>
           <div class="languagesBarPreview">
             <div class="percentageBar">
-              <p class="textBarPreview">Francés</p>
+              <p class="textBarPreview">Fracés</p>
             </div>
           </div>
           <div class="languagesBarPreview">
@@ -520,12 +447,12 @@
         <section id="hobbiesPreview">
           <h2 class="section-title">Hobbies</h2>
           <div class="allHobbiesPreview">
-            <img id="read" src="images/read.png" alt="read hobbie">
-            <img id="travel" src="images/travel.png" alt="travel hobbie">
-            <img id="game" src="images/videogame.png" alt="game hobbie">
-            <img id="sports" src="images/sports.png" alt="sports hobbie">
-            <img id="cinema" src="images/cinema.png" alt="cinema hobbie">
-            <img id="music" src="images/music.png" alt="music hobbie">
+            <img id="read" src="images/readSmall.png" alt="read hobbie">
+            <img id="travel" src="images/travelSmall.png" alt="travel hobbie">
+            <img id="game" src="images/videogameSmall.png" alt="game hobbie">
+            <img id="sports" src="images/sportsSmall.png" alt="sports hobbie">
+            <img id="cinema" src="images/cinemaSmall.png" alt="cinema hobbie">
+            <img id="music" src="images/musicSmall.png" alt="music hobbie">
 					</div>
         </section>
 
@@ -557,8 +484,9 @@
            </div>
 
         </section>
-
+				</div>
       </section>
+			</div>
     </main>
 
 		<!-- End Container -->
@@ -575,6 +503,9 @@
 				  <img src="images/logo-adalab.png" alt="Logo Adalab" class="logoadalab">
 			  </a>
 		  </div>
+      <a id="arriba" href="#contenedorPrincipal" title="Arriba">
+    		<img src="images/arriba.png" title="Arriba" alt="Arriba">
+    	</a>
 	  </footer>
 	  <!-- End Footer-->
 		<!-- JavaScript Code -->

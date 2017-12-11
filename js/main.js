@@ -3,55 +3,50 @@
 //prueba cargar imagen
 function archivo(evt) {
   var files = evt.target.files; // FileList object
-  //Obtenemos la imagen del campo "file".
-    for (var i = 0, f; f = files[i]; i++){
-			//Solo admitimos imágenes.
-    	if (!f.type.match('image.*')) {
-      	continue;
-    	}
-    	var reader = new FileReader();
-      	reader.onload = (function(theFile) {
-         	return function(e) {
-         	// Creamos la imagen.
-          document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
-      	};
-           })(f);
-
+	//Obtenemos la imagen del campo "file".
+    for (var i = 0, f; f = files[i]; i++) {
+    //Solo admitimos imágenes.
+      if (!f.type.match('image.*')) {
+        continue;
+        }
+  var reader = new FileReader();
+    reader.onload = (function(theFile) {
+    	return function(e) {
+      // Creamos la imagen.
+        document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+         };
+         })(f);
       reader.readAsDataURL(f);
-   	}
-}
-
-      document.getElementById('files').addEventListener('change', archivo, false);
-			// duplico para img prev
-			function archivo2(evt) {
-			      var files = evt.target.files; // FileList object
-
-			        //Obtenemos la imagen del campo "file".
-			      for (var i = 0, f; f = files[i]; i++) {
-			           //Solo admitimos imágenes.
-			           if (!f.type.match('image.*')) {
+       }
+		 }
+		 		document.getElementById('files').addEventListener('change', archivo, false);
+// duplico para img prev
+function archivo2(evt) {
+	var files = evt.target.files; // FileList object
+	//Obtenemos la imagen del campo "file".
+	for (var i = 0, f; f = files[i]; i++) {
+	//Solo admitimos imágenes.
+		if (!f.type.match('image.*')) {
 			                continue;
 			           }
-
-			           var reader = new FileReader();
-
-			           reader.onload = (function(theFile) {
+		var reader = new FileReader();
+		reader.onload = (function(theFile) {
 			               return function(e) {
-			               // Creamos la imagen.
-			                      document.getElementById("prefoto").innerHTML = ['<img class="thumb2" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
-			               };
-			           })(f);
-
-			           reader.readAsDataURL(f);
-			       }
+			// Creamos la imagen.
+			 document.getElementById("prefoto").innerHTML = ['<img class="thumb2" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+			   };
+			  })(f);
+		reader.readAsDataURL(f);
+			  }
 			}
-
-			      document.getElementById('files').addEventListener('change', archivo2, false);
-	//fin prueba cargar imagen
-
+			document.getElementById('files').addEventListener('change', archivo2, false);
+	//fin cargar imagen
+function simularClick(){
+	document.getElementById('files').click()
+}
 //Datos principales
 //guardar datos principales introducidos
-function guardardatosprincipales(){
+function guardarDatosPrincipales(){
 	var nombreformulario = document.getElementById('nombreformulario').value;
 	if(nombreformulario == ""){
 		}
@@ -83,6 +78,8 @@ function guardardatosprincipales(){
 		document.getElementById('pretelefono').innerHTML = telefonoformulario;
 	}
 }
+var buttonSavePersonal = document.getElementById('button-save-personal');
+buttonSavePersonal.addEventListener('click', guardarDatosPrincipales);
 
 //previsualizacion en otra hoja
 function viewprev(){
@@ -92,14 +89,49 @@ function viewprev(){
 }
 
 //fin parte marta
-//About
-function showPromptAbout() {
-	document.getElementById('aboutMe-preview').innerHTML=document.getElementById('text-about').value;
-	/*var textAbout = prompt("Haz una breve descripción sobre ti");
-	var textAboutMe = document.querySelector('.aboutMe');
-	textAboutMe.value = textAbout;*/
-	editar('content-about');
+
+//Typed text
+// var type = ['C','r','e','a',' ','t','u',' ','C','V ',' ','c','o','n',' ','e','s','t','i','l','o',' ','.','.'];
+// var h1 = document.querySelector('.textcrea');
+// document.addEventListener('DOMContentLoaded', function() {
+//   for (var i = 0; i < type.length; i++) {
+//       setTimeout(h1.innerHTML += type[i], 1000);
+//   }
+// });
+
+// Add typed text.
+var idx = 0;
+var txt = 'Crea tu CV con estilo...'.split('');
+var speed = 150;
+var waitOnFinish = 3000;
+var textCreaEl = document.querySelector('.textcrea');
+
+document.addEventListener('DOMContentLoaded', typeWriter);
+
+function typeWriter() {
+  if (idx < txt.length) {
+    var tempTxt = textCreaEl.innerHTML;
+    textCreaEl.innerHTML += '|';
+    setTimeout(function() {
+      textCreaEl.innerHTML = tempTxt + txt[idx];
+      idx++;
+      setTimeout(typeWriter, speed);
+    }, speed/2);
+  } else {
+    idx = 0;
+    setTimeout(function(){
+      textCreaEl.innerHTML = '';
+      typeWriter();
+    }, waitOnFinish);
+  }
 }
+
+//ABOUT FUNCTION
+function saveAbout(){
+	document.getElementById('aboutMe-preview').innerHTML=document.getElementById('text-about').value;
+}
+var buttonSaveAbout = document.getElementById('button-save-about');
+buttonSaveAbout.addEventListener('click', saveAbout);
 
 //función para abrir el desplegable
 function editar(idContent){
@@ -149,7 +181,6 @@ var yearsAll = document.querySelectorAll('.year');
 for (var i = 0; i < yearsAll.length; i++) {
 	yearsAll[i].innerHTML = yearOptions;
 }
-
 //Función para introducir en la previsualización los datos obtenidos de experiencia
 function saveExperience(){
 	document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
@@ -159,9 +190,34 @@ function saveExperience(){
 	document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
 	document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
 }
+function addFirstExperience(){
+	var timeLineLeft = document.querySelector('.left');
+	timeLineLeft.classList.add('visible');
+  var buttonSaveFirst = document.querySelector('.experiencia');
+  buttonSaveFirst.classList.add('invisible');
+  var buttonAddNew = document.querySelector('.add-new');
+  buttonAddNew.classList.add('visible');
+	saveFirstExperience();
+}
+var buttonSaveFirstExp = document.getElementById('button-save-first-exp');
+buttonSaveFirstExp.addEventListener('click', addFirstExperience);
 
-//Función para introducir en la previsualización los datos obtenidos de formación
-function saveTraining(){
+//Añadir más puestos de trabajo
+function saveNewExperience(){
+  var jobSectionPreview = '<div class="container-timeline left" id="container-timeline-left"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-job-year-preview"class="title-year">' + document.getElementById("year-job-start").value +'</h3><p id="start-job-month-preview">' + document.getElementById("month-job-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-job-year-preview"class="title-year">' + document.getElementById("year-job-end").value + '</h3><p id="end-job-month-preview">' + document.getElementById("month-job-end").value + '</p></div></div><div class="work-information-output-container"><p id="job-preview"class="job-title">' + document.getElementById("job").value + '</p><p id="company-preview">' + document.getElementById("company").value + '</p></div></div></div>'
+  var container = document.querySelector('.timeline');
+  container.insertAdjacentHTML('beforeend', jobSectionPreview);
+}
+function addNewExperience(){
+	var timeLineLeft = document.querySelector('.left');
+	timeLineLeft.classList.add('visible');
+	saveNewExperience();
+}
+var buttonSaveNewExp = document.getElementById('add-new-exp');
+buttonSaveNewExp.addEventListener('click', addNewExperience);
+
+//Guardar primera formación
+function saveFirstTraining(){
 	document.getElementById('education-title-preview').innerHTML=document.getElementById('educ-title').value;
 	document.getElementById('education-center-preview').innerHTML=document.getElementById('center').value;
 	document.getElementById('start-education-month-preview').innerHTML=document.getElementById('month-training-start').value;
@@ -169,6 +225,32 @@ function saveTraining(){
 	document.getElementById('start-education-year-preview').innerHTML=document.getElementById('year-training-start').value;
 	document.getElementById('end-education-year-preview').innerHTML=document.getElementById('year-training-end').value;
 }
+function addFirstTraining(){
+	var timeLineRight = document.querySelector('.right');
+	timeLineRight.classList.add('visible');
+  var buttonSaveFirst = document.querySelector('.formacion');
+  buttonSaveFirst.classList.add('invisible');
+  var buttonAddNew = document.querySelector('.add-new-ed');
+  buttonAddNew.classList.add('visible');
+	saveFirstTraining();
+}
+var buttonSaveFirstEd = document.getElementById('save-first-ed');
+buttonSaveFirstEd.addEventListener('click', addFirstTraining);
+
+//Añadir más titulaciones
+function saveNewTraining(){
+	var educationSectionPreview = '<div class="container-timeline right"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-education-year-preview" class="title-year">' + document.getElementById("year-training-start").value + '</h3><p id="start-education-month-preview">' + document.getElementById("month-training-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-education-year-preview" class="title-year">' + document.getElementById("year-training-end").value + '</h3><p id="end-education-month-preview">' + document.getElementById("month-training-end").value + '</p></div></div><div class="work-information-output-container"><p id="education-title-preview" class="education-title">' + document.getElementById("educ-title").value + '</p><p id="education-center-preview">' + document.getElementById("center").value + '</p></div></div></div>'
+	var educationPreviewBox = document.querySelector('.timeline');
+  educationPreviewBox.insertAdjacentHTML('beforeend', educationSectionPreview);
+}
+function addNewTraining(){
+	var timeLineRight = document.querySelector('.right');
+	timeLineRight.classList.add('visible');
+	saveNewTraining();
+}
+var buttonSaveNewEd = document.getElementById('add-new-edu');
+buttonSaveNewEd.addEventListener('click', addNewTraining);
+
 //Fin de Experiencia y Formación
 
 //cosis
@@ -183,7 +265,7 @@ function saveSkills(){
 	var skillName;
 	var skillPercList = document.querySelectorAll(".skillBar");
 	var skillPercentage;
-	//alert(newSkill.length);
+}
 	/*for(var i = 0; i < skillsNameList.length; i++){
 		skillName = prompt("Introduce una habilidad");
 		skillPercentage = prompt("De 1 a 10, ¿cuánto sabes?")
@@ -191,29 +273,34 @@ function saveSkills(){
 		skillPercList[i].innerHTML = skillPercentage;
 	}*/
 	editar('content-skills');
-}
+var addSkills = getElementById('saveSkills');
+addSkills.addEventListener('click', saveSkills);
 
+//Get languages and percentages
+var addLangs = document.getElementById('button-save');
+addLangs.addEventListener('click', addLanguages);
 
-/*function showPromptLanguage() {
+function addLanguages(){
   var newTextLanguage = document.querySelectorAll('.textBarPreview');
+  var inputsLanguage = document.querySelectorAll('.language');
+  var inputsPercentage = document.querySelectorAll('.percentage');
+
   for (var i = 0; i < newTextLanguage.length; i++) {
-    var text = prompt("Introduce un idioma");
-    newTextLanguage[i].innerHTML = text;
-    var pct = prompt("Introduce el porcentaje");
-    newTextLanguage[i].parentElement.style.width = pct + "%";
+    newTextLanguage[i].innerHTML = inputsLanguage[i].value;
+    newTextLanguage[i].parentElement.style.width = inputsPercentage[i].value + '%';
   }
-}*/
+}
 
 //Hobbies Preview
 function showHobbiesPreview(elementId) {
   var check = document.getElementById(elementId);
+
   if (check.style.display == "inline-block"){
     check.style.display = "none";
    } else {
      check.style.display = "inline-block";
    }
  }
-
 /*Redes sociales*/
 function showNetsocial() {
   var netSocialDiv = document.querySelector('.netsocialhidden');
@@ -251,4 +338,18 @@ function setSocialMedia(value, net){
 	}else if(net == 'twitter'){
 		aNet.href = aNet.href+value;
 	}
+}
+/*imprimir*/
+ function printCurriculum(){
+  var divPrint = document.getElementById('ventana2');
+  divPrint.style.display="block";
+
+  var contenido= divPrint.innerHTML;
+  var contenidoOriginal= document.body.innerHTML;
+
+  document.body.innerHTML = contenido;
+
+  window.print();
+
+  document.body.innerHTML = contenidoOriginal;
 }
