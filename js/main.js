@@ -367,13 +367,21 @@ function setValue(net){
 	var inputSocial = document.getElementById(net);
   var liSocial = document.querySelector('.'+net);
   if(inputSocial.value != ""){//Si tiene valor el input mostramos el icono
-    liSocial.classList.remove('invisible');
-    liSocial.classList.add('visible');
+    show(liSocial);
   }else{//Si NO tiene valor el input ocultamos el icono
-    liSocial.classList.remove('visible');
-    liSocial.classList.add('invisible');
+    hide(liSocial);
   }
 	setSocialMedia(inputSocial.value, net);
+}
+
+function show(element){
+  element.classList.remove('invisible');
+  element.classList.add('visible');
+}
+
+function hide(element){
+  element.classList.remove('visible');
+  element.classList.add('invisible');
 }
 
 function setSocialMedia(value, net){
@@ -389,6 +397,22 @@ function setSocialMedia(value, net){
 		aNet.href = aNet.href+value;
 	}
 }
+/*flecha*/
+window.onscroll = function(){
+  var arribaButton = document.getElementById('arriba');
+  var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+  if(scroll < 100){
+    hide(arribaButton);
+  }else{
+    show(arribaButton);
+  }
+}
+//subir al principio de la página cuando se hace click en la flecha arriba
+var arribaButton = document.getElementById('arriba');
+arribaButton.onclick = function(){
+    window.scrollTo(0,0);
+}
+
 /*imprimir*/
  function printCurriculum(){
   var divPrint = document.getElementById('ventana2');
@@ -398,8 +422,6 @@ function setSocialMedia(value, net){
   var contenidoOriginal= document.body.innerHTML;
 
   document.body.innerHTML = contenido;
-
   window.print();
-
   document.body.innerHTML = contenidoOriginal;
 }

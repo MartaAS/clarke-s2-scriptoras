@@ -11,12 +11,12 @@
 		<!-- Header -->
 		<header class="headlog">
 			<div class="containerlogo">
-			<div>
-				<a href="index.html"><img src="images/logoMaquina.png" alt="logoscriptoras" class="machinelog"></a>
-			</div>
-			<div>
-				<a href="index.html"><img src="images/logoLetras.png" alt="logoscriptoras" class="letterslog"></a>
-			</div>
+  			<div>
+  				<a href="index.html"><img src="images/logoMaquina.png" alt="logoscriptoras" class="machinelog"></a>
+  			</div>
+  			<div>
+  				<a href="index.html"><img src="images/logoLetras.png" alt="logoscriptoras" class="letterslog"></a>
+  			</div>
 			</div>
 			<div class="containericonos">
 				<input class="icons" type="button" onclick="viewprev()" id="btnview" title="Vista previa">
@@ -278,23 +278,23 @@
               <div class="boxes-container netsocialhidden" id="minredes">
                 <div class="nets">
                   <label class="socialLabel" for="linkedin">Linkedin</label>
-                  <input class="users inputs" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onchange="setValue('linkedin')">
+                  <input class="users inputs" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onkeypress="setValue('linkedin')">
               </div>
               <div class="nets">
                 <label class="socialLabel" for="facebook">Facebook</label>
-                <input class="users inputs" id="facebook" type="text" name="net2" placeholder=" Rellena con tu usuario" onchange="setValue('facebook')">
+                <input class="users inputs" id="facebook" type="text" name="net2" placeholder=" Rellena con tu usuario" onkeypress="setValue('facebook')">
               </div>
               <div class="nets">
                 <label class="socialLabel" for="github">Github</label>
-                <input class="users inputs" id="github" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('github')">
+                <input class="users inputs" id="github" type="text" name="net3" placeholder=" Rellena con tu usuario" onkeypress="setValue('github')">
               </div>
               <div class="nets">
                 <label class="socialLabel" for="twitter">Twitter</label>
-                <input class="users inputs" id="twitter" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('twitter')">
+                <input class="users inputs" id="twitter" type="text" name="net3" placeholder=" Rellena con tu usuario" onkeypress="setValue('twitter')">
               </div>
               <div class="nets">
                 <label class="socialLabel" for="instagram">Instagram</label>
-                <input class="users inputs" id="instagram" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('instagram')">
+                <input class="users inputs" id="instagram" type="text" name="net3" placeholder=" Rellena con tu usuario" onkeypress="setValue('instagram')">
               </div>
               <div class="buttons-container">
   							<input type="button" value="Guardar" class="buttons-save-general">
@@ -502,7 +502,7 @@
 				  <img src="images/logo-adalab.png" alt="Logo Adalab" class="logoadalab">
 			  </a>
 		  </div>
-      <a id="arriba" href="#contenedorPrincipal" title="Arriba">
+      <a id="arriba" title="Arriba" class="invisible">
     		<img src="images/arriba.png" title="Arriba" alt="Arriba">
     	</a>
 	  </footer>
