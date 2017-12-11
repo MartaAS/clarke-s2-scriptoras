@@ -91,7 +91,8 @@ main{
 .boxes-container, .netsocialhidden, .invisible,#languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
 }
-.visible{
+
+.visible {
 	display: block;
 }
 /*Fin estilos generales*/
@@ -819,10 +820,12 @@ input[type=checkbox]
 		height: 120vh;
 	}
 }
+
 @media all and (min-width:900px) {
 	.headercreatucv{
-		height: 120vh;
 		width: 100%;
+		background-image: url(../images/group.png);
+		height: 95vh;
 	}
 	.main-web-sections{
 		display: flex;
@@ -866,11 +869,6 @@ input[type=checkbox]
 		display: flex;
 		justify-content:space-between;
 	}
-
-.headercreatucv {
-		background-image: url(../images/group.png);
-		height: 95vh;
-}
 
 .textcrea {
 	margin-top: 5%;
