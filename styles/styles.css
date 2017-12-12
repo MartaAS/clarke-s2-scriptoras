@@ -3,12 +3,14 @@
 *{
 	box-sizing: border-box;
 }
+
 body{
 	background-color: #FFFEFA;
 	margin: 0;
 	padding: 0;
 	font-family: 'Gabriela', serif;
 }
+
 main{
 	padding-top: 50px;
 	box-sizing: border-box;
@@ -21,8 +23,15 @@ main{
 	height: 70px;
 }
 
+@font-face {
+font-family: 'American Typewriter Bold';
+font-style: normal;
+font-weight: normal;
+src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold.woff') format('woff');
+}
+
 /*Estilos generales de la sección de desplegables*/
-.title-container{
+.title-container {
 	padding-left: 20px;
 	margin-bottom: 10px;
 	width: 90%;
@@ -36,6 +45,7 @@ main{
 	box-shadow: rgba(0,0,0,1) 0 1px 0;
 	text-shadow: rgba(0,0,0,.4) 0 1px 0;
 }
+
 .title-container:hover {
   border-top-color: #5A392B;
   background: #5A392B;
@@ -46,23 +56,27 @@ main{
 	border-top-color: #5A392B;
 	background: #5A392B;
 }
-.open-section-button{
+
+.open-section-button {
 	background: none;
 	border: none;
 	margin-left: auto;
 }
-.close-section-button{
+
+.close-section-button {
 	background: none;
 	border: none;
 }
-.cruz-section-button{
+
+.cruz-section-button {
 	background: none;
 	border: none;
 	margin-top: 10%;
 	margin-left: 70%;
 	cursor: pointer;
 }
-.inputs{
+
+.inputs {
 	display: flex;
 	text-align: center;
 	font-size: 15px;
@@ -84,6 +98,7 @@ main{
 	width: 70px;
 	border-radius:7px;
 }
+
 .buttons-save-general:hover {
 	background: #7DBEA5;
   box-shadow: inset 0 0 20px #7DBEA5, 0 0 20px #7DBEA5;
@@ -92,6 +107,7 @@ main{
 	font-weight: bold;
 	border-color:#7DBEA5;
 }
+
 /*Ocultar secciones*/
 .boxes-container, .netsocialhidden, .invisible,#languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
@@ -168,6 +184,7 @@ header{
   z-index: 99;
 	padding-right: 10px;
 }
+
 #header-fondo {
 	background-image: url(../images/groupMobile.png);
 	background-position: center;
@@ -177,12 +194,11 @@ header{
 }
 
 .text-crea {
-	display: flex;
-	align-self: flex-start;
 	margin-top: 20%;
 	margin-left: 20px;
 	font-size: 1.5em;
-	font-family: 'Arial';
+	font-family: 'American Typewriter Bold', Arial;
+	font-weight: bold;
 	color: #5a392b;
 }
 
@@ -632,6 +648,7 @@ input[type=checkbox]
 .input-lang, .input-skill{
 	padding-bottom: 1em;
 }
+
 /*Hobbies*/
 .allHobbiesPreview {
 	width: 100%;
@@ -639,6 +656,7 @@ input[type=checkbox]
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+
 #hobbies-form {
 	padding-bottom: 2%;
 }
@@ -943,6 +961,12 @@ input[type=checkbox]
 		display: none;
 	}
 
+	.text-crea {
+		margin-top: 15%;
+		margin-left: 20px;
+		font-size: 2em;
+	}
+
 	.sociality {
 		display: flex;
 		justify-content: space-around;
@@ -976,27 +1000,43 @@ input[type=checkbox]
 		height: 30px;
 		width: 30px;
 	}
+
+	.text-crea {
+		margin-top: 10%;
+		margin-left: 20px;
+		font-size: 2.1em;
+	}
 }
 
 @media all and (min-width:900px) {
 
-	.main-web-sections{
+	.main-web-sections {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	#ventana2{
+
+	.text-crea {
+		margin-top: 10%;
+		margin-left: 20px;
+		font-size: 2.3em;
+	}
+
+	#ventana2 {
 		display: block;
-		}
-	main{
+	}
+
+	main {
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 	}
-	.formulario-sec{
+
+	.formulario-sec {
 	height: 100%;
 	width: 40%
 	}
+
 	.previsualizacion-sec{
 		height: 100%;
 		width: 50%
@@ -1022,21 +1062,20 @@ input[type=checkbox]
 		display: flex;
 		justify-content:space-between;
 	}
-	.textcrea {
-		margin-top: 5%;
-		margin-left: 20px;
-		font-size: 3em;
-	}
+
 	.input-lang, .input-skill{
 		display:flex;
 	}
+
 	.language{
 		margin-right: 1%;
 	}
+
 	@media print {
 		header, footer, nav {
 	  display: none;
 	}
+
 	.formulario-sec {
 		  display: none;
 	}
