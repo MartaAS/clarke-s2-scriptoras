@@ -140,18 +140,30 @@ main{
   border-style: none;
   cursor: pointer;
 }
+.iconsprev{
+	height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  background-size: cover;
+  align-items: flex-end;
+  text-align: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-style: none;
+  cursor: pointer;
+}
 /*header parte marta*/
 #btnview{
-	background-image: url("../images/btnfile2.png");
+	background-image: url("../images/btnfile.png");
 }
 #btnshare{
-		background-image: url("../images/btnshare2.png");
+		background-image: url("../images/btnshare.png");
 }
 #btnprint{
-		background-image: url("../images/btnprint2.png");
+		background-image: url("../images/btnprint.png");
 }
 #btndownload{
-		background-image: url("../images/btndownload2.png");
+		background-image: url("../images/btndownload.png");
 }
 
 header{
