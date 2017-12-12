@@ -490,7 +490,7 @@ input[type=checkbox]{
   height: 10px;
   margin-left: 0;
   position: relative;
-	display: flex;
+	display: none;
 	margin-top: 5px;
 }
 .barra_front {
@@ -613,6 +613,35 @@ input[type=checkbox]{
 	width: 225px;
 	height: 28px;
 	margin-right: 8px;
+}
+/*Ventana de alert de error de fecha introducida*/
+.alert-dates{
+	background-color: #FFFEFA;
+	width: 230px;
+  height: 110px;
+  position: fixed;
+  top: 220px;
+  left: 17%;
+	border: 2px solid #7DBEA5;
+}
+.button-alert-img{
+	background-color: transparent;
+  border: none;
+	position: absolute;
+	top: 3px;
+  right: 0;
+	cursor: pointer;
+}
+.text-alert{
+	font-size: 13px;
+  margin: 30px 30px;
+  text-align: justify;
+  color: #e64d4d;
+	font-weight: bold;
+}
+.alert-cruise{
+	width: 20px;
+  height: 20px;
 }
 /*footer*/
 .infooter{
@@ -938,6 +967,7 @@ input[type=checkbox]{
 	.language{
 		margin-right: 1%;
 	}
+}
 	@media print {
 		header, footer, nav {
 		display: none;
