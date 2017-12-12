@@ -1,5 +1,4 @@
 /*Estilos generales*/
-
 *{
 	box-sizing: border-box;
 }
@@ -41,7 +40,6 @@ main{
   background: #5A392B;
   color: #ccc;
 }
-
 .title-container:active {
 	border-top-color: #5A392B;
 	background: #5A392B;
@@ -61,6 +59,8 @@ main{
 	margin-top: 10%;
 	margin-left: 70%;
 	cursor: pointer;
+	margin-top: 30px;
+	margin-left: 400px;
 }
 .inputs{
 	display: flex;
@@ -72,7 +72,6 @@ main{
 	border-radius: 5px;
 	width: 225px;
 }
-
 /*Botones añadir y guardar*/
 .buttons-save-general {
 	background-color: #E1F7E7;
@@ -93,10 +92,9 @@ main{
 	border-color:#7DBEA5;
 }
 /*Ocultar secciones*/
-.boxes-container, .netsocialhidden, .invisible,#languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
+.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
 }
-
 .visible {
 	display: block;
 }
@@ -129,18 +127,6 @@ main{
 	margin-top: 10px;
 }
 .icons{
-	height: 18px;
-  width: 18px;
-  margin-left: 5px;
-  background-size: cover;
-  align-items: flex-end;
-  text-align: center;
-  background-color: transparent;
-  box-sizing: border-box;
-  border-style: none;
-  cursor: pointer;
-}
-.iconsprev{
 	height: 30px;
   width: 30px;
   margin-left: 5px;
@@ -154,18 +140,23 @@ main{
 }
 /*header parte marta*/
 #btnview{
-	background-image: url("../images/btnfile.png");
+	background-image: url("../images/btnfile2.png");
 }
 #btnshare{
-		background-image: url("../images/btnshare.png");
+	background-image: url("../images/btnshare3.png");
+	height: 30px;
+	width: 30px;
 }
 #btnprint{
-		background-image: url("../images/btnprint.png");
+	background-image: url("../images/btnprint3.png");
+	height: 30px;
+	width: 30px;
 }
 #btndownload{
-		background-image: url("../images/btndownload.png");
+	background-image: url("../images/btndown.png");
+	height: 30px;
+	width: 30px;
 }
-
 header{
 	width: 100%;
 	height: 60px;
@@ -191,7 +182,6 @@ header{
 	align-items: flex-start;
 	margin-bottom: 5px;
 }
-
 .text-crea {
 	display: flex;
 	align-self: flex-start;
@@ -201,15 +191,9 @@ header{
 	font-family: 'Arial';
 	color: #5a392b;
 }
-
 #button-down {
 	background: none;
 	border: none;
-}
-
-.imgcrea{
-	width: 100%;
-	height: 200px;
 }
 /* cargar imagen*/
 .thumb{
@@ -239,10 +223,6 @@ header{
 	display: flex;
 	justify-content: center;
 }
-.form{
-	display: flex;
-	justify-content: center;
-}
 .name{
 	font-size: 20px;
 	font-weight: bold;
@@ -267,7 +247,6 @@ header{
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .subirfoto{
 	width: 95px;
 	display: flex;
@@ -275,16 +254,13 @@ header{
 	align-items: center;
 	-webkit-box-shadow: 5px 8px 42px 1px #3d3d29;
 }
-
 /*styles pre*/
-.preprincipales {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 .preprincipales p{
 	margin: 2px;
 	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .containerprefoto{
 	display: flex;
@@ -301,97 +277,13 @@ header{
 	-webkit-box-shadow: 8px 14px 42px 1px #3d3d29;
 }
 /*ventana previsualizar*/
-	.textcrea{
-		font-size: 40px;
-		margin-top: 50px;
+.textcrea{
+	font-size: 40px;
+	margin-top: 50px;
 	}
-}
-@media all and (min-width: 810px){
-	.headercreatucv{
-		height: 120vh;
-	}
-	.headlog{
-		height: ;
-	}
-}
-@media all and (min-width: 900px){
-	.headercreatucv{
-		height: 120vh;
-		width: 100%;
-	}
-	#ventana2{
-		display: block;
-	}
-}
 /*fin parte marta*/
 
-
-/*Estilos generales de la sección de desplegables*/
-.title-container{
-	padding-left: 20px;
-	margin-bottom: 10px;
-	width: 90%;
-	height: 40px;
-	background-color: #7DBEA5;
-	border-radius: 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	justify-content: space-around;
-	box-shadow: rgba(0,0,0,1) 0 1px 0;
-	text-shadow: rgba(0,0,0,.4) 0 1px 0;
-}
-.title-container:hover{
-  border-top-color: #5A392B;
-  background: #5A392B;
-  color: #ccc;
-  }
-.title-container:active {
-	border-top-color: #5A392B;
-	background: #5A392B;
-	}
-.open-section-button{
-	background: none;
-	border: none;
-	margin-left: auto;
-}
-.close-section-button{
-	background: none;
-	border: none;
-}
-.cruz-section-button{
-	background: none;
-	border: none;
-	margin-top: 30px;
-	margin-left: 400px;
-
-}
-
-/*Botones añadir y cerrar*/
-.save-button, .out-button, .guardarprincipal {
-	background-color: ;
-	padding: 5px;
-	text-shadow: rgba(0,0,0,.4) 0 1px 0;
-	box-shadow: rgba(0,0,0,1) 0 1px 0;
-	display: inline-block;
-	margin: 13px 0;
-	width: 70px;
-}
-.save-button:hover, .out-button:hover, .guardarprincipal:hover {
-	background: #7DBEA5;
-  box-shadow: inset 0 0 20px #7DBEA5, 0 0 20px #7DBEA5;
-  outline-offset: 80px;
-	color: #fff;
-	font-weight: bold;
-	border-color:#7DBEA5;
-}
-/*Ocultar sección*/
-
-.content, .boxes-container, .netsocialhidden, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music {
-	display: none;
-}
-
-.allHobbiesPreview {
+.all-hobbies-preview {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
@@ -403,7 +295,6 @@ header{
 #aboutMe-preview{
 	color: black;
 }
-
 /*Experience and Education form*/
 .form-section-container{
 	display:flex;
@@ -411,7 +302,7 @@ header{
 	align-items: center;
 }
 .boxes-container{
-	padding-left: 5%;
+	display: none;
 	padding-bottom: 10px;
 }
 .subtitle-section{
@@ -440,7 +331,6 @@ header{
 .month, .year{
 	margin-top: 5px;
 }
-
 /*Experience and Education preview*/
 .section-title{
 	text-align: center;
@@ -463,21 +353,16 @@ header{
   left: 50%;
   margin-left: -3px;
 }
-
 /*Checkbox styles*/
-
-.checkBoxHobbies {
+.check-box-hobbies {
 	display: flex;
 	justify-content: space-between;
 	padding-bottom: 4%;
 }
-
-input[type=checkbox]
-{
-  -webkit-transform: scale(1.2); /* Safari and Chrome */
+input[type=checkbox]{
+	-webkit-transform: scale(1.2); /* Safari and Chrome */
 	color: #000000;
 }
-
 /* Contenido alrededor de la timeline */
 .container-timeline {
   padding: 10px 40px;
@@ -502,7 +387,6 @@ input[type=checkbox]
 .left {
   left: 0;
 }
-
 /* Situar los contenidos de la derecha */
 .right {
   left: 50%;
@@ -554,15 +438,15 @@ input[type=checkbox]
 	margin-top: 5px;
 }
 /*Estilos de texto dentro de cajas*/
-.title-year{
+.title-year {
   color: #5A392B;
 	margin: 8px;
 	font-size: 20px;
 }
-.job-title, .education-title{
+.job-title, .education-title {
   font-weight: bold;
 }
-.dates-output-container{
+.dates-output-container {
   display:flex;
   flex-direction: row;
   justify-content: space-around;
@@ -588,7 +472,7 @@ input[type=checkbox]
 .skill-pre {
 	margin-left: 7%;
 }
-.skill_title {
+.skill-title {
   /*font-family: sans-serif;*/
   font-size: 14px;
 	margin-top: 5px;
@@ -612,53 +496,42 @@ input[type=checkbox]
   border-radius: 10px;
   background: #7DBEA5;
 }
-
 /*Languages form container*/
-#languagesFormContainer, #hobbiesFormContainer {
+#languages-form-container, #hobbies-form-container {
 	display:flex;
 	flex-direction: column;
 	align-items: center;
 }
-
-.textFormButton {
+.text-form-button {
 	color: #ffffff;
 }
-
-#languagesPreview, #hobbiesPreview {
+#languages-preview, #hobbies-preview {
 	padding-left: 7%;
 	padding-right: 7%;
 }
-
-.languagesBarPreview {
+.languages-bar-preview {
 	background-color: #eeeeee;
 	margin-bottom: 1em;
 }
-
-.textBarPreview {
+.text-bar-preview {
 	text-align: left;
 	color: #ffffff;
 	line-height: 2em;
 	padding-left: 1em;
 }
-
-.percentageBar {
+.percentage-bar {
 	background-color: #5a392b;
 }
-
 .input-lang, .input-skill{
 	padding-bottom: 1em;
 }
 /*Hobbies*/
-.allHobbiesPreview {
+.all-hobbies-preview {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
-#hobbies-form {
-	padding-bottom: 2%;
-}
-
 /* Redes sociales*/
 .nets{
 	display: flex;
@@ -942,8 +815,12 @@ input[type=checkbox]
 	}*/
 
 @media all and (max-width: 600px){
-	.textFormButton{
+	.text-form-button{
 		font-size: 18px;
+	}
+	.icons{
+		height: 30px;
+	  width: 30px;
 	}
 	/*Mediaqueries de preview de Experiencia y Formación*/
 	/* Poner la línea a la izquierda */
@@ -1004,12 +881,19 @@ input[type=checkbox]
 		height: 100px;
 	}
 	.icons{
-		height: 30px;
-		width: 30px;
+		height: 50px;
+		width: 50px;
 	}
 }
 
 @media all and (min-width:900px) {
+	.headercreatucv{
+		height: 120vh;
+		width: 100%;
+	}
+	#ventana2{
+		display: block;
+	}
 	#header-fondo {
 		width: cover;
 		background-image: url(../images/group.png);
@@ -1062,7 +946,7 @@ input[type=checkbox]
 	.social {
 		width: 300px;
 	}
-	.sociality{
+	.sociality {
 		display: flex;
 		justify-content:space-between;
 	}
@@ -1080,9 +964,17 @@ input[type=checkbox]
 }
 	@media print {
 		header, footer, nav {
-	  display: none;
+		display: none;
 	}
 	.formulario-sec {
 		  display: none;
+	}
+}
+@media all and (min-width: 810px){
+	.headercreatucv{
+		height: 120vh;
+	}
+	.headlog{
+		height: ;
 	}
 }

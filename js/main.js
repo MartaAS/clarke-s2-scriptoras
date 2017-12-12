@@ -83,7 +83,8 @@ telefonoformulario.onkeyup = guardarDatosPrincipales;
 function viewprev(){
 	document.getElementById('ventana2').style.display="block";
 	document.getElementById('ventana1').style.display="none";
-	document.getElementById('headerfondo').style.display="none";
+	document.getElementById('header-fondo').style.display="none";
+	document.getElementById('button-down').style.display="none";
 }
 
 //fin parte marta
@@ -262,7 +263,7 @@ var addLangs = document.getElementById('button-save');
 addLangs.addEventListener('click', addLanguages);
 
 function addLanguages(){
-  var newTextLanguage = document.querySelectorAll('.textBarPreview');
+  var newTextLanguage = document.querySelectorAll('.text-bar-preview');
   var inputsLanguage = document.querySelectorAll('.language');
   var inputsPercentage = document.querySelectorAll('.percentage');
 
