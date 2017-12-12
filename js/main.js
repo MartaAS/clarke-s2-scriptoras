@@ -15,7 +15,6 @@ Number.prototype.clamp = function(min, max) {
   return Math.min(Math.max(this, min), max);
 };
 
-
 //marta
 //prueba cargar imagen
 function archivo(evt) {
@@ -107,21 +106,12 @@ function viewprev(){
 
 //fin parte marta
 
-//Typed text
-// var type = ['C','r','e','a',' ','t','u',' ','C','V ',' ','c','o','n',' ','e','s','t','i','l','o',' ','.','.'];
-// var h1 = document.querySelector('.textcrea');
-// document.addEventListener('DOMContentLoaded', function() {
-//   for (var i = 0; i < type.length; i++) {
-//       setTimeout(h1.innerHTML += type[i], 1000);
-//   }
-// });
-
 // Add typed text.
 var idx = 0;
 var txt = 'Crea tu CV con estilo...'.split('');
 var speed = 150;
 var waitOnFinish = 3000;
-var textCreaEl = document.querySelector('.textcrea');
+var textCreaEl = document.querySelector('.text-crea');
 
 document.addEventListener('DOMContentLoaded', typeWriter);
 
