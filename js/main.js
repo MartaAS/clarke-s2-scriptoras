@@ -147,9 +147,6 @@ function typeWriter() {
 function saveAbout(){
 	document.getElementById('aboutMe-preview').innerHTML=document.getElementById('text-about').value;
 }
-var buttonSaveAbout = document.getElementById('button-save-about');
-buttonSaveAbout.addEventListener('click', saveAbout);
-
 var aboutTextArea = document.getElementById('text-about');
 aboutTextArea.onkeyup = saveAbout;
 /*---------------------------END ABOUT FUNCTION--------------------------------------*/
@@ -316,9 +313,6 @@ percentageBar3.onkeyup = percentageSkill;
 
 var percentageBar4 = document.getElementById("percentage4");
 percentageBar4.onkeyup = percentageSkill;
-
-var addSkills = document.getElementById("saveSkills");
-addSkills.addEventListener('click', saveSkills);
 /*----------------------END SKILLS FUNCTIONS--------------------------*/
 
 //Get languages and percentages
