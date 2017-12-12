@@ -977,7 +977,11 @@ input[type=checkbox]
 		height: 100vh;
 	}
 
-	#button-down, #empty-container {
+	#empty-container {
+		height: 70px;
+	}
+
+	#button-down {
 		display: none;
 	}
 
