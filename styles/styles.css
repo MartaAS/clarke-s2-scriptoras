@@ -1,5 +1,4 @@
 /*Estilos generales*/
-
 *{
 	box-sizing: border-box;
 }
@@ -282,23 +281,7 @@ header{
 		margin-top: 50px;
 	}
 }
-@media all and (min-width: 810px){
-	.headercreatucv{
-		height: 120vh;
-	}
-	.headlog{
-		height: ;
-	}
-}
-@media all and (min-width: 900px){
-	.headercreatucv{
-		height: 120vh;
-		width: 100%;
-	}
-	#ventana2{
-		display: block;
-	}
-}
+
 /*fin parte marta*/
 
 
@@ -441,7 +424,6 @@ header{
 }
 
 /*Checkbox styles*/
-
 .checkBoxHobbies {
 	display: flex;
 	justify-content: space-between;
@@ -959,6 +941,13 @@ input[type=checkbox]
 
 @media all and (min-width:900px) {
 	.headercreatucv{
+		height: 120vh;
+		width: 100%;
+	}
+	#ventana2{
+		display: block;
+	}
+	.headercreatucv{
 		width: 100%;
 		background-image: url(../images/group.png);
 		height: 95vh;
@@ -1022,5 +1011,13 @@ input[type=checkbox]
 	}
 	.formulario-sec {
 		  display: none;
+	}
+}
+@media all and (min-width: 810px){
+	.headercreatucv{
+		height: 120vh;
+	}
+	.headlog{
+		height: ;
 	}
 }
