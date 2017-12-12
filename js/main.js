@@ -402,6 +402,25 @@ arribaButton.onclick = function(){
     window.scrollTo(0,0);
 }
 
+/*Escuchadores de los botones + y -*/
+document.getElementById('openButton').addEventListener('click', listButton);
+document.getElementById('closeButton').addEventListener('click', listButton);
+
+//Función que cambia la visibilidad en base al elemento que reciba
+function listButton(){
+  var openButton = document.getElementById('openButton');
+  var closeButton = document.getElementById('closeButton');
+  if(this !== undefined){
+    if(this.value == 'openButton'){// si el valor del boton es de abrir
+      hide(openButton);
+      show(closeButton);
+    }else{//Si es de cerrar
+      hide(closeButton);
+      show(openButton);
+    }
+  }
+}
+
 /*imprimir*/
  function printCurriculum(){
   var divPrint = document.getElementById('ventana2');
