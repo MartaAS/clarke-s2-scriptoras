@@ -129,18 +129,6 @@ main{
 	margin-top: 10px;
 }
 .icons{
-	height: 18px;
-  width: 18px;
-  margin-left: 5px;
-  background-size: cover;
-  align-items: flex-end;
-  text-align: center;
-  background-color: transparent;
-  box-sizing: border-box;
-  border-style: none;
-  cursor: pointer;
-}
-.iconsprev{
 	height: 30px;
   width: 30px;
   margin-left: 5px;
@@ -155,17 +143,46 @@ main{
 /*header parte marta*/
 #btnview{
 	background-image: url("../images/btnfile2.png");
-	width: 30px;
-	height: 30px;
+
 }
 #btnshare{
 		background-image: url("../images/btnshare3.png");
+		height: 30px;
+	  width: 30px;
+	  margin-left: 5px;
+	  background-size: cover;
+	  align-items: flex-end;
+	  text-align: center;
+	  background-color: transparent;
+	  box-sizing: border-box;
+	  border-style: none;
+	  cursor: pointer;
 }
 #btnprint{
 		background-image: url("../images/btnprint3.png");
+		height: 30px;
+	  width: 30px;
+	  margin-left: 5px;
+	  background-size: cover;
+	  align-items: flex-end;
+	  text-align: center;
+	  background-color: transparent;
+	  box-sizing: border-box;
+	  border-style: none;
+	  cursor: pointer;
 }
 #btndownload{
 		background-image: url("../images/btndown.png");
+		height: 30px;
+	  width: 30px;
+	  margin-left: 5px;
+	  background-size: cover;
+	  align-items: flex-end;
+	  text-align: center;
+	  background-color: transparent;
+	  box-sizing: border-box;
+	  border-style: none;
+	  cursor: pointer;
 }
 
 header{
@@ -918,6 +935,10 @@ input[type=checkbox]
 	.textFormButton{
 		font-size: 18px;
 	}
+	.icons{
+		height: 30px;
+	  width: 30px;
+	}
 	/*Mediaqueries de preview de Experiencia y Formación*/
 	/* Poner la línea a la izquierda */
 	.timeline::after {
@@ -973,9 +994,12 @@ input[type=checkbox]
 	.headercreatucv{
 		height: 500vh;
 	}
-	#btnview{
-		height: 40px;
-		width: 40px;
+	.headlog{
+		height: 100px;
+	}
+	.icons{
+		height: 50px;
+		width: 50px;
 	}
 }
 
