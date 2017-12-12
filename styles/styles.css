@@ -170,13 +170,9 @@ header{
 }
 #header-fondo {
 	background-image: url(../images/groupMobile.png);
-	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	height: 80vh;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
 	margin-bottom: 5px;
 }
 
@@ -933,6 +929,20 @@ input[type=checkbox]
 }
 
 @media all and (min-width:600px) {
+
+	#header-fondo {
+		background-image: url(../images/group.png);
+		height: 100vh;
+	}
+
+	#empty-container {
+		height: 70px;
+	}
+
+	#button-down {
+		display: none;
+	}
+
 	.sociality {
 		display: flex;
 		justify-content: space-around;
@@ -969,19 +979,6 @@ input[type=checkbox]
 }
 
 @media all and (min-width:900px) {
-	#header-fondo {
-		width: cover;
-		background-image: url(../images/group.png);
-		height: 100vh;
-	}
-
-	#empty-container {
-		height: 70px;
-	}
-
-	#button-down {
-		display: none;
-	}
 
 	.main-web-sections{
 		display: flex;
