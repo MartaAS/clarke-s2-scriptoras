@@ -315,7 +315,7 @@ function showHobbiesPreview(elementId) {
  }
 /*Redes sociales*/
 function showNetsocial() {
-  var netSocialDiv = document.querySelector('.netsocialhidden');
+  var netSocialDiv = document.querySelector('.net-social-hidden');
   netSocialDiv.style.display = 'block';
   // var netSocial = document.querySelectorAll('.printnet');
   // for (var i=0; i<netSocial.length; i++){
@@ -344,6 +344,16 @@ function show(element){
 function hide(element){
   element.classList.remove('visible');
   element.classList.add('invisible');
+}
+
+function visibility(element){
+  element.classList.remove('hidden');
+  element.classList.add('shown');
+}
+
+function noVisibility(element){
+  element.classList.remove('shown');
+  element.classList.add('hidden');
 }
 
 function setSocialMedia(value, net){
@@ -376,20 +386,34 @@ arribaButton.onclick = function(){
 }
 
 /*Escuchadores de los botones + y -*/
-document.getElementById('openButton').addEventListener('click', listButton);
-document.getElementById('closeButton').addEventListener('click', listButton);
+document.getElementById('openButtonPrincipal').addEventListener('click', listButton);
+document.getElementById('closeButtonPrincipal').addEventListener('click', listButton);
+document.getElementById('openButtonAbout').addEventListener('click', listButton);
+document.getElementById('closeButtonAbout').addEventListener('click', listButton);
+document.getElementById('openButtonExperience').addEventListener('click', listButton);
+document.getElementById('closeButtonExperience').addEventListener('click', listButton);
+document.getElementById('openButtonFormac').addEventListener('click', listButton);
+document.getElementById('closeButtonFormac').addEventListener('click', listButton);
+document.getElementById('openButtonSkill').addEventListener('click', listButton);
+document.getElementById('closeButtonSkill').addEventListener('click', listButton);
+document.getElementById('openButtonlanguages').addEventListener('click', listButton);
+document.getElementById('closeButtonlanguages').addEventListener('click', listButton);
+document.getElementById('openButtonHobbies').addEventListener('click', listButton);
+document.getElementById('closeButtonHobbies').addEventListener('click', listButton);
+document.getElementById('openButtonNet').addEventListener('click', listButton);
+document.getElementById('closeButtonNet').addEventListener('click', listButton);
+document.getElementById('openButtonQr').addEventListener('click', listButton);
+document.getElementById('closeButtonQr').addEventListener('click', listButton);
 
 //Función que cambia la visibilidad en base al elemento que reciba
 function listButton(){
-  var openButton = document.getElementById('openButton');
-  var closeButton = document.getElementById('closeButton');
   if(this !== undefined){
     if(this.value == 'openButton'){// si el valor del boton es de abrir
-      hide(openButton);
-      show(closeButton);
-    }else{//Si es de cerrar
-      hide(closeButton);
-      show(openButton);
+      noVisibility(this);
+      visibility(this.nextElementSibling);
+    }else if(this.value == 'closeButton'){//Si es de cerrar
+      noVisibility(this);
+      visibility(this.previousElementSibling);
     }
   }
 }

@@ -98,6 +98,12 @@ main{
 .visible {
 	display: block;
 }
+.shown{
+	visibility: visible;
+}
+.hidden{
+	visibility: hidden;
+}
 /*Fin estilos generales*/
 /*Header logo formulario*/
 .headlog{

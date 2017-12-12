@@ -37,10 +37,10 @@
 				<form class="form-section-container" id=principal-section action="" method="post">
 					<div class="title-container">
 						<h2 class="text-form-button" onclick="editar('principal-box')">Datos principales</h2>
-						<button class="open-section-button" type="button" name="principales-button" onclick="editar('principal-box')">
+						<button id="openButtonPrincipal" class="open-section-button shown" type="button" name="principales-button" onclick="editar('principal-box')" value="openButton">
 							<img src="images/addButton32px.png" alt="addButton">
 						</button>
-						<button class="close-section-button" type="button" name="principales-button" onclick="ocultar('principal-box')">
+						<button id="closeButtonPrincipal"class="close-section-button hidden" type="button" name="principales-button" onclick="ocultar('principal-box')" value="closeButton">
 						<img src="images/menos.png" alt="minusbuttom">
 						</button>
 					</div>
@@ -70,10 +70,10 @@
 			<form class="form-section-container" action="" method="post"> <!--Mostrado-->
 				<div class="title-container">
 					<h2 class="text-form-button" onclick="editar('content-about')">Sobre mí</h2>
-					<button class="open-section-button" type="button" name="about-me-button" onclick="editar('content-about')">
+					<button id="openButtonAbout" class="open-section-button shown" type="button" name="about-me-button" onclick="editar('content-about')" value="openButton">
 						<img src="images/addButton32px.png" alt="addButton">
 					</button>
-					<button class="close-section-button" type="button" name="about-me-button" onclick="ocultar('content-about')">
+					<button id="closeButtonAbout" class="close-section-button hidden" type="button" name="about-me-button" onclick="ocultar('content-about')" value="closeButton">
 						<img src="images/menos.png" alt="minusbuttom">
 					</button>
 				</div>
@@ -87,10 +87,10 @@
 				<form class="form-section-container" id=experience-section action="" method="post">
 					<div class="title-container">
 						<h2 class="text-form-button" onclick="editar('job-box')">Experiencia laboral</h2>
-						<button class="open-section-button" type="button" name="experience-button" onclick="editar('job-box')">
+						<button id="openButtonExperience" class="open-section-button shown" type="button" name="experience-button" onclick="editar('job-box')" value="openButton">
 							<img src="images/addButton32px.png" alt="addButton">
 						</button>
-						<button class="close-section-button" type="button" name="job-box-button" onclick="ocultar('job-box')">
+						<button id="closeButtonExperience" class="close-section-button hidden" type="button" name="job-box-button" onclick="ocultar('job-box')" value="closeButton">
 						<img src="images/menos.png" alt="minusbuttom">
 					</button>
 					</div>
@@ -129,10 +129,10 @@
 				<form class="form-section-container" id="education-section" action="" method="post">
 					<div class="title-container">
 						<h2 class="text-form-button" onclick="editar('education-box')">Formación</h2>
-						<button class="open-section-button" type="button" name="languageButton" onclick="editar('education-box')">
+						<button id="openButtonFormac" class="open-section-button shown" type="button" name="languageButton" onclick="editar('education-box')" value="openButton">
 							<img src="images/addButton32px.png" alt="addButton">
 						</button>
-						<button class="close-section-button" type="button" name="education-button" onclick="ocultar('education-box')">
+						<button id="closeButtonFormac" class="close-section-button hidden" type="button" name="education-button" onclick="ocultar('education-box')" value="closeButton">
 						<img src="images/menos.png" alt="minusbuttom">
 						</button>
 					</div>
@@ -168,10 +168,10 @@
 				<section  class="form-section-container">
 					<div class="title-container">
 						<h2 class="text-form-button">Habilidades</h2><!--Mostrado-->
-						<button class="open-section-button" type="button" name="skills-button" onclick="editar('content-skills')">
+						<button id="openButtonSkill" class="open-section-button shown" type="button" name="skills-button" onclick="editar('content-skills')" value="openButton">
 							<img src="images/addButton32px.png" alt="addButton">
 						</button>
-						<button class="close-section-button" type="button" name="content-skills-button" onclick="ocultar('content-skills')">
+						<button id="closeButtonSkill" class="close-section-button hidden" type="button" name="content-skills-button" onclick="ocultar('content-skills')" value="closeButton">
 								<img src="images/menos.png" alt="minusbuttom">
 						</button>
 					</div>
@@ -201,8 +201,8 @@
         <section id="languages-form-container">
           <div class="title-container">
             <h2 class="text-form-button">Idiomas</h2>
-            <button class="open-section-button" type="button" name="languageButton" onclick="editar('languages-form')"><img src="images/addButton32px.png" alt="addButton"></button>
-						<button class="close-section-button" type="button" name="job-box-button" onclick="ocultar('languages-form')">
+            <button id="openButtonlanguages" class="open-section-button shown" type="button" name="languageButton" onclick="editar('languages-form')"value="openButton"><img src="images/addButton32px.png" alt="addButton"></button>
+						<button id="closeButtonlanguages" class="close-section-button hidden" type="button" name="job-box-button" onclick="ocultar('languages-form')" value="closeButton">
 						<img src="images/menos.png" alt="minusbuttom"></button>
           </div>
           <form id="languages-form" action="index.html" method="post">
@@ -226,8 +226,8 @@
         <section id="hobbies-form-container">
           <div class="title-container">
             <h2 class="text-form-button">Hobbies</h2>
-            <button class="addLanguageButton open-section-button" type="button" name="languageButton" onclick="editar('hobbies-form')"><img src="images/addButton32px.png" alt="addButton"></button>
-						<button class="close-section-button" type="button" name="hobbiesForm-button" onclick="ocultar('hobbies-form')">
+            <button id="openButtonHobbies" class="addLanguageButton open-section-button shown" type="button" name="languageButton" onclick="editar('hobbies-form')" value="openButton"><img src="images/addButton32px.png" alt="addButton"></button>
+						<button id="closeButtonHobbies" class="close-section-button hidden" type="button" name="hobbiesForm-button" onclick="ocultar('hobbies-form')"value="closeButton">
 						<img src="images/menos.png" alt="minusbuttom">
 					  </button>
           </div>
@@ -263,9 +263,9 @@
         	<form class="form-section-container" action="index.html" method="post">
              <div class="title-container">
               <h2 class="text-form-button">Redes Sociales</h2>
-  						  <button id="openButton" class="open-section-button visible" type="button" name="networksButton" onclick="showNetsocial()" value="openButton">
+  						  <button id="openButtonNet" class="open-section-button shown" type="button" name="networksButton" onclick="showNetsocial()" value="openButton">
   							 <img src="images/addButton32px.png" alt="addButton"></button>
-								 <button id="closeButton" class="close-section-button invisible" type="button" name="minredes-button" onclick="ocultar('minredes')" value="closeButton">
+								 <button id="closeButtonNet" class="close-section-button hidden" type="button" name="minredes-button" onclick="ocultar('minredes')" value="closeButton">
 	 							<img src="images/menos.png" alt="minusbuttom">
 	 						</button>
   					 </div>
@@ -296,9 +296,9 @@
          	<form class="form-section-container" action="index.html" method="post">
  						<div class="title-container">
              	<h2 class="text-form-button">Portfolio</h2>
- 							<button class="open-section-button" type="button" name="networksButton" onclick="editar('showNetsocial')">
+ 							<button  id="openButtonQr" class="open-section-button shown" type="button" name="networksButton" onclick="editar('showNetsocial')" value="openButton">
  							<img src="images/addButton32px.png" alt="addButton"></button>
-							<button class="close-section-button" type="button" name="showNetsocial-button" onclick="ocultar('showNetsocial')">
+							<button  id="closeButtonQr" class="close-section-button hidden" type="button" name="showNetsocial-button" onclick="ocultar('showNetsocial')" value="closeButton">
 							<img src="images/menos.png" alt="minusbuttom">
 						</button>
  						</div>
