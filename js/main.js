@@ -286,7 +286,7 @@ function showHobbiesPreview(elementId) {
  }
 /*Redes sociales*/
 function showNetsocial() {
-  var netSocialDiv = document.querySelector('.netsocialhidden');
+  var netSocialDiv = document.querySelector('.net-social-hidden');
   netSocialDiv.style.display = 'block';
   // var netSocial = document.querySelectorAll('.printnet');
   // for (var i=0; i<netSocial.length; i++){
