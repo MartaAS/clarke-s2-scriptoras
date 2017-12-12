@@ -83,7 +83,6 @@
 				<div  id="content-about" class="boxes-container"><!--Oculto-->
 					<label for="about"></label>
 					<textarea name="about-me" rows="6" cols="20" placeholder="Introduce una breve descripción sobre ti." class="inputs" id="text-about"></textarea>
-					<!--<input type="button" value="Guardar" class="buttons-save-general" id="button-save-about"> ESTE BOTON NO TENDRÍA SENTIDO-->
 				</div>
 			</form>
 <!--_____________________________END ABOUT__________________________________-->
@@ -123,8 +122,7 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-							<input class="buttons-save-general add-new invisible" id="add-new-exp" type="button" name="add" value="Añadir">
-							<input class="buttons-save-general experiencia" id="button-save-first-exp" type="button" name="save" value="Guardar">
+							<input class="buttons-save-general experiencia" id="button-add-exp" type="button" name="add-exp" value="Añadir">
 						</div>
 					</div>
 				</form>
@@ -163,8 +161,7 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-							<input class="buttons-save-general add-new-ed invisible" id="add-new-edu" type="button" name="save" value="Añadir">
-							<input type="button" value="Guardar" id="save-first-ed" class="buttons-save-general formacion">
+							<input type="button" value="Añadir" name="add-ed" id="button-add-ed" class="buttons-save-general formacion">
 						</div>
 					</div>
 				</form>
@@ -197,7 +194,6 @@
 									<input class="inputs skill" type="text" name="skill4" value="" placeholder="Escribe una habilidad" id="skill4">
 									<input class="inputs skill" type="text" name="percentage4" value="" placeholder="Escribe un porcentaje" id="percentage4">
 								</div>
-				<!--<input type="button" value="Guardar" class="buttons-save-general" id="saveSkills"> ESTE BOTON NO TENDRÍA SENTIDO--->
 						</div>
 				</form>
 			</section>
@@ -296,9 +292,9 @@
                 <label class="socialLabel" for="instagram">Instagram</label>
                 <input class="users inputs" id="instagram" type="text" name="net3" placeholder=" Rellena con tu usuario" onkeypress="setValue('instagram')">
               </div>
-              <div class="buttons-container">
+              <!-- <div class="buttons-container">
   							<input type="button" value="Guardar" class="buttons-save-general">
-  						</div>
+  						</div> -->
 						</div>
 			   </form>
          <!--Sección de Portfolio-->
@@ -316,9 +312,9 @@
                <input class="inputPortfolio" id="inputQr" type="text" name="inputQr" placeholder=" Contenido para generar QR">
                <input type="button" value="Generar" onclick="update_qrcode()" class="buttons-save-general">
              </div>
-             <div class="buttons-container">
+             <!-- <div class="buttons-container">
  							<input type="button" value="Guardar" class="buttons-save-general">
- 						</div>
+ 						</div> -->
            </div>
  			   </form>
        </section>
@@ -354,44 +350,6 @@
 				<section class="">
 					<h2 class="section-title">Experiencia y Formación</h2>
 					<section class="timeline">
-						<div class="container-timeline left invisible" id="container-timeline-left">
-					    <div class="content-timeline">
-					      <div class="dates-output-container">
-									<div class="dates-container">
- 					      		<h3 id="start-job-year-preview"class="title-year"> 2017</h3>
- 										<p id="start-job-month-preview">Mes</p>
- 									</div>
- 									<h3 class="title-year">-</h3>
- 									<div class="dates-container">
-	 						      <h3 id="end-job-year-preview" class="title-year" >2018</h3>
-	 									<p id="end-job-month-preview">Mes</p>
- 									</div>
-					      </div>
-					      <div class="work-information-output-container">
-									<p id="job-preview"class='job-title'>Cargo</p>
- 							    <p id="company-preview">Empresa</p>
-					      </div>
-					    </div>
-						</div>
-						<div class="container-timeline right invisible">
-					    <div class="content-timeline">
-					      <div class="dates-output-container">
-									<div class="dates-container">
-	 					      	<h3 id="start-education-year-preview"class="title-year"> 2017</h3>
-	 									<p id="start-education-month-preview">Mes</p>
- 									</div>
- 									<h3 class="title-year">-</h3>
-	 								<div class="dates-container">
-	 						      <h3 id="end-education-year-preview" class="title-year" >2018</h3>
-	 									<p id="end-education-month-preview">Mes</p>
-	 								</div>
-					      </div>
-					      <div class="work-information-output-container">
-									<p id="education-title-preview" class='education-title'>Título</p>
-						      <p id="education-center-preview">Centro de estudios</p>
-					      </div>
-					    </div>
-						</div>
 					</section>
 				</section>
 
@@ -485,7 +443,7 @@
         </section>
 				</div>
       </section>
-			</div>
+			</div>			
     </main>
 
 		<!-- End Container -->
