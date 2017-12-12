@@ -15,7 +15,6 @@ Number.prototype.clamp = function(min, max) {
   return Math.min(Math.max(this, min), max);
 };
 
-
 //marta
 //prueba cargar imagen
 function archivo(evt) {
@@ -62,42 +61,24 @@ function simularClick(){
 	document.getElementById('files').click()
 }
 //Datos principales
-//guardar datos principales introducidos
+//guardar datos principales introducidos y pintarlos directamente en la preview
 function guardarDatosPrincipales(){
-	var nombreformulario = document.getElementById('nombreformulario').value;
-	if(nombreformulario == ""){
-		}
-	else {
-		document.getElementById('prenombre').innerHTML = nombreformulario;
-	}
-	var apellidoformulario = document.getElementById('apellidoformulario').value;
-	if(apellidoformulario ==""){
-	}
-	else {
-		document.getElementById('preapellidos').innerHTML = apellidoformulario;
-	}
-	var profesionformulario = document.getElementById('profesionformulario').value;
-	if(profesionformulario ==""){
-	}
-	else {
-		document.getElementById('preprofesion').innerHTML = profesionformulario;
-	}
-	var emailformulario = document.getElementById('emailformulario').value;
-	if(emailformulario ==""){
-	}
-	else {
-		document.getElementById('preemail').innerHTML = emailformulario;
-	}
-	var telefonoformulario = document.getElementById('telefonoformulario').value;
-	if(telefonoformulario ==""){
-	}
-	else {
-		document.getElementById('pretelefono').innerHTML = telefonoformulario;
-	}
+	document.getElementById('prenombre').innerHTML = document.getElementById('nombreformulario').value;
+	document.getElementById('preapellidos').innerHTML = document.getElementById('apellidoformulario').value;
+	document.getElementById('preprofesion').innerHTML = document.getElementById('profesionformulario').value;
+	document.getElementById('preemail').innerHTML = document.getElementById('emailformulario').value;
+	document.getElementById('pretelefono').innerHTML = document.getElementById('telefonoformulario').value;
 }
-var buttonSavePersonal = document.getElementById('button-save-personal');
-buttonSavePersonal.addEventListener('click', guardarDatosPrincipales);
-
+var nombreformulario = document.getElementById("nombreformulario");
+nombreformulario.onkeyup = guardarDatosPrincipales;
+var apellidoformulario = document.getElementById("apellidoformulario");
+apellidoformulario.onkeyup = guardarDatosPrincipales;
+var profesionformulario = document.getElementById("profesionformulario");
+profesionformulario.onkeyup = guardarDatosPrincipales;
+var emailformulario = document.getElementById("emailformulario");
+emailformulario.onkeyup = guardarDatosPrincipales;
+var telefonoformulario = document.getElementById("telefonoformulario");
+telefonoformulario.onkeyup = guardarDatosPrincipales;
 //previsualizacion en otra hoja
 function viewprev(){
 	document.getElementById('ventana2').style.display="block";
@@ -107,41 +88,32 @@ function viewprev(){
 
 //fin parte marta
 
-//Typed text
-// var type = ['C','r','e','a',' ','t','u',' ','C','V ',' ','c','o','n',' ','e','s','t','i','l','o',' ','.','.'];
-// var h1 = document.querySelector('.textcrea');
-// document.addEventListener('DOMContentLoaded', function() {
-//   for (var i = 0; i < type.length; i++) {
-//       setTimeout(h1.innerHTML += type[i], 1000);
-//   }
-// });
-
 // Add typed text.
-var idx = 0;
-var txt = 'Crea tu CV con estilo...'.split('');
-var speed = 150;
-var waitOnFinish = 3000;
-var textCreaEl = document.querySelector('.textcrea');
-
-document.addEventListener('DOMContentLoaded', typeWriter);
-
-function typeWriter() {
-  if (idx < txt.length) {
-    var tempTxt = textCreaEl.innerHTML;
-    textCreaEl.innerHTML += '|';
-    setTimeout(function() {
-      textCreaEl.innerHTML = tempTxt + txt[idx];
-      idx++;
-      setTimeout(typeWriter, speed);
-    }, speed/2);
-  } else {
-    idx = 0;
-    setTimeout(function(){
-      textCreaEl.innerHTML = '';
-      typeWriter();
-    }, waitOnFinish);
-  }
-}
+// var idx = 0;
+// var txt = 'Crea tu CV con estilo...'.split('');
+// var speed = 150;
+// var waitOnFinish = 3000;
+// var textCreaEl = document.querySelector('.text-crea');
+//
+// document.addEventListener('DOMContentLoaded', typeWriter);
+//
+// function typeWriter() {
+//   if (idx < txt.length) {
+//     var tempTxt = textCreaEl.innerHTML;
+//     textCreaEl.innerHTML += '|';
+//     setTimeout(function() {
+//       textCreaEl.innerHTML = tempTxt + txt[idx];
+//       idx++;
+//       setTimeout(typeWriter, speed);
+//     }, speed/2);
+//   } else {
+//     idx = 0;
+//     setTimeout(function(){
+//       textCreaEl.innerHTML = '';
+//       typeWriter();
+//     }, waitOnFinish);
+//   }
+// }
 
 /*--------------------------- ABOUT FUNCTION---------------------------------------*/
 function saveAbout(){
