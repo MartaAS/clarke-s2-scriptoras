@@ -20,9 +20,6 @@
 			</div>
 			<div class="containericonos">
 				<input class="icons" type="button" onclick="viewprev()" id="btnview" title="Vista previa">
-				<input class="icons" type="button" onclick="share()" id="btnshare" title="Compartir">
-				<input class="icons" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
-				<input class="icons" type="button" onclick="download()" id="btndownload" title="Descargar">
 			</div>
 				<!-- value="Ver mi CV">-->
 		</header>
@@ -30,10 +27,11 @@
 		<!-- Container -->
 		<main>
 			<!--cabecera-->
-			<div class="headercreatucv" id="headerfondo">
-      	<h1 class="textcrea"></h1>
+			<div id="header-fondo">
+      	<h1 class="text-crea"></h1>
 			</div>
-      <button type="button" name="button-down"><img src="images/expand-button-medium.png" alt="rellena-los-campos"></button>
+      <button id="button-down" type="button" name="button-down"><a href="index.html#empty-container"><img src="images/expand-button-medium.png" alt="rellena-los-campos"></a></button>
+      <div id="empty-container"></div>
 			<div class="main-web-sections">
 			<section class="formulario-sec" id="ventana1">
 				<form class="form-section-container" id=principal-section action="" method="post">
@@ -64,7 +62,6 @@
 							<input type="text" name="profesion" placeholder="Introduce profesión" class="inputs" required id="profesionformulario">
 							<input type="email" name="mail" placeholder="Introduce email" class="inputs" id="emailformulario">
 							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="inputs" id="telefonoformulario">
-							<input type="button" value="Guardar" class="buttons-save-general" id="button-save-personal">
 						</div>
 					</div>
 				</div>
@@ -265,32 +262,32 @@
         	<form class="form-section-container" action="index.html" method="post">
              <div class="title-container">
               <h2 class="textFormButton">Redes Sociales</h2>
-  						  <button class="open-section-button" type="button" name="networksButton" onclick="showNetsocial()">
+  						  <button id="openButton" class="open-section-button visible" type="button" name="networksButton" onclick="showNetsocial()" value="openButton">
   							 <img src="images/addButton32px.png" alt="addButton"></button>
-								 <button class="close-section-button" type="button" name="minredes-button" onclick="ocultar('minredes')">
+								 <button id="closeButton" class="close-section-button invisible" type="button" name="minredes-button" onclick="ocultar('minredes')" value="closeButton">
 	 							<img src="images/menos.png" alt="minusbuttom">
 	 						</button>
   					 </div>
               <div class="boxes-container netsocialhidden" id="minredes">
                 <div class="nets">
                   <label class="socialLabel" for="linkedin">Linkedin</label>
-                  <input class="users inputs" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onkeypress="setValue('linkedin')">
+                  <input class="users inputs" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onchange="setValue('linkedin')">
               </div>
               <div class="nets">
                 <label class="socialLabel" for="facebook">Facebook</label>
-                <input class="users inputs" id="facebook" type="text" name="net2" placeholder=" Rellena con tu usuario" onkeypress="setValue('facebook')">
+                <input class="users inputs" id="facebook" type="text" name="net2" placeholder=" Rellena con tu usuario" onchange="setValue('facebook')">
               </div>
               <div class="nets">
                 <label class="socialLabel" for="github">Github</label>
-                <input class="users inputs" id="github" type="text" name="net3" placeholder=" Rellena con tu usuario" onkeypress="setValue('github')">
+                <input class="users inputs" id="github" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('github')">
               </div>
               <div class="nets">
                 <label class="socialLabel" for="twitter">Twitter</label>
-                <input class="users inputs" id="twitter" type="text" name="net3" placeholder=" Rellena con tu usuario" onkeypress="setValue('twitter')">
+                <input class="users inputs" id="twitter" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('twitter')">
               </div>
               <div class="nets">
                 <label class="socialLabel" for="instagram">Instagram</label>
-                <input class="users inputs" id="instagram" type="text" name="net3" placeholder=" Rellena con tu usuario" onkeypress="setValue('instagram')">
+                <input class="users inputs" id="instagram" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('instagram')">
               </div>
               <!-- <div class="buttons-container">
   							<input type="button" value="Guardar" class="buttons-save-general">
@@ -325,6 +322,9 @@
 				<div class="containerprev">
 				<button class="cruz-section-button" type="button" name="cruz-button" onclick="closePreview('ventana2')">
 				<img src="images/btnclose.png" alt="cruzbuttom"></button>
+				<input class="iconsprev" type="button" onclick="share()" id="btnshare" title="Compartir">
+				<input class="iconsprev" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
+				<input class="iconsprev" type="button" onclick="download()" id="btndownload" title="Descargar">
 				<!--datos principales-->
 				<section class="containerprefoto">
 					<div id="prefoto" class="prefoto"></div>
@@ -384,17 +384,17 @@
           <h2 class="section-title">Idiomas</h2>
           <div class="languagesBarPreview">
             <div class="percentageBar">
-              <p class="textBarPreview">Inglés</p>
+              <p class="textBarPreview"></p>
             </div>
           </div>
           <div class="languagesBarPreview">
             <div class="percentageBar">
-              <p class="textBarPreview">Fracés</p>
+              <p class="textBarPreview"></p>
             </div>
           </div>
           <div class="languagesBarPreview">
             <div class="percentageBar">
-              <p class="textBarPreview">Español</p>
+              <p class="textBarPreview"></p>
             </div>
           </div>
         </section>

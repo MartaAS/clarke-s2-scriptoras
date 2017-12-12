@@ -16,6 +16,11 @@ main{
 	flex-direction: column;
 	min-height: 100vh;
 }
+
+#empty-container {
+	height: 70px;
+}
+
 /*Estilos generales de la sección de desplegables*/
 .title-container{
 	padding-left: 20px;
@@ -98,6 +103,7 @@ main{
 /*Fin estilos generales*/
 /*Header logo formulario*/
 .headlog{
+	height: 70px;
 	min-width: 60px;
 	display: flex;
 	flex-wrap: wrap;
@@ -134,18 +140,30 @@ main{
   border-style: none;
   cursor: pointer;
 }
+.iconsprev{
+	height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  background-size: cover;
+  align-items: flex-end;
+  text-align: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-style: none;
+  cursor: pointer;
+}
 /*header parte marta*/
 #btnview{
-	background-image: url("../images/btnfile2.png");
+	background-image: url("../images/btnfile.png");
 }
 #btnshare{
-		background-image: url("../images/btnshare2.png");
+		background-image: url("../images/btnshare.png");
 }
 #btnprint{
-		background-image: url("../images/btnprint2.png");
+		background-image: url("../images/btnprint.png");
 }
 #btndownload{
-		background-image: url("../images/btndownload2.png");
+		background-image: url("../images/btndownload.png");
 }
 
 header{
@@ -162,7 +180,7 @@ header{
   z-index: 99;
 	padding-right: 10px;
 }
-.headercreatucv{
+#header-fondo {
 	background-image: url(../images/groupMobile.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -174,14 +192,21 @@ header{
 	margin-bottom: 5px;
 }
 
-.textcrea{
+.text-crea {
 	display: flex;
 	align-self: flex-start;
 	margin-top: 20%;
 	margin-left: 20px;
 	font-size: 1.5em;
 	font-family: 'Arial';
+	color: #5a392b;
 }
+
+#button-down {
+	background: none;
+	border: none;
+}
+
 .imgcrea{
 	width: 100%;
 	height: 200px;
@@ -285,6 +310,9 @@ header{
 	.headercreatucv{
 		height: 120vh;
 	}
+	.headlog{
+		height: ;
+	}
 }
 @media all and (min-width: 900px){
 	.headercreatucv{
@@ -369,12 +397,9 @@ header{
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
-
 /*Fin de estilos generales*/
-/*About*/
-.aboutMe{
-	display: block;
-}
+
+/*ABOUT*/
 #aboutMe-preview{
 	color: black;
 }
@@ -400,11 +425,11 @@ header{
 	text-align: center;
 }
 .select-styles{
-text-shadow: rgba(0,0,0,.4) 0 1px 0;
-padding: 2px;
-border: solid 1px;
-background-color: #fff;
-border-radius: 5px;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	padding: 2px;
+	border: solid 1px;
+	background-color: #fff;
+	border-radius: 5px;
 }
 .buttons-container{
 	margin: 10px 0px;
@@ -418,14 +443,14 @@ border-radius: 5px;
 
 /*Experience and Education preview*/
 .section-title{
-text-align: center;
-color: #5A392B;
+	text-align: center;
+	color: #5A392B;
 }
 /* La timeline*/
 .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 /* La propia timeline (línea vertical) */
 .timeline::after {
@@ -554,20 +579,13 @@ input[type=checkbox]
 	text-align: center;
 }
 /*End Experience and Education preview*/
-/*Skills*/
-
-#skillPreview{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	display: block;
-}
+/*SKILLS*/
 .skill {
   margin-top: 5px;
 	margin-right: 1%;
 	color: #5A392B;
 }
-.skill-pre{
+.skill-pre {
 	margin-left: 7%;
 }
 .skill_title {
@@ -585,10 +603,8 @@ input[type=checkbox]
 	display: flex;
 	margin-top: 5px;
 }
-
 .barra_front {
 	width: 0;
-  /* background: green; */
   height: 100%;
   position: absolute;
   top: 0;
@@ -626,7 +642,6 @@ input[type=checkbox]
 }
 
 .percentageBar {
-	width: 50% ;
 	background-color: #5a392b;
 }
 
@@ -765,13 +780,13 @@ input[type=checkbox]
 }
 /*flecha subir arriba*/
 #arriba {
-	 width: 5px;
-	 padding: 5px;
-	 position: fixed;
-	 bottom: 15px;
-	 right: 45px;
-	 z-index: 1;
-	 opacity: 0.9;
+	width: 5px;
+	padding: 5px;
+	position: fixed;
+	bottom: 15px;
+	right: 45px;
+	z-index: 1;
+	opacity: 0.9;
 }
 #arriba img{
 	width: 30px;
@@ -943,32 +958,48 @@ input[type=checkbox]
 		flex-direction: row;
 	}
 	#arriba {
-		 width: 5px;
-		 padding: 5px;
-		 position: fixed;
-		 bottom: 15px;
-		 right: 45px;
-		 z-index: 1;
-		 opacity: 0.9;
+		width: 5px;
+		padding: 5px;
+		position: fixed;
+		bottom: 15px;
+		right: 45px;
+		z-index: 1;
+		opacity: 0.9;
 	}
 }
 @media all and (min-width: 810px){
 	.headercreatucv{
-		height: 120vh;
+		height: 500vh;
+	}
+	.headlog{
+		height: 100px;
+	}
+	.icons{
+		height: 30px;
+		width: 30px;
 	}
 }
 
 @media all and (min-width:900px) {
-	.headercreatucv{
-		width: 100%;
+	#header-fondo {
+		width: cover;
 		background-image: url(../images/group.png);
-		height: 95vh;
+		height: 100vh;
 	}
+
+	#empty-container {
+		height: 70px;
+	}
+
+	#button-down {
+		display: none;
+	}
+
 	.main-web-sections{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
-}
+	}
 	#ventana2{
 		display: block;
 		}
@@ -988,10 +1019,10 @@ input[type=checkbox]
 	.cruz-section-button{
 		margin-top: 0%;
 		margin-left: 90%;
-}
+	}
 	.separador{
 		margin-top: 1.5em;
-}
+	}
 	/*Footer*/
 	.logo{
 		margin-right:120px;
@@ -1006,26 +1037,22 @@ input[type=checkbox]
 		display: flex;
 		justify-content:space-between;
 	}
-
-.textcrea {
-	margin-top: 5%;
-	margin-left: 20px;
-	font-size: 3em;
-}
-
-.input-lang, .input-skill{
-	display:flex;
-}
-
-.language{
-	margin-right: 1%;
-}
-
-@media print {
-	header, footer, nav {
-  display: none;
-}
-.formulario-sec {
+	.textcrea {
+		margin-top: 5%;
+		margin-left: 20px;
+		font-size: 3em;
+	}
+	.input-lang, .input-skill{
+		display:flex;
+	}
+	.language{
+		margin-right: 1%;
+	}
+	@media print {
+		header, footer, nav {
 	  display: none;
+	}
+	.formulario-sec {
+		  display: none;
 	}
 }
