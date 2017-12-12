@@ -62,42 +62,24 @@ function simularClick(){
 	document.getElementById('files').click()
 }
 //Datos principales
-//guardar datos principales introducidos
+//guardar datos principales introducidos y pintarlos directamente en la preview
 function guardarDatosPrincipales(){
-	var nombreformulario = document.getElementById('nombreformulario').value;
-	if(nombreformulario == ""){
-		}
-	else {
-		document.getElementById('prenombre').innerHTML = nombreformulario;
-	}
-	var apellidoformulario = document.getElementById('apellidoformulario').value;
-	if(apellidoformulario ==""){
-	}
-	else {
-		document.getElementById('preapellidos').innerHTML = apellidoformulario;
-	}
-	var profesionformulario = document.getElementById('profesionformulario').value;
-	if(profesionformulario ==""){
-	}
-	else {
-		document.getElementById('preprofesion').innerHTML = profesionformulario;
-	}
-	var emailformulario = document.getElementById('emailformulario').value;
-	if(emailformulario ==""){
-	}
-	else {
-		document.getElementById('preemail').innerHTML = emailformulario;
-	}
-	var telefonoformulario = document.getElementById('telefonoformulario').value;
-	if(telefonoformulario ==""){
-	}
-	else {
-		document.getElementById('pretelefono').innerHTML = telefonoformulario;
-	}
+	document.getElementById('prenombre').innerHTML = document.getElementById('nombreformulario').value;
+	document.getElementById('preapellidos').innerHTML = document.getElementById('apellidoformulario').value;
+	document.getElementById('preprofesion').innerHTML = document.getElementById('profesionformulario').value;
+	document.getElementById('preemail').innerHTML = document.getElementById('emailformulario').value;
+	document.getElementById('pretelefono').innerHTML = document.getElementById('telefonoformulario').value;
 }
-var buttonSavePersonal = document.getElementById('button-save-personal');
-buttonSavePersonal.addEventListener('click', guardarDatosPrincipales);
-
+var nombreformulario = document.getElementById("nombreformulario");
+nombreformulario.onkeyup = guardarDatosPrincipales;
+var apellidoformulario = document.getElementById("apellidoformulario");
+apellidoformulario.onkeyup = guardarDatosPrincipales;
+var profesionformulario = document.getElementById("profesionformulario");
+profesionformulario.onkeyup = guardarDatosPrincipales;
+var emailformulario = document.getElementById("emailformulario");
+emailformulario.onkeyup = guardarDatosPrincipales;
+var telefonoformulario = document.getElementById("telefonoformulario");
+telefonoformulario.onkeyup = guardarDatosPrincipales;
 //previsualizacion en otra hoja
 function viewprev(){
 	document.getElementById('ventana2').style.display="block";

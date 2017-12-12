@@ -98,6 +98,7 @@ main{
 /*Fin estilos generales*/
 /*Header logo formulario*/
 .headlog{
+	height: 70px;
 	min-width: 60px;
 	display: flex;
 	flex-wrap: wrap;
@@ -284,6 +285,9 @@ header{
 @media all and (min-width: 810px){
 	.headercreatucv{
 		height: 120vh;
+	}
+	.headlog{
+		height: ;
 	}
 }
 @media all and (min-width: 900px){
@@ -953,7 +957,14 @@ input[type=checkbox]
 }
 @media all and (min-width: 810px){
 	.headercreatucv{
-		height: 120vh;
+		height: 500vh;
+	}
+	.headlog{
+		height: 100px;
+	}
+	.icons{
+		height: 30px;
+		width: 30px;
 	}
 }
 
