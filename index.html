@@ -20,15 +20,12 @@
 			</div>
 			<div class="containericonos">
 				<input class="icons" type="button" onclick="viewprev()" id="btnview" title="Vista previa">
-				<input class="icons" type="button" onclick="share()" id="btnshare" title="Compartir">
-				<input class="icons" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
-				<input class="icons" type="button" onclick="download()" id="btndownload" title="Descargar">
 			</div>
 				<!-- value="Ver mi CV">-->
 		</header>
 		<!-- End Header -->
 		<!-- Container -->
-		<main>
+		<main class="bloque">
 			<!--cabecera-->
 			<div id="header-fondo">
       	<h1 class="text-crea"></h1>
@@ -321,6 +318,9 @@
 				<div class="containerprev">
 				<button class="cruz-section-button" type="button" name="cruz-button" onclick="closePreview('ventana2')">
 				<img src="images/btnclose.png" alt="cruzbuttom"></button>
+				<input class="iconsprev" type="button" onclick="share()" id="btnshare" title="Compartir">
+				<input class="iconsprev" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
+				<input class="iconsprev" type="button" onclick="download()" id="btndownload" title="Descargar">
 				<!--datos principales-->
 				<section class="containerprefoto">
 					<div id="prefoto" class="prefoto"></div>
