@@ -293,7 +293,7 @@ var addLangs = document.getElementById('button-save');
 addLangs.addEventListener('click', addLanguages);
 
 function addLanguages(){
-  var newTextLanguage = document.querySelectorAll('.textBarPreview');
+  var newTextLanguage = document.querySelectorAll('.text-bar-preview');
   var inputsLanguage = document.querySelectorAll('.language');
   var inputsPercentage = document.querySelectorAll('.percentage');
 
