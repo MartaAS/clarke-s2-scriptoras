@@ -971,11 +971,16 @@ input[type=checkbox]
 }
 
 @media all and (min-width:900px) {
-	.headercreatucv{
-		width: 100%;
+	#header-fondo {
+		width: cover;
 		background-image: url(../images/group.png);
-		height: 95vh;
+		height: 100vh;
 	}
+
+	#button-down, #empty-container {
+		display: none;
+	}
+
 	.main-web-sections{
 		display: flex;
 		flex-direction: row;
