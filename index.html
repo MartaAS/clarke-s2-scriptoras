@@ -119,8 +119,7 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-							<input class="buttons-save-general add-new invisible" id="add-new-exp" type="button" name="add" value="Añadir">
-							<input class="buttons-save-general experiencia" id="button-save-first-exp" type="button" name="save" value="Guardar">
+							<input class="buttons-save-general experiencia" id="button-add-exp" type="button" name="add-exp" value="Añadir">
 						</div>
 					</div>
 				</form>
@@ -159,8 +158,7 @@
 							</select>
 						</div>
 						<div class="buttons-container">
-							<input class="buttons-save-general add-new-ed invisible" id="add-new-edu" type="button" name="save" value="Añadir">
-							<input type="button" value="Guardar" id="save-first-ed" class="buttons-save-general formacion">
+							<input type="button" value="Añadir" name="add-ed" id="button-add-ed" class="buttons-save-general formacion">
 						</div>
 					</div>
 				</form>
@@ -345,44 +343,6 @@
 				<section class="">
 					<h2 class="section-title">Experiencia y Formación</h2>
 					<section class="timeline">
-						<div class="container-timeline left invisible" id="container-timeline-left">
-					    <div class="content-timeline">
-					      <div class="dates-output-container">
-									<div class="dates-container">
- 					      		<h3 id="start-job-year-preview"class="title-year"> 2017</h3>
- 										<p id="start-job-month-preview">Mes</p>
- 									</div>
- 									<h3 class="title-year">-</h3>
- 									<div class="dates-container">
-	 						      <h3 id="end-job-year-preview" class="title-year" >2018</h3>
-	 									<p id="end-job-month-preview">Mes</p>
- 									</div>
-					      </div>
-					      <div class="work-information-output-container">
-									<p id="job-preview"class='job-title'>Cargo</p>
- 							    <p id="company-preview">Empresa</p>
-					      </div>
-					    </div>
-						</div>
-						<div class="container-timeline right invisible">
-					    <div class="content-timeline">
-					      <div class="dates-output-container">
-									<div class="dates-container">
-	 					      	<h3 id="start-education-year-preview"class="title-year"> 2017</h3>
-	 									<p id="start-education-month-preview">Mes</p>
- 									</div>
- 									<h3 class="title-year">-</h3>
-	 								<div class="dates-container">
-	 						      <h3 id="end-education-year-preview" class="title-year" >2018</h3>
-	 									<p id="end-education-month-preview">Mes</p>
-	 								</div>
-					      </div>
-					      <div class="work-information-output-container">
-									<p id="education-title-preview" class='education-title'>Título</p>
-						      <p id="education-center-preview">Centro de estudios</p>
-					      </div>
-					    </div>
-						</div>
 					</section>
 				</section>
 <!--___________________________Skills_______________________________________-->
@@ -474,6 +434,12 @@
         </section>
 				</div>
       </section>
+			</div>
+			<div class="alert-dates invisible">
+				<button class="button-alert-img" type="button" name="button">
+					<img class="alert-cruise" src="images/btnclose.png" alt="cruise-button">
+				</button>
+				<p class="text-alert">¡Ojo! La fecha de inicio no debe ser posterior a la fecha de finalización.</p>
 			</div>
     </main>
 

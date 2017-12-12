@@ -139,21 +139,9 @@ function closePreview(idContent){
 	document.getElementById('headerfondo').style.display = 'block';
 }
 
-//Experience
+//Experiencia y Formación
 //Desplegable mes
-var monthOptions = '<option value="mes">Mes</option>';
-monthOptions = monthOptions + '<option value="Ene"> Enero</option>';
-monthOptions = monthOptions + '<option value="Feb"> Febrero</option>';
-monthOptions = monthOptions + '<option value="Mar">Marzo</option>';
-monthOptions = monthOptions + '<option value="Abr">Abril</option>';
-monthOptions = monthOptions + '<option value="May">Mayo</option>';
-monthOptions = monthOptions + '<option value="Jun">Junio</option>';
-monthOptions = monthOptions + '<option value="Jul">Julio</option>';
-monthOptions = monthOptions + '<option value="Ago">Agosto</option>';
-monthOptions = monthOptions + '<option value="Sep">Septiembre</option>';
-monthOptions = monthOptions + '<option value="Oct">Octubre</option>';
-monthOptions = monthOptions + '<option value="Nov">Noviembre</option>';
-monthOptions = monthOptions + '<option value="Dic">Diciembre</option>';
+var monthOptions = '<option value="mes">Mes</option><option value="Ene">Enero</option><option value="Feb">Febrero</option><option value="Mar">Marzo</option><option value="Abr">Abril</option><option value="May">Mayo</option><option value="Jun">Junio</option><option value="Jul">Julio</option><option value="Ago">Agosto</option><option value="Sep">Septiembre</option><option value="Oct">Octubre</option><option value="Nov">Noviembre</option><option value="Dic">Diciembre</option>';
 
 //Se aplica en todos los que tengan la clase .month
 var months = document.querySelectorAll('.month');
@@ -173,74 +161,56 @@ for (var i = 0; i < yearsAll.length; i++) {
 	yearsAll[i].innerHTML = yearOptions;
 }
 //Función para introducir en la previsualización los datos obtenidos de experiencia
-function saveExperience(){
-	document.getElementById('job-preview').innerHTML=document.getElementById('job').value;
-	document.getElementById('company-preview').innerHTML=document.getElementById('company').value;
-	document.getElementById('start-job-month-preview').innerHTML=document.getElementById('month-job-start').value;
-	document.getElementById('end-job-month-preview').innerHTML=document.getElementById('month-job-end').value;
-	document.getElementById('start-job-year-preview').innerHTML=document.getElementById('year-job-start').value;
-	document.getElementById('end-job-year-preview').innerHTML=document.getElementById('year-job-end').value;
-}
-function addFirstExperience(){
-	var timeLineLeft = document.querySelector('.left');
-	timeLineLeft.classList.add('visible');
-  var buttonSaveFirst = document.querySelector('.experiencia');
-  buttonSaveFirst.classList.add('invisible');
-  var buttonAddNew = document.querySelector('.add-new');
-  buttonAddNew.classList.add('visible');
-	saveFirstExperience();
-}
-var buttonSaveFirstExp = document.getElementById('button-save-first-exp');
-buttonSaveFirstExp.addEventListener('click', addFirstExperience);
 
-//Añadir más puestos de trabajo
 function saveNewExperience(){
   var jobSectionPreview = '<div class="container-timeline left" id="container-timeline-left"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-job-year-preview"class="title-year">' + document.getElementById("year-job-start").value +'</h3><p id="start-job-month-preview">' + document.getElementById("month-job-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-job-year-preview"class="title-year">' + document.getElementById("year-job-end").value + '</h3><p id="end-job-month-preview">' + document.getElementById("month-job-end").value + '</p></div></div><div class="work-information-output-container"><p id="job-preview"class="job-title">' + document.getElementById("job").value + '</p><p id="company-preview">' + document.getElementById("company").value + '</p></div></div></div>'
-  var container = document.querySelector('.timeline');
-  container.insertAdjacentHTML('beforeend', jobSectionPreview);
-}
-function addNewExperience(){
-	var timeLineLeft = document.querySelector('.left');
-	timeLineLeft.classList.add('visible');
-	saveNewExperience();
-}
-var buttonSaveNewExp = document.getElementById('add-new-exp');
-buttonSaveNewExp.addEventListener('click', addNewExperience);
 
-//Guardar primera formación
-function saveFirstTraining(){
-	document.getElementById('education-title-preview').innerHTML=document.getElementById('educ-title').value;
-	document.getElementById('education-center-preview').innerHTML=document.getElementById('center').value;
-	document.getElementById('start-education-month-preview').innerHTML=document.getElementById('month-training-start').value;
-	document.getElementById('end-education-month-preview').innerHTML=document.getElementById('month-training-end').value;
-	document.getElementById('start-education-year-preview').innerHTML=document.getElementById('year-training-start').value;
-	document.getElementById('end-education-year-preview').innerHTML=document.getElementById('year-training-end').value;
+	if(document.getElementById("year-job-start").value > document.getElementById("year-job-end").value){
+		showAlert();
+	} else {
+		var jobPreviewBox = document.querySelector('.timeline');
+	  jobPreviewBox.innerHTML += jobSectionPreview;
+	}
+	document.getElementById("job").value = '';
+	document.getElementById("company").value = '';
+	document.getElementById("year-job-start").value = '1950';
+	document.getElementById("month-job-start").value = 'mes';
+	document.getElementById("year-job-end").value = '1950';
+	document.getElementById("month-job-end").value = 'mes';
 }
-function addFirstTraining(){
-	var timeLineRight = document.querySelector('.right');
-	timeLineRight.classList.add('visible');
-  var buttonSaveFirst = document.querySelector('.formacion');
-  buttonSaveFirst.classList.add('invisible');
-  var buttonAddNew = document.querySelector('.add-new-ed');
-  buttonAddNew.classList.add('visible');
-	saveFirstTraining();
-}
-var buttonSaveFirstEd = document.getElementById('save-first-ed');
-buttonSaveFirstEd.addEventListener('click', addFirstTraining);
 
-//Añadir más titulaciones
+var buttonAddExp = document.getElementById('button-add-exp');
+buttonAddExp.addEventListener('click', saveNewExperience);
+
+var alertDatesDiv = document.querySelector('.alert-dates');
+function showAlert(){
+	alertDatesDiv.classList.remove('invisible');
+}
+function closeAlert(){
+	alertDatesDiv.classList.add('invisible');
+}
+var closeButtonAlert = document.querySelector('.button-alert-img');
+closeButtonAlert.addEventListener('click', closeAlert);
+
+//Función para introducir en la previsualización los datos obtenidos de formación
 function saveNewTraining(){
 	var educationSectionPreview = '<div class="container-timeline right"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-education-year-preview" class="title-year">' + document.getElementById("year-training-start").value + '</h3><p id="start-education-month-preview">' + document.getElementById("month-training-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-education-year-preview" class="title-year">' + document.getElementById("year-training-end").value + '</h3><p id="end-education-month-preview">' + document.getElementById("month-training-end").value + '</p></div></div><div class="work-information-output-container"><p id="education-title-preview" class="education-title">' + document.getElementById("educ-title").value + '</p><p id="education-center-preview">' + document.getElementById("center").value + '</p></div></div></div>'
-	var educationPreviewBox = document.querySelector('.timeline');
-  educationPreviewBox.insertAdjacentHTML('beforeend', educationSectionPreview);
+
+	if(document.getElementById("year-training-start").value > document.getElementById("year-training-end").value){
+		showAlert();
+	}else {
+		var educationPreviewBox = document.querySelector('.timeline');
+	  educationPreviewBox.innerHTML += educationSectionPreview;
+	}
+	document.getElementById("educ-title").value = '';
+	document.getElementById("center").value = '';
+	document.getElementById("year-training-start").value = '1950';
+	document.getElementById("month-training-start").value = 'mes';
+	document.getElementById("year-training-end").value = '1950';
+	document.getElementById("month-training-end").value = 'mes';
 }
-function addNewTraining(){
-	var timeLineRight = document.querySelector('.right');
-	timeLineRight.classList.add('visible');
-	saveNewTraining();
-}
-var buttonSaveNewEd = document.getElementById('add-new-edu');
-buttonSaveNewEd.addEventListener('click', addNewTraining);
+var buttonSaveFirstEd = document.getElementById('button-add-ed');
+buttonSaveFirstEd.addEventListener('click', saveNewTraining);
 
 //Fin de Experiencia y Formación
 
