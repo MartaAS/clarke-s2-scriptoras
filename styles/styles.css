@@ -154,16 +154,18 @@ main{
 }
 /*header parte marta*/
 #btnview{
-	background-image: url("../images/btnfile.png");
+	background-image: url("../images/btnfile2.png");
+	width: 30px;
+	height: 30px;
 }
 #btnshare{
-		background-image: url("../images/btnshare.png");
+		background-image: url("../images/btnshare3.png");
 }
 #btnprint{
-		background-image: url("../images/btnprint.png");
+		background-image: url("../images/btnprint3.png");
 }
 #btndownload{
-		background-image: url("../images/btndownload.png");
+		background-image: url("../images/btndown.png");
 }
 
 header{
@@ -971,12 +973,9 @@ input[type=checkbox]
 	.headercreatucv{
 		height: 500vh;
 	}
-	.headlog{
-		height: 100px;
-	}
-	.icons{
-		height: 30px;
-		width: 30px;
+	#btnview{
+		height: 40px;
+		width: 40px;
 	}
 }
 
