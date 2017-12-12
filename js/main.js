@@ -262,18 +262,19 @@ var skillsText4 = document.getElementById("skill4");
 skillsText4.onkeyup = saveSkills;
 
 //PERCENTAGES
+var barParentArr = document.querySelectorAll('.barra');//array todos los elementos barra sombra
+var percentageBoxArr = document.querySelectorAll('.skill-percent');//array de todos los elementos porcentaje
+var barsArr = document.querySelectorAll('.barra_front');//array de todos los elementos barra
+
 function percentageSkill(){
-	var auxValue = parseInt(document.getElementById('percentage1').value) || 0;
-	document.getElementById('barra1').style.width = auxValue.clamp(0,100) + "%";
-
-	auxValue = parseInt(document.getElementById('percentage2').value) || 0;
-	document.getElementById('barra2').style.width = auxValue.clamp(0,100) + "%";
-
-	auxValue = parseInt(document.getElementById('percentage3').value) || 0;
-	document.getElementById('barra3').style.width = auxValue.clamp(0,100) + "%";
-
-	auxValue = parseInt(document.getElementById('percentage4').value) || 0;
-	document.getElementById('barra4').style.width = auxValue.clamp(0,100) + "%";
+	for (var i = 0; i < barsArr.length; i++) {
+		var auxValue = parseInt(percentageBoxArr[i].value) || 0;
+		barsArr[i].style.width = auxValue.clamp(0,100) + "%";
+		if (auxValue > 0)
+			barParentArr[i].style.display = "block";
+		else
+			barParentArr[i].style.display = "none";
+	}
 }
 var percentageBar1 = document.getElementById("percentage1");
 percentageBar1.onkeyup = percentageSkill;
