@@ -90,31 +90,31 @@ function viewprev(){
 //fin parte marta
 
 // Add typed text.
-var idx = 0;
-var txt = 'Crea tu CV con estilo...'.split('');
-var speed = 150;
-var waitOnFinish = 3000;
-var textCreaEl = document.querySelector('.text-crea');
-
-document.addEventListener('DOMContentLoaded', typeWriter);
-
-function typeWriter() {
-  if (idx < txt.length) {
-    var tempTxt = textCreaEl.innerHTML;
-    textCreaEl.innerHTML += '|';
-    setTimeout(function() {
-      textCreaEl.innerHTML = tempTxt + txt[idx];
-      idx++;
-      setTimeout(typeWriter, speed);
-    }, speed/2);
-  } else {
-    idx = 0;
-    setTimeout(function(){
-      textCreaEl.innerHTML = '';
-      typeWriter();
-    }, waitOnFinish);
-  }
-}
+// var idx = 0;
+// var txt = 'Crea tu CV con estilo...'.split('');
+// var speed = 150;
+// var waitOnFinish = 3000;
+// var textCreaEl = document.querySelector('.text-crea');
+//
+// document.addEventListener('DOMContentLoaded', typeWriter);
+//
+// function typeWriter() {
+//   if (idx < txt.length) {
+//     var tempTxt = textCreaEl.innerHTML;
+//     textCreaEl.innerHTML += '|';
+//     setTimeout(function() {
+//       textCreaEl.innerHTML = tempTxt + txt[idx];
+//       idx++;
+//       setTimeout(typeWriter, speed);
+//     }, speed/2);
+//   } else {
+//     idx = 0;
+//     setTimeout(function(){
+//       textCreaEl.innerHTML = '';
+//       typeWriter();
+//     }, waitOnFinish);
+//   }
+// }
 
 /*--------------------------- ABOUT FUNCTION---------------------------------------*/
 function saveAbout(){
@@ -289,14 +289,17 @@ percentageBar4.onkeyup = percentageSkill;
 /*----------------------END SKILLS FUNCTIONS--------------------------*/
 
 //Get languages and percentages
-var addLangs = document.getElementById('button-save');
-addLangs.addEventListener('click', addLanguages);
+var newTextLanguage = document.querySelectorAll('.textBarPreview');
+var inputsLanguage = document.querySelectorAll('.language');
+var inputsPercentage = document.querySelectorAll('.percentage');
+
+for (var i = 0; i < inputsLanguage.length; i++) {
+  inputsLanguage[i].onkeyup = addLanguages;
+  inputsPercentage[i].onkeyup = addLanguages;
+}
+//addLangs.addEventListener('onkeyup', addLanguages);
 
 function addLanguages(){
-  var newTextLanguage = document.querySelectorAll('.textBarPreview');
-  var inputsLanguage = document.querySelectorAll('.language');
-  var inputsPercentage = document.querySelectorAll('.percentage');
-
   for (var i = 0; i < newTextLanguage.length; i++) {
     newTextLanguage[i].innerHTML = inputsLanguage[i].value;
     newTextLanguage[i].parentElement.style.width = inputsPercentage[i].value + '%';
@@ -313,6 +316,7 @@ function showHobbiesPreview(elementId) {
      check.style.display = "inline-block";
    }
  }
+
 /*Redes sociales*/
 function showNetsocial() {
   var netSocialDiv = document.querySelector('.netsocialhidden');
