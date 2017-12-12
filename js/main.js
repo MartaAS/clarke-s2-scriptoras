@@ -15,7 +15,6 @@ Number.prototype.clamp = function(min, max) {
   return Math.min(Math.max(this, min), max);
 };
 
-
 //marta
 //prueba cargar imagen
 function archivo(evt) {
@@ -89,41 +88,32 @@ function viewprev(){
 
 //fin parte marta
 
-//Typed text
-// var type = ['C','r','e','a',' ','t','u',' ','C','V ',' ','c','o','n',' ','e','s','t','i','l','o',' ','.','.'];
-// var h1 = document.querySelector('.textcrea');
-// document.addEventListener('DOMContentLoaded', function() {
-//   for (var i = 0; i < type.length; i++) {
-//       setTimeout(h1.innerHTML += type[i], 1000);
-//   }
-// });
-
 // Add typed text.
-var idx = 0;
-var txt = 'Crea tu CV con estilo...'.split('');
-var speed = 150;
-var waitOnFinish = 3000;
-var textCreaEl = document.querySelector('.textcrea');
-
-document.addEventListener('DOMContentLoaded', typeWriter);
-
-function typeWriter() {
-  if (idx < txt.length) {
-    var tempTxt = textCreaEl.innerHTML;
-    textCreaEl.innerHTML += '|';
-    setTimeout(function() {
-      textCreaEl.innerHTML = tempTxt + txt[idx];
-      idx++;
-      setTimeout(typeWriter, speed);
-    }, speed/2);
-  } else {
-    idx = 0;
-    setTimeout(function(){
-      textCreaEl.innerHTML = '';
-      typeWriter();
-    }, waitOnFinish);
-  }
-}
+// var idx = 0;
+// var txt = 'Crea tu CV con estilo...'.split('');
+// var speed = 150;
+// var waitOnFinish = 3000;
+// var textCreaEl = document.querySelector('.text-crea');
+//
+// document.addEventListener('DOMContentLoaded', typeWriter);
+//
+// function typeWriter() {
+//   if (idx < txt.length) {
+//     var tempTxt = textCreaEl.innerHTML;
+//     textCreaEl.innerHTML += '|';
+//     setTimeout(function() {
+//       textCreaEl.innerHTML = tempTxt + txt[idx];
+//       idx++;
+//       setTimeout(typeWriter, speed);
+//     }, speed/2);
+//   } else {
+//     idx = 0;
+//     setTimeout(function(){
+//       textCreaEl.innerHTML = '';
+//       typeWriter();
+//     }, waitOnFinish);
+//   }
+// }
 
 /*--------------------------- ABOUT FUNCTION---------------------------------------*/
 function saveAbout(){
@@ -382,6 +372,25 @@ window.onscroll = function(){
 var arribaButton = document.getElementById('arriba');
 arribaButton.onclick = function(){
     window.scrollTo(0,0);
+}
+
+/*Escuchadores de los botones + y -*/
+document.getElementById('openButton').addEventListener('click', listButton);
+document.getElementById('closeButton').addEventListener('click', listButton);
+
+//Función que cambia la visibilidad en base al elemento que reciba
+function listButton(){
+  var openButton = document.getElementById('openButton');
+  var closeButton = document.getElementById('closeButton');
+  if(this !== undefined){
+    if(this.value == 'openButton'){// si el valor del boton es de abrir
+      hide(openButton);
+      show(closeButton);
+    }else{//Si es de cerrar
+      hide(closeButton);
+      show(openButton);
+    }
+  }
 }
 
 /*imprimir*/
