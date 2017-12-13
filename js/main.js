@@ -171,6 +171,11 @@ for (var i = 0; i < yearsAll.length; i++) {
 	yearsAll[i].innerHTML = yearOptions;
 }
 //Función para introducir en la previsualización los datos obtenidos de experiencia
+var jobPreviewBox = document.querySelector('.timeline');
+var buttonAddExp = document.getElementById('button-add-exp');
+var alertDatesDiv = document.querySelector('.alert-dates');
+var closeButtonAlert = document.querySelector('.button-alert-img');
+var buttonDelExp = document.getElementById('button-delete-exp');
 
 function saveNewExperience(){
   var jobSectionPreview = '<div class="container-timeline left" id="container-timeline-left"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-job-year-preview"class="title-year">' + document.getElementById("year-job-start").value +'</h3><p id="start-job-month-preview">' + document.getElementById("month-job-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-job-year-preview"class="title-year">' + document.getElementById("year-job-end").value + '</h3><p id="end-job-month-preview">' + document.getElementById("month-job-end").value + '</p></div></div><div class="work-information-output-container"><p id="job-preview"class="job-title">' + document.getElementById("job").value + '</p><p id="company-preview">' + document.getElementById("company").value + '</p></div></div></div>'
@@ -178,7 +183,6 @@ function saveNewExperience(){
 	if(document.getElementById("year-job-start").value > document.getElementById("year-job-end").value){
 		showAlert();
 	} else {
-		var jobPreviewBox = document.querySelector('.timeline');
 	  jobPreviewBox.innerHTML += jobSectionPreview;
 	}
 	document.getElementById("job").value = '';
@@ -188,29 +192,33 @@ function saveNewExperience(){
 	document.getElementById("year-job-end").value = '1950';
 	document.getElementById("month-job-end").value = 'mes';
 }
-
-var buttonAddExp = document.getElementById('button-add-exp');
 buttonAddExp.addEventListener('click', saveNewExperience);
 
-var alertDatesDiv = document.querySelector('.alert-dates');
 function showAlert(){
 	alertDatesDiv.classList.remove('invisible');
 }
 function closeAlert(){
 	alertDatesDiv.classList.add('invisible');
 }
-var closeButtonAlert = document.querySelector('.button-alert-img');
 closeButtonAlert.addEventListener('click', closeAlert);
 
+function deleteExperience(){
+	jobPreviewBox.innerHTML = '';
+}
+buttonDelExp.addEventListener('click', deleteExperience);
+
 //Función para introducir en la previsualización los datos obtenidos de formación
+var educationPreviewBox = document.querySelector('.timeline');
+var buttonSaveFirstEd = document.getElementById('button-add-ed');
+var buttonDelEd = document.getElementById('button-delete-ed');
+
 function saveNewTraining(){
 	var educationSectionPreview = '<div class="container-timeline right"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-education-year-preview" class="title-year">' + document.getElementById("year-training-start").value + '</h3><p id="start-education-month-preview">' + document.getElementById("month-training-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-education-year-preview" class="title-year">' + document.getElementById("year-training-end").value + '</h3><p id="end-education-month-preview">' + document.getElementById("month-training-end").value + '</p></div></div><div class="work-information-output-container"><p id="education-title-preview" class="education-title">' + document.getElementById("educ-title").value + '</p><p id="education-center-preview">' + document.getElementById("center").value + '</p></div></div></div>'
 
 	if(document.getElementById("year-training-start").value > document.getElementById("year-training-end").value){
 		showAlert();
 	}else {
-		var educationPreviewBox = document.querySelector('.timeline');
-	  educationPreviewBox.innerHTML += educationSectionPreview;
+		educationPreviewBox.innerHTML += educationSectionPreview;
 	}
 	document.getElementById("educ-title").value = '';
 	document.getElementById("center").value = '';
@@ -219,9 +227,12 @@ function saveNewTraining(){
 	document.getElementById("year-training-end").value = '1950';
 	document.getElementById("month-training-end").value = 'mes';
 }
-var buttonSaveFirstEd = document.getElementById('button-add-ed');
 buttonSaveFirstEd.addEventListener('click', saveNewTraining);
 
+function deleteEducation(){
+	educationPreviewBox.innerHTML = '';
+}
+buttonDelEd.addEventListener('click', deleteEducation);
 //Fin de Experiencia y Formación
 
 /*--------------------------SKILLS FUNCTIONS------------------------------*/
