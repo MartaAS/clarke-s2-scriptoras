@@ -97,7 +97,7 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	border-color:#7DBEA5;
 }
 /*Ocultar secciones*/
-.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
+.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2, #button-down {
 	display: none;
 }
 .visible {
@@ -182,7 +182,6 @@ header{
   z-index: 99;
 	padding-right: 10px;
 }
-
 #header-fondo {
 	background-image: url(../images/groupMobile.png);
 	background-position: center;
@@ -309,7 +308,6 @@ header{
 	justify-content: center;
 	margin:0;
 	color: black;
-
 }
 /*Experience and Education form*/
 .form-section-container{
@@ -546,7 +544,6 @@ input[type=checkbox]{
 .input-lang, .input-skill{
 	padding-bottom: 1em;
 }
-
 /*Hobbies*/
 .all-hobbies-preview {
 	width: 100%;
@@ -749,7 +746,6 @@ input[type=checkbox]{
 	align-items: center;
 	position: relative;
   z-index: 2;
-
 }
 .titleForm{
 	text-align: center;
@@ -800,7 +796,6 @@ input[type=checkbox]{
   border-radius: 0.6em;
 	width: 100px;
   margin-left: auto;
-
 }
 /*mediaqueries*/
 @media all and (min-width: 350px){
@@ -815,7 +810,6 @@ input[type=checkbox]{
 	.containericonos{
 		margin-right: 20px;
 	}
-
 }
 @media all and (min-width: 400px){
 	.headercreatucv{
@@ -823,22 +817,20 @@ input[type=checkbox]{
 	}
 }
 @media all and (min-width: 460px){
-#arriba {
-	 bottom: 15px;
-	 right: 27px;
- }
-
+	#arriba {
+		 bottom: 15px;
+		 right: 27px;
+	}
 }
 @media all and (min-width: 490px){
 	.headercreatucv{
-	height: 80vh;
+		height: 80vh;
 	}
 }
 	/*.textcrea{
 		font-size: 40px;
 		margin-top: 50px;
 	}*/
-
 @media all and (max-width: 600px){
 	.text-form-button{
 		font-size: 18px;
@@ -874,28 +866,19 @@ input[type=checkbox]{
 		left: 15px;
 	}
 }
-
 @media all and (min-width:600px) {
-
 	#header-fondo {
 		background-image: url(../images/group.png);
 		height: 100vh;
 	}
-
 	#empty-container {
 		height: 70px;
 	}
-
-	#button-down {
-		display: none;
-	}
-
 	.text-crea {
 		margin-top: 15%;
 		margin-left: 20px;
 		font-size: 2em;
 	}
-
 	.sociality {
 		display: flex;
 		justify-content: space-around;
@@ -930,7 +913,6 @@ input[type=checkbox]{
 		width: 50px;
 	}
 }
-
 @media all and (min-width:900px) {
 	.headercreatucv{
 		height: 120vh;
@@ -949,37 +931,20 @@ input[type=checkbox]{
 		margin-left: 20px;
 		font-size: 2.1em;
 	}
-}
-
-@media all and (min-width:900px) {
-
 	.main-web-sections {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 	}
-
-	.text-crea {
-		margin-top: 10%;
-		margin-left: 20px;
-		font-size: 2.3em;
-	}
-
-	#ventana2 {
-		display: block;
-	}
-
 	main {
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 	}
-
 	.formulario-sec {
 	height: 100%;
 	width: 40%
 	}
-
 	.previsualizacion-sec{
 		height: 100%;
 		width: 50%
@@ -1005,11 +970,9 @@ input[type=checkbox]{
 		display: flex;
 		justify-content:space-between;
 	}
-
 	.input-lang, .input-skill{
 		display:flex;
 	}
-
 	.language{
 		margin-right: 1%;
 	}
@@ -1026,7 +989,6 @@ input[type=checkbox]{
 		header, footer, nav {
 		display: none;
 	}
-
 	.formulario-sec {
 		  display: none;
 	}
