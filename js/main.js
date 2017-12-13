@@ -86,6 +86,7 @@ function viewprev(){
 	document.getElementById('header-fondo').style.display="none";
 	document.getElementById('button-down').style.display="none";
 }
+
 //fin parte marta
 
 // Add typed text.
@@ -345,9 +346,15 @@ function setSocialMedia(value, net){
 	}
 }
 /*enlace codigo qr*/
- var listElem = document.querySelector('.list');
- var content = '<li><a href="#">Home</a></li><li><a href="#">Contact</a></li>';
- listElem.innerHTML = content;
+var buttonGenerateQr = document.getElementById('button-generateqr');
+var qrLink = document.getElementById('qrlink');
+buttonGenerateQr.addEventListener('click', generateQr);
+
+function generateQr(event) {
+  var inputPortfolio = document.querySelector('.inputPortfolio').value;
+  qrLink.href = inputPortfolio;
+  update_qrcode();
+}
 
 /*flecha*/
 window.onscroll = function(){

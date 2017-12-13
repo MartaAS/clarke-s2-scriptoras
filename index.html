@@ -294,7 +294,7 @@
             <div class="boxes-container net-social-hidden" id="showNetsocial">
              <div class="nets">
                <input class="inputPortfolio" id="inputQr" type="text" name="inputQr" placeholder=" Contenido para generar QR">
-               <input type="button" value="Generar" onclick="update_qrcode()" class="buttons-save-general">
+               <input type="button" id="button-generateqr" value="Generar" class="buttons-save-general">
              </div>
            </div>
  			   </form>
@@ -420,8 +420,9 @@
                 </li>
               </ul>
             </div>
-            <div id="codigoqr" class="codigoqr">
-            </div>
+            <a href='' id='qrlink'>
+              <div id="codigoqr" class="codigoqr"></div>
+            </a>
            </div>
 
         </section>
