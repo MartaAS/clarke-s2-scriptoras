@@ -149,24 +149,91 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
   border-style: none;
   cursor: pointer;
 }
+.iconsprev{
+	height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  background-size: cover;
+  align-items: flex-end;
+  text-align: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-style: none;
+  cursor: pointer
+}
 /*header parte marta*/
+.containericonos{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.cajaiconsprev{
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
 #btnview{
 	background-image: url("../images/btnfile2.png");
 }
 #btnshare{
-	background-image: url("../images/btnshare3.png");
-	height: 30px;
-	width: 30px;
+	background-image: url("../images/btnshare2.png");
+	display: none;
 }
 #btnprint{
-	background-image: url("../images/btnprint3.png");
-	height: 30px;
-	width: 30px;
+	background-image: url("../images/btnprint2.png");
+	display: none;
 }
 #btndownload{
+	background-image: url("../images/btndownload2.png");
+	display: none;
+}
+#btnshareprev{
+	background-image: url("../images/btnshare3.png");
+	display: block;
+}
+#btnprintprev{
+	background-image: url("../images/btnprint3.png");
+	display: block;
+}
+#btndownloadprev{
 	background-image: url("../images/btndown.png");
-	height: 30px;
-	width: 30px;
+		display: block;
+}
+@media all and (min-width: 900px){
+#btnshare{
+	display: block;
+}
+#btnprint{
+	display: block;
+}
+#btndownload{
+	display: block;
+}
+#btnshareprev{
+	display: none;
+}
+#btnprintprev{
+	display: none;
+}
+#btndownloadprev{
+	display: none;
+}
+.containerlogo{
+	height: 80px;
+	width: 41%;
+	margin-bottom: 8px;
+}
+.machinelog{
+	max-width: 80%;
+}
+.containerleters{
+		width: 1000px;
+}
+.letterslog{
+	max-width: 100%;
+	padding-top: 10px;
+	padding-left: -5px;
+}
 }
 header{
 	width: 100%;
@@ -833,8 +900,8 @@ input[type=checkbox]{
 		font-size: 18px;
 	}
 	.icons{
-		height: 30px;
-	  width: 30px;
+		height: 28px;
+	  width: 28px;
 	}
 	/*Mediaqueries de preview de Experiencia y Formación*/
 	/* Poner la línea a la izquierda */
@@ -906,8 +973,28 @@ input[type=checkbox]{
 		height: 100px;
 	}
 	.icons{
-		height: 50px;
-		width: 50px;
+		height: 34px;
+		width: 34px;
+		margin: 8px;
+	}
+	.containerlogo{
+		height: 80px;
+		width: 41%;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+	.machinelog{
+		max-width: 85%;
+		margin: 0px;
+		padding: 3px;
+	}
+	.containerleters{
+			width: 1000px;
+	}
+	.letterslog{
+		max-width: 100%;
+		padding-top: 10px;
+		padding-left: -5px;
 	}
 }
 @media all and (min-width:900px) {
@@ -915,6 +1002,7 @@ input[type=checkbox]{
 		height: 120vh;
 		width: 100%;
 	}
+	.containerlogo
 	#ventana2{
 		display: block;
 	}

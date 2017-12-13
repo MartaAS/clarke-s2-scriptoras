@@ -86,7 +86,6 @@ function viewprev(){
 	document.getElementById('header-fondo').style.display="none";
 	document.getElementById('button-down').style.display="none";
 }
-
 //fin parte marta
 
 // Add typed text.
