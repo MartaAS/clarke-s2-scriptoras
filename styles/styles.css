@@ -213,14 +213,9 @@ header{
 }
 /*fin cargar imagen*/
 .separador {
-	border: 3px;
-	background-color: #7DBEA5;
-  border-radius: 90px /30px;
-	height: 5px;
-	width: 60%;
+  color: #7DBEA5;
+	width: 100%;
 	text-align: center;
-	margin-top: 2.5em;
-	margin-bottom: 1em;
 }
 .containerinfo{
 	display: flex;
