@@ -480,13 +480,17 @@ input[type=checkbox]{
 }
 /*End Experience and Education preview*/
 /*SKILLS*/
+.section-skills {
+	margin-left: 15px;
+	margin-right: 20px
+}
 .skill {
   margin-top: 5px;
 	margin-right: 1%;
 	color: #5A392B;
 }
 .skill-pre {
-	margin-left: 7%;
+	margin-left: 15%;
 }
 .skill-title {
   /*font-family: sans-serif;*/
@@ -496,9 +500,10 @@ input[type=checkbox]{
 .barra {
   background-color: #E0E0E0 ;
   border-radius: 10px;
-  width: 94%;
+  width: 85%;
   height: 10px;
   margin-left: 0;
+	margin-right: 0;
   position: relative;
 	display: none;
 	margin-top: 5px;
