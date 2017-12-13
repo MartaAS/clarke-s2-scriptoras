@@ -169,10 +169,12 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 .cajaiconsprev{
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-end;
 	align-items: baseline;
 	margin-bottom: 50px;
 	margin-left: 75px;
 	margin-top: 10px;
+	margin-right: 17px;
 }
 #btnview{
 	background-image: url("../images/btnfile2.png");
@@ -937,6 +939,9 @@ input[type=checkbox]{
 	}
 	.headlog{
 		height: 100px;
+	}
+	.cajaiconsprev{
+		margin-top: 37px;
 	}
 	.icons{
 		height: 34px;
