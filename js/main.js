@@ -260,22 +260,14 @@ percentageBar4.onkeyup = percentageSkill;
 /*----------------------END SKILLS FUNCTIONS--------------------------*/
 
 //Get languages and percentages
-var newTextLanguage = document.querySelectorAll('.textBarPreview');
+var newTextLanguage = document.querySelectorAll('.text-bar-preview');
 var inputsLanguage = document.querySelectorAll('.language');
 var inputsPercentage = document.querySelectorAll('.percentage');
 
-<<<<<<< HEAD
 for (var i = 0; i < inputsLanguage.length; i++) {
   inputsLanguage[i].onkeyup = addLanguages;
   inputsPercentage[i].onkeyup = addLanguages;
 }
-//addLangs.addEventListener('onkeyup', addLanguages);
-=======
-function addLanguages(){
-  var newTextLanguage = document.querySelectorAll('.text-bar-preview');
-  var inputsLanguage = document.querySelectorAll('.language');
-  var inputsPercentage = document.querySelectorAll('.percentage');
->>>>>>> 8781438198c20dce02a17939188ec91b30f86f6c
 
 function addLanguages(){
   for (var i = 0; i < newTextLanguage.length; i++) {
