@@ -347,7 +347,7 @@ function setSocialMedia(value, net){
 window.onscroll = function(){
   var arribaButton = document.getElementById('arriba');
   var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-  if(scroll < 100){
+  if(scroll < 130){
     hide(arribaButton);
   }else{
     show(arribaButton);
