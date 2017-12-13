@@ -994,8 +994,7 @@ input[type=checkbox]{
 		width: 50%
 	}
 	.cruz-section-button{
-		margin-top: 0%;
-		margin-left: 90%;
+		display: none;
 	}
 	.separador{
 		margin-top: 1.5em;
