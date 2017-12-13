@@ -301,14 +301,17 @@ function showHobbiesPreview(elementId) {
 function showNetsocial() {
   var netSocialDiv = document.querySelector('.net-social-hidden');
   netSocialDiv.style.display = 'block';
-  // var netSocial = document.querySelectorAll('.printnet');
-  // for (var i=0; i<netSocial.length; i++){
-  //   var text = prompt("Introduce tu usuario de "+netSocial[i].innerHTML);
-  //   netSocial[i].href = netSocial[i].href + text;
-  // }
+
 }
 
 /*javascript de redes sociales*/
+
+document.getElementById('linkedin').addEventListener('keyup', function(){setValue('linkedin')});
+document.getElementById('facebook').addEventListener('keyup', function(){setValue('facebook')});
+document.getElementById('github').addEventListener('keyup', function(){setValue('github')});
+document.getElementById('twitter').addEventListener('keyup', function(){setValue('twitter')});
+document.getElementById('instagram').addEventListener('keyup', function(){setValue('instagram')});
+
 function setValue(net){
 	var inputSocial = document.getElementById(net);
   var liSocial = document.querySelector('.'+net);
@@ -343,18 +346,25 @@ function noVisibility(element){
 function setSocialMedia(value, net){
 	var aNet = document.getElementById('a-'+net);
 	var url;
+  var linkedin = "https://www.linkedin.com/in/";
+  var facebook = "https://www.facebook.com/";
+  var github = "https://github.com/";
+  var twitter = "https://twitter.com/";
+  var instagram ="https://www.instagram.com/";
+
 	if(net == 'linkedin'){
-		aNet.href = aNet.href+value;
+		aNet.href = linkedin + value;
 	}else if(net == 'facebook'){
-		aNet.href = aNet.href+value;
+		aNet.href = facebook + value;
 	}else if(net == 'github'){
-		aNet.href = aNet.href+value;
+		aNet.href = github + value;
 	}else if(net == 'twitter'){
-		aNet.href = aNet.href+value;
+		aNet.href = twitter + value;
 	}else if(net == 'instagram'){
-		aNet.href = aNet.href+value;
+		aNet.href = instagram + value;
 	}
 }
+
 /*enlace codigo qr*/
 var buttonGenerateQr = document.getElementById('button-generateqr');
 var qrLink = document.getElementById('qrlink');
