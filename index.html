@@ -35,149 +35,139 @@
 			</div>
       <button id="button-down" type="button" name="button-down"><a href="index.html#empty-container"><img src="images/expand-button-medium.png" alt="rellena-los-campos"></a></button>
       <div id="empty-container"></div>
-			<div class="main-web-sections">
-			<section class="formulario-sec" id="ventana1">
-				<form class="form-section-container" id=principal-section action="" method="post">
-					<div class="title-container">
-						<h2 class="text-form-button" onclick="editar('principal-box')">Datos principales</h2>
-						<button id="openButtonPrincipal" class="open-section-button shown" type="button" name="principales-button" onclick="editar('principal-box')" value="openButton">
-							<img src="images/addButton32px.png" alt="addButton">
-						</button>
-						<button id="closeButtonPrincipal"class="close-section-button hidden" type="button" name="principales-button" onclick="ocultar('principal-box')" value="closeButton">
-						<img src="images/menos.png" alt="minusbuttom">
-						</button>
-					</div>
-					<div class="boxes-container" id="principal-box">
-					<div class="containerinfo">
-						<!--<div class="containerfoto" id="list">
-							<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt="foto" class="foto">
-						</div> -->
-						<input type="file" id="files" name="files[]" class=""/>
-						<div class="foto" title="Subir imagen" onclick="simularClick()"></div>
-						<!--prueba cargar imagen-->
-
-						<!--<output id="list"></output>-->
-						<!--fin prueba cargar imagen-->
-							<!-- posiblemente se quite por el boton que genera la prueba cargar imagen<input type="button" value="Upload image" class="subirfoto"> -->
-						<div class="datosprin">
-							<input type="text" name="name" placeholder="Introduce nombre" class="inputs name" required id="nombreformulario">
-							<input type="text" name="surname" placeholder="Introduce apellidos" class="inputs" required id="apellidoformulario">
-							<input type="text" name="profesion" placeholder="Introduce profesión" class="inputs" required id="profesionformulario">
-							<input type="email" name="mail" placeholder="Introduce email" class="inputs" id="emailformulario">
-							<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="inputs" id="telefonoformulario">
-						</div>
-					</div>
-				</div>
-			</form>
-<!---___________________________ABOUT______________________________ --->
-			<form class="form-section-container" action="" method="post"> <!--Mostrado-->
-				<div class="title-container">
-					<h2 class="text-form-button" onclick="editar('content-about')">Sobre mí</h2>
-					<button id="openButtonAbout" class="open-section-button shown" type="button" name="about-me-button" onclick="editar('content-about')" value="openButton">
-						<img src="images/addButton32px.png" alt="addButton">
-					</button>
-					<button id="closeButtonAbout" class="close-section-button hidden" type="button" name="about-me-button" onclick="ocultar('content-about')" value="closeButton">
-						<img src="images/menos.png" alt="minusbuttom">
-					</button>
-				</div>
-				<div  id="content-about" class="boxes-container"><!--Oculto-->
-					<label for="about"></label>
-					<textarea name="about-me" rows="6" cols="20" placeholder="Introduce una breve descripción sobre ti." class="inputs" id="text-about"></textarea>
-				</div>
-			</form>
-<!--_____________________________END ABOUT__________________________________-->
-				<!--Sección de Experiencia-->
-				<form class="form-section-container" id=experience-section action="" method="post">
-					<div class="title-container">
-						<h2 class="text-form-button" onclick="editar('job-box')">Experiencia laboral</h2>
-						<button id="openButtonExperience" class="open-section-button shown" type="button" name="experience-button" onclick="editar('job-box')" value="openButton">
-							<img src="images/addButton32px.png" alt="addButton">
-						</button>
-						<button id="closeButtonExperience" class="close-section-button hidden" type="button" name="job-box-button" onclick="ocultar('job-box')" value="closeButton">
-						<img src="images/menos.png" alt="minusbuttom">
-					</button>
-					</div>
-					<div class="boxes-container" id="job-box">
-						<h3 class="subtitle-section">Puesto de trabajo</h3>
-						<div>
-							<label for="job"></label>
-							<input class="inputs" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo"/>
-						</div>
-						<div >
-							<label for="company"></label>
-							<input class="inputs" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
-						</div>
-						<div class="dates-boxes">
-							<label>Fecha de inicio:</label>
-							<select class="select-styles month" id="month-job-start" name="job-start-month">
-							</select>
-							<select class="select-styles year" id="year-job-start" name="job-start-year">
-							</select>
-						</div>
-						<div class="dates-boxes">
-							<label>Fecha de finalización</label>
-							<select class="select-styles month" id="month-job-end" name="job-end-month">
-							</select>
-							<select class="select-styles year" id="year-job-end" name="job-end-year">
-							</select>
-						</div>
-						<div class="buttons-container">
-							<input class="buttons-save-general experiencia" id="button-add-exp" type="button" name="add-exp" value="Añadir">
-						</div>
-					</div>
-				</form>
-
-				<!--Sección de Formación-->
-				<form class="form-section-container" id="education-section" action="" method="post">
-					<div class="title-container">
-						<h2 class="text-form-button" onclick="editar('education-box')">Formación</h2>
-						<button id="openButtonFormac" class="open-section-button shown" type="button" name="languageButton" onclick="editar('education-box')" value="openButton">
-							<img src="images/addButton32px.png" alt="addButton">
-						</button>
-						<button id="closeButtonFormac" class="close-section-button hidden" type="button" name="education-button" onclick="ocultar('education-box')" value="closeButton">
-						<img src="images/menos.png" alt="minusbuttom">
-						</button>
-					</div>
-					<div class="boxes-container" id="education-box">
-						<h3 class="subtitle-section">Titulación</h3>
-						<div>
-							<input class="inputs" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación"/>
-						</div>
-						<div >
-							<input class="inputs" id="center" type="text" name="center-name" placeholder="Indica el centro de estudios">
-						</div>
-						<div class="dates-boxes">
-							<label>Fecha de inicio</label>
-							<select class="select-styles month" id="month-training-start" name="training-start-month">
-							</select>
-							<select class="select-styles year" id="year-training-start" name="training-start-year">
-							</select>
-						</div>
-						<div class="dates-boxes">
-							<label>Fecha de finalización</label>
-							<select class="select-styles month" id="month-training-end" name="training-end-month">
-							</select>
-							<select class="select-styles year" id="year-training-end" name="training-end-year">
-							</select>
-						</div>
-						<div class="buttons-container">
-							<input type="button" value="Añadir" name="add-ed" id="button-add-ed" class="buttons-save-general formacion">
-						</div>
-					</div>
-				</form>
-				<!--Skills -->
-				<section  class="form-section-container">
-					<div class="title-container">
-						<h2 class="text-form-button">Habilidades</h2><!--Mostrado-->
-						<button id="openButtonSkill" class="open-section-button shown" type="button" name="skills-button" onclick="editar('content-skills')" value="openButton">
-							<img src="images/addButton32px.png" alt="addButton">
-						</button>
-						<button id="closeButtonSkill" class="close-section-button hidden" type="button" name="content-skills-button" onclick="ocultar('content-skills')" value="closeButton">
+			<div class="main-web-sections"><!--ETIQUETA NO CERRADA-->
+				<section class="formulario-sec" id="ventana1">
+					<form class="form-section-container" id=principal-section action="" method="post">
+						<div class="title-container">
+							<h2 class="text-form-button" onclick="editar('principal-box')">Datos principales</h2>
+							<button id="openButtonPrincipal" class="open-section-button shown" type="button" name="principales-button" onclick="editar('principal-box')" value="openButton">
+								<img src="images/addButton32px.png" alt="addButton">
+							</button>
+							<button id="closeButtonPrincipal"class="close-section-button hidden" type="button" name="principales-button" onclick="ocultar('principal-box')" value="closeButton">
 								<img src="images/menos.png" alt="minusbuttom">
-						</button>
-					</div>
-					<form action="index.html" method="post">
-						<div id="content-skills" class="boxes-container"><!--Oculto-->
+							</button>
+						</div>
+						<div class="boxes-container" id="principal-box">
+							<div class="containerinfo">
+								<!--<div class="containerfoto" id="list">
+									<img src="https://i.pinimg.com/236x/7a/09/15/7a0915d217eb044dfff11408b3090897--blue-eyes-pop-viking-men.jpg" alt="foto" class="foto">
+								</div> -->
+								<input type="file" id="files" name="files[]" class=""/>
+								<div class="foto" title="Subir imagen" onclick="simularClick()"></div>
+								<!--prueba cargar imagen-->
+								<!--<output id="list"></output>-->
+								<!--fin prueba cargar imagen-->
+									<!-- posiblemente se quite por el boton que genera la prueba cargar imagen<input type="button" value="Upload image" class="subirfoto"> -->
+								<div class="datosprin">
+									<input type="text" name="name" placeholder="Introduce nombre" class="inputs name" required id="nombreformulario">
+									<input type="text" name="surname" placeholder="Introduce apellidos" class="inputs" required id="apellidoformulario">
+									<input type="text" name="profesion" placeholder="Introduce profesión" class="inputs" required id="profesionformulario">
+									<input type="email" name="mail" placeholder="Introduce email" class="inputs" id="emailformulario">
+									<input type="tel" name="telephone" placeholder="Introduce teléfono móvil" class="inputs" id="telefonoformulario">
+								</div>
+							</div>
+						</div>
+					</form>
+					<!---ABOUT--->
+					<form class="form-section-container" action="" method="post"> <!--Mostrado-->
+						<div class="title-container">
+							<h2 class="text-form-button" onclick="editar('content-about')">Sobre mí</h2>
+							<button id="openButtonAbout" class="open-section-button shown" type="button" name="about-me-button" onclick="editar('content-about')" value="openButton">
+								<img src="images/addButton32px.png" alt="addButton">
+							</button>
+							<button id="closeButtonAbout" class="close-section-button hidden" type="button" name="about-me-button" onclick="ocultar('content-about')" value="closeButton">
+								<img src="images/menos.png" alt="minusbuttom">
+							</button>
+						</div>
+						<div  id="content-about" class="boxes-container"><!--Oculto-->
+							<label for="about"></label>
+							<textarea name="about-me" rows="6" cols="25" placeholder="Introduce una breve descripción sobre ti." class="textarea" id="text-about"></textarea>
+						</div>
+					</form>
+					<!--END ABOUT-->
+					<!--Sección de Experiencia-->
+					<form class="form-section-container" id=experience-section action="" method="post">
+						<div class="title-container">
+							<h2 class="text-form-button" onclick="editar('job-box')">Experiencia laboral</h2>
+							<button id="openButtonExperience" class="open-section-button shown" type="button" name="experience-button" onclick="editar('job-box')" value="openButton">
+								<img src="images/addButton32px.png" alt="addButton">
+							</button>
+							<button id="closeButtonExperience" class="close-section-button hidden" type="button" name="job-box-button" onclick="ocultar('job-box')" value="closeButton">
+							<img src="images/menos.png" alt="minusbuttom">
+							</button>
+						</div>
+						<div class="boxes-container" id="job-box">
+							<h3 class="subtitle-section">Puesto de trabajo</h3>
+							<div>
+								<label for="job"></label>
+								<input class="inputs" id="job" type="text" name="job-name" placeholder="Indica el puesto de trabajo"/>
+							</div>
+							<div>
+								<label for="company"></label>
+								<input class="inputs" id="company" type="text" name="company-name" placeholder="Indica el nombre de la empresa">
+							</div>
+							<div class="dates-boxes">
+								<label>Fecha de inicio:</label>
+								<select class="select-styles month" id="month-job-start" name="job-start-month"></select>
+								<select class="select-styles year" id="year-job-start" name="job-start-year"></select>
+							</div>
+							<div class="dates-boxes">
+								<label>Fecha de finalización</label>
+								<select class="select-styles month" id="month-job-end" name="job-end-month"></select>
+								<select class="select-styles year" id="year-job-end" name="job-end-year"></select>
+							</div>
+							<div class="buttons-container">
+								<input class="buttons-save-general experiencia" id="button-add-exp" type="button" name="add-exp" value="Añadir">
+							</div>
+						</div>
+					</form>
+					<!--Sección de Formación-->
+					<form class="form-section-container" id="education-section" action="" method="post">
+						<div class="title-container">
+							<h2 class="text-form-button" onclick="editar('education-box')">Formación</h2>
+							<button id="openButtonFormac" class="open-section-button shown" type="button" name="languageButton" onclick="editar('education-box')" value="openButton">
+								<img src="images/addButton32px.png" alt="addButton">
+							</button>
+							<button id="closeButtonFormac" class="close-section-button hidden" type="button" name="education-button" onclick="ocultar('education-box')" value="closeButton">
+							<img src="images/menos.png" alt="minusbuttom">
+							</button>
+						</div>
+						<div class="boxes-container" id="education-box">
+							<h3 class="subtitle-section">Titulación</h3>
+							<div>
+								<input class="inputs" id="educ-title" type="text" name="title-name" placeholder="Indica el nombre de la titulación"/>
+							</div>
+							<div >
+								<input class="inputs" id="center" type="text" name="center-name" placeholder="Indica el centro de estudios">
+							</div>
+							<div class="dates-boxes">
+								<label>Fecha de inicio</label>
+								<select class="select-styles month" id="month-training-start" name="training-start-month"></select>
+								<select class="select-styles year" id="year-training-start" name="training-start-year"></select>
+							</div>
+							<div class="dates-boxes">
+								<label>Fecha de finalización</label>
+								<select class="select-styles month" id="month-training-end" name="training-end-month"></select>
+								<select class="select-styles year" id="year-training-end" name="training-end-year"></select>
+							</div>
+							<div class="buttons-container">
+								<input type="button" value="Añadir" name="add-ed" id="button-add-ed" class="buttons-save-general formacion">
+							</div>
+						</div>
+					</form>
+					<!--Skills -->
+					<section  class="form-section-container">
+						<div class="title-container">
+							<h2 class="text-form-button">Habilidades</h2><!--Mostrado-->
+							<button id="openButtonSkill" class="open-section-button shown" type="button" name="skills-button" onclick="editar('content-skills')" value="openButton">
+								<img src="images/addButton32px.png" alt="addButton">
+							</button>
+							<button id="closeButtonSkill" class="close-section-button hidden" type="button" name="content-skills-button" onclick="ocultar('content-skills')" value="closeButton">
+									<img src="images/menos.png" alt="minusbuttom">
+							</button>
+						</div>
+						<form action="index.html" method="post">
+							<div id="content-skills" class="boxes-container"><!--Oculto-->
 								<div class="input-skill">
 									<input class="inputs skill" type="text" name="skill1" value="" placeholder="Escribe una habilidad" id="skill1">
 									<input class="inputs skill-percent" type="text" name="percentage1" value="" placeholder="Escribe un porcentaje" id="percentage1">
@@ -194,114 +184,112 @@
 									<input class="inputs skill" type="text" name="skill4" value="" placeholder="Escribe una habilidad" id="skill4">
 									<input class="inputs skill-percent" type="text" name="percentage4" value="" placeholder="Escribe un porcentaje" id="percentage4">
 								</div>
-						</div>
-				</form>
-			</section>
-<!--_________________________________End Skills___________________________________-->
-        <!--Languages form section-->
-        <section id="languages-form-container">
-          <div class="title-container">
-            <h2 class="text-form-button">Idiomas</h2>
-            <button id="openButtonlanguages" class="open-section-button shown" type="button" name="languageButton" onclick="editar('languages-form')"value="openButton"><img src="images/addButton32px.png" alt="addButton"></button>
-						<button id="closeButtonlanguages" class="close-section-button hidden" type="button" name="job-box-button" onclick="ocultar('languages-form')" value="closeButton">
-						<img src="images/menos.png" alt="minusbuttom"></button>
-          </div>
-          <form id="languages-form" action="index.html" method="post">
-            <div class="input-lang">
-              <input class="language inputs" type="text" name="language1" value="" placeholder="Escribe un idioma">
-              <input class="percentage inputs" type="text" name="percentage1" value="" placeholder="Escribe su porcentaje">
-            </div>
-            <div class="input-lang">
-              <input class="language inputs" type="text" name="language2" value="" placeholder="Escribe un idioma">
-              <input class="percentage inputs" type="text" name="percentage2" value="" placeholder="Escribe su porcentaje">
-            </div>
-            <div class="input-lang">
-              <input class="language inputs" type="text" name="language3" value="" placeholder="Escribe un idioma">
-              <input class="percentage inputs" type="text" name="percentage3" value="" placeholder="Escribe su porcentaje">
-            </div>
-            <input type="button" value="Guardar" class="buttons-save-general" id="button-save">
-          </form>
-        </section>
-
-        <!--Hobbies form section-->
-        <section id="hobbies-form-container">
-          <div class="title-container">
-            <h2 class="text-form-button">Hobbies</h2>
-            <button id="openButtonHobbies" class="addLanguageButton open-section-button shown" type="button" name="languageButton" onclick="editar('hobbies-form')" value="openButton"><img src="images/addButton32px.png" alt="addButton"></button>
-						<button id="closeButtonHobbies" class="close-section-button hidden" type="button" name="hobbiesForm-button" onclick="ocultar('hobbies-form')"value="closeButton">
-						<img src="images/menos.png" alt="minusbuttom">
-					  </button>
-          </div>
-          <form id="hobbies-form" action="index.html" method="post">
-            <div class="check-box-hobbies">
-              <label for="hobbie1">Leer</label>
-              <input id ="hobbie1" type="checkbox" name="read" value="hobbies" onchange="showHobbiesPreview('read')">
-            </div>
-            <div class="check-box-hobbies">
-              <label for="hobbie2">Viajar</label>
-              <input id ="hobbie2" type="checkbox" name="travel" value="hobbies" onchange="showHobbiesPreview('travel')">
-            </div>
-            <div class="check-box-hobbies">
-              <label for="hobbie3">Videojuegos</label>
-              <input id ="hobbie3" type="checkbox" name="game" value="hobbies" onchange="showHobbiesPreview('game')">
-            </div>
-            <div class="check-box-hobbies">
-              <label for="hobbie4">Deportes</label>
-              <input id ="hobbie4" type="checkbox" name="sports" value="hobbies" onchange="showHobbiesPreview('sports')">
-            </div>
-            <div class="check-box-hobbies">
-              <label for="hobbie5">Cine</label>
-              <input id ="hobbie5" type="checkbox" name="movies" value="hobbies" onchange="showHobbiesPreview('cinema')">
-            </div>
-            <div class="check-box-hobbies">
-              <label for="hobbie6">Música</label>
-              <input id ="hobbie6" type="checkbox" name="music" value="hobbies" onchange="showHobbiesPreview('music')">
-            </div>
-          </form>
-        </section>
-
-				<!--Sección de Redes sociales -->
+							</div>
+						</form>
+					</section>
+					<!--End Skills-->
+	        <!--Languages form section-->
+	        <section id="languages-form-container">
+	          <div class="title-container">
+	            <h2 class="text-form-button">Idiomas</h2>
+	            <button id="openButtonlanguages" class="open-section-button shown" type="button" name="languageButton" onclick="editar('languages-form')"value="openButton"><img src="images/addButton32px.png" alt="addButton"></button>
+							<button id="closeButtonlanguages" class="close-section-button hidden" type="button" name="job-box-button" onclick="ocultar('languages-form')" value="closeButton">
+							<img src="images/menos.png" alt="minusbuttom"></button>
+	          </div>
+	          <form id="languages-form" action="index.html" method="post">
+	            <div class="input-lang">
+	              <input class="language inputs" type="text" name="language1" value="" placeholder="Escribe un idioma">
+	              <input class="percentage inputs" type="text" name="percentage1" value="" placeholder="Escribe su porcentaje">
+	            </div>
+	            <div class="input-lang">
+	              <input class="language inputs" type="text" name="language2" value="" placeholder="Escribe un idioma">
+	              <input class="percentage inputs" type="text" name="percentage2" value="" placeholder="Escribe su porcentaje">
+	            </div>
+	            <div class="input-lang">
+	              <input class="language inputs" type="text" name="language3" value="" placeholder="Escribe un idioma">
+	              <input class="percentage inputs" type="text" name="percentage3" value="" placeholder="Escribe su porcentaje">
+	            </div>
+	          </form>
+	        </section>
+	        <!--Hobbies form section-->
+	        <section id="hobbies-form-container">
+	          <div class="title-container">
+	            <h2 class="text-form-button">Hobbies</h2>
+	            <button id="openButtonHobbies" class="addLanguageButton open-section-button shown" type="button" name="languageButton" onclick="editar('hobbies-form')" value="openButton"><img src="images/addButton32px.png" alt="addButton"></button>
+							<button id="closeButtonHobbies" class="close-section-button hidden" type="button" name="hobbiesForm-button" onclick="ocultar('hobbies-form')"value="closeButton">
+							<img src="images/menos.png" alt="minusbuttom">
+						  </button>
+	          </div>
+	          <form id="hobbies-form" action="index.html" method="post">
+	            <div class="check-box-hobbies">
+	              <label for="hobbie1">Leer</label>
+	              <input id ="hobbie1" type="checkbox" name="read" value="hobbies" onchange="showHobbiesPreview('read')">
+	            </div>
+	            <div class="check-box-hobbies">
+	              <label for="hobbie2">Viajar</label>
+	              <input id ="hobbie2" type="checkbox" name="travel" value="hobbies" onchange="showHobbiesPreview('travel')">
+	            </div>
+	            <div class="check-box-hobbies">
+	              <label for="hobbie3">Videojuegos</label>
+	              <input id ="hobbie3" type="checkbox" name="game" value="hobbies" onchange="showHobbiesPreview('game')">
+	            </div>
+	            <div class="check-box-hobbies">
+	              <label for="hobbie4">Deportes</label>
+	              <input id ="hobbie4" type="checkbox" name="sports" value="hobbies" onchange="showHobbiesPreview('sports')">
+	            </div>
+	            <div class="check-box-hobbies">
+	              <label for="hobbie5">Cine</label>
+	              <input id ="hobbie5" type="checkbox" name="movies" value="hobbies" onchange="showHobbiesPreview('cinema')">
+	            </div>
+	            <div class="check-box-hobbies">
+	              <label for="hobbie6">Música</label>
+	              <input id ="hobbie6" type="checkbox" name="music" value="hobbies" onchange="showHobbiesPreview('music')">
+	            </div>
+	          </form>
+	        </section>
+					<!--Sección de Redes sociales -->
         	<form class="form-section-container" action="index.html" method="post">
-             <div class="title-container">
+            <div class="title-container">
               <h2 class="text-form-button">Redes Sociales</h2>
   						  <button id="openButtonNet" class="open-section-button shown" type="button" name="networksButton" onclick="showNetsocial()" value="openButton">
-  							 <img src="images/addButton32px.png" alt="addButton"></button>
-								 <button id="closeButtonNet" class="close-section-button hidden" type="button" name="minredes-button" onclick="ocultar('minredes')" value="closeButton">
-	 							<img src="images/menos.png" alt="minusbuttom">
-	 						</button>
-  					 </div>
-              <div class="boxes-container net-social-hidden" id="minredes">
-                <div class="nets">
-                  <label class="socialLabel" for="linkedin">Linkedin</label>
-                  <input class="users inputs" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onchange="setValue('linkedin')">
-              </div>
+  								<img src="images/addButton32px.png" alt="addButton"></button>
+								<button id="closeButtonNet" class="close-section-button hidden" type="button" name="minredes-button" onclick="ocultar('minredes')" value="closeButton">
+	 								<img src="images/menos.png" alt="minusbuttom">
+	 							</button>
+  					</div>
+						<div class="boxes-container net-social-hidden" id="minredes">
               <div class="nets">
-                <label class="socialLabel" for="facebook">Facebook</label>
-                <input class="users inputs" id="facebook" type="text" name="net2" placeholder=" Rellena con tu usuario" onchange="setValue('facebook')">
+                <label class="socialLabel" for="linkedin">Linkedin</label>
+          	     <input class="users inputs" id="linkedin" type="text" name="net1" placeholder=" Rellena con tu usuario" onchange="setValue('linkedin')">
               </div>
-              <div class="nets">
-                <label class="socialLabel" for="github">Github</label>
-                <input class="users inputs" id="github" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('github')">
-              </div>
-              <div class="nets">
-                <label class="socialLabel" for="twitter">Twitter</label>
-                <input class="users inputs" id="twitter" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('twitter')">
-              </div>
-              <div class="nets">
-                <label class="socialLabel" for="instagram">Instagram</label>
-                <input class="users inputs" id="instagram" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('instagram')">
-              </div>
+      	      <div class="nets">
+	              <label class="socialLabel" for="facebook">Facebook</label>
+	              <input class="users inputs" id="facebook" type="text" name="net2" placeholder=" Rellena con tu usuario" onchange="setValue('facebook')">
+	            </div>
+	            <div class="nets">
+	              <label class="socialLabel" for="github">Github</label>
+	              <input class="users inputs" id="github" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('github')">
+	            </div>
+	            <div class="nets">
+	              <label class="socialLabel" for="twitter">Twitter</label>
+	              <input class="users inputs" id="twitter" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('twitter')">
+	            </div>
+	            <div class="nets">
+	              <label class="socialLabel" for="instagram">Instagram</label>
+	              <input class="users inputs" id="instagram" type="text" name="net3" placeholder=" Rellena con tu usuario" onchange="setValue('instagram')">
+	            </div>
 						</div>
-			   </form>
+				  </form>
          <!--Sección de Portfolio-->
          	<form class="form-section-container" action="index.html" method="post">
  						<div class="title-container">
              	<h2 class="text-form-button">Portfolio</h2>
  							<button  id="openButtonQr" class="open-section-button shown" type="button" name="networksButton" onclick="editar('showNetsocial')" value="openButton">
- 							<img src="images/addButton32px.png" alt="addButton"></button>
+ 								<img src="images/addButton32px.png" alt="addButton">
+							</button>
 							<button  id="closeButtonQr" class="close-section-button hidden" type="button" name="showNetsocial-button" onclick="ocultar('showNetsocial')" value="closeButton">
-							<img src="images/menos.png" alt="minusbuttom">
-						</button>
+								<img src="images/menos.png" alt="minusbuttom">
+							</button>
  						</div>
             <div class="boxes-container net-social-hidden" id="showNetsocial">
              <div class="nets">
@@ -327,8 +315,8 @@
 				<section class="containerprefoto">
 					<div id="prefoto" class="prefoto"></div>
 				</section>
-				<hr class="separador">
-				<section class="preprincipales">
+				<p class="separador">* * * * * * * * * * * * * * * </p>
+				<section class="preprincipales" id="preprincipales-link">
 					<p id="prenombre" class="name">Nombre</p>
 					<p id="preapellidos">Apellido</p>
 					<p id="preprofesion">Profesion</p>
@@ -337,22 +325,22 @@
 				</section>
 
 				<!--Sección About Me-->
-				<hr class="separador">
+				<p class="separador">* * * * * * * * * * * * * * * </p>
 				<section class="">
 					<h2 class="section-title">Sobre mí</h2>
 						<p id="aboutMe-preview" class="section-title"></p>
 				</section>
 
 				<!--Sección de Experiencia y Formación-->
-        <hr class="separador">
+        <p class="separador">* * * * * * * * * * * * * * * </p>
 				<section class="">
 					<h2 class="section-title">Experiencia y Formación</h2>
 					<section class="timeline">
 					</section>
 				</section>
 <!--___________________________Skills_______________________________________-->
-				<hr class="separador">
-				<section>
+			<p class="separador">* * * * * * * * * * * * * * * </p>
+				<section class="section-skills">
 					<h2 class="section-title">Habilidades</h2>
 					<div class="skill-pre">
     				<div class="skill-title" id="skill1-preview"></div>
@@ -375,7 +363,7 @@
 				</section>
 <!--___________________________END SKILLS_______________________________________-->
         <!--Languages preview section-->
-        <hr class="separador">
+        <p class="separador">* * * * * * * * * * * * * * * </p>
         <section id="languages-preview">
           <h2 class="section-title">Idiomas</h2>
           <div class="languages-bar-preview">
@@ -396,7 +384,7 @@
         </section>
 
         <!--Hobbies section-->
-        <hr class="separador">
+        <p class="separador">* * * * * * * * * * * * * * * </p>
         <section id="hobbies-preview">
           <h2 class="section-title">Hobbies</h2>
           <div class="all-hobbies-preview">
@@ -410,7 +398,7 @@
         </section>
 
         <!--Sección de Redes sociales -->
-        <hr class="separador">
+        <p class="separador">* * * * * * * * * * * * * * * </p>
         <section>
           <div class="sociality">
             <div class="socialNetworks">
@@ -439,6 +427,7 @@
         </section>
 				</div>
       </section>
+
 			</div>
 			<div class="alert-dates invisible">
 				<button class="button-alert-img" type="button" name="button">
@@ -447,13 +436,10 @@
 				<p class="text-alert">¡Ojo! La fecha de inicio no debe ser posterior a la fecha de finalización.</p>
 			</div>
     </main>
-
 		<!-- End Container -->
 		<!-- Footer -->
 	  <footer class="infooter">
-			<div class="end">
-			   <h3>Scriptoras &copy; 2017</h3>
-			</div>
+			<div class="end"><h3>Scriptoras &copy; 2017</h3></div>
 			<div class="end">
 				<p><a class="contacto" href="contact.html">Contacta con nosotras</a></p>
 		  </div>

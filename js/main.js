@@ -259,14 +259,16 @@ percentageBar4.onkeyup = percentageSkill;
 /*----------------------END SKILLS FUNCTIONS--------------------------*/
 
 //Get languages and percentages
-var addLangs = document.getElementById('button-save');
-addLangs.addEventListener('click', addLanguages);
+var newTextLanguage = document.querySelectorAll('.text-bar-preview');
+var inputsLanguage = document.querySelectorAll('.language');
+var inputsPercentage = document.querySelectorAll('.percentage');
+
+for (var i = 0; i < inputsLanguage.length; i++) {
+  inputsLanguage[i].onkeyup = addLanguages;
+  inputsPercentage[i].onkeyup = addLanguages;
+}
 
 function addLanguages(){
-  var newTextLanguage = document.querySelectorAll('.text-bar-preview');
-  var inputsLanguage = document.querySelectorAll('.language');
-  var inputsPercentage = document.querySelectorAll('.percentage');
-
   for (var i = 0; i < newTextLanguage.length; i++) {
     newTextLanguage[i].innerHTML = inputsLanguage[i].value;
     newTextLanguage[i].parentElement.style.width = inputsPercentage[i].value + '%';
@@ -283,6 +285,7 @@ function showHobbiesPreview(elementId) {
      check.style.display = "inline-block";
    }
  }
+
 /*Redes sociales*/
 function showNetsocial() {
   var netSocialDiv = document.querySelector('.net-social-hidden');
@@ -343,7 +346,7 @@ function setSocialMedia(value, net){
 window.onscroll = function(){
   var arribaButton = document.getElementById('arriba');
   var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-  if(scroll < 100){
+  if(scroll < 130){
     hide(arribaButton);
   }else{
     show(arribaButton);

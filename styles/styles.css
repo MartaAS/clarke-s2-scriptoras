@@ -15,13 +15,17 @@ main{
 	flex-direction: column;
 	min-height: 100vh;
 }
-
 #empty-container {
 	height: 70px;
 }
-
+@font-face {
+font-family: 'American Typewriter Bold';
+font-style: normal;
+font-weight: normal;
+src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold.woff') format('woff');
+}
 /*Estilos generales de la sección de desplegables*/
-.title-container{
+.title-container {
 	padding-left: 20px;
 	margin-bottom: 10px;
 	width: 90%;
@@ -44,16 +48,16 @@ main{
 	border-top-color: #5A392B;
 	background: #5A392B;
 }
-.open-section-button{
+.open-section-button {
 	background: none;
 	border: none;
 	margin-left: auto;
 }
-.close-section-button{
+.close-section-button {
 	background: none;
 	border: none;
 }
-.cruz-section-button{
+.cruz-section-button {
 	background: none;
 	border: none;
 	margin-top: 10%;
@@ -62,7 +66,7 @@ main{
 	margin-top: 30px;
 	margin-left: 400px;
 }
-.inputs{
+.inputs {
 	display: flex;
 	text-align: center;
 	font-size: 15px;
@@ -71,6 +75,7 @@ main{
 	border: solid 1px;
 	border-radius: 5px;
 	width: 225px;
+	font-style: arial;
 }
 /*Botones añadir y guardar*/
 .buttons-save-general {
@@ -92,7 +97,7 @@ main{
 	border-color:#7DBEA5;
 }
 /*Ocultar secciones*/
-.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
+.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2, #button-down {
 	display: none;
 }
 .visible {
@@ -246,22 +251,17 @@ header{
 }
 #header-fondo {
 	background-image: url(../images/groupMobile.png);
-	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	height: 80vh;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
 	margin-bottom: 5px;
 }
 .text-crea {
-	display: flex;
-	align-self: flex-start;
 	margin-top: 20%;
 	margin-left: 20px;
 	font-size: 1.5em;
-	font-family: 'Arial';
+	font-family: 'American Typewriter Bold', Arial;
+	font-weight: bold;
 	color: #5a392b;
 }
 #button-down {
@@ -279,14 +279,9 @@ header{
 }
 /*fin cargar imagen*/
 .separador {
-	border: 3px;
-	background-color: #7DBEA5;
-  border-radius: 90px /30px;
-	height: 5px;
-	width: 60%;
+  color: #7DBEA5;
+	width: 100%;
 	text-align: center;
-	margin-top: 2.5em;
-	margin-bottom: 1em;
 }
 .containerinfo{
 	display: flex;
@@ -365,7 +360,15 @@ header{
 /*Fin de estilos generales*/
 
 /*ABOUT*/
+.textarea {
+	font-family: arial;
+	font-size: 15px;
+}
 #aboutMe-preview{
+	text-align: justify;
+	display: flex;
+	justify-content: center;
+	margin:0;
 	color: black;
 }
 /*Experience and Education form*/
@@ -537,13 +540,17 @@ input[type=checkbox]{
 }
 /*End Experience and Education preview*/
 /*SKILLS*/
+.section-skills {
+	margin-left: 15px;
+	margin-right: 20px
+}
 .skill {
   margin-top: 5px;
 	margin-right: 1%;
 	color: #5A392B;
 }
 .skill-pre {
-	margin-left: 7%;
+	margin-left: 15%;
 }
 .skill-title {
   /*font-family: sans-serif;*/
@@ -553,9 +560,10 @@ input[type=checkbox]{
 .barra {
   background-color: #E0E0E0 ;
   border-radius: 10px;
-  width: 94%;
+  width: 85%;
   height: 10px;
   margin-left: 0;
+	margin-right: 0;
   position: relative;
 	display: none;
 	margin-top: 5px;
@@ -605,6 +613,9 @@ input[type=checkbox]{
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+#hobbies-form {
+	padding-bottom: 2%;
+}
 /* Redes sociales*/
 .nets{
 	display: flex;
@@ -616,6 +627,7 @@ input[type=checkbox]{
 	justify-content: space-between;
 	width: 70%;
 }
+
 .linkedin a{
 	background: url('../images/linkedin.png');
 	overflow: hidden;
@@ -767,7 +779,8 @@ input[type=checkbox]{
 	width: 30px;
 	height: 30px;
 	background-color: white;
-	border-radius: 17px;
+	border-radius: 30px;
+	margin-bottom: 60px;
 }
 /*formulario*/
 .flexible{
@@ -785,8 +798,8 @@ input[type=checkbox]{
   top: 0;
   width: 100%;
   height: 103%;
-  background: url(../images/vintage8.jpg) left top no-repeat;
-  background-size: 100% auto;
+  background: url(../images/groupMobile.png) left top no-repeat;
+  background-size: cover;
   z-index: 1;
   opacity: .5;
 }
@@ -797,7 +810,6 @@ input[type=checkbox]{
 	align-items: center;
 	position: relative;
   z-index: 2;
-
 }
 .titleForm{
 	text-align: center;
@@ -848,7 +860,6 @@ input[type=checkbox]{
   border-radius: 0.6em;
 	width: 100px;
   margin-left: auto;
-
 }
 /*mediaqueries*/
 @media all and (min-width: 350px){
@@ -863,7 +874,6 @@ input[type=checkbox]{
 	.containericonos{
 		margin-right: 20px;
 	}
-
 }
 @media all and (min-width: 400px){
 	.headercreatucv{
@@ -871,22 +881,20 @@ input[type=checkbox]{
 	}
 }
 @media all and (min-width: 460px){
-#arriba {
-	 bottom: 15px;
-	 right: 27px;
- }
-
+	#arriba {
+		 bottom: 15px;
+		 right: 27px;
+	}
 }
 @media all and (min-width: 490px){
 	.headercreatucv{
-	height: 80vh;
+		height: 80vh;
 	}
 }
 	/*.textcrea{
 		font-size: 40px;
 		margin-top: 50px;
 	}*/
-
 @media all and (max-width: 600px){
 	.text-form-button{
 		font-size: 18px;
@@ -922,11 +930,22 @@ input[type=checkbox]{
 		left: 15px;
 	}
 }
-
 @media all and (min-width:600px) {
+	#header-fondo {
+		background-image: url(../images/group.png);
+		height: 100vh;
+	}
+	#empty-container {
+		height: 70px;
+	}
+	.text-crea {
+		margin-top: 15%;
+		margin-left: 20px;
+		font-size: 2em;
+	}
 	.sociality {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 	}
 	.social {
 		width: 300px;
@@ -987,34 +1006,33 @@ input[type=checkbox]{
 	#ventana2{
 		display: block;
 	}
-	#header-fondo {
+	#header-fondo{
 		width: cover;
 		background-image: url(../images/group.png);
 		height: 100vh;
 	}
-
-	#empty-container {
-		height: 70px;
+	.flexible::before{
+		left: 0;
+		top: 0;
+		background: url(../images/group.png) left top no-repeat;
+		background-size: cover;
 	}
-
-	#button-down {
-		display: none;
+	.text-crea {
+		margin-top: 10%;
+		margin-left: 20px;
+		font-size: 2.1em;
 	}
-
-	.main-web-sections{
+	.main-web-sections {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	#ventana2{
-		display: block;
-		}
-	main{
+	main {
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 	}
-	.formulario-sec{
+	.formulario-sec {
 	height: 100%;
 	width: 40%
 	}
@@ -1023,8 +1041,7 @@ input[type=checkbox]{
 		width: 50%
 	}
 	.cruz-section-button{
-		margin-top: 0%;
-		margin-left: 90%;
+		display: none;
 	}
 	.separador{
 		margin-top: 1.5em;
@@ -1039,28 +1056,11 @@ input[type=checkbox]{
 	.social {
 		width: 300px;
 	}
-	.sociality {
-		display: flex;
-		justify-content:space-between;
-	}
-	.textcrea {
-		margin-top: 5%;
-		margin-left: 20px;
-		font-size: 3em;
-	}
 	.input-lang, .input-skill{
 		display:flex;
 	}
 	.language{
 		margin-right: 1%;
-	}
-}
-	@media print {
-		header, footer, nav {
-		display: none;
-	}
-	.formulario-sec {
-		  display: none;
 	}
 }
 @media all and (min-width: 810px){
@@ -1069,5 +1069,13 @@ input[type=checkbox]{
 	}
 	.headlog{
 		height: ;
+	}
+}
+	@media print {
+		header, footer, nav {
+		display: none;
+	}
+	.formulario-sec {
+		  display: none;
 	}
 }
