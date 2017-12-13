@@ -341,8 +341,15 @@ function setSocialMedia(value, net){
 		aNet.href = aNet.href+value;
 	}else if(net == 'twitter'){
 		aNet.href = aNet.href+value;
+	}else if(net == 'instagram'){
+		aNet.href = aNet.href+value;
 	}
 }
+/*enlace codigo qr*/
+ var listElem = document.querySelector('.list');
+ var content = '<li><a href="#">Home</a></li><li><a href="#">Contact</a></li>';
+ listElem.innerHTML = content;
+
 /*flecha*/
 window.onscroll = function(){
   var arribaButton = document.getElementById('arriba');
