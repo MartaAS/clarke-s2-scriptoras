@@ -85,11 +85,10 @@ function viewprev(){
 	document.getElementById('ventana1').style.display="none";
 	document.getElementById('header-fondo').style.display="none";
 	document.getElementById('button-down').style.display="none";
-
 	document.getElementById('empty-container').style.display="none";
+	document.querySelector('.cruz-section-button').style.display="block";
 	}
 
-//fin parte marta
 
 // Add typed text.
 // var idx = 0;
@@ -138,7 +137,16 @@ function ocultar(idContent){
 function closePreview(idContent){
 	document.getElementById(idContent).style.display = 'none';
 	document.getElementById('ventana1').style.display = 'block';
-	document.getElementById('headerfondo').style.display = 'block';
+	document.getElementById('header-fondo').style.display = 'block';
+	var tamañoPantalla = window.innerWidth;
+	if (tamañoPantalla >= 900) {
+		document.getElementById('ventana1').style.display = 'block';
+		document.getElementById('ventana2').style.display = 'block';
+		document.querySelector('.cruz-section-button').style.display = 'none';
+	}
+	else {
+		document.getElementById('ventana1').style.display = 'block';
+	}
 }
 
 //Experiencia y Formación
