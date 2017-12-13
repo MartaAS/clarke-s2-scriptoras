@@ -720,7 +720,8 @@ input[type=checkbox]{
 	width: 30px;
 	height: 30px;
 	background-color: white;
-	border-radius: 17px;
+	border-radius: 30px;
+	margin-bottom: 60px;
 }
 /*formulario*/
 .flexible{
