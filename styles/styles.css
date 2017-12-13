@@ -1005,7 +1005,6 @@ input[type=checkbox]{
 		padding-top: 10px;
 		padding-left: -5px;
 	}
-	.containerlogo
 	#ventana2{
 		display: block;
 	}
@@ -1075,7 +1074,10 @@ input[type=checkbox]{
 		height: ;
 	}
 }
-	@media print {
+@media print {
+	.barra, .content-timeline, .languages-bar-preview, .timeline, .printnet {
+			-webkit-print-color-adjust: exact;
+		}
 		header, footer, nav {
 		display: none;
 	}
