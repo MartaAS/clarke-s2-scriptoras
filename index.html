@@ -14,12 +14,15 @@
   			<div>
   				<a href="index.html"><img src="images/logoMaquina.png" alt="logoscriptoras" class="machinelog"></a>
   			</div>
-  			<div>
+  			<div class="containerleters">
   				<a href="index.html"><img src="images/logoLetras.png" alt="logoscriptoras" class="letterslog"></a>
   			</div>
 			</div>
 			<div class="containericonos">
 				<input class="icons" type="button" onclick="viewprev()" id="btnview" title="Vista previa">
+				<input class="icons" type="button" onclick="share()" id="btnshare" title="Compartir">
+				<input class="icons" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
+				<input class="icons" type="button" onclick="download()" id="btndownload" title="Descargar">
 			</div>
 				<!-- value="Ver mi CV">-->
 		</header>
@@ -313,11 +316,13 @@
 
 			<section class="previsualizacion-sec" id="ventana2">
 				<div class="containerprev">
-				<button class="cruz-section-button" type="button" name="cruz-button" onclick="closePreview('ventana2')">
-				<img src="images/btnclose.png" alt="cruzbuttom"></button>
-				<input class="icons" type="button" onclick="share()" id="btnshare" title="Compartir">
-				<input class="icons" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
-				<input class="icons" type="button" onclick="download()" id="btndownload" title="Descargar">
+					<div class="cajaiconsprev">
+						<button class="cruz-section-button" type="button" name="cruz-button" onclick="closePreview('ventana2')">
+						<img src="images/btnclose.png" alt="cruzbuttom"></button>
+						<input class="iconsprev" type="button" onclick="share()" id="btnshareprev" title="Compartir">
+						<input class="iconsprev" type="button" onclick="printCurriculum()" id="btnprintprev" title="Imprimir">
+						<input class="iconsprev" type="button" onclick="download()" id="btndownloadprev" title="Descargar">
+					</div>
 				<!--datos principales-->
 				<section class="containerprefoto">
 					<div id="prefoto" class="prefoto"></div>
