@@ -162,7 +162,7 @@ var months = document.querySelectorAll('.month');
 //desplegable años
 var years = 2030;
 var yearOptions = ''; //almacena options de html que van en el select
-	for (var initialYear=1950; initialYear<years; initialYear++) {
+	for (var initialYear = 1950; initialYear < years; initialYear++) {
 	  yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
 	}
 //Se aplica en todos los que tengan la clase year

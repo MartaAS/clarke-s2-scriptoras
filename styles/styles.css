@@ -1075,7 +1075,7 @@ input[type=checkbox]{
 	.barra, .content-timeline, .languages-bar-preview, .timeline, .printnet {
 			-webkit-print-color-adjust: exact;
 		}
-		header, footer, nav {
+	header, footer, nav {
 		display: none;
 	}
 	.formulario-sec {
