@@ -587,7 +587,6 @@ input[type=checkbox]{
 .nets{
 	display: flex;
 	justify-content: space-between;
-
 }
 .social {
 	display: flex;
@@ -839,6 +838,13 @@ input[type=checkbox]{
 	.headercreatucv{
 	height: 60vh;
 	}
+}
+@media all and (max-width: 430px){
+.nets{
+	display: flex;
+	flex-direction: column;
+
+ }
 }
 @media all and (min-width: 460px){
 	#arriba {
