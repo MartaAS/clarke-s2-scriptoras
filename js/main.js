@@ -29,7 +29,7 @@ function archivo(evt) {
     reader.onload = (function(theFile) {
     	return function(e) {
       // Creamos la imagen.
-        document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+        document.getElementById("foto").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
          };
          })(f);
       reader.readAsDataURL(f);
@@ -90,7 +90,7 @@ function viewprev(){
 	}
 
 
-// Add typed text.
+// //Add typed text.
 // var idx = 0;
 // var txt = 'Crea tu CV con estilo...'.split('');
 // var speed = 150;
@@ -482,14 +482,26 @@ function listButton(){
 }
 
 /*imprimir*/
- function printCurriculum(){
-  var divPrint = document.getElementById('ventana2');
-  divPrint.style.display="block";
+function printCurriculum() { //Generamos la función que llamaremos desde el botón imprimir
+	var divPrint = document.getElementById('ventana2').innerHTML; // Variable que captura la ventana2, que tiene el contenido
+	var printPopup = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');//genera una nueva ventana con las dimensiones establecidad
 
-  var contenido= divPrint.innerHTML;
-  var contenidoOriginal= document.body.innerHTML;
+	if (printPopup != null) { // si printPopup no es nullo nos pinta el html que le decimos
+		printPopup.document.write('<html>');
+		printPopup.document.write('<head><link rel="stylesheet" href="' + location.origin + '/styles/styles.css' + '"></head>');
+		printPopup.document.write('<body>');
+		printPopup.document.write(divPrint);
+		printPopup.document.write('</body>');
+		printPopup.document.write('</html>');
+		printPopup.document.close();
 
-  document.body.innerHTML = contenido;
-  window.print();
-  document.body.innerHTML = contenidoOriginal;
+		var cajaiconsprev = printPopup.document.querySelector('div.cajaiconsprev');//variable que captura la caja de los iconos
+		cajaiconsprev.style.display = 'none';//bloquea los iconos de imprimir, descargar...
+
+		printPopup.addEventListener('load', function() {
+			printPopup.print();//función que imprime el contenido
+		});
+	} else {
+		alert('Ey! Listen!! Activa los popups para poder imprimir'); // si null = TRUE salta alert para que se activen los popups
+	}
 }
