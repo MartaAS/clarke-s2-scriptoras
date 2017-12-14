@@ -90,31 +90,36 @@ function viewprev(){
 	}
 
 // //Add typed text.
-// var idx = 0;
-// var txt = 'Crea tu CV con estilo...'.split('');
-// var speed = 150;
-// var waitOnFinish = 3000;
-// var textCreaEl = document.querySelector('.text-crea');
-//
-// document.addEventListener('DOMContentLoaded', typeWriter);
-//
-// function typeWriter() {
-//   if (idx < txt.length) {
-//     var tempTxt = textCreaEl.innerHTML;
-//     textCreaEl.innerHTML += '|';
-//     setTimeout(function() {
-//       textCreaEl.innerHTML = tempTxt + txt[idx];
-//       idx++;
-//       setTimeout(typeWriter, speed);
-//     }, speed/2);
-//   } else {
-//     idx = 0;
-//     setTimeout(function(){
-//       textCreaEl.innerHTML = '';
-//       typeWriter();
-//     }, waitOnFinish);
-//   }
-// }
+var idx = 0;
+var txt = 'Crea tu CV con estilo...'.split('');
+var speed = 150;
+var waitOnFinish = 3000;
+var soundEfx = document.getElementById('sound-efx');
+var textCreaEl = document.querySelector('.text-crea');
+
+document.addEventListener('DOMContentLoaded', typeWriter);
+
+function typeWriter() {
+  if (idx < txt.length) {
+    var tempTxt = textCreaEl.innerHTML;
+    textCreaEl.innerHTML += '|';
+    setTimeout(function() {
+      textCreaEl.innerHTML = tempTxt + txt[idx];
+      idx++;
+      soundEfx.play();
+      setTimeout(typeWriter, speed);
+    }, speed/2);
+  } else {
+    idx = 0;
+    setTimeout(function(){
+      textCreaEl.innerHTML = '';
+      typeWriter();
+    }, waitOnFinish);
+  }
+}
+
+//function sound
+
 
 /*--------------------------- ABOUT FUNCTION---------------------------------------*/
 function saveAbout(){
