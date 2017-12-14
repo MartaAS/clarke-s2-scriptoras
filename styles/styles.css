@@ -1,5 +1,5 @@
 /*Estilos generales*/
-#btrs{ text-align:center;}.lkdn:hover, .fb:hover, .twtr:hover, .glg:hover,.pnt:hover {-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg);transform: rotate(360deg);transition:all .3s ease-out;-moz-transition: all .5s;-webkit-transition: all .5s;-o-transition: all .5s;}.lkdn, .fb, .twtr, .glg, .pnt {transition:all .3s ease-out;-moz-transition: all .5s;-webkit-transition: all .5s;-o-transition: all .5s;margin-left:10px; /* espacio entre cada boton */}
+
 *{
 	box-sizing: border-box;
 }
@@ -75,6 +75,8 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	width: 225px;
 	font-style: arial;
 }
+/*botones compartir en redes sociales*/
+#btrs{ text-align:center;}.lkdn:hover, .fb:hover, .twtr:hover, .glg:hover,.pnt:hover, .sl:hover {-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg);transform: rotate(360deg);transition:all .3s ease-out;-moz-transition: all .5s;-webkit-transition: all .5s;}
 /*Botones añadir y guardar*/
 .buttons-save-general {
 	background-color: #E1F7E7;
