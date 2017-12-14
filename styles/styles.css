@@ -558,7 +558,7 @@ input[type=checkbox]{
 .text-form-button {
 	color: #ffffff;
 }
-#languages-preview, #hobbies-preview {
+#languages-preview, #hobbies-preview, .social {
 	padding-left: 7%;
 	padding-right: 7%;
 }
@@ -589,10 +589,8 @@ input[type=checkbox]{
 #hobbies-form {
 	padding-bottom: 2%;
 }
-/*Redes sociales*/
-.social{
-	padding-left: 0;
-}
+
+
 .linkedin a{
 	background: url('../images/linkedin.png');
 	overflow: hidden;
