@@ -180,8 +180,6 @@ var buttonDelExp = document.getElementById('button-delete-exp');
 var alertMonthDiv = document.getElementById('alert-month');
 var closeButtonAlertMonth = document.getElementById('close-button-alert-month');
 
-
-
 function saveNewExperience(){
 	var startYearJob = document.getElementById("year-job-start").value;
 	var startMonthJob = document.getElementById("month-job-start").value
@@ -225,12 +223,9 @@ function closeAlert(){
 }
 closeButtonAlert.addEventListener('click', closeAlert);
 
-
 function showAlertMonth(){
-
 	alertMonthDiv.classList.remove('invisible');
 }
-
 function closeAlertMonth(){
 	alertMonthDiv.classList.add('invisible');
 }
@@ -247,18 +242,34 @@ var buttonSaveFirstEd = document.getElementById('button-add-ed');
 var buttonDelEd = document.getElementById('button-delete-ed');
 
 function saveNewTraining(){
-	var educationSectionPreview = '<div class="container-timeline right"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-education-year-preview" class="title-year">' + document.getElementById("year-training-start").value + '</h3><p id="start-education-month-preview">' + document.getElementById("month-training-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-education-year-preview" class="title-year">' + document.getElementById("year-training-end").value + '</h3><p id="end-education-month-preview">' + document.getElementById("month-training-end").value + '</p></div></div><div class="work-information-output-container"><p id="education-title-preview" class="education-title">' + document.getElementById("educ-title").value + '</p><p id="education-center-preview">' + document.getElementById("center").value + '</p></div></div></div>'
+	var startYearEd = document.getElementById("year-training-start").value;
+	var startMonthEd = document.getElementById("month-training-start").value;
+	var endYearEd = document.getElementById("year-training-end").value;
+	var endMonthEd = document.getElementById("month-training-end").value;
+	var educTitle = document.getElementById("educ-title").value;
+	var educCenter = document.getElementById("center").value;
+	var educSectionPreviewBegin = '<div class="container-timeline right"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-education-year-preview" class="title-year">' + startYearEd + '</h3><p id="start-education-month-preview">' + startMonthEd + '</p></div><h3 class="title-year">-</h3><div class="dates-container">';
+	var educSectionPreviewEnd = '</div></div><div class="work-information-output-container"><p id="education-title-preview" class="education-title">' + educTitle + '</p><p id="education-center-preview">' + educCenter + '</p></div></div></div>';
 
-	if(document.getElementById("year-training-start").value > document.getElementById("year-training-end").value){
-		showAlert();
-	}else {
-		educationPreviewBox.innerHTML += educationSectionPreview;
+	if ((endMonthEd === 'mes' && endYearEd > 0) || (startMonthEd === 'mes' && startYearEd > 0)) {
+		showAlertMonth();
+	}
+	else if ((endMonthEd === 'mes' && endYearEd === 'Actualmente') || endYearEd === 'Actualmente' ) {
+	var educationSectionPreview = educSectionPreviewBegin + '<h3 id="end-education-year-preview" class="title-year">Actual</h3><p id="end-education-month-preview"></p>' + educSectionPreviewEnd;
+	educationPreviewBox.innerHTML += educationSectionPreview;
+	} else {
+	var educationSectionPreview = educSectionPreviewBegin + '<h3 id="end-education-year-preview" class="title-year">' + endYearEd + '</h3><p id="end-education-month-preview">' + endMonthEd + '</p>' + educSectionPreviewEnd;
+		if(document.getElementById("year-training-start").value > document.getElementById("year-training-end").value){
+			showAlert();
+		}else {
+			educationPreviewBox.innerHTML += educationSectionPreview;
+		}
 	}
 	document.getElementById("educ-title").value = '';
 	document.getElementById("center").value = '';
 	document.getElementById("year-training-start").value = '1950';
 	document.getElementById("month-training-start").value = 'mes';
-	document.getElementById("year-training-end").value = '1950';
+	document.getElementById("year-training-end").value = 'Actualmente';
 	document.getElementById("month-training-end").value = 'mes';
 }
 buttonSaveFirstEd.addEventListener('click', saveNewTraining);
