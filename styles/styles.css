@@ -645,6 +645,11 @@ input[type=checkbox]{
 	width: 120px;
 	height: 120px;
 }
+.nets{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+ }
 .inputPortfolio{
 	display: flex;
 	text-align: center;
@@ -656,6 +661,10 @@ input[type=checkbox]{
 	width: 225px;
 	height: 28px;
 	margin-right: 8px;
+}
+.codigoqr{
+padding: 15px;
+text-align: center;
 }
 /*Ventana de alert de error de fecha introducida*/
 .alert-dates{
@@ -836,12 +845,10 @@ input[type=checkbox]{
 	.headercreatucv{
 	height: 60vh;
 	}
-}
-@media all and (max-width: 430px){
-.nets{
-	display: flex;
-	flex-direction: column;
- }
+	.nets{
+		display: flex;
+		flex-direction: row;
+	 }
 }
 @media all and (min-width: 460px){
 	#arriba {
