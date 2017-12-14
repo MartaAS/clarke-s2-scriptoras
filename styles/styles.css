@@ -25,6 +25,7 @@ font-style: normal;
 font-weight: normal;
 src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold.woff') format('woff');
 }
+
 /*Estilos generales de la sección de desplegables*/
 .title-container {
 	padding-left: 20px;
@@ -97,7 +98,7 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	border-color:#7DBEA5;
 }
 /*Ocultar secciones*/
-.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
+.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2, #sound-efx {
 	display: none;
 }
 .visible {
