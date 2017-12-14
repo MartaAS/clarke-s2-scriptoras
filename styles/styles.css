@@ -575,24 +575,15 @@ input[type=checkbox]{
 	padding-bottom: 1em;
 }
 /*Hobbies*/
-.all-hobbies-preview {
+.all-hobbies-preview, .socialNetworks, .social {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+
 #hobbies-form {
 	padding-bottom: 2%;
-}
-/* Redes sociales*/
-.nets{
-	display: flex;
-	justify-content: space-between;
-}
-.social {
-	display: flex;
-	justify-content: space-between;
-	width: 70%;
 }
 
 .linkedin a{
@@ -916,13 +907,7 @@ input[type=checkbox]{
 		margin-left: 20px;
 		font-size: 2em;
 	}
-	.sociality {
-		display: flex;
-		justify-content: center;
-	}
-	.social {
-		width: 300px;
-	}
+
 	/*Footer*/
 	.infooter{
 		display: flex;
@@ -1066,9 +1051,7 @@ input[type=checkbox]{
 	.end{
 		margin-left: auto;
 	}
-	.social {
-		width: 300px;
-	}
+
 	.input-lang, .input-skill{
 		display:flex;
 	}

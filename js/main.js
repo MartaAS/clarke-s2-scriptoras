@@ -89,7 +89,6 @@ function viewprev(){
 	document.querySelector('.cruz-section-button').style.display="block";
 	}
 
-
 // //Add typed text.
 // var idx = 0;
 // var txt = 'Crea tu CV con estilo...'.split('');
