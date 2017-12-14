@@ -840,11 +840,10 @@ input[type=checkbox]{
 	}
 }
 @media all and (max-width: 430px){
-.nets{
-	display: flex;
-	flex-direction: column;
-
- }
+	.nets{
+		display: flex;
+		flex-direction: column;
+	 }
 }
 @media all and (min-width: 460px){
 	#arriba {
@@ -901,15 +900,12 @@ input[type=checkbox]{
 		background-image: url(../images/group.png);
 		height: 100vh;
 	}
-
 	#button-down {
 		display: none;
 	}
-
 	#empty-container {
 		height: 20px;
 	}
-
 	.text-crea {
 		margin-top: 15%;
 		margin-left: 20px;
@@ -977,25 +973,10 @@ input[type=checkbox]{
 		height: 120vh;
 		width: 100%;
 	}
-	#ventana2{
+	#ventana2, #btnshare, #btnprint, #btndownload {
 		display: block;
 	}
-	#btnshare{
-		display: block;
-	}
-	#btnprint{
-		display: block;
-	}
-	#btndownload{
-		display: block;
-	}
-	#btnshareprev{
-		display: none;
-	}
-	#btnprintprev{
-		display: none;
-	}
-	#btndownloadprev{
+	#btnshareprev, #btnprintprev, #btndownloadprev {
 		display: none;
 	}
 	.containerlogo{
@@ -1007,15 +988,12 @@ input[type=checkbox]{
 		max-width: 80%;
 	}
 	.containerleters{
-			width: 1000px;
+		width: 1000px;
 	}
 	.letterslog{
 		max-width: 100%;
 		padding-top: 10px;
 		padding-left: -5px;
-	}
-	#ventana2{
-		display: block;
 	}
 	#header-fondo{
 		width: cover;
@@ -1044,9 +1022,12 @@ input[type=checkbox]{
 		display: flex;
 		flex-direction: column;
 	}
+	.skill, .language, .skill-percent, .percentage {
+		width: 160px;
+	}
 	.formulario-sec {
-	height: 100%;
-	width: 40%
+		height: 100%;
+		width: 40%
 	}
 	.previsualizacion-sec{
 		height: 100%;
