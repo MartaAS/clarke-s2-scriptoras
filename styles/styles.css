@@ -1071,4 +1071,38 @@ text-align: center;
 	.formulario-sec {
 		  display: none;
 	}
+	.timeline::after {
+	  left: 50%;
+	}
+	.container-timeline {
+	  padding: 10px 40px;
+	  width: 50%;
+	}
+	.container-timeline::after {
+	  left: 343px;
+	  top: 15px;
+	}
+	.left {
+	  left: 0;
+	}
+	.right {
+	  left: 50%;
+	}
+	.right::after {
+	  left: -16px;
+	}
+	.left::before {
+	  top: 22px;
+	  left: 319px;
+	  border: medium solid rgba(125, 190, 165, 0.36);
+	  border-width: 10px 0 10px 10px;
+	  border-color: transparent transparent transparent rgba(125, 190, 165, 0.36);
+	}
+	.right::before {
+	  top: 22px;
+	  left: 30px;
+	  border: medium solid rgba(125, 190, 165, 0.36);
+	  border-width: 10px 10px 10px 0;
+	  border-color: transparent rgba(125, 190, 165, 0.36) transparent transparent;
+	}
 }
