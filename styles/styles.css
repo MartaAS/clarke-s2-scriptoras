@@ -33,9 +33,7 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	background-color: #7DBEA5;
 	border-radius: 8px;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	justify-content: space-around;
 	box-shadow: rgba(0,0,0,1) 0 1px 0;
 	text-shadow: rgba(0,0,0,.4) 0 1px 0;
 }
@@ -56,6 +54,7 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 .close-section-button {
 	background: none;
 	border: none;
+	margin-left: auto;
 }
 .cruz-section-button {
 	background: none;
@@ -102,10 +101,12 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	display: block;
 }
 .shown{
-	visibility: visible;
+	/*visibility: visible;*/
+	display: block;
 }
 .hidden{
-	visibility: hidden;
+	/*visibility: hidden;*/
+	display: none;
 }
 /*Fin estilos generales*/
 /*Header logo formulario*/
