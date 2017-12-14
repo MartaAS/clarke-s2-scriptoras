@@ -705,13 +705,6 @@ input[type=checkbox]{
 .end{
 	margin-left: auto;
 	margin-right: auto;
-	/*width: 100%;
-	font-size: 0.8em;
-  color: #555555;
-	display: flex;
-	flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;*/
 }
 .contacto{
 	color: #d5d4cd;
