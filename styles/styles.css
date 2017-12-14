@@ -843,7 +843,6 @@ input[type=checkbox]{
 .nets{
 	display: flex;
 	flex-direction: column;
-
  }
 }
 @media all and (min-width: 460px){
