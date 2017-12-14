@@ -78,6 +78,7 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 }
 /*botones compartir en redes sociales*/
 #btrs{ text-align:center;}.sl:hover, .lkdn:hover, .fb:hover, .twtr:hover, .glg:hover,.pnt:hover {-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg);transform: rotate(360deg);transition:all .3s ease-out;-moz-transition: all .5s;-webkit-transition: all .5s;}
+
 /*Botones añadir y guardar*/
 .buttons-save-general {
 	background-color: #E1F7E7;
@@ -254,6 +255,7 @@ header{
   color: #7DBEA5;
 	width: 100%;
 	text-align: center;
+	padding: 4%;
 }
 .containerinfo{
 	display: flex;
@@ -401,7 +403,6 @@ header{
   left: 50%;
   margin-left: -3px;
 }
-
 /* Contenido alrededor de la timeline */
 .container-timeline {
   padding: 10px 40px;
