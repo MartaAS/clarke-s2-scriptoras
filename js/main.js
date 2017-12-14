@@ -170,6 +170,15 @@ var yearsAll = document.querySelectorAll('.year');
 for (var i = 0; i < yearsAll.length; i++) {
 	yearsAll[i].innerHTML = yearOptions;
 }
+//Creamos otro desplegable distinto para la fecha de inicio para que no esté Actualmente
+var yearIniOptions = '';; //almacena options de html que van en el select
+	for (var initialYear=1950; initialYear<years; initialYear++) {
+	  yearIniOptions = yearIniOptions + '<option>' + initialYear + '</option>';
+	}
+var yearsIniAll = document.querySelectorAll('.year-ini');
+	for (var i = 0; i < yearsIniAll.length; i++) {
+		yearsIniAll[i].innerHTML = yearIniOptions;
+	}
 //Función para introducir en la previsualización los datos obtenidos de experiencia
 var jobPreviewBox = document.querySelector('.timeline');
 var buttonAddExp = document.getElementById('button-add-exp');
