@@ -21,7 +21,6 @@
 			<div class="containericonos">
 				<input class="icons" type="button" onclick="viewprev()" id="btnview" title="Vista previa">
 				<input class="icons" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
-				<input class="icons" type="button" onclick="download()" id="btndownload" title="Descargar">
 			</div>
 				<!-- value="Ver mi CV">-->
 		</header>
@@ -110,6 +109,7 @@
 							</div>
 							<div class="buttons-container">
 								<input class="buttons-save-general experiencia" id="button-add-exp" type="button" name="add-exp" value="Añadir">
+								<input class="buttons-save-general experiencia" id="button-delete-exp" type="button" name="delete-exp" value="Borrar">
 							</div>
 						</div>
 					</form>
@@ -144,6 +144,7 @@
 							</div>
 							<div class="buttons-container">
 								<input type="button" value="Añadir" name="add-ed" id="button-add-ed" class="buttons-save-general formacion">
+								<input type="button" value="Borrar" name="delete-ed" id="button-delete-ed" class="buttons-save-general formacion">
 							</div>
 						</div>
 					</form>
@@ -426,6 +427,12 @@
 					<img class="alert-cruise" src="images/btnclose.png" alt="cruise-button">
 				</button>
 				<p class="text-alert">¡Ojo! La fecha de inicio no debe ser posterior a la fecha de finalización.</p>
+			</div>
+			<div class="alert-dates invisible" id="alert-month">
+				<button class="button-alert-img" id="close-button-alert-month" type="button" name="button">
+					<img class="alert-cruise" src="images/btnclose.png" alt="cruise-button">
+				</button>
+				<p class="text-alert">¡Ojo! No has introducido el mes.</p>
 			</div>
     </main>
 		<!-- End Container -->
