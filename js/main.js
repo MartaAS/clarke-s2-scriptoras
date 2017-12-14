@@ -90,7 +90,7 @@ function viewprev(){
 	}
 
 
-// Add typed text.
+// //Add typed text.
 // var idx = 0;
 // var txt = 'Crea tu CV con estilo...'.split('');
 // var speed = 150;

@@ -95,7 +95,7 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	border-color:#7DBEA5;
 }
 /*Ocultar secciones*/
-.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2, #button-down {
+.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
 }
 .visible {
@@ -587,7 +587,6 @@ input[type=checkbox]{
 .nets{
 	display: flex;
 	justify-content: space-between;
-
 }
 .social {
 	display: flex;
@@ -840,6 +839,13 @@ input[type=checkbox]{
 	height: 60vh;
 	}
 }
+@media all and (max-width: 430px){
+.nets{
+	display: flex;
+	flex-direction: column;
+
+ }
+}
 @media all and (min-width: 460px){
 	#arriba {
 		 bottom: 15px;
@@ -895,9 +901,15 @@ input[type=checkbox]{
 		background-image: url(../images/group.png);
 		height: 100vh;
 	}
-	#empty-container {
-		height: 70px;
+
+	#button-down {
+		display: none;
 	}
+
+	#empty-container {
+		height: 20px;
+	}
+
 	.text-crea {
 		margin-top: 15%;
 		margin-left: 20px;
