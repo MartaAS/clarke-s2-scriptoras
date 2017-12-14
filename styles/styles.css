@@ -412,7 +412,7 @@ input[type=checkbox]{
 }
 /* Contenido alrededor de la timeline */
 .container-timeline {
-  padding: 10px 40px;
+  padding: 10px ;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -588,7 +588,10 @@ input[type=checkbox]{
 #hobbies-form {
 	padding-bottom: 2%;
 }
-
+/*Redes sociales*/
+.social{
+	padding-left: 0;
+}
 .linkedin a{
 	background: url('../images/linkedin.png');
 	overflow: hidden;
