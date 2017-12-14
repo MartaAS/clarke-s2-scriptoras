@@ -33,9 +33,7 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	background-color: #7DBEA5;
 	border-radius: 8px;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	justify-content: space-around;
 	box-shadow: rgba(0,0,0,1) 0 1px 0;
 	text-shadow: rgba(0,0,0,.4) 0 1px 0;
 }
@@ -56,6 +54,7 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 .close-section-button {
 	background: none;
 	border: none;
+	margin-left: auto;
 }
 .cruz-section-button {
 	background: none;
@@ -95,17 +94,19 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	border-color:#7DBEA5;
 }
 /*Ocultar secciones*/
-.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2, #button-down {
+.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
 	display: none;
 }
 .visible {
 	display: block;
 }
 .shown{
-	visibility: visible;
+	/*visibility: visible;*/
+	display: block;
 }
 .hidden{
-	visibility: hidden;
+	/*visibility: hidden;*/
+	display: none;
 }
 /*Fin estilos generales*/
 /*Header logo formulario*/
@@ -587,7 +588,6 @@ input[type=checkbox]{
 .nets{
 	display: flex;
 	justify-content: space-between;
-
 }
 .social {
 	display: flex;
@@ -705,13 +705,6 @@ input[type=checkbox]{
 .end{
 	margin-left: auto;
 	margin-right: auto;
-	/*width: 100%;
-	font-size: 0.8em;
-  color: #555555;
-	display: flex;
-	flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;*/
 }
 .contacto{
 	color: #d5d4cd;
@@ -847,6 +840,13 @@ input[type=checkbox]{
 	height: 60vh;
 	}
 }
+@media all and (max-width: 430px){
+.nets{
+	display: flex;
+	flex-direction: column;
+
+ }
+}
 @media all and (min-width: 460px){
 	#arriba {
 		 bottom: 15px;
@@ -902,9 +902,15 @@ input[type=checkbox]{
 		background-image: url(../images/group.png);
 		height: 100vh;
 	}
-	#empty-container {
-		height: 70px;
+
+	#button-down {
+		display: none;
 	}
+
+	#empty-container {
+		height: 20px;
+	}
+
 	.text-crea {
 		margin-top: 15%;
 		margin-left: 20px;
