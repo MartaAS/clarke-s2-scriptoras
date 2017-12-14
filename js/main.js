@@ -29,7 +29,7 @@ function archivo(evt) {
     reader.onload = (function(theFile) {
     	return function(e) {
       // Creamos la imagen.
-        document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+        document.getElementById("foto").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
          };
          })(f);
       reader.readAsDataURL(f);
