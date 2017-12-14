@@ -400,19 +400,10 @@ header{
   left: 50%;
   margin-left: -3px;
 }
-/*Checkbox styles*/
-.check-box-hobbies {
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 4%;
-}
-input[type=checkbox]{
-	-webkit-transform: scale(1.2); /* Safari and Chrome */
-	color: #000000;
-}
+
 /* Contenido alrededor de la timeline */
 .container-timeline {
-  padding: 10px ;
+  padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -584,7 +575,16 @@ input[type=checkbox]{
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
-
+/*Checkbox styles*/
+.check-box-hobbies {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 4%;
+}
+input[type=checkbox]{
+	-webkit-transform: scale(1.2); /* Safari and Chrome */
+	color: #000000;
+}
 #hobbies-form {
 	padding-bottom: 2%;
 }
