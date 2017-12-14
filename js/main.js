@@ -161,10 +161,11 @@ var months = document.querySelectorAll('.month');
 
 //desplegable años
 var years = 2030;
-var yearOptions = ''; //almacena options de html que van en el select
+var yearOptions = '<option>Actualmente</option>';; //almacena options de html que van en el select
 	for (var initialYear=1950; initialYear<years; initialYear++) {
-	  yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
+	  yearOptions = yearOptions + '<option>' + initialYear + '</option>';
 	}
+
 //Se aplica en todos los que tengan la clase year
 var yearsAll = document.querySelectorAll('.year');
 for (var i = 0; i < yearsAll.length; i++) {
@@ -176,20 +177,42 @@ var buttonAddExp = document.getElementById('button-add-exp');
 var alertDatesDiv = document.querySelector('.alert-dates');
 var closeButtonAlert = document.querySelector('.button-alert-img');
 var buttonDelExp = document.getElementById('button-delete-exp');
+var alertMonthDiv = document.getElementById('alert-month');
+var closeButtonAlertMonth = document.getElementById('close-button-alert-month');
+
+
 
 function saveNewExperience(){
-  var jobSectionPreview = '<div class="container-timeline left" id="container-timeline-left"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-job-year-preview"class="title-year">' + document.getElementById("year-job-start").value +'</h3><p id="start-job-month-preview">' + document.getElementById("month-job-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-job-year-preview"class="title-year">' + document.getElementById("year-job-end").value + '</h3><p id="end-job-month-preview">' + document.getElementById("month-job-end").value + '</p></div></div><div class="work-information-output-container"><p id="job-preview"class="job-title">' + document.getElementById("job").value + '</p><p id="company-preview">' + document.getElementById("company").value + '</p></div></div></div>'
+	var startYearJob = document.getElementById("year-job-start").value;
+	var startMonthJob = document.getElementById("month-job-start").value
+	var endYearJob = document.getElementById("year-job-end").value;
+	var endMonthJob = document.getElementById("month-job-end").value;
+	var job = document.getElementById("job").value;
+	var company = document.getElementById("company").value;
+	var jobSectionPreviewBegin = '<div class="container-timeline left" id="container-timeline-left"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-job-year-preview"class="title-year">' + startYearJob +'</h3><p id="start-job-month-preview">' + startMonthJob + '</p></div><h3 class="title-year">-</h3><div class="dates-container">'
+	var jobSectionPreviewEnd = '</div></div><div class="work-information-output-container"><p id="job-preview"class="job-title">' + job + '</p><p id="company-preview">' + company + '</p></div></div></div>'
 
-	if(document.getElementById("year-job-start").value > document.getElementById("year-job-end").value){
-		showAlert();
+	if ((endMonthJob === 'mes' && endYearJob > 0) || (startMonthJob === 'mes' && startYearJob > 0)) {
+		showAlertMonth();
+	}
+	else if ((endMonthJob === 'mes' && endYearJob === 'Actualmente') || endYearJob === 'Actualmente' ) {
+		var jobSectionPreview = jobSectionPreviewBegin + '<h3 id="end-job-year-preview"class="title-year">Actual</h3><p id="end-job-month-preview"> </p>' + jobSectionPreviewEnd;
+		jobPreviewBox.innerHTML += jobSectionPreview;
 	} else {
-	  jobPreviewBox.innerHTML += jobSectionPreview;
+
+  var jobSectionPreview = jobSectionPreviewBegin + '<h3 id="end-job-year-preview"class="title-year">' + endYearJob + '</h3><p id="end-job-month-preview">' + endMonthJob + '</p>' + jobSectionPreviewEnd;
+
+		if(startYearJob > endYearJob){
+			showAlert();
+		} else {
+		  jobPreviewBox.innerHTML += jobSectionPreview;
+		}
 	}
 	document.getElementById("job").value = '';
 	document.getElementById("company").value = '';
 	document.getElementById("year-job-start").value = '1950';
 	document.getElementById("month-job-start").value = 'mes';
-	document.getElementById("year-job-end").value = '1950';
+	document.getElementById("year-job-end").value = 'Actualmente';
 	document.getElementById("month-job-end").value = 'mes';
 }
 buttonAddExp.addEventListener('click', saveNewExperience);
@@ -201,6 +224,17 @@ function closeAlert(){
 	alertDatesDiv.classList.add('invisible');
 }
 closeButtonAlert.addEventListener('click', closeAlert);
+
+
+function showAlertMonth(){
+
+	alertMonthDiv.classList.remove('invisible');
+}
+
+function closeAlertMonth(){
+	alertMonthDiv.classList.add('invisible');
+}
+closeButtonAlertMonth.addEventListener('click', closeAlertMonth);
 
 function deleteExperience(){
 	jobPreviewBox.innerHTML = '';
