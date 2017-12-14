@@ -367,30 +367,6 @@ function showHobbiesPreview(elementId) {
  }
 
 /*Redes sociales*/
-function showNetsocial() {
-  var netSocialDiv = document.querySelector('.net-social-hidden');
-  netSocialDiv.style.display = 'block';
-
-}
-
-/*javascript de redes sociales*/
-
-document.getElementById('linkedin').addEventListener('keyup', function(){setValue('linkedin')});
-document.getElementById('facebook').addEventListener('keyup', function(){setValue('facebook')});
-document.getElementById('github').addEventListener('keyup', function(){setValue('github')});
-document.getElementById('twitter').addEventListener('keyup', function(){setValue('twitter')});
-document.getElementById('instagram').addEventListener('keyup', function(){setValue('instagram')});
-
-function setValue(net){
-	var inputSocial = document.getElementById(net);
-  var liSocial = document.querySelector('.'+net);
-  if(inputSocial.value != ""){//Si tiene valor el input mostramos el icono
-    show(liSocial);
-  }else{//Si NO tiene valor el input ocultamos el icono
-    hide(liSocial);
-  }
-	setSocialMedia(inputSocial.value, net);
-}
 
 function show(element){
   element.classList.remove('invisible');
@@ -410,6 +386,28 @@ function visibility(element){
 function noVisibility(element){
   element.classList.remove('shown');
   element.classList.add('hidden');
+}
+
+function showNetsocial() {
+  var netSocialDiv = document.querySelector('.net-social-hidden');
+  netSocialDiv.style.display = 'block';
+}
+
+document.getElementById('linkedin').addEventListener('keyup', function(){setValue('linkedin')});
+document.getElementById('facebook').addEventListener('keyup', function(){setValue('facebook')});
+document.getElementById('github').addEventListener('keyup', function(){setValue('github')});
+document.getElementById('twitter').addEventListener('keyup', function(){setValue('twitter')});
+document.getElementById('instagram').addEventListener('keyup', function(){setValue('instagram')});
+
+function setValue(net){
+	var inputSocial = document.getElementById(net);
+  var liSocial = document.querySelector('.'+net);
+  if(inputSocial.value != ""){//Si tiene valor el input mostramos el icono
+    show(liSocial);
+  }else{//Si NO tiene valor el input ocultamos el icono
+    hide(liSocial);
+  }
+	setSocialMedia(inputSocial.value, net);
 }
 
 function setSocialMedia(value, net){
