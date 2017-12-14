@@ -1,4 +1,5 @@
 /*Estilos generales*/
+
 *{
 	box-sizing: border-box;
 }
@@ -74,6 +75,8 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	width: 225px;
 	font-style: arial;
 }
+/*botones compartir en redes sociales*/
+#btrs{ text-align:center;}.sl:hover, .lkdn:hover, .fb:hover, .twtr:hover, .glg:hover,.pnt:hover {-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg);transform: rotate(360deg);transition:all .3s ease-out;-moz-transition: all .5s;-webkit-transition: all .5s;}
 /*Botones añadir y guardar*/
 .buttons-save-general {
 	background-color: #E1F7E7;
@@ -832,11 +835,10 @@ input[type=checkbox]{
 	}
 }
 @media all and (max-width: 430px){
-.nets{
-	display: flex;
-	flex-direction: column;
-
- }
+	.nets{
+		display: flex;
+		flex-direction: column;
+	 }
 }
 @media all and (min-width: 460px){
 	#arriba {
@@ -893,15 +895,12 @@ input[type=checkbox]{
 		background-image: url(../images/group.png);
 		height: 100vh;
 	}
-
 	#button-down {
 		display: none;
 	}
-
 	#empty-container {
 		height: 20px;
 	}
-
 	.text-crea {
 		margin-top: 15%;
 		margin-left: 20px;
@@ -963,25 +962,10 @@ input[type=checkbox]{
 		height: 120vh;
 		width: 100%;
 	}
-	#ventana2{
+	#ventana2, #btnshare, #btnprint, #btndownload {
 		display: block;
 	}
-	#btnshare{
-		display: block;
-	}
-	#btnprint{
-		display: block;
-	}
-	#btndownload{
-		display: block;
-	}
-	#btnshareprev{
-		display: none;
-	}
-	#btnprintprev{
-		display: none;
-	}
-	#btndownloadprev{
+	#btnshareprev, #btnprintprev, #btndownloadprev {
 		display: none;
 	}
 	.containerlogo{
@@ -990,18 +974,15 @@ input[type=checkbox]{
 		margin-bottom: 8px;
 	}
 	.machinelog{
-		max-width: 80%;
+		max-width: 74%;
 	}
 	.containerleters{
-			width: 1000px;
+		width: 1000px;
 	}
 	.letterslog{
 		max-width: 100%;
 		padding-top: 10px;
 		padding-left: -5px;
-	}
-	#ventana2{
-		display: block;
 	}
 	#header-fondo{
 		width: cover;
@@ -1030,9 +1011,12 @@ input[type=checkbox]{
 		display: flex;
 		flex-direction: column;
 	}
+	.skill, .language, .skill-percent, .percentage {
+		width: 160px;
+	}
 	.formulario-sec {
-	height: 100%;
-	width: 40%
+		height: 100%;
+		width: 40%
 	}
 	.previsualizacion-sec{
 		height: 100%;
@@ -1071,7 +1055,7 @@ input[type=checkbox]{
 	.barra, .content-timeline, .languages-bar-preview, .timeline, .printnet {
 			-webkit-print-color-adjust: exact;
 		}
-		header, footer, nav {
+	header, footer, nav {
 		display: none;
 	}
 	.formulario-sec {
