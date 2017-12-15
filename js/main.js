@@ -432,7 +432,7 @@ function printCurriculum() { //Generamos la función que llamaremos desde el bot
 
 	if (printPopup != null) { // si printPopup no es nullo nos pinta el html que le decimos
 		printPopup.document.write('<html>');
-		printPopup.document.write('<head><link rel="stylesheet" href="' + location.origin + '/styles/styles.css' + '"></head>');
+		printPopup.document.write('<head><link rel="stylesheet" href="' + location.href + 'styles/styles.css' + '"></head>');
 		printPopup.document.write('<body>');
 		printPopup.document.write(divPrint);
 		printPopup.document.write('</body>');
