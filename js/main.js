@@ -245,7 +245,7 @@ function closeAlertMonth(){
 closeButtonAlertMonth.addEventListener('click', closeAlertMonth);
 
 function deleteExperience(){
-	jobPreviewBox.innerHTML = '';
+	jobPreviewBox.lastChild.innerHTML = '';
 }
 buttonDelExp.addEventListener('click', deleteExperience);
 
@@ -288,7 +288,7 @@ function saveNewTraining(){
 buttonSaveFirstEd.addEventListener('click', saveNewTraining);
 
 function deleteEducation(){
-	educationPreviewBox.innerHTML = '';
+	educationPreviewBox.lastChild.innerHTML = '';
 }
 buttonDelEd.addEventListener('click', deleteEducation);
 //Fin de Experiencia y Formación
