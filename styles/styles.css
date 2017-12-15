@@ -1,4 +1,5 @@
 /*Estilos generales*/
+
 *{
 	box-sizing: border-box;
 }
@@ -24,6 +25,7 @@ font-style: normal;
 font-weight: normal;
 src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold.woff') format('woff');
 }
+
 /*Estilos generales de la sección de desplegables*/
 .title-container {
 	padding-left: 20px;
@@ -74,6 +76,9 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	width: 225px;
 	font-style: arial;
 }
+/*botones compartir en redes sociales*/
+#btrs{ text-align:center;}.sl:hover, .lkdn:hover, .fb:hover, .twtr:hover, .glg:hover,.pnt:hover {-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg);transform: rotate(360deg);transition:all .3s ease-out;-moz-transition: all .5s;-webkit-transition: all .5s;}
+
 /*Botones añadir y guardar*/
 .buttons-save-general {
 	background-color: #E1F7E7;
@@ -94,7 +99,7 @@ src: local('American Typewriter Bold'), url('ufonts.com_american-typewriter-bold
 	border-color:#7DBEA5;
 }
 /*Ocultar secciones*/
-.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2 {
+.net-social-hidden, .invisible, #languages-form, #hobbies-form, #read, #travel, #game, #sports, #cinema, #music, #files, #ventana2, #sound-efx {
 	display: none;
 }
 .visible {
@@ -250,6 +255,7 @@ header{
   color: #7DBEA5;
 	width: 100%;
 	text-align: center;
+	padding: 4%;
 }
 .containerinfo{
 	display: flex;
@@ -355,7 +361,7 @@ header{
 }
 .dates-boxes{
 	margin: 8px 8px;
-	width: 200px;
+	width: 220px;
 	padding: 3px;
 	text-align: center;
 }
@@ -396,16 +402,6 @@ header{
   bottom: 0;
   left: 50%;
   margin-left: -3px;
-}
-/*Checkbox styles*/
-.check-box-hobbies {
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 4%;
-}
-input[type=checkbox]{
-	-webkit-transform: scale(1.2); /* Safari and Chrome */
-	color: #000000;
 }
 /* Contenido alrededor de la timeline */
 .container-timeline {
@@ -554,12 +550,12 @@ input[type=checkbox]{
 .text-form-button {
 	color: #ffffff;
 }
-#languages-preview, #hobbies-preview {
+#languages-preview, #hobbies-preview, .social {
 	padding-left: 7%;
 	padding-right: 7%;
 }
 .languages-bar-preview {
-	background-color: #eeeeee;
+	background-color: #e0e0e0;
 	margin-bottom: 1em;
 }
 .text-bar-preview {
@@ -575,25 +571,26 @@ input[type=checkbox]{
 	padding-bottom: 1em;
 }
 /*Hobbies*/
-.all-hobbies-preview {
+.all-hobbies-preview, .socialNetworks, .social {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+/*Checkbox styles*/
+.check-box-hobbies {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 4%;
+}
+input[type=checkbox]{
+	-webkit-transform: scale(1.2); /* Safari and Chrome */
+	color: #000000;
+}
 #hobbies-form {
 	padding-bottom: 2%;
 }
-/* Redes sociales*/
-.nets{
-	display: flex;
-	justify-content: space-between;
-}
-.social {
-	display: flex;
-	justify-content: space-between;
-	width: 70%;
-}
+
 
 .linkedin a{
 	background: url('../images/linkedin.png');
@@ -648,6 +645,11 @@ input[type=checkbox]{
 	width: 120px;
 	height: 120px;
 }
+.nets{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+ }
 .inputPortfolio{
 	display: flex;
 	text-align: center;
@@ -659,6 +661,10 @@ input[type=checkbox]{
 	width: 225px;
 	height: 28px;
 	margin-right: 8px;
+}
+.codigoqr{
+padding: 15px;
+text-align: center;
 }
 /*Ventana de alert de error de fecha introducida*/
 .alert-dates{
@@ -839,11 +845,9 @@ input[type=checkbox]{
 	.headercreatucv{
 	height: 60vh;
 	}
-}
-@media all and (max-width: 430px){
 	.nets{
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 	 }
 }
 @media all and (min-width: 460px){
@@ -912,13 +916,7 @@ input[type=checkbox]{
 		margin-left: 20px;
 		font-size: 2em;
 	}
-	.sociality {
-		display: flex;
-		justify-content: center;
-	}
-	.social {
-		width: 300px;
-	}
+
 	/*Footer*/
 	.infooter{
 		display: flex;
@@ -1047,9 +1045,7 @@ input[type=checkbox]{
 	.end{
 		margin-left: auto;
 	}
-	.social {
-		width: 300px;
-	}
+
 	.input-lang, .input-skill{
 		display:flex;
 	}
@@ -1072,7 +1068,44 @@ input[type=checkbox]{
 	header, footer, nav {
 		display: none;
 	}
+	.thumb2{
+		margin-top: 50px;
+	}
 	.formulario-sec {
 		  display: none;
+	}
+	.timeline::after {
+	  left: 50%;
+	}
+	.container-timeline {
+	  padding: 10px 40px;
+	  width: 50%;
+	}
+	.container-timeline::after {
+	  left: 343px;
+	  top: 15px;
+	}
+	.left {
+	  left: 0;
+	}
+	.right {
+	  left: 50%;
+	}
+	.right::after {
+	  left: -16px;
+	}
+	.left::before {
+	  top: 22px;
+	  left: 319px;
+	  border: medium solid rgba(125, 190, 165, 0.36);
+	  border-width: 10px 0 10px 10px;
+	  border-color: transparent transparent transparent rgba(125, 190, 165, 0.36);
+	}
+	.right::before {
+	  top: 22px;
+	  left: 30px;
+	  border: medium solid rgba(125, 190, 165, 0.36);
+	  border-width: 10px 10px 10px 0;
+	  border-color: transparent rgba(125, 190, 165, 0.36) transparent transparent;
 	}
 }

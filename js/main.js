@@ -89,33 +89,37 @@ function viewprev(){
 	document.querySelector('.cruz-section-button').style.display="block";
 	}
 
-
 // //Add typed text.
-// var idx = 0;
-// var txt = 'Crea tu CV con estilo...'.split('');
-// var speed = 150;
-// var waitOnFinish = 3000;
-// var textCreaEl = document.querySelector('.text-crea');
-//
-// document.addEventListener('DOMContentLoaded', typeWriter);
-//
-// function typeWriter() {
-//   if (idx < txt.length) {
-//     var tempTxt = textCreaEl.innerHTML;
-//     textCreaEl.innerHTML += '|';
-//     setTimeout(function() {
-//       textCreaEl.innerHTML = tempTxt + txt[idx];
-//       idx++;
-//       setTimeout(typeWriter, speed);
-//     }, speed/2);
-//   } else {
-//     idx = 0;
-//     setTimeout(function(){
-//       textCreaEl.innerHTML = '';
-//       typeWriter();
-//     }, waitOnFinish);
-//   }
-// }
+var idx = 0;
+var txt = 'Crea tu CV con estilo...'.split('');
+var speed = 150;
+var waitOnFinish = 3000;
+var soundEfx = document.getElementById('sound-efx');
+var textCreaEl = document.querySelector('.text-crea');
+
+document.addEventListener('DOMContentLoaded', typeWriter);
+
+function typeWriter() {
+  if (idx < txt.length) {
+    var tempTxt = textCreaEl.innerHTML;
+    textCreaEl.innerHTML += '|';
+    setTimeout(function() {
+      textCreaEl.innerHTML = tempTxt + txt[idx];
+      idx++;
+      soundEfx.play();
+      setTimeout(typeWriter, speed);
+    }, speed/2);
+  } else {
+    idx = 0;
+    setTimeout(function(){
+      textCreaEl.innerHTML = '';
+      typeWriter();
+    }, waitOnFinish);
+  }
+}
+
+//function sound
+
 
 /*--------------------------- ABOUT FUNCTION---------------------------------------*/
 function saveAbout(){
@@ -161,67 +165,132 @@ var months = document.querySelectorAll('.month');
 
 //desplegable años
 var years = 2030;
-var yearOptions = ''; //almacena options de html que van en el select
-	for (var initialYear = 1950; initialYear < years; initialYear++) {
-	  yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
+var yearOptions = '<option>Actualmente</option>';; //almacena options de html que van en el select
+	for (var initialYear=1950; initialYear<years; initialYear++) {
+	  yearOptions = yearOptions + '<option>' + initialYear + '</option>';
 	}
+
 //Se aplica en todos los que tengan la clase year
 var yearsAll = document.querySelectorAll('.year');
 for (var i = 0; i < yearsAll.length; i++) {
 	yearsAll[i].innerHTML = yearOptions;
 }
+//Creamos otro desplegable distinto para la fecha de inicio para que no esté Actualmente
+var yearIniOptions = '';; //almacena options de html que van en el select
+	for (var initialYear=1950; initialYear<years; initialYear++) {
+	  yearIniOptions = yearIniOptions + '<option>' + initialYear + '</option>';
+	}
+var yearsIniAll = document.querySelectorAll('.year-ini');
+	for (var i = 0; i < yearsIniAll.length; i++) {
+		yearsIniAll[i].innerHTML = yearIniOptions;
+	}
 //Función para introducir en la previsualización los datos obtenidos de experiencia
+var jobPreviewBox = document.querySelector('.timeline');
+var buttonAddExp = document.getElementById('button-add-exp');
+var alertDatesDiv = document.querySelector('.alert-dates');
+var closeButtonAlert = document.querySelector('.button-alert-img');
+var buttonDelExp = document.getElementById('button-delete-exp');
+var alertMonthDiv = document.getElementById('alert-month');
+var closeButtonAlertMonth = document.getElementById('close-button-alert-month');
 
 function saveNewExperience(){
-  var jobSectionPreview = '<div class="container-timeline left" id="container-timeline-left"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-job-year-preview"class="title-year">' + document.getElementById("year-job-start").value +'</h3><p id="start-job-month-preview">' + document.getElementById("month-job-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-job-year-preview"class="title-year">' + document.getElementById("year-job-end").value + '</h3><p id="end-job-month-preview">' + document.getElementById("month-job-end").value + '</p></div></div><div class="work-information-output-container"><p id="job-preview"class="job-title">' + document.getElementById("job").value + '</p><p id="company-preview">' + document.getElementById("company").value + '</p></div></div></div>'
+	var startYearJob = document.getElementById("year-job-start").value;
+	var startMonthJob = document.getElementById("month-job-start").value
+	var endYearJob = document.getElementById("year-job-end").value;
+	var endMonthJob = document.getElementById("month-job-end").value;
+	var job = document.getElementById("job").value;
+	var company = document.getElementById("company").value;
+	var jobSectionPreviewBegin = '<div class="container-timeline left" id="container-timeline-left"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-job-year-preview"class="title-year">' + startYearJob +'</h3><p id="start-job-month-preview">' + startMonthJob + '</p></div><h3 class="title-year">-</h3><div class="dates-container">'
+	var jobSectionPreviewEnd = '</div></div><div class="work-information-output-container"><p id="job-preview"class="job-title">' + job + '</p><p id="company-preview">' + company + '</p></div></div></div>'
 
-	if(document.getElementById("year-job-start").value > document.getElementById("year-job-end").value){
-		showAlert();
+	if ((endMonthJob === 'mes' && endYearJob > 0) || (startMonthJob === 'mes' && startYearJob > 0)) {
+		showAlertMonth();
+	}
+	else if ((endMonthJob === 'mes' && endYearJob === 'Actualmente') || endYearJob === 'Actualmente' ) {
+		var jobSectionPreview = jobSectionPreviewBegin + '<h3 id="end-job-year-preview"class="title-year">Actual</h3><p id="end-job-month-preview"> </p>' + jobSectionPreviewEnd;
+		jobPreviewBox.innerHTML += jobSectionPreview;
 	} else {
-		var jobPreviewBox = document.querySelector('.timeline');
-	  jobPreviewBox.innerHTML += jobSectionPreview;
+
+  var jobSectionPreview = jobSectionPreviewBegin + '<h3 id="end-job-year-preview"class="title-year">' + endYearJob + '</h3><p id="end-job-month-preview">' + endMonthJob + '</p>' + jobSectionPreviewEnd;
+
+		if(startYearJob > endYearJob){
+			showAlert();
+		} else {
+		  jobPreviewBox.innerHTML += jobSectionPreview;
+		}
 	}
 	document.getElementById("job").value = '';
 	document.getElementById("company").value = '';
 	document.getElementById("year-job-start").value = '1950';
 	document.getElementById("month-job-start").value = 'mes';
-	document.getElementById("year-job-end").value = '1950';
+	document.getElementById("year-job-end").value = 'Actualmente';
 	document.getElementById("month-job-end").value = 'mes';
 }
-
-var buttonAddExp = document.getElementById('button-add-exp');
 buttonAddExp.addEventListener('click', saveNewExperience);
 
-var alertDatesDiv = document.querySelector('.alert-dates');
 function showAlert(){
 	alertDatesDiv.classList.remove('invisible');
 }
 function closeAlert(){
 	alertDatesDiv.classList.add('invisible');
 }
-var closeButtonAlert = document.querySelector('.button-alert-img');
 closeButtonAlert.addEventListener('click', closeAlert);
 
-//Función para introducir en la previsualización los datos obtenidos de formación
-function saveNewTraining(){
-	var educationSectionPreview = '<div class="container-timeline right"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-education-year-preview" class="title-year">' + document.getElementById("year-training-start").value + '</h3><p id="start-education-month-preview">' + document.getElementById("month-training-start").value + '</p></div><h3 class="title-year">-</h3><div class="dates-container"><h3 id="end-education-year-preview" class="title-year">' + document.getElementById("year-training-end").value + '</h3><p id="end-education-month-preview">' + document.getElementById("month-training-end").value + '</p></div></div><div class="work-information-output-container"><p id="education-title-preview" class="education-title">' + document.getElementById("educ-title").value + '</p><p id="education-center-preview">' + document.getElementById("center").value + '</p></div></div></div>'
+function showAlertMonth(){
+	alertMonthDiv.classList.remove('invisible');
+}
+function closeAlertMonth(){
+	alertMonthDiv.classList.add('invisible');
+}
+closeButtonAlertMonth.addEventListener('click', closeAlertMonth);
 
-	if(document.getElementById("year-training-start").value > document.getElementById("year-training-end").value){
-		showAlert();
-	}else {
-		var educationPreviewBox = document.querySelector('.timeline');
-	  educationPreviewBox.innerHTML += educationSectionPreview;
+function deleteExperience(){
+	jobPreviewBox.innerHTML = '';
+}
+buttonDelExp.addEventListener('click', deleteExperience);
+
+//Función para introducir en la previsualización los datos obtenidos de formación
+var educationPreviewBox = document.querySelector('.timeline');
+var buttonSaveFirstEd = document.getElementById('button-add-ed');
+var buttonDelEd = document.getElementById('button-delete-ed');
+
+function saveNewTraining(){
+	var startYearEd = document.getElementById("year-training-start").value;
+	var startMonthEd = document.getElementById("month-training-start").value;
+	var endYearEd = document.getElementById("year-training-end").value;
+	var endMonthEd = document.getElementById("month-training-end").value;
+	var educTitle = document.getElementById("educ-title").value;
+	var educCenter = document.getElementById("center").value;
+	var educSectionPreviewBegin = '<div class="container-timeline right"><div class="content-timeline"><div class="dates-output-container"><div class="dates-container"><h3 id="start-education-year-preview" class="title-year">' + startYearEd + '</h3><p id="start-education-month-preview">' + startMonthEd + '</p></div><h3 class="title-year">-</h3><div class="dates-container">';
+	var educSectionPreviewEnd = '</div></div><div class="work-information-output-container"><p id="education-title-preview" class="education-title">' + educTitle + '</p><p id="education-center-preview">' + educCenter + '</p></div></div></div>';
+
+	if ((endMonthEd === 'mes' && endYearEd > 0) || (startMonthEd === 'mes' && startYearEd > 0)) {
+		showAlertMonth();
+	}
+	else if ((endMonthEd === 'mes' && endYearEd === 'Actualmente') || endYearEd === 'Actualmente' ) {
+	var educationSectionPreview = educSectionPreviewBegin + '<h3 id="end-education-year-preview" class="title-year">Actual</h3><p id="end-education-month-preview"></p>' + educSectionPreviewEnd;
+	educationPreviewBox.innerHTML += educationSectionPreview;
+	} else {
+	var educationSectionPreview = educSectionPreviewBegin + '<h3 id="end-education-year-preview" class="title-year">' + endYearEd + '</h3><p id="end-education-month-preview">' + endMonthEd + '</p>' + educSectionPreviewEnd;
+		if(document.getElementById("year-training-start").value > document.getElementById("year-training-end").value){
+			showAlert();
+		}else {
+			educationPreviewBox.innerHTML += educationSectionPreview;
+		}
 	}
 	document.getElementById("educ-title").value = '';
 	document.getElementById("center").value = '';
 	document.getElementById("year-training-start").value = '1950';
 	document.getElementById("month-training-start").value = 'mes';
-	document.getElementById("year-training-end").value = '1950';
+	document.getElementById("year-training-end").value = 'Actualmente';
 	document.getElementById("month-training-end").value = 'mes';
 }
-var buttonSaveFirstEd = document.getElementById('button-add-ed');
 buttonSaveFirstEd.addEventListener('click', saveNewTraining);
 
+function deleteEducation(){
+	educationPreviewBox.innerHTML = '';
+}
+buttonDelEd.addEventListener('click', deleteEducation);
 //Fin de Experiencia y Formación
 
 /*--------------------------SKILLS FUNCTIONS------------------------------*/
@@ -298,30 +367,6 @@ function showHobbiesPreview(elementId) {
  }
 
 /*Redes sociales*/
-function showNetsocial() {
-  var netSocialDiv = document.querySelector('.net-social-hidden');
-  netSocialDiv.style.display = 'block';
-
-}
-
-/*javascript de redes sociales*/
-
-document.getElementById('linkedin').addEventListener('keyup', function(){setValue('linkedin')});
-document.getElementById('facebook').addEventListener('keyup', function(){setValue('facebook')});
-document.getElementById('github').addEventListener('keyup', function(){setValue('github')});
-document.getElementById('twitter').addEventListener('keyup', function(){setValue('twitter')});
-document.getElementById('instagram').addEventListener('keyup', function(){setValue('instagram')});
-
-function setValue(net){
-	var inputSocial = document.getElementById(net);
-  var liSocial = document.querySelector('.'+net);
-  if(inputSocial.value != ""){//Si tiene valor el input mostramos el icono
-    show(liSocial);
-  }else{//Si NO tiene valor el input ocultamos el icono
-    hide(liSocial);
-  }
-	setSocialMedia(inputSocial.value, net);
-}
 
 function show(element){
   element.classList.remove('invisible');
@@ -341,6 +386,28 @@ function visibility(element){
 function noVisibility(element){
   element.classList.remove('shown');
   element.classList.add('hidden');
+}
+
+function showNetsocial() {
+  var netSocialDiv = document.querySelector('.net-social-hidden');
+  netSocialDiv.style.display = 'block';
+}
+
+document.getElementById('linkedin').addEventListener('keyup', function(){setValue('linkedin')});
+document.getElementById('facebook').addEventListener('keyup', function(){setValue('facebook')});
+document.getElementById('github').addEventListener('keyup', function(){setValue('github')});
+document.getElementById('twitter').addEventListener('keyup', function(){setValue('twitter')});
+document.getElementById('instagram').addEventListener('keyup', function(){setValue('instagram')});
+
+function setValue(net){
+	var inputSocial = document.getElementById(net);
+  var liSocial = document.querySelector('.'+net);
+  if(inputSocial.value != ""){//Si tiene valor el input mostramos el icono
+    show(liSocial);
+  }else{//Si NO tiene valor el input ocultamos el icono
+    hide(liSocial);
+  }
+	setSocialMedia(inputSocial.value, net);
 }
 
 function setSocialMedia(value, net){

@@ -20,7 +20,6 @@
 			</div>
 			<div class="containericonos">
 				<input class="icons" type="button" onclick="viewprev()" id="btnview" title="Vista previa">
-				<input class="icons" type="button" onclick="share()" id="btnshare" title="Compartir">
 				<input class="icons" type="button" onclick="printCurriculum()" id="btnprint" title="Imprimir">
 			</div>
 				<!-- value="Ver mi CV">-->
@@ -31,6 +30,7 @@
 			<!--cabecera-->
 			<div id="header-fondo">
       	<h1 class="text-crea"></h1>
+        <audio id="sound-efx" src="styles/typewriter.wav"></audio>
 			</div>
       <button id="button-down" type="button" name="button-down"><a href="index.html#empty-container"><img src="images/expand-button-medium.png" alt="rellena-los-campos"></a></button>
       <div id="empty-container"></div>
@@ -101,7 +101,7 @@
 							<div class="dates-boxes">
 								<label>Fecha de inicio:</label>
 								<select class="select-styles month" id="month-job-start" name="job-start-month"></select>
-								<select class="select-styles year" id="year-job-start" name="job-start-year"></select>
+								<select class="select-styles year-ini" id="year-job-start" name="job-start-year"></select>
 							</div>
 							<div class="dates-boxes">
 								<label>Fecha de finalización</label>
@@ -110,6 +110,7 @@
 							</div>
 							<div class="buttons-container">
 								<input class="buttons-save-general experiencia" id="button-add-exp" type="button" name="add-exp" value="Añadir">
+								<input class="buttons-save-general experiencia" id="button-delete-exp" type="button" name="delete-exp" value="Borrar">
 							</div>
 						</div>
 					</form>
@@ -135,7 +136,7 @@
 							<div class="dates-boxes">
 								<label>Fecha de inicio</label>
 								<select class="select-styles month" id="month-training-start" name="training-start-month"></select>
-								<select class="select-styles year" id="year-training-start" name="training-start-year"></select>
+								<select class="select-styles year-ini" id="year-training-start" name="training-start-year"></select>
 							</div>
 							<div class="dates-boxes">
 								<label>Fecha de finalización</label>
@@ -144,6 +145,7 @@
 							</div>
 							<div class="buttons-container">
 								<input type="button" value="Añadir" name="add-ed" id="button-add-ed" class="buttons-save-general formacion">
+								<input type="button" value="Borrar" name="delete-ed" id="button-delete-ed" class="buttons-save-general formacion">
 							</div>
 						</div>
 					</form>
@@ -299,7 +301,6 @@
 					<div class="cajaiconsprev">
 						<button class="cruz-section-button" type="button" name="cruz-button" onclick="closePreview('ventana2')">
 						<img src="images/btnclose.png" alt="cruzbuttom"></button>
-						<input class="iconsprev" type="button" onclick="share()" id="btnshareprev" title="Compartir">
 						<input class="iconsprev" type="button" onclick="printCurriculum()" id="btnprintprev" title="Imprimir">
 						<input class="iconsprev" type="button" onclick="download()" id="btndownloadprev" title="Descargar">
 					</div>
@@ -428,9 +429,35 @@
 				</button>
 				<p class="text-alert">¡Ojo! La fecha de inicio no debe ser posterior a la fecha de finalización.</p>
 			</div>
+			<div class="alert-dates invisible" id="alert-month">
+				<button class="button-alert-img" id="close-button-alert-month" type="button" name="button">
+					<img class="alert-cruise" src="images/btnclose.png" alt="cruise-button">
+				</button>
+				<p class="text-alert">¡Ojo! No has introducido el mes.</p>
+			</div>
     </main>
 		<!-- End Container -->
 		<!-- Footer -->
+		<div id="btrs">
+<p><b>Comparte nuestra página en redes sociales</b></p>
+<script type="text/javascript">
+var ub = window.location;
+var us="https://slack.com/share?url="+"https://adalab.github.io/clarke-s2-scriptoras";
+var uf="https://www.facebook.com/sharer.php?u="+"https://adalab.github.io/clarke-s2-scriptoras";
+var ut="https://twitter.com/share?url="+"https://adalab.github.io/clarke-s2-scriptoras";
+var ug="https://plus.google.com/share?url="+"https://adalab.github.io/clarke-s2-scriptoras";
+var up="https://www.pinterest.com/pin/create/button/?url="+"https://adalab.github.io/clarke-s2-scriptoras";
+var ul="https://www.linkedin.com/shareArticle?mini=true&url="+"https://adalab.github.io/clarke-s2-scriptoras";
+var uw="whatsapp://share?url="+"https://adalab.github.io/clarke-s2-scriptoras";
+</script>
+<a href="javascript:void(0);" onclick="window.open(us,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en Slack"><img alt="Compartir en slack" class="sl" height="40" src="https://i.pinimg.com/originals/5c/49/e7/5c49e71075941267cfaf5eb2700e7049.png" title="Compartir en slack" width="40" /></a>
+<a href="javascript:void(0);" onclick="window.open(uf,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en Facebook"><img alt="Compartir en facebook" class="fb" height="40" src="https://cdn.tahonadedonpio.es/wp-content/uploads/social/facebook-long.png" title="Compartir en facebook" width="40" /></a>
+<a href="javascript:void(0);" onclick="window.open(ug,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en Google+"><img alt="Compartir en google+" class="glg" height="40" src="https://cdn.tahonadedonpio.es/wp-content/uploads/social/google-long.png" title="Compartir en google+" width="40" /></a>
+<a href="javascript:void(0);" onclick="window.open(ut,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en Twitter"><img alt="Compartir en twitter" class="twtr" height="40" src="https://cdn.tahonadedonpio.es/wp-content/uploads/social/twitter-long.png" title="Compartir en twitter" width="40" /></a>
+<a href="javascript:void(0);" onclick="window.open(up,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en Pinterest"><img alt="Compartir en pinterest" class="pnt" height="40" src="https://cdn.tahonadedonpio.es/wp-content/uploads/social/pinterest-long.png" title="Compartir en pinterest" width="40" /></a>
+<a href="javascript:void(0);" onclick="window.open(ul,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en linkedin+"><img alt="Compartir en likedin" class="lkdn" height="40" src="https://cdn.tahonadedonpio.es/wp-content/uploads/social/linkedin-long.png" title="Compartir en Likedin" width="40" /></a>
+<a href="javascript:void(0);" data-action=”share/whatsapp/share” onclick="window.open(uw,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en WhatsApp+"><img alt="Compartir en WhatsApp " class="lkdn" height="40" src="https://cdn.tahonadedonpio.es/wp-content/uploads/social/whatsapp-long.png" title="Compartir en WhatsApp " width="40" /></a>
+</div>
 	  <footer class="infooter">
 			<div class="end"><h3>Scriptoras &copy; 2017</h3></div>
 			<div class="end">
